@@ -31,7 +31,7 @@ Opinions:
 
 上万中文姓名及性别：https://pan.baidu.com/s/1hsHTEU4
 
-好的资料：
+其他资料：
 
 https://github.com/thunlp
 
