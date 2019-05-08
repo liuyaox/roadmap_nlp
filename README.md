@@ -27,6 +27,7 @@ Github: https://github.com/hse-aml/natural-language-processing
 Opinions: 
 
 ## 4. Corpus and Data
+
 大规模中文自然语言处理语料Large Scale Chinese Corpus for NLP: https://github.com/brightmart/nlp_chinese_corpus
 
 上万中文姓名及性别：https://pan.baidu.com/s/1hsHTEU4
@@ -261,7 +262,7 @@ Character-Aware Neural Language Models-2015 (https://arxiv.org/abs/1508.06615)
 
 Github: https://github.com/chiragjn/deep-char-cnn-lstm (Keras)
 
-8.6 Summary
+### 8.6 Summary
 
 ## 9. Text Classification
 ### 9.1 Overview
@@ -453,7 +454,7 @@ a. 详解文本分类之DeepCNN的理论与实践 (https://mp.weixin.qq.com/s?__
 ### 9.9 Summary
 
 
-## 10. Seq2seq
+## 10. Seq2Seq & Encoder-Decoder
 ### 10.1 Overview
 
 Attention, Transformer, Pointer Network
@@ -510,6 +511,8 @@ b. The Annotated Transformer (http://nlp.seas.harvard.edu/2018/04/03/attention.h
 **Articles**
 
 a. The Illustrated Transformer (https://jalammar.github.io/illustrated-transformer/)
+
+### 10.6 Summary
 
 
 ## 11. Probabilistic Graphical Models (PGM)
