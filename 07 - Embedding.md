@@ -21,13 +21,21 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 **Website**: 
 
-**Github**: <https://github.com/danielfrg/word2vec>
+**Github**: 
+
+a. <https://github.com/tmikolov/word2vec/blob/master/word2vec.c> (C, original)
+
+b. <https://github.com/chrisjmccormick/word2vec_commented/blob/master/word2vec.c> (C, with detailed comments)
+
+c. <https://github.com/danielfrg/word2vec> (Python)
 
 #### Article - OK
 
-Skip-Gram: <http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/>
+a. Skip-Gram: <http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/>
 
-Negative Sampling & Subsampling of Frequent Words & Phrase Learning: <http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/>
+b. Negative Sampling & Subsampling of Frequent Words & Phrase Learning: <http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/>
+
+c. The Illustrated Word2vec: <http://jalammar.github.io/illustrated-word2vec/>
 
 #### Tool/Library
 
