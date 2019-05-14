@@ -5,6 +5,13 @@
 
 **Keywords**: Word2Vec  Wiki2Vec  GloVe  Ngram2Vec  Para2Vec  Doc2Vec StarSpace
 
+#### Article
+
+a. Generalized Language Models(<https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html>)
+
+要点：本文主要整理深度学习中一些前沿的Contextual Pretrained Model，以及这些开源模型使用场景、开源代码和一些公开数据集。
+
+
 ### 7.2 Word2Vec
 
 #### Paper - OK

@@ -7,3 +7,10 @@
 其他资料：
 
 https://github.com/thunlp
+
+
+
+### Github
+
+a. 史上最全PyTorch资源汇总：教程、实战、必读论文、中文教材一应俱全<https://github.com/intermt/awesome-pytorch-chinese>
+
