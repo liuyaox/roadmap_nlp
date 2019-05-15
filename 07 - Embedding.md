@@ -20,9 +20,11 @@ b. Embedding从入门到专家必读的十篇论文 (<https://zhuanlan.zhihu.com
 
 #### Paper - OK
 
-Word2Vec - Efficient Estimation of Word Representations in Vector Space-2013(<https://arxiv.org/abs/1301.3781>)
+a. Word2Vec - Efficient Estimation of Word Representations in Vector Space-2013(<https://arxiv.org/abs/1301.3781>)
 
-Hierarchical Softmax & Negative Sampling & Subsampling of Frequent Words & Phrase Learning - Distributed Representations of Words and Phrases and their Compositionality-2013(<https://arxiv.org/abs/1310.4546>)
+b. Hierarchical Softmax & Negative Sampling & Subsampling of Frequent Words & Phrase Learning - Distributed Representations of Words and Phrases and their Compositionality-2013(<https://arxiv.org/abs/1310.4546>)
+
+c. Negative Sampling & Machine Translation - On Using Very Large Target Vocabulary for Neural Machine Translation-2015 (<https://arxiv.org/abs/1412.2007>)
 
 #### Comment
 
@@ -57,6 +59,8 @@ Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
 a. How to Create a Simple Word2Vec Network and What Are the Input and Output?
 
 b. How to Use Word2Vec Tools to Train Your Own Embeddings? Such as gensim.models.word2vec and others. Both English and Chinese.
+
+可以参考<https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py>中gensim的使用
 
 For English
 
