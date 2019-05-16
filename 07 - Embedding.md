@@ -7,11 +7,11 @@
 
 #### Article
 
-a. Generalized Language Models(<https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html>)
+a. [Generalized Language Models](https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html)
 
 要点：本文主要整理深度学习中一些前沿的Contextual Pretrained Model，以及这些开源模型使用场景、开源代码和一些公开数据集。
 
-b. Embedding从入门到专家必读的十篇论文 (<https://zhuanlan.zhihu.com/p/58805184>)
+b. [Embedding从入门到专家必读的十篇论文](https://zhuanlan.zhihu.com/p/58805184)
 
 要点：包括Word2Vec基础、Word2Vec衍生及应用、Graph Embedding 共3部分。
 
@@ -20,9 +20,9 @@ b. Embedding从入门到专家必读的十篇论文 (<https://zhuanlan.zhihu.com
 
 #### Paper - OK
 
-a. Word2Vec - Efficient Estimation of Word Representations in Vector Space-2013(<https://arxiv.org/abs/1301.3781>)
+a. Word2Vec - [Efficient Estimation of Word Representations in Vector Space - Google2013](https://arxiv.org/abs/1301.3781)
 
-b. Hierarchical Softmax & Negative Sampling & Subsampling of Frequent Words & Phrase Learning - Distributed Representations of Words and Phrases and their Compositionality-2013(<https://arxiv.org/abs/1310.4546>)
+b. Hierarchical Softmax & Negative Sampling & Subsampling of Frequent Words & Phrase Learning - [Distributed Representations of Words and Phrases and their Compositionality - Google2013](https://arxiv.org/abs/1310.4546)
 
 c. Negative Sampling & Machine Translation - On Using Very Large Target Vocabulary for Neural Machine Translation-2015 (<https://arxiv.org/abs/1412.2007>)
 
@@ -31,8 +31,6 @@ c. Negative Sampling & Machine Translation - On Using Very Large Target Vocabula
 Yao: These are not easy to understand, and you'd better learn them by reading some other articles, such as the ones in 'Articles' below.
 
 #### Source
-
-**Website**: 
 
 **Github**: 
 
@@ -44,11 +42,11 @@ c. <https://github.com/danielfrg/word2vec> (Python)
 
 #### Article - OK
 
-a. Skip-Gram: <http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/>
+a. Skip-Gram: [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 
-b. Negative Sampling & Subsampling of Frequent Words & Phrase Learning: <http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/>
+b. Negative Sampling & Subsampling of Frequent Words & Phrase Learning: [Word2Vec Tutorial Part 2 - Negative Sampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)
 
-c. The Illustrated Word2vec: <http://jalammar.github.io/illustrated-word2vec/>
+c. [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/)
 
 #### Tool/Library
 
@@ -76,13 +74,21 @@ People's Daily  --> Word Embeddings
 
 #### Further - TODO
 
-Interesting Job: Applying Word2Vec to Recommenders and Advertising?(<http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/>)
+a. [Interesting Job: Applying Word2Vec to Recommenders and Advertising](http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/)
+
+b. [WSABIE: Scaling Up To Large Vocabulary Image Annotation - Google2017](http://www.thespermwhale.com/jaseweston/papers/wsabie-ijcai.pdf)
+
+**要点**: 指定有限个label，给object打标！
+
+**Article**: [WSABIE 算法解释](https://heleifz.github.io/14696374110477.html)
+
+**要点**: 对待打标签的object(的向量)进行线性变换，同时借鉴Word2Vec的思想，把有限个label转换成Embedding，从而把object与label映射到同一向量空间，向量内积即可度量相似性。
 
 ### 7.3 GloVe
 
 #### Paper
 
-GloVe: Global Vectors for Word Representation (<https://nlp.stanford.edu/projects/glove/>)
+GloVe: [Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
 
 #### Source
 
@@ -90,7 +96,7 @@ GloVe: Global Vectors for Word Representation (<https://nlp.stanford.edu/project
 
 #### Article
 
-a. (<https://blog.csdn.net/coderTC/article/details/73864097>)
+a. [理解GloVe模型（Global vectors for word representation）](https://blog.csdn.net/coderTC/article/details/73864097)
 
 Yao：本质上是想让词向量(经一定的函数处理后)具有共现矩阵的性质，方法上使用了较多脑洞和技巧，有种强行凑出来的感觉，而非严谨的数学推导，不过对于想做研究的人来说，可以是一种有启发的借鉴，借鉴的不是想法，而是做法！
 
@@ -106,21 +112,21 @@ To Create Embedding Layer for Neural Network
 
 #### Paper
 
-Deep contextualized word representations - AllenAI2018 (<https://arxiv.org/abs/1802.05365>)
+[Deep contextualized word representations - AllenAI2018](https://arxiv.org/abs/1802.05365)
 
 #### Article
 
-b. ELMO模型（Deep contextualized word representation）(<https://www.cnblogs.com/jiangxinyang/p/10060887.html>)
+b. [ELMO模型(Deep contextualized word representation)](https://www.cnblogs.com/jiangxinyang/p/10060887.html)
 
 #### Practice
 
-b. 文本分类实战（九）—— ELMO 预训练模型 (<https://www.cnblogs.com/jiangxinyang/p/10235054.html>)
+b. [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10235054.html)
 
 ### 7.5 BERT - TOTODO
 
 #### Paper
 
-BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2018 (<https://arxiv.org/abs/1810.04805>)
+[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2018](https://arxiv.org/abs/1810.04805)
 
 #### Source
 
@@ -130,7 +136,7 @@ BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 
 a. <https://github.com/brightmart/text_classification/tree/master/a00_Bert> (Tensorflow)
 
-b. 文本分类实战（十）—— BERT 预训练模型 (<https://www.cnblogs.com/jiangxinyang/p/10241243.html>)
+b. [文本分类实战（十）—— BERT 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10241243.html)
 
 GPT
 
@@ -141,7 +147,7 @@ Phrase2Vec???
 
 #### Paper
 
-Ngram2vec: Learning Improved Word Representations from Ngram Co-occurrence Statistics (<http://www.aclweb.org/anthology/D17-1023>)
+[Ngram2vec: Learning Improved Word Representations from Ngram Co-occurrence Statistics](http://www.aclweb.org/anthology/D17-1023)
 
 #### Source
 
@@ -174,7 +180,7 @@ Ngram2vec: Learning Improved Word Representations from Ngram Co-occurrence Stati
 
 #### Paper
 
-StarSpace: Embed All The Things! (<https://arxiv.org/abs/1709.03856>)
+[StarSpace: Embed All The Things!](<https://arxiv.org/abs/1709.03856>)
 
 损失函数：相似Entity之间相似度较高
 
@@ -187,7 +193,7 @@ StarSpace: Embed All The Things! (<https://arxiv.org/abs/1709.03856>)
 
 #### Paper
 
-node2vec: Scalable Feature Learning for Networks - Stanford2016 (<https://arxiv.org/abs/1607.00653>)
+[node2vec: Scalable Feature Learning for Networks - Stanford2016](<https://arxiv.org/abs/1607.00653>)
 
 node2vec is an algorithmic framework for learning continuous feature representations for nodes in networks. In node2vec, we learn a mapping of nodes to a low-dimensional space of features that maximizes the likelihood of preserving network neighborhoods of nodes.
 
@@ -202,24 +208,24 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 ### 7.11 Item2Vec
 
-Item2Vec: Neural Item Embedding for Collaborative Filtering
+#### Paper
 
-**Paper**: <https://arxiv.org/abs/1603.04259>
+[Item2Vec: Neural Item Embedding for Collaborative Filtering - Microsoft2016](https://arxiv.org/abs/1603.04259)
 
 **Keywords**: Collaborative Filtering; Item Similarity; Recommender System; Neural Network Embedding
 
 #### Article
 
-a. 从用户行为去理解内容-item2vec及其应用 (<https://cloud.tencent.com/developer/article/1039868>)
+a. [从用户行为去理解内容-item2vec及其应用](https://cloud.tencent.com/developer/article/1039868)
 
-要点：讲述了item2vec或其理念在分类、推荐召回和语义召回上的应用，以及直接作为深度模型的输入特征。
+**要点**：讲述了item2vec或其理念在分类、推荐召回和语义召回上的应用，以及直接作为深度模型的输入特征。
 
 
 ### 7.12 Graph Embedding
 
 #### Article
 
-a. 深度学习中不得不学的 Graph Embedding 方法 (<http://www.6aiq.com/article/1557332223911>)
+a. [深度学习中不得不学的 Graph Embedding 方法](http://www.6aiq.com/article/1557332223911)
 
 
 

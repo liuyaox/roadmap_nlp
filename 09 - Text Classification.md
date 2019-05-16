@@ -17,15 +17,15 @@ b. <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
 #### Practice
 
-a. 文本分类实战系列文章 (<https://www.cnblogs.com/jiangxinyang/p/10207482.html>) (Tensorflow)
+a. [文本分类实战系列文章](https://www.cnblogs.com/jiangxinyang/p/10207482.html) (Tensorflow)
 
-b. 阿里AI工程师教你如何用CNN RNN Attention解决大规模文本分类问题 (<https://www.sohu.com/a/130492867_642762>)
+b. [阿里AI工程师教你如何用CNN RNN Attention解决大规模文本分类问题](https://www.sohu.com/a/130492867_642762)
 
 ### 9.2 fastText
 
 #### Paper
 
-Bag of Tricks for Efficient Text Classification (<https://arxiv.org/abs/1607.01759>)
+[Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)
 
 #### Source
 
@@ -59,7 +59,7 @@ b. 还有一种自己搭建模型的方式，不确定是否合理：
 
 #### Paper
 
-a. Convolutional Neural Networks for Sentence Classification (<https://arxiv.org/abs/1408.5882>)
+[Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1408.5882)
 
 **Structure**: Input -> Embedding -> (Conv1D -> GlobalMaxPooling1D) * n_filter_size -> Concatenate -> Dropout -> Dense -> Dropout -> Dense，其中GlobalMaxPooling1D与MaxPooling1D-->Flatten功能相同。
 
@@ -75,15 +75,15 @@ TextCNN的输入Embedding有3种：
 
 - Two-Channel: Static Pre-trained + Dynamic Embedding，其中Dynamic有2种：Pre-trained + Finetuning和随机初始化，Dynamic的作用是，通过对语料的学习，模型可以得到task-specific的信息。
 
-b. 对TextCNN进行调优：A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification(<https://arxiv.org/abs/1510.03820>)
+b. 对TextCNN进行调优：[A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1510.03820)
 
 论文基于one-layer CNNs，研究了Input Word Vectors、Filter Region Size、Number of Feature Maps for Each Filter Region Size、Activation Function、Pooling Strategy和Regularization等对模型性能的影响，有助于我们参考以选择适合自己的参数。
 
 c. charCNN
 
-**Paper**: Character-level Convolutional Networks for Text Classification-2016 (<https://arxiv.org/abs/1509.01626>)
+**Paper**: [Character-level Convolutional Networks for Text Classification-2016](https://arxiv.org/abs/1509.01626)
 
-**Practice**: 文本分类实战（三）—— charCNN模型 (<https://www.cnblogs.com/jiangxinyang/p/10207686.html>)
+**Practice**: [文本分类实战（三）—— charCNN模型](https://www.cnblogs.com/jiangxinyang/p/10207686.html)
 
 **Source**: <https://github.com/jiangxinyang227/textClassifier>
 
@@ -135,13 +135,13 @@ b. <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
 #### Paper
 
-Recurrent Convolutional Neural Networks for Text Classification (<https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9745/9552>)
+[Recurrent Convolutional Neural Networks for Text Classification](https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9745/9552)
 
 **Structure**
 
 Recurrent Structure(Convolutional Layer) -> MaxPooling -> Dense(Softmax)
 
-Representation of Current Word = [ Left_context_vector, Current_word_embedding, Right_context_vecotor]
+Representation of Current Word = [Left_context_vector, Current_word_embedding, Right_context_vecotor]
 
 For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transform of previous word w3('stroll') and left previous context Cl(w3)
 
@@ -173,13 +173,13 @@ b. <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
 #### Practice
 
-a. 文本分类实战（六）—— RCNN模型 (<https://www.cnblogs.com/jiangxinyang/p/10208290.html>) (Tensorflow)
+a. [文本分类实战（六）—— RCNN模型](https://www.cnblogs.com/jiangxinyang/p/10208290.html) (Tensorflow)
 
 ### 9.6 VDCNN
 
 #### Paper
 
-Very Deep Convolutional Networks for Text Classification - Facebook2017 (<https://arxiv.org/abs/1606.01781)>
+[Very Deep Convolutional Networks for Text Classification - Facebook2017](https://arxiv.org/abs/1606.01781)
 
 #### Source
 
@@ -197,6 +197,6 @@ multi_channel_CNN, deep_CNN, LSTM_CNN, Tree-LSTM
 
 #### Practice
 
-a. 详解文本分类之DeepCNN的理论与实践 (<https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428&chksm=eb501d1edc2794081a51eba592da28880bb572caf5bd174869211f7c10719b3c59e703f2ef6b&scene=21#wechat_redirect>)
+a. [详解文本分类之DeepCNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428&chksm=eb501d1edc2794081a51eba592da28880bb572caf5bd174869211f7c10719b3c59e703f2ef6b&scene=21#wechat_redirect)
 
 ### 9.9 Summary
