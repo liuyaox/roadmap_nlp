@@ -9,12 +9,15 @@
 
 a. [Generalized Language Models](https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html)
 
-要点：本文主要整理深度学习中一些前沿的Contextual Pretrained Model，以及这些开源模型使用场景、开源代码和一些公开数据集。
+**要点**：本文主要整理深度学习中一些前沿的Contextual Pretrained Model，以及这些开源模型使用场景、开源代码和一些公开数据集。
 
 b. [Embedding从入门到专家必读的十篇论文](https://zhuanlan.zhihu.com/p/58805184)
 
-要点：包括Word2Vec基础、Word2Vec衍生及应用、Graph Embedding 共3部分。
+**要点**：包括Word2Vec基础、Word2Vec衍生及应用、Graph Embedding 共3部分。
 
+c. [万物皆Embedding，从经典的word2vec到深度学习基本操作item2vec](https://zhuanlan.zhihu.com/p/53194407)
+
+**要点**: Embedding是DL的基础，介绍了Word2Vec, Item2Vec
 
 ### 7.2 Word2Vec
 
@@ -205,6 +208,10 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 **Github**: <https://github.com/aditya-grover/node2vec>
 
+#### Article
+
+- [关于Node2vec算法中Graph Embedding同质性和结构性的进一步探讨](https://zhuanlan.zhihu.com/p/64756917)
+
 
 ### 7.11 Item2Vec
 
@@ -213,6 +220,8 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 [Item2Vec: Neural Item Embedding for Collaborative Filtering - Microsoft2016](https://arxiv.org/abs/1603.04259)
 
 **Keywords**: Collaborative Filtering; Item Similarity; Recommender System; Neural Network Embedding
+
+**要点**: 
 
 #### Article
 
@@ -225,7 +234,7 @@ a. [从用户行为去理解内容-item2vec及其应用](https://cloud.tencent.c
 
 #### Article
 
-a. [深度学习中不得不学的 Graph Embedding 方法](http://www.6aiq.com/article/1557332223911)
+a. [深度学习中不得不学的 Graph Embedding 方法](https://zhuanlan.zhihu.com/p/64200072)
 
 
 
