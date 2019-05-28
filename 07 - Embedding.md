@@ -137,9 +137,13 @@ b. [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.
 
 #### Practice
 
-a. <https://github.com/brightmart/text_classification/tree/master/a00_Bert> (Tensorflow)
+- [Pretrained PyTorch models for BERT, OpenAI GPT & GPT-2, Google/CMU Transformer-XL](https://github.com/huggingface/pytorch-pretrained-bert) (PyTorch)
 
-b. [文本分类实战（十）—— BERT 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10241243.html)
+- Good!!! [Implemention some Baseline Model upon Bert for Text Classification](https://github.com/songyingxin/bert-textclassification) (PyTorch)
+
+- <https://github.com/brightmart/text_classification/tree/master/a00_Bert> (Tensorflow)
+
+- [文本分类实战（十）—— BERT 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10241243.html)
 
 GPT
 
@@ -192,7 +196,7 @@ Phrase2Vec???
 **Github**: <https://github.com/facebookresearch/StarSpace>
 
 
-### 7.10 Node2Vec
+### 7.10 Node2Vec - TOTODO
 
 #### Paper
 
@@ -213,7 +217,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 - [关于Node2vec算法中Graph Embedding同质性和结构性的进一步探讨](https://zhuanlan.zhihu.com/p/64756917)
 
 
-### 7.11 Item2Vec
+### 7.11 Item2Vec - TOTODO
 
 #### Paper
 
