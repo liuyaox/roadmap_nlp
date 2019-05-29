@@ -27,7 +27,7 @@ a. Word2Vec - [Efficient Estimation of Word Representations in Vector Space - Go
 
 b. Hierarchical Softmax & Negative Sampling & Subsampling of Frequent Words & Phrase Learning - [Distributed Representations of Words and Phrases and their Compositionality - Google2013](https://arxiv.org/abs/1310.4546)
 
-c. Negative Sampling & Machine Translation - On Using Very Large Target Vocabulary for Neural Machine Translation-2015 (<https://arxiv.org/abs/1412.2007>)
+c. Negative Sampling & Machine Translation - [On Using Very Large Target Vocabulary for Neural Machine Translation-2015](https://arxiv.org/abs/1412.2007)
 
 #### Comment
 
@@ -61,7 +61,7 @@ a. How to Create a Simple Word2Vec Network and What Are the Input and Output?
 
 b. How to Use Word2Vec Tools to Train Your Own Embeddings? Such as gensim.models.word2vec and others. Both English and Chinese.
 
-可以参考<https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py>中gensim的使用
+可以参考 <https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py> 中gensim的使用
 
 For English
 
@@ -129,7 +129,7 @@ b. [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.
 
 #### Paper
 
-[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2018](https://arxiv.org/abs/1810.04805)
+[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2019](https://arxiv.org/abs/1810.04805)
 
 #### Source
 
@@ -145,9 +145,24 @@ b. [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.
 
 - [文本分类实战（十）—— BERT 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10241243.html)
 
-GPT
+### 7.6 GPT
+
+#### Paper
+
+- GPT: [Improving Language Understanding by Generative Pre-Training - OpenAI2018](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+
+- GPT-2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf)
+
+#### Source
+
+**Github**: GPT-2 - <https://github.com/openai/gpt-2> (Tensorflow)
+
+#### Article
+
+- [Better Language Models and Their Implications](https://www.openai.com/blog/better-language-models/)
 
 ### 7.6 Ngram2Vec
+
 Maybe it's useful for attr-attrval matching!?!
 
 Phrase2Vec???
@@ -187,7 +202,7 @@ Phrase2Vec???
 
 #### Paper
 
-[StarSpace: Embed All The Things!](<https://arxiv.org/abs/1709.03856>)
+[StarSpace: Embed All The Things!](https://arxiv.org/abs/1709.03856)
 
 损失函数：相似Entity之间相似度较高
 
@@ -200,7 +215,7 @@ Phrase2Vec???
 
 #### Paper
 
-[node2vec: Scalable Feature Learning for Networks - Stanford2016](<https://arxiv.org/abs/1607.00653>)
+[node2vec: Scalable Feature Learning for Networks - Stanford2016](https://arxiv.org/abs/1607.00653)
 
 node2vec is an algorithmic framework for learning continuous feature representations for nodes in networks. In node2vec, we learn a mapping of nodes to a low-dimensional space of features that maximizes the likelihood of preserving network neighborhoods of nodes.
 
