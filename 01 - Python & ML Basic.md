@@ -11,3 +11,7 @@ Github: <https://github.com/machinelearningmindset/machine-learning-course> (Pyt
 
 Website: <https://machine-learning-course.readthedocs.io/en/latest/>
 
+### Data Science Cheatsheets
+
+Github: <https://github.com/faviovazquez/ds-cheatsheets>
+
