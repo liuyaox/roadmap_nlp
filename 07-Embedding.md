@@ -135,6 +135,10 @@ b. [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.
 
 **Github**: <https://github.com/google-research/bert> (Tensorflow)
 
+#### Article
+
+- [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](http://jalammar.github.io/illustrated-bert/)
+
 #### Practice
 
 - [Pretrained PyTorch models for BERT, OpenAI GPT & GPT-2, Google/CMU Transformer-XL](https://github.com/huggingface/pytorch-pretrained-bert) (PyTorch)
