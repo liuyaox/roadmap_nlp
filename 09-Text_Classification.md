@@ -33,6 +33,8 @@ b. [阿里AI工程师教你如何用CNN RNN Attention解决大规模文本分类
 
 **Website**: <https://fasttext.cc/>
 
+**API**: gensim - <https://radimrehurek.com/gensim/models/fasttext.html>
+
 #### Practice
 
 a. 直接使用Python的fastText库：
@@ -65,7 +67,7 @@ b. 还有一种自己搭建模型的方式，不确定是否合理：
 
 ![textcnn_structure](./image/textcnn_01.png)
 
-**Points**：
+**Key Points**：
 
 TextCNN的输入Embedding有3种：
 
@@ -109,7 +111,9 @@ def TextCNNModel(input_shape, embedding_layer):
     return Model(sentences, X)
 ```
 
-b. <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
+b. <https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras> (Keras)
+
+c. <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
 #### Practice
 
@@ -171,6 +175,8 @@ def get_context_right(self, context_right, embedding_afterward):
 
 b. <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
+c. <https://github.com/roomylee/rcnn-text-classification> (Tensorflow)
+
 #### Practice
 
 a. [文本分类实战（六）—— RCNN模型](https://www.cnblogs.com/jiangxinyang/p/10208290.html) (Tensorflow)
@@ -191,9 +197,67 @@ a. [文本分类实战（六）—— RCNN模型](https://www.cnblogs.com/jiangx
 
 #### Source
 
+### 9.8 HAN
+
+#### Paper
+
+[Multilingual Hierarchical Attention Networks for Document Classification - NAACL2016](https://arxiv.org/abs/1707.00896)
+
+**Key Points**: 相较于TextCNN，HAN最大的进步在于完全保留了文章的结构信息，并且特别难能可贵的是，基于attention结构有很强的解释性。
+
+![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/han.jpeg)
+
+#### Source
+
+- Github: <https://github.com/richliao/textClassifier> (Keras)
+
+### 9.9 DPCNN
+
+#### Paper
+
+[Deep Pyramid Convolutional Neural Networks for Text Categorization - Tencent2017](https://ai.tencent.com/ailab/media/publications/ACL3-Brady.pdf)
+
+单词级别的深层CNN模型，来捕捉文本的全局语义表征，该模型在不增加太多的计算开销的情况下，通过增加网络深度可以获得最佳的性能
+
+#### Source
+
+- Github: <https://github.com/Cheneng/DPCNN> (PyTorch)
+
 ### 9.8 Others
 
 multi_channel_CNN, deep_CNN, LSTM_CNN, Tree-LSTM
+
+#### Paper
+
+- [Document Modeling with Gated Recurrent Neural Network for Sentiment Classification (EMNLP 2015)](https://www.aclweb.org/anthology/D15-1167)
+
+利用GRU对文档进行建模的情感分类模型：首先将文本映射为向量，然后利用CNN/LSTM进行句子向量表示，输入到GRU中，得到文档向量表示，最后输送给Softmax层，得到标签的概率分布。
+
+- [Recurrent Neural Network for Text Classification with Multi-Task Learning (IJCAI 2016)](https://arxiv.org/abs/1605.05101)
+
+针对文本多分类任务，提出了基于RNN的三种不同的共享信息机制对具有特定任务和文本进行建模：所有任务共享同1个LSTM层，每个任务具有自己独立的LSTM层，除1个共享的BLSTM层外每个任务有自己独立的LSTM层。
+
+- DeepMoji - [Using millions of emoji occurrences to learn any-domain representations for detecting sentiment, emotion and sarcasm - MIT2017](https://arxiv.org/abs/1708.00524)
+
+使用数以百万计的表情符号来学习任何领域的表情符号来检测情绪、情绪和讽刺，提出了DeepMoji模型，并取得了具有竞争性的效果。同时，DeepMoji模型在文本分类任务上也可以取得不错的结果。
+
+**Github**: <https://github.com/bfelbo/DeepMoji> (Keras)
+
+- [Investigating Capsule Networks with Dynamic Routing for Text Classification - CAS2018)](https://arxiv.org/abs/1804.00538)
+
+一种基于胶囊网络的文本分类模型，并改进了Sabour等人提出的动态路由，提出了三种稳定动态路由。
+
+**Github**: <https://github.com/andyweizhao/capsule_text_classification> (Tensorflow, Keras)
+
+- RNN-Capsule - [Sentiment Analysis by Capsules -THU2018](http://coai.cs.tsinghua.edu.cn/hml/media/files/p1165-wang.pdf)
+
+RNN-Capsule首先使用RNN捕捉文本上下文信息，然后将其输入到capsule结构中：用注意力机制计算capsule表征 --> 用capsule表征计算capsule状态的概率 --> 用capsule表征以及capsule状态概率重构实例的表征
+
+- GCN - [Graph Convolutional Networks for Text Classification - Northwestern2018)](https://arxiv.org/abs/1809.05679)
+
+一种基于graph convolutional networks(GCN)进行文本分类，构建了一个包含word节点和document节点的大型异构文本图，显式地对全局word利用co-occurrence信息进行建模，然后将文本分类问题看作是node分类问题。
+
+**Github**: <https://github.com/yao8839836/text_gcn> (Tensorflow)
 
 #### Practice
 
