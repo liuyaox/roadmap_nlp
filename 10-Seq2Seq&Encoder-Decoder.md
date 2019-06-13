@@ -61,4 +61,8 @@ b. The Annotated Transformer (http://nlp.seas.harvard.edu/2018/04/03/attention.h
 
 a. The Illustrated Transformer (https://jalammar.github.io/illustrated-transformer/)
 
+#### Pratice
+
+- [放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较](https://zhuanlan.zhihu.com/p/54743941)
+
 ### 10.6 Summary
