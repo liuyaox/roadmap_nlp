@@ -139,6 +139,8 @@ b. [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.
 
 - [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](http://jalammar.github.io/illustrated-bert/)
 
+- [【NLP】彻底搞懂BERT](https://www.cnblogs.com/rucwxb/p/10277217.html)
+
 #### Practice
 
 - [Pretrained PyTorch models for BERT, OpenAI GPT & GPT-2, Google/CMU Transformer-XL](https://github.com/huggingface/pytorch-pretrained-bert) (PyTorch)
@@ -235,6 +237,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 - [关于Node2vec算法中Graph Embedding同质性和结构性的进一步探讨](https://zhuanlan.zhihu.com/p/64756917)
 
+- [node2vec: Embeddings for Graph Data](https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef)
 
 ### 7.11 Item2Vec - TOTODO
 

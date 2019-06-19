@@ -29,3 +29,8 @@ a. Natural Language Processing with PyTorch: Build Intelligent Language Applicat
 
 <https://github.com/joosthub/PyTorchNLPBook>
 
+
+### Website
+
+a. [Modern Deep Learning Techniques Applied to NLP](https://nlpoverview.com)
+
