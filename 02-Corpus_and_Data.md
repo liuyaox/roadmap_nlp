@@ -1,4 +1,4 @@
-## 4. Corpus and Data
+# 4. Corpus and Data
 
 大规模中文自然语言处理语料Large Scale Chinese Corpus for NLP: https://github.com/brightmart/nlp_chinese_corpus
 
@@ -10,7 +10,5 @@ https://github.com/thunlp
 
 
 
-### Github
-
-a. 
+## Github
 

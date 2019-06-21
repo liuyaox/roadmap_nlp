@@ -1,7 +1,8 @@
 
 
-## 18. Pairwise Input
-### 18.1 Overview
+# 18. Pairwise Input
+
+## 18.1 Overview
 
 NLP领域的任务的输入输出有以下几种：
 
@@ -13,7 +14,7 @@ NLP领域的任务的输入输出有以下几种：
 
 除7.2外，其他模型结构都是或类似于双胞胎网络(Siamese Network)，2个网络的结构是完全一致的，但其参数，有时共享，有时不同？
 
-### 18.2 BiLSTMTextRelation
+## 18.2 BiLSTMTextRelation
 
 **Structure**: Input(Seq EOS Seq) -> Embeddding -> BiLSTM -> Average -> Softmax
 
@@ -21,27 +22,27 @@ Same with TextRNN, but input is special designed.
 
 e.g. input: "How much is the computer ? EOS Price of laptop", where 'EOS' is a special token splitted input1 and input2
 
-#### Source
+#### Code
 
-<https://github.com/brightmart/text_classification> (Tensorflow)
+- <https://github.com/brightmart/text_classification> (Tensorflow)
 
-### 18.3 twoCNNTextRelation - OK
+## 18.3 twoCNNTextRelation - OK
 
 **Structure**: Seq1(Input1 -> Embedding -> TextCNN) + Seq2(Input2 -> Embedding -> TextCNN) -> Concatenate -> Softmax
 
 产品词关系项目中使用的模型与此类似，在此基础上增加了第3个Input（结构化输入）。
 
-#### Source
+#### Code
 
-<https://github.com/brightmart/text_classification> (Tensorflow)
+- <https://github.com/brightmart/text_classification> (Tensorflow)
 
-### 18.4 BiLSTMTextRelationTwoRNN
+## 18.4 BiLSTMTextRelationTwoRNN
 
 又叫 Dual Encoder LSTM Network ?
 
 #### Paper
 
-The Ubuntu Dialogue Corpus: A Large Dataset for Research in Unstructured Multi-Turn Dialogue Systems-2016 (<https://arxiv.org/abs/1506.08909>)
+[The Ubuntu Dialogue Corpus: A Large Dataset for Research in Unstructured Multi-Turn Dialogue Systems-2016](<https://arxiv.org/abs/1506.08909>)
 
 **Structure**: Seq1(Input1 -> Embedding -> BiLSTM) + Seq2(Input2 -> Embedding -> BiLSTM) -> Dot Product -> Softmax
 
@@ -51,12 +52,12 @@ Dot Product作用：To measure the similarity of the predicted response r' and t
 
 #### Article
 
-Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow(<http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/>)
+- [Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow](<http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/>)
 
-### 18.5 Others
+## 18.5 Others
 
 #### Paper
 
-Pairwise relation classification with mirror instances and a combined convolutional neural network - Singapore (<https://www.aclweb.org/anthology/C16-1223>)
+[Pairwise relation classification with mirror instances and a combined convolutional neural network - Singapore](<https://www.aclweb.org/anthology/C16-1223>)
 
 Github: <https://github.com/jefferyYu/Pairwise-relation-classification> (Torch, Lua)

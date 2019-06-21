@@ -1,21 +1,21 @@
 
-## 25. Text Matching
+# 25. Text Matching
 
 Text Matching and Text Entailment both belong to Natural Language Inference (NLI), and sometimes they are very close to each other.
 
-### 25.1 Overview
+## 25.1 Overview
 
 A curated list of papers dedicated to neural text (semantic) matching.
 
 Github: <https://github.com/NTMC-Community/awaresome-neural-models-for-semantic-match>
 
-### 25.2 MatchZoo
+## 25.2 MatchZoo
 
 #### Paper
 
 MatchZoo: A Toolkit for Deep Text Matching-2017 (<https://arxiv.org/abs/1707.07270>)
 
-#### Source
+#### Code
 
-Github: <https://github.com/NTMC-Community/MatchZoo>
+- <https://github.com/NTMC-Community/MatchZoo>
 

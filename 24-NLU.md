@@ -1,31 +1,31 @@
 
-## 24. NLU
+# 24. NLU
 
-### 24.1 Overview
+## 24.1 Overview
 
-### 24.2 Memory Network
+## 24.2 Memory Network
 
 #### Paper
 
-a. Memory Networks - Facebook2015 (<https://arxiv.org/abs/1410.3916>)
+- [Memory Networks - Facebook2015](https://arxiv.org/abs/1410.3916)
 
-b. End-To-End Memory Networks - Facebook2015 (<http://papers.nips.cc/paper/5846-end-to-end-memory-networks.pdf>)
+- [End-To-End Memory Networks - Facebook2015](http://papers.nips.cc/paper/5846-end-to-end-memory-networks.pdf)
 
 #### Article
 
-a. 论文笔记 - Memory Networks 系列 (<https://zhuanlan.zhihu.com/p/32257642?edition=yidianzixun&utm_source=yidianzixun&yidian_docid=0HymGR2b>)
+- [论文笔记 - Memory Networks 系列](https://zhuanlan.zhihu.com/p/32257642?edition=yidianzixun&utm_source=yidianzixun&yidian_docid=0HymGR2b)
 
-#### Source
+#### Code
 
-<https://github.com/brightmart/text_classification> (Tensorflow)
+- <https://github.com/brightmart/text_classification> (Tensorflow)
 
-### 24.3 Recurrent Entity Network
+## 24.3 Recurrent Entity Network
 
 #### Paper
 
-Tracking the World State with Recurrent Entity Networks - Facebook2017 (<https://arxiv.org/abs/1612.03969>)
+[Tracking the World State with Recurrent Entity Networks - Facebook2017](https://arxiv.org/abs/1612.03969)
 
-Structure
+**Structure**:
 
 Input (Context, Question) -> Encoding (BOW with Position Mask or BiRNN) -> 
 
@@ -35,11 +35,11 @@ Output Module (Similarity of Query and Hidden State -> Possibility Distribution 
 
 ![recurrent_entity_network_structure](./image/recurrent_entity_network_01.png)
 
-#### Source
+#### code
 
-a. <https://github.com/facebook/MemNN/tree/master/EntNet-babi> (Torch, Lua)
+- <https://github.com/facebook/MemNN/tree/master/EntNet-babi> (Torch, Lua)
 
-b. <https://github.com/jimfleming/recurrent-entity-networks> (Tensorflow)
+- <https://github.com/jimfleming/recurrent-entity-networks> (Tensorflow)
 
-c. <https://github.com/brightmart/text_classification> (Tensorflow)
+- <https://github.com/brightmart/text_classification> (Tensorflow)
 
