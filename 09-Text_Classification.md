@@ -216,9 +216,46 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 
 - <https://github.com/Cheneng/DPCNN> (PyTorch)
 
-## 9.8 Others
 
-multi_channel_CNN, deep_CNN, LSTM_CNN, Tree-LSTM
+## 9.8 multiChannelCNN & DeepCNN & LSTM-CNN & Tree-LSTM
+
+multiChannelCNN: 同一个Sequence，用多个Embedding，其一是随机初始化，其二是预训练Embedding如Word2Vec或GloVe等，然后Concatenate
+
+DeepCNN: 其实是multiLayerCNN
+
+LSTM-CNN:
+
+Tree-LSTM:
+
+### 9.8.1 multiChannelCNN
+
+#### Code
+
+- <https://github.com/zenRRan/Sentiment-Analysis/blob/master/models/multi_channel_CNN.py> (PyTorch)
+
+#### Article
+
+- [详解文本分类之多通道CNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485817&idx=1&sn=fc0c3a4a5f6afc111b57045ff929cc2b&chksm=eb501deadc2794fcbd1ecbf5f607305294ae8d5e207a33cf0f438ec1aa396585dd1fefeac678&scene=21#wechat_redirect)
+
+
+### 9.8.2 DeepCNN
+
+#### Code
+
+- <https://github.com/zenRRan/Sentiment-Analysis/blob/master/models/Multi_layer_CNN.py> (PyTorch)
+
+#### Article
+
+- [详解文本分类之DeepCNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428&chksm=eb501d1edc2794081a51eba592da28880bb572caf5bd174869211f7c10719b3c59e703f2ef6b&scene=21#wechat_redirect)
+
+
+### 9.8.3 LSTM-CNN
+
+
+### 9.8.4 Tree-LSTM
+
+
+## 9.11 Others
 
 #### Paper
 
@@ -252,8 +289,3 @@ multi_channel_CNN, deep_CNN, LSTM_CNN, Tree-LSTM
 
     **Github**: <https://github.com/yao8839836/text_gcn> (Tensorflow)
 
-#### Practice
-
-- [详解文本分类之DeepCNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428&chksm=eb501d1edc2794081a51eba592da28880bb572caf5bd174869211f7c10719b3c59e703f2ef6b&scene=21#wechat_redirect)
-
-## 9.9 Summary

@@ -5,7 +5,7 @@
 
 #### Code
 
-- <https://github.com/zenRRan/Sentiment-Analysis> (PyTorch)
+- 【Great】<https://github.com/zenRRan/Sentiment-Analysis> (PyTorch)
 
 
 #### Competition
