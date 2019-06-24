@@ -6,7 +6,9 @@
 
 Attention, Transformer, Pointer Network
 
+
 ## 10.2 Seq2Seq & Encoder2Decoder
+
 
 ## 10.3 Attention
 
@@ -87,6 +89,12 @@ Attention: To get important word/sentence among words/sentences
 [Transformer-XL: Attentive Language Models Beyond a Fixed Length Context - Google2019](https://arxiv.org/abs/1901.02860)
 
 该模型对 Transformer 进行了改进，但这一改进没有被 BERT 采用
+
+#### Code
+
+- <https://github.com/kimiyoung/transformer-xl/tree/master/pytorch> (PyTorch)
+
+- <https://github.com/kimiyoung/transformer-xl/tree/master/tf> (Tensorflow)
 
 #### Article
 
