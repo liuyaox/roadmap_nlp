@@ -19,6 +19,10 @@
 
 - [BERT, EMLo and ERNIE Implementation with PaddlePaddle](https://github.com/PaddlePaddle/LARK)
 
+- [Language Models and Contextualised Word Embeddings](http://www.davidsbatista.net/blog/2018/12/06/Word_Embeddings/)
+  
+  对 ELMo, BERT 及其他模型进行了一个简单的综述
+
 
 ## 8.2 EMLO - TOTODO
 
@@ -78,6 +82,10 @@ EMLO 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - <https://github.com/brightmart/text_classification/tree/master/a00_Bert> (Tensorflow)
 
 - [文本分类实战（十）—— BERT 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10241243.html)
+
+- [Multi-label Text Classification using BERT – The Mighty Transformer](https://medium.com/huggingface/multi-label-text-classification-using-bert-the-mighty-transformer-69714fa3fb3d)
+
+    [中文解读](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667790&idx=1&sn=c051c993ee561c7ada8c03b58679f305&chksm=bd4c1add8a3b93cbd06bea5c0885ec21943ad89b597c195512fa9ae4701c385ff5254b90c0f8&mpshare=1&scene=1&srcid=#rd)
 
 #### Further
 

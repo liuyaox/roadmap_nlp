@@ -30,6 +30,28 @@
   
     最全中华古诗词数据库, 接近5.5万首唐诗，26万宋诗，21050首词
 
+- <https://github.com/wb14123/couplet-dataset>
+
+    70万条对联数据库
+
+    [Google Drive 链接](https://drive.google.com/file/d/13cJWWp_ST2Xqt76pEr5ZWa6LVJwGYC4-/view?usp=sharing)
+
+- <https://github.com/andy-yangz/midi_lyric_corpus>
+
+    包含250首中文歌的 midi 文件，以及对应的歌词文本
+
+- <https://github.com/andy-yangz/chinese>
+
+    中文形近字
+
+- <https://github.com/andy-yangz/corpus>
+
+    古典中文語料庫：全唐诗，古籍字频统计，汉语大词典，三国志，中国历史地名辞典，全宋词，全唐五代词，千家诗，唐诗三百首，宋词三百首，日本姓氏，日本战国时代，楚辞，乐府诗集，花间集，诗经，教育部词频统计表
+
+
+
+
+
 
 ## 2.2 Embedding
 
@@ -42,9 +64,15 @@
     100+ Chinese Word Vectors 上百种预训练中文词向量 from 北师大和人大
 
 
-## 2.3 Others
+## 2.3 Practice
 
-https://github.com/thunlp
+- [Working with and analyzing Wikipedia Data](https://github.com/WillKoehrsen/wikipedia-data-science)
+
+
+
+## 2.5 Others
+
+- <https://github.com/thunlp>
 
 
 

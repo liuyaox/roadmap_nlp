@@ -15,13 +15,18 @@
   
   包括Word2Vec基础、Word2Vec衍生及应用、Graph Embedding 共3部分。
 
-- [万物皆Embedding，从经典的word2vec到深度学习基本操作item2vec](https://zhuanlan.zhihu.com/p/53194407)
+- [万物皆Embedding，从经典的word2vec到深度学习基本操作item2vec - 王喆](https://zhuanlan.zhihu.com/p/53194407)
   
   Embedding是DL的基础，介绍了Word2Vec, Item2Vec
 
-- [Language Models and Contextualised Word Embeddings](http://www.davidsbatista.net/blog/2018/12/06/Word_Embeddings/)
-  
-  对 ELMo, BERT 及其他模型进行了一个简单的综述
+- [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
+
+#### Practice
+
+- [How deep learning can represent War and Peace as a vector](https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526)
+
+    中文解读：[神经网络词嵌入：如何将《战争与和平》表示成一个向量？](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485826&idx=2&sn=8b946e7401f239c819623b6447af8bbc&chksm=eb501d11dc279407aa5ebff45db2f9919cbab005efd9a44c854d1c894ebf146e803c8b3ad87a&mpshare=1&scene=1&srcid=0120yNFXmXH4SnfmbfkCLDGc#rd)
+
 
 
 ## 7.2 Word2Vec
@@ -57,6 +62,8 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
 
 #### Practice - TODO
+
+- [使用维基从头训练词嵌入](https://github.com/HoratioJSY/cn-words)
 
 - How to Create a Simple Word2Vec Network and What Are the Input and Output?
 
@@ -112,6 +119,19 @@ GloVe: [Global Vectors for Word Representation](https://nlp.stanford.edu/project
 - To Do Simple Job
 
 - To Create Embedding Layer for Neural Network
+
+
+## 7.4 Character Embedding
+
+#### Paper
+
+- CWE - [Joint learning of character and word embeddings - THU2015](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/ijcai2015_character.pdf)
+
+    中文解读：[Character and Word Embedding读书报告](https://zkq1314.github.io/2018/07/14/Character-and-Word-Embedding%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/)
+
+- [Joint Embeddings of Chinese Words, Characters, and Fine-grained Subcharacter Components - HKUST2017](https://www.aclweb.org/anthology/D17-1027)
+
+
 
 
 ## 7.4 Ngram2Vec

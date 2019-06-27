@@ -3,6 +3,12 @@
 
 ## 20.1 Overview
 
+#### Paper
+
+- [Deep Learning for Sentiment Analysis : A Survey - 2018](https://arxiv.org/abs/1801.07883)
+
+    中文翻译：[就喜欢看综述论文：情感分析中的深度学习](https://cloud.tencent.com/developer/article/1120718)
+
 #### Code
 
 - 【Great】<https://github.com/zenRRan/Sentiment-Analysis> (PyTorch)
