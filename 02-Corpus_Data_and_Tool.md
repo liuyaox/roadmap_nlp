@@ -1,4 +1,4 @@
-# 2. Corpus and Data
+# 2. Corpus, Data and Tool
 
 ## 2.1 Data
 
@@ -51,28 +51,49 @@
 
 
 
-
-
 ## 2.2 Embedding
 
 - [Tencent AI Lab Embedding Corpus for Chinese Words and Phrases](https://ai.tencent.com/ailab/nlp/embedding.html)
 
     This corpus provides 200-dimension vector representations, a.k.a. embeddings, for over 8 million Chinese words and phrases.
   
+- <https://github.com/cliuxinxin/TX-WORD2VEC-SMALL>
+
+    上面腾讯word2vec模型缩小版，包括 5K, 4.5W, 7W, 10W, 50W, 100W, 200W 词汇量。
+
 - <https://github.com/Embedding/Chinese-Word-Vectors>
 
     100+ Chinese Word Vectors 上百种预训练中文词向量 from 北师大和人大
 
 
-## 2.3 Practice
+## 2.3 Tool
+
+- <https://github.com/thunlp>
+
+- <https://github.com/huyingxi/Synonyms>
+
+    中文近义词工具包，基于Word Embedding和字符串编辑距离等。
+
+- <https://github.com/facebookresearch/pytext>
+
+    pytext: A natural language modeling framework based on PyTorch.
+
+    **Documentation**: <https://pytext.readthedocs.io/en/master/>
+
+- <https://github.com/pytorch/text>
+
+    torchtext: Data loaders and abstractions for text and NLP.
+
+    **Documentation**: <https://torchtext.readthedocs.io/en/latest/index.html>
+
+
+## 2.4 Practice
 
 - [Working with and analyzing Wikipedia Data](https://github.com/WillKoehrsen/wikipedia-data-science)
 
 
 
-## 2.5 Others
 
-- <https://github.com/thunlp>
 
 
 
