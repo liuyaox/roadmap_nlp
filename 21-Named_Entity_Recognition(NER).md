@@ -25,3 +25,10 @@
     **Structure**: BiRNN + CRF
     
     **Github**: <https://github.com/shiyybua/NER> (Tensorflow)
+
+
+## 21.5 CNN
+
+- <https://github.com/nlpdz/Medical-Named-Entity-Rec-Based-on-Dilated-CNN>
+
+    基于膨胀卷积神经网络（Dilated Convolutions）训练好的医疗命名实体识别工具
