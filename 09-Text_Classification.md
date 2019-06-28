@@ -13,11 +13,33 @@
 
 - <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
+- <https://github.com/brightmart/ai_law> (Tensorflow)
+
+    All kinds of baseline models for long text classificaiton (text categorization): 
+
+    HAN, TextCNN, DPCNN, CNN-GRU, GRU-CNN, Simple Pooling, Transformer(todo)
+
 #### Practice
 
 - [文本分类实战系列文章](https://www.cnblogs.com/jiangxinyang/p/10207482.html) (Tensorflow)
 
 - [阿里AI工程师教你如何用CNN RNN Attention解决大规模文本分类问题](https://www.sohu.com/a/130492867_642762)
+
+#### Competition
+
+- 【Great！！】<https://github.com/ShawnyXiao/2018-DC-DataGrand-TextIntelProcess>
+
+    2018-DC-“达观杯”文本智能处理挑战赛：冠军 (1st/3131)，任务是通过长文本的字和词的序列数据，判断文本类别。
+
+    特征构建：TFIDF特征，LDA特征，LSI特征，Word2Vec特征
+
+    传统模型：MultinomialNB, BernoulliNB, LinearSVC, GBDT, MLP, LightGBM, LR等 (对模型融合的提升是巨大的)
+
+    深度学习模型：Enhanced GRU(GRU+Capsule), Reinforced Embedding(Capsule+Attention) + Reinforced GRU(GRU+Capsule+Attention), Reinforced CNN(CNN+Capsule+Attention) + Reinforce GRU
+
+    模型技巧：Stacking
+
+
 
 ## 9.2 fastText
 
@@ -131,6 +153,10 @@
 #### Practice
 
 其实就是使用LSTM或BiLSTM按一般方式去处理Sequnce，没什么花样。
+
+- <https://github.com/cjymz886/text_rnn_attention> (Tensorflow)
+
+    嵌入Word2vec词向量的RNN+ATTENTION中文文本分类
 
 ## 9.5 TextRCNN
 
