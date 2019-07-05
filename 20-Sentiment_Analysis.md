@@ -96,6 +96,12 @@ Sentiment Analysis 按粒度可分为3种：
   
     Code for Fine-grained Sentiment Analysis of User Reviews
 
+- <https://github.com/foamliu/Sentiment-Analysis> (PyTorch)
+
+    **YAO**:
+
+    数据示例和解释还挺全，待看……
+
 
 **搜狐2019 内容识别算法大赛**:
 
@@ -166,6 +172,7 @@ Sentiment Analysis 按粒度可分为3种：
 - <https://github.com/nlpjoe/CCF-BDCI-Automotive-Field-ASC-2018> (Tensorflow)
 
     第6名解决方案
+
 
 
 ## 20.2 Deep Learning
