@@ -79,6 +79,8 @@ EMLO 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - Good!!! [Implemention some Baseline Model upon Bert for Text Classification](https://github.com/songyingxin/bert-textclassification) (PyTorch)
 
+- [BERT模型从训练到部署](https://github.com/xmxoxo/BERT-train2deploy)
+
 - <https://github.com/brightmart/text_classification/tree/master/a00_Bert> (Tensorflow)
 
 - [文本分类实战（十）—— BERT 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10241243.html)
@@ -154,7 +156,7 @@ EMLO 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 #### Code
 
-- <https://github.com/zalandoresearch/flair> ()
+- <https://github.com/zalandoresearch/flair> (PyTorch)
 
 
 ## 8.7 ERNIE
