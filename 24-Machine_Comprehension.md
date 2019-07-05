@@ -1,7 +1,12 @@
 
-# 24. NLU
+# 24. Machine Comprehension
 
 ## 24.1 Overview
+
+#### Paper
+
+- [Must-read papers on Machine Reading Comprehension](https://github.com/thunlp/RCPapers)
+
 
 ## 24.2 Memory Network
 
@@ -19,7 +24,25 @@
 
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
-## 24.3 Recurrent Entity Network
+
+## 24.3 R-NET
+
+#### Paper
+
+[R-Net: Machine Reading Comprehension with Self-Matching- MSRA2017](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf )
+
+#### Code
+
+- <https://github.com/NLPLearn/R-net> (Tensorflow)
+
+#### Article
+
+- [Understanding R-Net: Microsoft’s ‘superhuman’ reading AI](https://codeburst.io/understanding-r-net-microsofts-superhuman-reading-ai-23ff7ededd96)
+
+- [《R-NET：MACHINE READING COMPREHENSION》阅读笔记](https://zhuanlan.zhihu.com/p/61502862)
+
+
+## 24.4 Recurrent Entity Network ?
 
 #### Paper
 
