@@ -21,3 +21,24 @@
     <https://github.com/vishnumani2009/siamese-text-similarity> (Tensorflow)
 
     <https://github.com/aditya1503/Siamese-LSTM> (Theano)
+
+
+## 19.3 Code
+
+- 【Great】<https://github.com/RandolphVI/Text-Pairs-Relation-Classification> (Tensorflow)
+
+    Text Pairs (Sentence Level) Classification (Similarity Modeling) Based on Neural Network
+
+    模型有：ABCNN, ANN, CNN, CRNN, FastText, HAN, RCNN, RNN, SANN
+
+    **YAO**:
+
+    模型很丰富，且具有结构可视化结果，待看……
+
+## 19.4 Competition
+
+- <https://github.com/Leputa/CIKM-AnalytiCup-2018> (Tensorflow)
+
+    CIKM AnalytiCup 2018 – 阿里小蜜机器人跨语言短文本匹配算法竞赛 – Rank12方案
+
+    判断不同语言的两个问句语义是否相同。
