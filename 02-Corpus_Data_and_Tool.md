@@ -10,6 +10,10 @@
 
     中文 Wikipedia
 
+- <https://radimrehurek.com/gensim/corpora/wikicorpus.html>
+
+    Gensim中的Corpus from a Wikipedia dump
+
 - <https://github.com/brightmart/nlp_chinese_corpus>
   
     大规模中文自然语言处理语料Large Scale Chinese Corpus for NLP
@@ -48,7 +52,9 @@
 
     古典中文語料庫：全唐诗，古籍字频统计，汉语大词典，三国志，中国历史地名辞典，全宋词，全唐五代词，千家诗，唐诗三百首，宋词三百首，日本姓氏，日本战国时代，楚辞，乐府诗集，花间集，诗经，教育部词频统计表
 
+- <https://github.com/shijiebei2009/CEC-Corpus>
 
+    中文突发事件语料库(Chinese Emergency Corpus) - 上海大学-语义智能实验室
 
 
 ## 2.2 Embedding
@@ -90,6 +96,10 @@
 ## 2.4 Practice
 
 - [Working with and analyzing Wikipedia Data](https://github.com/WillKoehrsen/wikipedia-data-science)
+
+- <https://github.com/taozhijiang/chinese_correct_wsd>
+
+    简易的中文纠错和消歧
 
 
 
