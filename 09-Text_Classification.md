@@ -53,7 +53,9 @@
 
 - **Website**: <https://fasttext.cc/>
 
-- **API**: gensim - <https://radimrehurek.com/gensim/models/fasttext.html>
+#### Library
+
+- gensim: <https://radimrehurek.com/gensim/models/fasttext.html>
 
 #### Practice
 
@@ -76,6 +78,7 @@
 - 还有一种自己搭建模型的方式，不确定是否合理
 
   **Structure**: inputs-->Embedding-->SpatialDropout1D-->GlobalAveragePooling1D-->Dense-->Softmax/Sigmoid  ???
+
 
 ## 9.3 TextCNN
 
@@ -134,6 +137,13 @@
 - <https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras> (Keras)
 
 - <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
+
+#### Article
+
+#### Practice
+
+- [tf18: 根据姓名判断性别](https://blog.csdn.net/u014365862/article/details/53869732)
+
 
 
 ## 9.4 TextRNN
