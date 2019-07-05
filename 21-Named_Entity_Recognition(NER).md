@@ -26,6 +26,14 @@
     
     **Github**: <https://github.com/shiyybua/NER> (Tensorflow)
 
+- <https://github.com/yanwii/ChinsesNER-pytorch> (PyTorch)
+
+    基于BI-LSTM+CRF的中文命名实体识别
+
+- <https://github.com/pumpkinduo/KnowledgeGraph_NER> (Tensorflow)
+
+    中文医学知识图谱命名实体识别，模型有：BiLSTM+CRF, Transformer+CRF
+
 
 ## 21.5 CNN
 
