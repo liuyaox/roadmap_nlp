@@ -75,6 +75,8 @@ Attention: To get important word/sentence among words/sentences
 
 - [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html) (PyTorch)
 
+- <https://github.com/jadore801120/attention-is-all-you-need-pytorch> (PyTorch)
+
 #### Article
 
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
