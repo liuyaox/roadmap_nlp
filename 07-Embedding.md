@@ -27,6 +27,9 @@
 
     中文解读：[神经网络词嵌入：如何将《战争与和平》表示成一个向量？](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485826&idx=2&sn=8b946e7401f239c819623b6447af8bbc&chksm=eb501d11dc279407aa5ebff45db2f9919cbab005efd9a44c854d1c894ebf146e803c8b3ad87a&mpshare=1&scene=1&srcid=0120yNFXmXH4SnfmbfkCLDGc#rd)
 
+- <https://github.com/liuhuanyong/Word2Vector>
+
+    Self complemented word embedding methods using CBOW，skip-Gram，word2doc matrix , word2word matrix.
 
 
 ## 7.2 Word2Vec
@@ -59,7 +62,9 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 #### Library
 
-Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
+- Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
+
+    ```from gensim.models import Word2Vec```
 
 #### Practice - TODO
 
@@ -131,6 +136,11 @@ GloVe: [Global Vectors for Word Representation](https://nlp.stanford.edu/project
 
 - [Joint Embeddings of Chinese Words, Characters, and Fine-grained Subcharacter Components - HKUST2017](https://www.aclweb.org/anthology/D17-1027)
 
+#### Article
+
+- [Character Level NLP](https://www.lighttag.io/blog/character-level-NLP/)
+
+    中文解读：[字符级NLP优劣分析：在某些场景中比词向量更好用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650759154&idx=4&sn=5b823a28c7755427fd0e7e9a1b95dd9f&chksm=871a9b8cb06d129a4c02335834bdda4d41fab65a64d2a98e62043324d71ee3492ddfbf3ca995&mpshare=1&scene=1&srcid=&key=904312b286f32b600567caff21f218e2663f3e0d68c2783d2155443e4c8ccbe1c715ae4f29307bd99d3334aca1dbe21e06ad6a457f5f1281e3d0f1bab37dbf387446ebd309a9b86837f3ca4b0946aa94&ascene=1&uin=MjcwMjE1Nzk1&devicetype=Windows+7&version=62060728&lang=en&pass_ticket=cdB2KHJvar25xdx3wr6MC5zWBYDWn2B6MX5vjW%2B00A2AamGWODR8SWyqgPHStqeH)
 
 
 
@@ -142,16 +152,16 @@ Phrase2Vec???
 
 #### Paper
 
-[Ngram2vec: Learning Improved Word Representations from Ngram Co-occurrence Statistics](http://www.aclweb.org/anthology/D17-1023)
+[Ngram2vec: Learning Improved Word Representations from Ngram Co-occurrence Statistics - RUC2017](http://www.aclweb.org/anthology/D17-1023)
 
 #### Code
 
 - <https://github.com/zhezhaoa/ngram2vec/>
 
 
-## 7.5 Sentence2Vec & Doc2Vec & Paragraph2Vec
+## 7.5 Sentence2Vec
 
-### 7.5.1 Sentence2Vec
+#### Paper
 
 - Universal Sentence Encoder-2018
   
@@ -171,9 +181,16 @@ Phrase2Vec???
 
   **Code**: <https://github.com/easonnie/ResEncoder>
 
-### 7.5.2 Doc2Vec
 
-### 7.5.3 Paragraph2Vec
+## 7.6 Doc2Vec & Paragraph2Vec
+
+#### Paper
+
+[Distributed Representations of Sentences and Documents - Google2014](https://arxiv.org/abs/1405.4053)
+
+#### Library
+
+- gensim: <https://radimrehurek.com/gensim/models/doc2vec.html>
 
 
 ## 7.6 StarSpace
@@ -187,6 +204,10 @@ Phrase2Vec???
 #### code
 
 - <https://github.com/facebookresearch/StarSpace>
+
+#### Article
+
+- [StarSpace（embed all the things嵌入表示）编译和测试](https://blog.csdn.net/sparkexpert/article/details/78957607)
 
 
 ## 7.7 Item2Vec - TOTODO
@@ -214,6 +235,7 @@ Phrase2Vec???
 
 - [深度学习中不得不学的 Graph Embedding 方法](https://zhuanlan.zhihu.com/p/64200072)
 
+
 ### 7.8.2 Node2Vec - TOTODO
 
 #### Paper
@@ -237,6 +259,19 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 - [node2vec: Embeddings for Graph Data](https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef)
 
 
-## 7.9 Others
+## 7.9 Other Embeddings
 
 Wiki2Vec: <https://github.com/idio/wiki2vec>
+
+
+## 7.10 Embeddings Dimensionality Reduction
+
+#### Paper
+
+[Simple & Effective Dimensionality Reduction for Word Embeddings - Microsoft2017](https://arxiv.org/abs/1708.03629)
+
+#### Code
+
+- tools_nlp项目: <https://github.com/liuyaox/tools_nlp/blob/master/Preprocessing/embedding_reduction.py>
+
+    Reference: <https://github.com/vyraun/Half-Size>
