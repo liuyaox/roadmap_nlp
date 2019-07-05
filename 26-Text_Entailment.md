@@ -12,6 +12,14 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 [Wikipedia](https://en.wikipedia.org/wiki/Textual_entailment)
 
+
+#### Code
+
+- <https://github.com/liuhuanyong/ChineseTextualInference>
+
+    中文文本推断项目,包括88万文本蕴含中文文本蕴含数据集的翻译与构建,基于深度学习的文本蕴含判定模型构建.
+
+
 #### Article
 
 - [Textual entailment with TensorFlow](https://www.colabug.com/496258.html)
