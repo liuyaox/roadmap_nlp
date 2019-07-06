@@ -18,6 +18,13 @@ Topic modeling is an unsupervised learning method that assumes each document con
     - LSI Model: <https://radimrehurek.com/gensim/models/lsimodel.html>
     - Author-topic model: <https://radimrehurek.com/gensim/models/atmodel.html>
 
+#### Practice
+
+- <https://github.com/liuhuanyong/TopicCluster>
+
+    基于Kmeans与Lda模型的多文档主题聚类,输入多篇文档,输出每个主题的关键词与相应文本,可用于主题发现与热点分析等应用，如历时话题建模，评论画像等。
+
+
 ## 12.3 LSA
 
 ## 12.4 Summary

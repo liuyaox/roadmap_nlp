@@ -34,6 +34,14 @@
 
     中文医学知识图谱命名实体识别，模型有：BiLSTM+CRF, Transformer+CRF
 
+- [Great]<https://github.com/baiyyang/medical-entity-recognition> (Tensorflow)
+
+    包含传统的基于统计模型(CRF)和基于深度学习(Embedding-Bi-LSTM-CRF)下的医疗数据命名实体识别
+
+- <https://github.com/Nrgeup/chinese_semantic_role_labeling> (Tensorflow)
+
+    基于 Bi-LSTM 和 CRF 的中文语义角色标注
+
 
 ## 21.5 CNN
 

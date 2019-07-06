@@ -29,7 +29,7 @@ Sentiment Analysis 按粒度可分为3种：
     **YAO**: 2017年及之前的论文综述，讲了三种粒度级别的情感分析，Related Tasks(包括Aspect Extraction, Opinion Extraction, Sentiment Composition等)，带有词嵌入的情感分析，以及嘲讽 Detection，Emotion 分析等。
 
 
-#### Code
+#### Practice
 
 - 【Great】<https://github.com/zenRRan/Sentiment-Analysis> (PyTorch)
 
@@ -54,6 +54,18 @@ Sentiment Analysis 按粒度可分为3种：
     基于深度学习（LSTM）的情感分析(京东商城数据)
 
     **YAO**: 任务类型是 **Sentence-Level 的正负二分类**
+
+- <https://github.com/BUPTLdy/Sentiment-Analysis> (Keras)
+
+    Chinese Shopping Reviews sentiment analysis 
+
+- <https://github.com/liuhuanyong/SentenceSentimentClassifier> (Keras)
+
+    基于机器学习与深度学习方法的情感分析算法实现与对比，包括决策树，贝叶斯，KNN, SVM ,MLP, CNN, LSTM实现
+
+- <https://github.com/maowankuiDji/Word2Vec-sentiment>
+
+    基于Word2Vec+SVM对电商的评论数据进行情感分析
 
 
 #### Competition

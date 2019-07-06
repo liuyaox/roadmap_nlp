@@ -27,9 +27,11 @@
 
 #### Competition
 
+**2018-DC-“达观杯”文本智能处理挑战赛**:
+
 - 【Great！！】<https://github.com/ShawnyXiao/2018-DC-DataGrand-TextIntelProcess>
 
-    2018-DC-“达观杯”文本智能处理挑战赛：冠军 (1st/3131)，任务是通过长文本的字和词的序列数据，判断文本类别。
+    冠军 (1st/3131)，任务是通过长文本的字和词的序列数据，判断文本类别。
 
     特征构建：TFIDF特征，LDA特征，LSI特征，Word2Vec特征
 
@@ -39,6 +41,9 @@
 
     模型技巧：Stacking
 
+- <https://github.com/moneyDboat/data_grand> (PyTorch)
+
+    Top10解决方案（10/3830）
 
 
 ## 9.2 fastText

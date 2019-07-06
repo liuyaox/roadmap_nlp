@@ -42,3 +42,7 @@
     CIKM AnalytiCup 2018 – 阿里小蜜机器人跨语言短文本匹配算法竞赛 – Rank12方案
 
     判断不同语言的两个问句语义是否相同。
+
+- <https://github.com/zake7749/CIKM-AnalytiCup-2018> (Tensorflow & Keras)
+
+    [ACM-CIKM] 2nd place solution at CIKM AnalytiCup 2018, a task for determining short text similarities.
