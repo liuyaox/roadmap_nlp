@@ -212,3 +212,4 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 
 - [XLNet:运行机制及和Bert的异同比较](https://zhuanlan.zhihu.com/p/70257427)
 
+- [XLNet太贵？这位小哥在PyTorch Wrapper上做了微缩版的](https://github.com/graykode/xlnet-pytorch)
