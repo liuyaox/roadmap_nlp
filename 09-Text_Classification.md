@@ -276,7 +276,7 @@ Tree-LSTM:
 
 #### Article
 
-- [详解文本分类之多通道CNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485817&idx=1&sn=fc0c3a4a5f6afc111b57045ff929cc2b&chksm=eb501deadc2794fcbd1ecbf5f607305294ae8d5e207a33cf0f438ec1aa396585dd1fefeac678&scene=21#wechat_redirect)
+- [详解文本分类之多通道CNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485817&idx=1&sn=fc0c3a4a5f6afc111b57045ff929cc2b)
 
 
 ### 9.8.2 DeepCNN
@@ -287,7 +287,7 @@ Tree-LSTM:
 
 #### Article
 
-- [详解文本分类之DeepCNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428&chksm=eb501d1edc2794081a51eba592da28880bb572caf5bd174869211f7c10719b3c59e703f2ef6b&scene=21#wechat_redirect)
+- [详解文本分类之DeepCNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428)
 
 
 ### 9.8.3 LSTM-CNN

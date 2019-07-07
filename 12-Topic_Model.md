@@ -14,8 +14,11 @@ Topic modeling is an unsupervised learning method that assumes each document con
 - Gensim
 
     - LDA Model: <https://radimrehurek.com/gensim/models/ldamodel.html>
+
     - LDA Seq Model: <https://radimrehurek.com/gensim/models/ldaseqmodel.html>
+
     - LSI Model: <https://radimrehurek.com/gensim/models/lsimodel.html>
+
     - Author-topic model: <https://radimrehurek.com/gensim/models/atmodel.html>
 
 #### Practice

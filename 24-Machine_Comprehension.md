@@ -7,6 +7,10 @@
 
 - [Must-read papers on Machine Reading Comprehension](https://github.com/thunlp/RCPapers)
 
+- [Neural Machine Reading Comprehension: Methods and Trends - NUDT2019](https://arxiv.org/abs/1907.01118)
+
+    综述：总结机器阅读理解领域已经提出的方法和近期发展趋势。
+
 
 ## 24.2 Memory Network
 
@@ -18,7 +22,7 @@
 
 #### Article
 
-- [论文笔记 - Memory Networks 系列](https://zhuanlan.zhihu.com/p/32257642?edition=yidianzixun&utm_source=yidianzixun&yidian_docid=0HymGR2b)
+- [论文笔记 - Memory Networks 系列](https://zhuanlan.zhihu.com/p/32257642)
 
 #### Code
 

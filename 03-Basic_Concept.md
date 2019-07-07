@@ -13,7 +13,7 @@
 
     **Github**: <https://github.com/UKPLab/emnlp2018-activation-functions>
 
-    **Article**: [21种NLP任务激活函数大比拼：你一定猜不到谁赢了](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650756158&idx=2&sn=90cb49c49be078e7406539eb93561c9e&chksm=871a9040b06d195624b980cd8cac239887ae0b39613a1b7f0418f6228b5e1db00f99577c2d63&mpshare=1&scene=1&srcid=01309YfBobc6Q95D5QZPP7qy#rd)
+    **Article**: [21种NLP任务激活函数大比拼：你一定猜不到谁赢了](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650756158&idx=2&sn=90cb49c49be078e7406539eb93561c9e)
 
 
 ## 3.2 CNN

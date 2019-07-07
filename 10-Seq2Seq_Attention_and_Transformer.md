@@ -35,7 +35,7 @@ Attention, Transformer, Pointer Network
 
 - [斯坦福 CS224n 课程对 attention 机制的介绍 from 1:00:55](https://www.youtube.com/watch?v=XXtpJxZBa2c)
 
-- [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56&chksm=eb501da4dc2794b2a7fa2b052c43e917e8e65467605b20b0cc4a885c60fcf526c4c88635fca1&mpshare=1&scene=1&srcid=01202KvMl6kcXRI6OaMFaLfg#rd)
+- [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
 
 
 ### 10.3.2 Hierarchical Attention Network
@@ -85,7 +85,7 @@ Attention: To get important word/sentence among words/sentences
   
 - [Google 发布的 attention 机制介绍官方视频](https://www.youtube.com/watch?v=rBCqOTEfxvg)
 
-- [BERT大火却不懂Transformer？读这一篇就够了](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651666707&idx=1&sn=2e9149ccdba746eaec687038ce560349&chksm=bd4c1e808a3b97968a15cb3d21032b5394461a1be275476e4fd26563aa28d99be0b798ccee17&token=1915554219&lang=zh_CN&scene=21#wechat_redirect)
+- [BERT大火却不懂Transformer？读这一篇就够了](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651666707&idx=1&sn=2e9149ccdba746eaec687038ce560349)
 
 #### Pratice
 
@@ -95,7 +95,7 @@ Attention: To get important word/sentence among words/sentences
 
 - [一个写对联的 Transformer 序列到序列模型](https://github.com/andy-yangz/couplets_seq2seq_transformer) (Tensorflow)
 
-    解读：[为了写春联，我用Transformer训练了一个“对穿肠”](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667456&idx=1&sn=b2ffe9990f8bf8a242e52face2044b65&chksm=bd4c1b938a3b9285a94c75b1867febba6411f01c4b5954af3e8848d36ecbf84ebfef068c825f&mpshare=1&scene=1&srcid=#rd)
+    解读：[为了写春联，我用Transformer训练了一个“对穿肠”](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667456&idx=1&sn=b2ffe9990f8bf8a242e52face2044b65)
 
 
 ### 10.4.2 Transformer-XL

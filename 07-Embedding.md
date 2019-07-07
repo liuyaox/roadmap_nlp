@@ -25,7 +25,7 @@
 
 - [How deep learning can represent War and Peace as a vector](https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526)
 
-    中文解读：[神经网络词嵌入：如何将《战争与和平》表示成一个向量？](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485826&idx=2&sn=8b946e7401f239c819623b6447af8bbc&chksm=eb501d11dc279407aa5ebff45db2f9919cbab005efd9a44c854d1c894ebf146e803c8b3ad87a&mpshare=1&scene=1&srcid=0120yNFXmXH4SnfmbfkCLDGc#rd)
+    中文解读：[神经网络词嵌入：如何将《战争与和平》表示成一个向量？](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485826&idx=2&sn=8b946e7401f239c819623b6447af8bbc)
 
 - <https://github.com/liuhuanyong/Word2Vector>
 
@@ -140,7 +140,7 @@ GloVe: [Global Vectors for Word Representation](https://nlp.stanford.edu/project
 
 - [Character Level NLP](https://www.lighttag.io/blog/character-level-NLP/)
 
-    中文解读：[字符级NLP优劣分析：在某些场景中比词向量更好用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650759154&idx=4&sn=5b823a28c7755427fd0e7e9a1b95dd9f&chksm=871a9b8cb06d129a4c02335834bdda4d41fab65a64d2a98e62043324d71ee3492ddfbf3ca995&mpshare=1&scene=1&srcid=&key=904312b286f32b600567caff21f218e2663f3e0d68c2783d2155443e4c8ccbe1c715ae4f29307bd99d3334aca1dbe21e06ad6a457f5f1281e3d0f1bab37dbf387446ebd309a9b86837f3ca4b0946aa94&ascene=1&uin=MjcwMjE1Nzk1&devicetype=Windows+7&version=62060728&lang=en&pass_ticket=cdB2KHJvar25xdx3wr6MC5zWBYDWn2B6MX5vjW%2B00A2AamGWODR8SWyqgPHStqeH)
+    中文解读：[字符级NLP优劣分析：在某些场景中比词向量更好用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650759154&idx=4&sn=5b823a28c7755427fd0e7e9a1b95dd9f)
 
 
 

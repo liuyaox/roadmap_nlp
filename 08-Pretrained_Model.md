@@ -9,13 +9,13 @@
 
     包括：ULMFiT, Transformer, BERT, Transformer-XL, GPT-2, ELMo, Flair, StanfordNLP
 
-    中文解读：[8种优秀预训练模型大盘点，NLP应用so easy！](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651669109&idx=2&sn=29b4e45291eac659af2967a1e246aa03&chksm=bd4c65e68a3becf0fdbb58b02a4c517c4dc62a6715763c9997b5139e4f6f96baab3ea850b96a&mpshare=1&scene=1&srcid=&key=10bce1f8c56039bd343495c51671ce60ec99a527555e1ae881a1c0ec560163d18b152a00dc0cac877c76ef4971469ad25afa2728e4e521188ed7a3995c25b21640e3ba391d2425525173a4d3060ea29c&ascene=1&uin=MjcwMjE1Nzk1&devicetype=Windows+7&version=62060833&lang=en&pass_ticket=vdfRef2%2FTgBj6IL%2Bi547vWc7twm2xFzEDaoX9%2Bj2dp9PWcoVadURLaEObEVcUU%2Ff)
+    中文解读：[8种优秀预训练模型大盘点，NLP应用so easy！](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651669109&idx=2&sn=29b4e45291eac659af2967a1e246aa03)
 
 - [Generalized Language Models](https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html)
 
     包括：CoVe, ELMo, Croww-View Training, ULMFiT, GPT, BERT, GPT-2
 
-    中文解读：[上下文预训练模型最全整理：原理、应用、开源代码、数据分享](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485551&idx=1&sn=de0a04647870543fe0b36d024f58429e&chksm=97a0c3bba0d74aade31178413de56de5d130620f8c05b3185ed45d14bcae67bfed1aae129952&mpshare=1&scene=1&srcid=&key=cb3ec8ead4de2b57b1bd58e48635b5ab74e3d34071cef9919ce843b038e2a37413d241edb643bd67abadc9549d0c614eaf71148f71da475e3c5834fa8ba715a665e4b68a5742b2fc25aec426bbca3eda&ascene=1&uin=MjcwMjE1Nzk1&devicetype=Windows+7&version=62060833&lang=en&pass_ticket=vdfRef2%2FTgBj6IL%2Bi547vWc7twm2xFzEDaoX9%2Bj2dp9PWcoVadURLaEObEVcUU%2Ff)
+    中文解读：[上下文预训练模型最全整理：原理、应用、开源代码、数据分享](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485551&idx=1&sn=de0a04647870543fe0b36d024f58429e)
 
 - [BERT, EMLo and ERNIE Implementation with PaddlePaddle](https://github.com/PaddlePaddle/LARK)
 
@@ -87,7 +87,7 @@ EMLO 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - [Multi-label Text Classification using BERT – The Mighty Transformer](https://medium.com/huggingface/multi-label-text-classification-using-bert-the-mighty-transformer-69714fa3fb3d)
 
-    [中文解读](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667790&idx=1&sn=c051c993ee561c7ada8c03b58679f305&chksm=bd4c1add8a3b93cbd06bea5c0885ec21943ad89b597c195512fa9ae4701c385ff5254b90c0f8&mpshare=1&scene=1&srcid=#rd)
+    [中文解读](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667790&idx=1&sn=c051c993ee561c7ada8c03b58679f305)
 
 #### Further
 
@@ -95,15 +95,15 @@ EMLO 是第一个使用预训练模型进行词嵌入的方法，将句子输入
   
   **Paper**: [Pre-Training with Whole Word Masking for Chinese BERT - HIT2019](https://arxiv.org/abs/1906.08101)
 
-- [站在BERT肩膀上的NLP新秀们（PART I）](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489437&idx=4&sn=d1d7ca7e3b4b0a1710252e8d52affe4d&chksm=ebb42f49dcc3a65ffbf86a6016db944a04911a17bd22979cfe17f2da52c2aa0d68833bf5eda8&mpshare=1&scene=1&srcid=&key=67a728f6339a0a1e70d20293822ea56da128bf66230228b7602acf0e31e1e1d7235379d978254cf7172f1639e89d6c2cd984a2205d92963f471a6c99238e89225aa2efc53febb55162ee78dd20023973&ascene=1&uin=MjcwMjE1Nzk1&devicetype=Windows+7&version=62060833&lang=en&pass_ticket=UYja1qL4FjsIjJwYJqT7vvLoCJho0%2Bf7%2FxcTCgiuCuAokcVpCfGb7MuLVdYj2QHK)
+- [站在BERT肩膀上的NLP新秀们（PART I）](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489437&idx=4&sn=d1d7ca7e3b4b0a1710252e8d52affe4d)
   
   给 BERT 模型增加外部知识信息，使其能更好地感知真实世界，主要讲了 ERNIE from Baidu 和 ERNIE from THU
 
-- [站在BERT肩膀上的NLP新秀们（PART II）](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650409996&idx=1&sn=ddf837339e50001be4514fee743bfe9d&chksm=becd8a5689ba03405b3e11c882e376effc407b1ecde745a1df0295008329b5d83c4a6ab5fc1c&scene=21#wechat_redirect)
+- [站在BERT肩膀上的NLP新秀们（PART II）](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650409996&idx=1&sn=ddf837339e50001be4514fee743bfe9d)
   
   主要讲了 XLMs from Facebook, LASER from Facebook, MASS from Microsoft 和 UNILM from Microsoft
 
-- [站在BERT肩膀上的NLP新秀们（PART III）](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650410110&idx=1&sn=310f675cf0cc1e2a1f4cc7b919743bc4&chksm=becd8a2489ba033262daff98227a9887f5a80fba45590b75c9328567258f9420f98423af6e19&mpshare=1&scene=1&srcid=&key=67a728f6339a0a1ede767062b26eef6e4f4dc12c1a81bf2f24d459516816478c0c05b3e3a6625e2e074c356aecc75e63253a21de6491e01d23be22709b9e32605da5ae8c545820a5d0c02a0428e7ed3a&ascene=1&uin=MjcwMjE1Nzk1&devicetype=Windows+7&version=62060833&lang=en&pass_ticket=SWBCv%2Bah0eIEISXOXsPuddmJM8%2Bvbzjxrwkg2kH2Il116bWpQYmtXQht1D9khSa%2B)
+- [站在BERT肩膀上的NLP新秀们（PART III）](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650410110&idx=1&sn=310f675cf0cc1e2a1f4cc7b919743bc4)
   
   主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
 
@@ -169,7 +169,7 @@ EMLO 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 #### Article
 
-- [中文任务全面超越BERT：百度正式发布NLP预训练模型ERNIE](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489050&idx=2&sn=0474c58819363b84b99d0f9ffe868f6a&chksm=ebb42ecedcc3a7d811f4c96598c7d171df4f615963d6016e90e0e50666bde56f36f249c3476c&mpshare=1&scene=1&srcid=&key=59b86e7114b344c3fd931cb3fd1b5a3b6217cf806b6cf11f896b6e50a8837099c84b0619661c3a018aa63edb361d3a9640353699afa2b94ea96a4fbc9ab72df7085fc72c96afdeaaaf5d266e4175924f&ascene=1&uin=MjcwMjE1Nzk1&devicetype=Windows+7&version=62060833&lang=en&pass_ticket=vdfRef2%2FTgBj6IL%2Bi547vWc7twm2xFzEDaoX9%2Bj2dp9PWcoVadURLaEObEVcUU%2Ff)
+- [中文任务全面超越BERT：百度正式发布NLP预训练模型ERNIE](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489050&idx=2&sn=0474c58819363b84b99d0f9ffe868f6a)
 
 
 ## 8.8 CoVe

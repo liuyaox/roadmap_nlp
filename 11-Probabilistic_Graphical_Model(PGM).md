@@ -5,7 +5,8 @@
 
 Hidden Markov Model, Bayesian Network, Conditional Random Field, Maximum Entropy Markov Model, Latent Dirichlet Allocation, LSI
 
-Course: https://www.coursera.org/specializations/probabilistic-graphical-models
+Course: <https://www.coursera.org/specializations/probabilistic-graphical-models>
+
 
 ## 11.2 Bayesian Network (BN)
 
