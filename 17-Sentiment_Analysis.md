@@ -82,7 +82,7 @@ Sentiment Analysis 按粒度可分为3种：
 
     **YAO**:
 
-    a. 实现并修改了 GCAE 和 SynATT 两个模型(论文见20.2)并进行了模型融合，特征包括 SVD 特征、Embedding 特征
+    a. 实现并修改了 GCAE 和 SynATT 两个模型(论文见20.2)并进行了模型融合，特征包括特征化特征(TFIDF+SVD)和 Embedding 特征(Char-level & Word-level)
 
     b. 关键技术有：词向量和字向量联合表示，GCAE，SynATT
 
@@ -185,6 +185,10 @@ Sentiment Analysis 按粒度可分为3种：
 
     第6名解决方案
 
+
+#### Article
+
+- 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
 
 
 ## 20.2 Deep Learning

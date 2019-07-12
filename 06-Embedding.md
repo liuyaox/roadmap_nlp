@@ -34,6 +34,9 @@
 
 ## 7.2 Word2Vec
 
+
+缺点：一个单词对应一个固定的向量，无法很好处理多义词。
+
 #### Paper - OK
 
 - Word2Vec - [Efficient Estimation of Word Representations in Vector Space - Google2013](https://arxiv.org/abs/1301.3781)
@@ -76,17 +79,6 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 可以参考 <https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py> 中gensim的使用
 
-For English
-
-Wikipeida --> Word Embeddings; Wiki2Vec
-
-For Chinese
-
-People's Daily  --> Word Embeddings
-
-缺点：
-
-一个单词对应一个固定的向量，无法很好处理多义词。
 
 #### Further - TODO
 
@@ -227,16 +219,9 @@ Phrase2Vec???
   讲述了item2vec或其理念在分类、推荐召回和语义召回上的应用，以及直接作为深度模型的输入特征。
 
 
-## 7.8 Graph Embedding
+## 7.8 Node2Vec - TOTODO
 
-### 7.8.1 Overview
-
-#### Article
-
-- [深度学习中不得不学的 Graph Embedding 方法](https://zhuanlan.zhihu.com/p/64200072)
-
-
-### 7.8.2 Node2Vec - TOTODO
+Node2Vec belongs to Graph Embedding. Detailed info about Graph Embedding is at <>.
 
 #### Paper
 
@@ -259,7 +244,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 - [node2vec: Embeddings for Graph Data](https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef)
 
 
-## 7.9 Other Embeddings
+## 7.9 Others
 
 Wiki2Vec: <https://github.com/idio/wiki2vec>
 
