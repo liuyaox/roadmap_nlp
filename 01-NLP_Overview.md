@@ -28,8 +28,7 @@
 
 - [Natural Language Processing Tutorial for Deep Learning Researchers](https://github.com/graykode/nlp-tutorial) (PyTorch, Tensorflow, Keras待定中)
 
-  亮点：分别使用PyTorch和Tensorflow，用百行代码搭建各类NLP模型，包括词嵌入、CNN、RNN、LSTM、Attention、Transform、BERT等核心模型，将诸多模型和代码去粗取精，且能够“一键执行”！
-
+  亮点：分别使用PyTorch和Tensorflow，用百行代码搭建各类NLP模型，包括词嵌入、CNN、RNN、LSTM、Attention、Transform、BERT等，将诸多模型和代码去粗取精，且能够“一键执行”！
 
 #### Book
 
@@ -44,6 +43,12 @@
 
     **Github**: <https://github.com/sebastianruder/NLP-progress>
 
+#### Article
+
 - 【Great】[How to solve 90% of NLP problems: a step-by-step guide](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e)
 
     中文解读：[掌握这些套路，你也能解决 90% 的 NLP 问题](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486090&idx=1&sn=1b1da4b81aaff47c5cc4128a4e31889c)
+
+- [How to get started in NLP - 2017](https://towardsdatascience.com/how-to-get-started-in-nlp-6a62aa4eaeff)
+
+

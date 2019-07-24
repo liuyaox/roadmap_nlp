@@ -7,6 +7,12 @@
 
 Statistical Language Models
 
+#### Code
+
+- <https://github.com/codekansas/keras-language-modeling> (Keras)
+
+    Some language modeling tools for Keras
+
 
 ## 5.2 NGram Model
 

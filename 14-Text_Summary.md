@@ -2,3 +2,34 @@
 # 27. Text Summary
 
 ## 27.1 Overview
+
+#### Article
+
+- [NLP中自动生产文摘（auto text summarization）- 2017](https://www.sohu.com/a/197255751_609569)
+
+    类似于综述，较为全面！
+
+
+
+#### Competition
+
+**Byte Cup 2018 国际机器学习竞赛: 英文文章标题自动生成**
+
+- <https://github.com/iwangjian/ByteCup2018> (PyTorch)
+
+    Rank 6
+
+    **Paper**: Paper1, 2, 3
+
+
+## 27.2 Deep Learning
+
+#### Paper
+
+- 1. [Regularizing and Optimizing LSTM Language Models - 2017](https://arxiv.org/abs/1708.02182)
+
+- 2. [Global Encoding for Abstractive Summarization - PKU2018](https://arxiv.org/abs/1805.03989)
+
+- 3. [Fast Abstractive Summarization with Reinforce-Selected Sentence Rewriting - UNC2018](https://arxiv.org/abs/1805.11080)
+
+    **Code**: <https://github.com/ChenRocks/fast_abs_rl> (PyTorch)

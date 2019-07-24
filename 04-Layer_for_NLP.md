@@ -36,7 +36,9 @@
 
 ## 3.2 CNN
 
+
 ## 3.3 RNN
+
 
 ## 3.4 LSTM/GRU
 
@@ -71,6 +73,7 @@ AWD-LSTM 对 LSTM 模型进行了改进，包括在隐藏层间加入 dropout �
   
 - [Github by fastAI](https://github.com/fastai/fastai/blob/master/fastai/text/models/awd_lstm.py)
 
+
 ### 3.4.3 Adversarial LSTM
 
 #### Paper
@@ -83,5 +86,22 @@ AWD-LSTM 对 LSTM 模型进行了改进，包括在隐藏层间加入 dropout �
 
 - [文本分类实战（七）—— Adversarial LSTM 模型](https://www.cnblogs.com/jiangxinyang/p/10208363.html)
 
+
 ### 3.4.4 GRU
+
+
+## 3.5 Other RNN
+
+- QRNN: [Quasi-Recurrent Neural Networks - Salesforce2016](https://arxiv.org/abs/1611.01576)
+
+- SRU: [Simple Recurrent Units for Highly Parallelizable Recurrence - ASAPP2018](https://arxiv.org/abs/1709.02755)
+
+    SRU单元在本质上与QRNN单元很像。从网络构建上看，SRU单元有点像QRNN单元中的一个特例，但是又比QRNN单元多了一个直连的设计。
+
+- IndRNN: [Independently Recurrent Neural Network (IndRNN): Building A Longer and Deeper RNN - Australia2018](https://arxiv.org/abs/1803.04831)
+
+    将IndRNN单元配合ReLu等非饱和激活函数一起使用，会使模型表现出更好的鲁棒性。
+
+- JANET: [The unreasonable effectiveness of the forget gate - Cambridge2018](https://arxiv.org/abs/1804.04849)
+
 

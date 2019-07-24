@@ -19,8 +19,6 @@
   
   Embedding是DL的基础，介绍了Word2Vec, Item2Vec
 
-- [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
-
 #### Practice
 
 - [How deep learning can represent War and Peace as a vector](https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526)
@@ -53,7 +51,19 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - <https://github.com/chrisjmccormick/word2vec_commented/blob/master/word2vec.c> (C, with detailed comments)
 
+- <https://github.com/jdeng/word2vec> (C++)
+
+- <http://deeplearning4j.org/word2vec> (Java)
+
 - <https://github.com/danielfrg/word2vec> (Python)
+
+
+#### Library
+
+- Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
+
+    ```from gensim.models import Word2Vec```
+
 
 #### Article - OK
 
@@ -63,21 +73,16 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/)
 
-#### Library
-
-- Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
-
-    ```from gensim.models import Word2Vec```
 
 #### Practice - TODO
 
 - [使用维基从头训练词嵌入](https://github.com/HoratioJSY/cn-words)
 
-- How to Create a Simple Word2Vec Network and What Are the Input and Output?
+- <https://github.com/AimeeLee77/wiki_zh_word2vec>
 
-- How to Use Word2Vec Tools to Train Your Own Embeddings? Such as gensim.models.word2vec and others. Both English and Chinese.
+    利用Python构建Wiki中文语料词向量模型试验
 
-可以参考 <https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py> 中gensim的使用
+- 参考<https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py>中gensim的使用
 
 
 #### Further - TODO
@@ -178,11 +183,18 @@ Phrase2Vec???
 
 #### Paper
 
-[Distributed Representations of Sentences and Documents - Google2014](https://arxiv.org/abs/1405.4053)
+- Doc2Vec: [Distributed Representations of Sentences and Documents - Google2014](https://arxiv.org/abs/1405.4053)
+
+    和 Word2Vec 一样，该模型也存在两种方法：Distributed Memory(DM) 和 Distributed Bag of Words(DBOW)。DM 试图在给定上下文和段落向量的情况下预测单词的概率。在一个句子或者文档的训练过程中，段落 ID 保持不变，共享着同一个段落向量。DBOW 则在仅给定段落向量的情况下预测段落中一组随机单词的概率。 
+
+#### Code
+
+- Doc2Vec: <https://github.com/klb3713/sentence2vec>
+
 
 #### Library
 
-- gensim: <https://radimrehurek.com/gensim/models/doc2vec.html>
+- Doc2Vec: gensim - <https://radimrehurek.com/gensim/models/doc2vec.html>
 
 
 ## 7.6 StarSpace
@@ -209,8 +221,6 @@ Phrase2Vec???
 [Item2Vec: Neural Item Embedding for Collaborative Filtering - Microsoft2016](https://arxiv.org/abs/1603.04259)
 
 **Keywords**: Collaborative Filtering; Item Similarity; Recommender System; Neural Network Embedding
-
-**要点**: 
 
 #### Article
 
@@ -246,7 +256,96 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 ## 7.9 Others
 
-Wiki2Vec: <https://github.com/idio/wiki2vec>
+### 7.9.1 Wiki2Vec
+
+**Code**: <https://github.com/idio/wiki2vec>
+
+
+### 7.9.2 Tweet2Vec
+
+一些社交文本中的语言结构跟书面语大不相同，作者别出心裁的特意做了一个基于字符组合的模型，其可以基于整个微博环境下复杂、非正常语言的字符串中学习到一种向量化的表达方式。
+
+**Paper**: [Tweet2Vec: Character-Based Distributed Representations for Social Media - CMU2016](https://arxiv.org/abs/1605.03481)
+
+**Code**: <https://github.com/bdhingra/tweet2vec>
+
+
+### 7.9.3 Illustration-2vec
+
+**Code**: <https://github.com/rezoo/illustration2vec>
+
+
+### 7.9.4 cw2Vec
+
+基于笔画的中文词向量算法
+
+**Paper**: [cw2vec: Learning Chinese Word Embeddings with Stroke n-gram Information - Alibaba2018](https://raw.githubusercontent.com/ShelsonCao/cw2vec/master/cw2vec.pdf)
+
+**Code**: <https://github.com/bamtercelboo/cw2vec> (C++)
+
+**Article**: [蚂蚁金服公开最新基于笔画的中文词向量算法](https://www.sohu.com/a/217456047_99940985)
+
+
+### 7.9.5 Lda2Vec
+
+**Paper**: [Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec - 2016](https://arxiv.org/abs/1605.02019)
+
+**Code**: <https://github.com/cemoody/lda2vec>
+
+**Article**: <http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994>
+
+
+### 7.9.6 TopicVec
+
+**Paper**: [Generative Topic Embedding: a Continuous Representation of Documents - Singapore2016](https://arxiv.org/abs/1606.02979)
+
+**Code**: <https://github.com/askerlee/topicvec>
+
+
+### 7.9.7 Entity2Vec
+
+**Paper**: [Fast and space-efficient entity linking in queries - Yahoo201](https://www.dc.fi.udc.es/~roi/publications/wsdm2015.pdf)
+
+**Code**: <https://github.com/ot/entity2vec>
+
+
+### 7.9.8 Str2Vec
+
+**code**: <https://github.com/pengli09/str2vec>
+
+
+### 7.9.9 Author2Vec
+
+**Paper**: [Author2Vec: Learning Author Representations by Combining Content and Link Information - Microsoft2016](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/jawahar16_www-2.pdf)
+
+
+### 7.9.10 Playlist2Vec
+
+**Code**: <https://github.com/mattdennewitz/playlist-to-vec>
+
+
+### 7.9.11 Sense2Vec
+
+**Paper**: [sense2vec - A Fast and Accurate Method for Word Sense Disambiguation In Neural Word Embeddings - 2015](https://arxiv.org/abs/1511.06388)
+
+
+### 7.9.12 Medical2Vec
+
+**Paper**: [Multi-layer Representation Learning for Medical Concepts - Georgia2016](https://arxiv.org/abs/1602.05568)
+
+**Code**: <https://github.com/mp2893/med2vec>
+
+**Code**: <https://github.com/ai-ku/wvec>
+
+
+### 7.9.13 Game2Vec
+
+**Code**: <https://github.com/warchildmd/game2vec>
+
+
+### 7.9.14 Paper2Vec
+
+**Paper**: [Paper2vec: Citation-Context Based Document Distributed Representation for Scholar Recommendation - SYSU2017](https://arxiv.org/abs/1703.06587)
 
 
 ## 7.10 Embeddings Dimensionality Reduction

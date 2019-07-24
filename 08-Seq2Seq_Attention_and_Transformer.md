@@ -17,15 +17,43 @@ Attention, Transformer, Pointer Network
 
 ## 10.3 Attention
 
+Attention的打分机制是关键，表示Encoder的状态a和Decoder的状态s之间的匹配程度，有多种，包括：**加性模型，点积模型，缩放点积模型，双线性模型**，如下图所示：
+
+![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/attetion_scoring.jpg)
+
+**YAO**: 
+
+有时候在一些模型结构中可简化，比如没有s只有a，把a输入至一个小神经网络里得到a的权重，表示关于a的Attention，随后便可与a加权求和，结果可继续输入后续结构中。
+
+Attention是一种理念和思想，核心要点在于：**通过小神经网络计算关于输入a的权重，即Attention**，从而后续结构在使用a时能够加权使用，有所侧重。
+
+依据这一思想，Attention-based模型可以有很多种，可以很简单。
+
+
 ### 10.3.1 Attention
 
 #### Paper
 
-[Neural Machine Translation by Jointly Learning to Align and Translate-2014](https://arxiv.org/abs/1409.0473v2)
+[Neural Machine Translation by Jointly Learning to Align and Translate - Germany2014](https://arxiv.org/abs/1409.0473v2)
+
+**YAO**: Attention打分机制使用的是**加性模型**
 
 #### Code
 
+- <https://github.com/tensorflow/nmt> (Tensorflow)
+
 - <https://github.com/brightmart/text_classification> (Tensorflow)
+
+- <https://github.com/Choco31415/Attention_Network_With_Keras> (Keras)
+
+    **YAO**: **加性模型**，与吴恩达课程练习5-3-1里的Attention实现方式差不多
+
+- [基于Keras的attention实战](https://blog.csdn.net/jinyuan7708/article/details/81909549)
+
+    **YAO**: 大道至简，2种简单的另类Attention。
+    
+    **YAO**: 好像说是：输入(或经简单处理如LSTM处理后)为inputs，inputs输入全连接层(小神经网络)，结果就是Attention，随后与inputs Merge在一起(Merge方式有很多)，再进行后续操作。这就是Attention-Based模型了！？！？
+
 
 #### Article
 
@@ -33,16 +61,18 @@ Attention, Transformer, Pointer Network
 
 - [Attention and Memoryin Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
 
-- [斯坦福 CS224n 课程对 attention 机制的介绍 from 1:00:55](https://www.youtube.com/watch?v=XXtpJxZBa2c)
+- [斯坦福 CS224n 课程对 Attention 机制的介绍 from 1:00:55](https://www.youtube.com/watch?v=XXtpJxZBa2c)
 
 - [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
 
+- [目前主流的attention方法都有哪些？](https://www.zhihu.com/question/68482809)
 
-### 10.3.2 Hierarchical Attention Network
+
+### 10.3.2 Hierarchical Attention Network (HAN)
 
 #### Paper
 
-[Hierarchical Attention Networks for Document Classification](https://www.cs.cmu.edu/~diyiy/docs/naacl16.pdf)
+HAN: [Hierarchical Attention Networks for Document Classification - CMU2016](https://www.cs.cmu.edu/~diyiy/docs/naacl16.pdf)
 
 Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> Sentence Attention -> Softmax
 
@@ -58,7 +88,40 @@ Attention: To get important word/sentence among words/sentences
 
 #### Code
 
+- <https://github.com/richliao/textClassifier> (Keras)
+
 - <https://github.com/brightmart/text_classification> (Tensorflow)
+
+
+### 10.3.3 BahdanauAttention & LuongAttention
+
+#### Paper
+
+- LuongAttention: [Effective Approaches to Attention-based Neural Machine Translation - Stanford2015](https://arxiv.org/abs/1508.04025)
+
+    **YAO**: 貌似使用得较多，TF里有现成的API. Attention打分机制提到了4种：**双线性模型general, 点积模型dot，最初的加性模型concat**以及location-based Attention时**只使用Target Hidden State**(而没有Source Hidden State)，待继续……
+
+- BahdanauAttention: [Neural Machine Translation by Jointly Learning to Align and Translate - Germany2016](https://arxiv.org/abs/1409.0473)
+
+    与LuongAttention长得略微有点不同，但是功能一样。
+
+- Normed BahdanauAttention: [Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks - OpenAI2016](https://arxiv.org/abs/1602.07868)
+
+    在BahdanauAttention类中有一个权重归一化的版本（normed_BahdanauAttention），它可以加快随机梯度下降的收敛速度。在使用时，将初始化函数中的参数normalize设为True即可。
+
+
+### 10.3.4 单调 & 混合 Attention
+
+#### Paper
+
+[Online and Linear-Time Attention by Enforcing Monotonic Alignments - 2017](https://arxiv.org/abs/1704.00784)
+
+    单调注意力机制(Monotonic Attention)，是在原有注意力机制上添加了一个单调约束。该单调约束的内容为：已经被关注过的输入序列，其前面的序列中不再被关注。
+
+
+[Attention-Based Models for Speech Recognition - Poland2015](https://arxiv.org/abs/1506.07503)
+
+    混合注意力机制很强大，比一般的注意力专注的地方更多，信息更丰富。因为混合注意力中含有位置信息，所以它可以在输入序列中选择下一个编码的位置。这样的机制更适用于输出序列大于输入序列的Seq2Seq任务，例如语音合成任务。
 
 
 ## 10.4 Transformer - TOTODO
@@ -115,6 +178,3 @@ Attention: To get important word/sentence among words/sentences
 #### Article
 
 - [Transformer-XL — CombiningTransformers and RNNs Into a State-of-the-art Language Model](https://www.lyrn.ai/2019/01/16/transformer-xl-sota-language-model)
-
-
-## 10.6 Summary

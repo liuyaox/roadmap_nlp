@@ -23,6 +23,8 @@
   
   对 ELMo, BERT 及其他模型进行了一个简单的综述
 
+- [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
+
 
 ## 8.2 EMLO - TOTODO
 
@@ -60,6 +62,8 @@ EMLO 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - <https://github.com/huggingface/pytorch-pretrained-BERT> (PyTorch)
 
 - <https://github.com/google-research/bert> (Tensorflow)
+
+- <https://github.com/codertimo/BERT-pytorch> (PyTorch)
 
 #### Article
 

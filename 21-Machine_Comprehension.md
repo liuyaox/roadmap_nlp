@@ -11,6 +11,20 @@
 
     综述：总结机器阅读理解领域已经提出的方法和近期发展趋势。
 
+#### Competition
+
+**AI Challenger 2018 观点型问题阅读理解**:
+
+- <https://github.com/yuhaitao1994/AIchallenger2018_MachineReadingComprehension> (Tensorflow)
+
+    复赛第8名 解决方案
+
+**法研杯 2019 阅读理解**:
+
+- <https://github.com/circlePi/2019Cail-A-Bert-Joint-Baseline-for-Machine-Comprehension> (PyTorch)
+
+    A pytorch implement of bert joint baseline for machine comprehension task in 2019 cail
+
 
 ## 24.2 Memory Network
 

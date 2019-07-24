@@ -12,5 +12,7 @@
 
     中国法研杯-司法人工智能挑战赛
 
+- <https://github.com/FanhuaandLuomu/ParseLawDocuments>
 
+    对收集的法律文档进行一系列分析，包括根据规范自动切分、案件相似度计算、案件聚类、法律条文推荐等
 

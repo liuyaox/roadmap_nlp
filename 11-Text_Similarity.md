@@ -4,13 +4,14 @@
 
 ## 19.1 Overview
 
+
 ## 19.2 Paper
 
-- [Siamese Recurrent Architectures for Learning Sentence Similarity-2016](https://www.mit.edu/~jonasm/info/MuellerThyagarajan_AAAI16.pdf)
+- [Siamese Recurrent Architectures for Learning Sentence Similarity - 2016](https://www.mit.edu/~jonasm/info/MuellerThyagarajan_AAAI16.pdf)
 
-- [Learning Text Similarity with Siamese Recurrent Networks-2016](http://www.aclweb.org/anthology/W16-16)
+- [Learning Text Similarity with Siamese Recurrent Networks - 2016](http://www.aclweb.org/anthology/W16-16)
 
-    Code: 
+    **Code**: 
     
     <https://github.com/likejazz/Siamese-LSTM> (Keras)
 
@@ -23,7 +24,7 @@
     <https://github.com/aditya1503/Siamese-LSTM> (Theano)
 
 
-## 19.3 Code
+## 19.3 Practice
 
 - 【Great】<https://github.com/RandolphVI/Text-Pairs-Relation-Classification> (Tensorflow)
 
@@ -35,14 +36,56 @@
 
     模型很丰富，且具有结构可视化结果，待看……
 
+- <https://github.com/liuhuanyong/SentenceSimilarity>
+
+    基于同义词词林，知网，指纹，字词向量，向量空间模型的**句子**相似度计算
+
+- <https://github.com/ashengtx/CilinSimilarity>
+
+    **Word** similarity computation based on Tongyici Cilin
+
+- <https://github.com/BiLiangLtd/WordSimilarity>
+
+    基于哈工大同义词词林扩展版的**单词**相似度计算方法
+
+    **Article**: [基于同义词词林扩展版的词语相似度计算](http://codepub.cn/2015/08/04/Based-on-the-extended-version-of-synonyms-Cilin-word-similarity-computing/)
+
+- <https://github.com/PengboLiu/Doc2Vec-Document-Similarity>
+
+    利用Doc2Vec计算文本相似度
+
+- <https://github.com/cjymz886/sentence-similarity>
+
+    对四种句子/文本相似度计算方法进行实验与比较: cosine, cosine+idf, bm25, jaccard
+
+- <https://github.com/liuhuanyong/SiameseSentenceSimilarity>
+
+    SiameseSentenceSimilarity,个人实现的基于Siamese bilstm模型的相似句子判定模型,提供训练数据集和测试数据集.
+
+
 ## 19.4 Competition
 
 - <https://github.com/Leputa/CIKM-AnalytiCup-2018> (Tensorflow)
 
     CIKM AnalytiCup 2018 – 阿里小蜜机器人跨语言短文本匹配算法竞赛 – Rank12方案
 
-    判断不同语言的两个问句语义是否相同。
+    判断不同语言的两个**问句**语义是否相同。
+
+- <https://github.com/ziweipolaris/atec2018-nlp> (Keras, PyTorch)
+
+    ATEC2018 NLP赛题，判断两个**问句**是否意思相同
 
 - <https://github.com/zake7749/CIKM-AnalytiCup-2018> (Tensorflow & Keras)
 
-    [ACM-CIKM] 2nd place solution at CIKM AnalytiCup 2018, a task for determining short text similarities.
+    [ACM-CIKM] 2nd place solution at CIKM AnalytiCup 2018, a task for determining **short text** similarities
+
+**2018atec蚂蚁金服NLP智能客服比赛**:
+
+> 给定客服里用户描述的两句话，判断**问句**相似度
+
+- <https://github.com/zle1992/atec> (Keras)
+
+    Rank 16/2631
+
+- <https://github.com/Lapis-Hong/atec-nlp> (PyTorch)
+

@@ -2,6 +2,10 @@
 
 ## 2.1 Data
 
+- <https://github.com/thunlp/THUOCL>
+
+    THUOCL（THU Open Chinese Lexicon）中文词库，包括以下数据及其词频统计DF值：IT 财经 成语 地名 历史名人 诗词 医学 饮食 法律 汽车 动物
+
 - <https://github.com/niderhoff/nlp-datasets>
   
     Alphabetical list of free/public domain datasets with text data for use in NLP
@@ -56,6 +60,50 @@
 
     中文突发事件语料库(Chinese Emergency Corpus) - 上海大学-语义智能实验室
 
+- <https://github.com/fate233/toutiao-multilevel-text-classfication-dataset>
+
+    今日头条 中文文本多层分类数据集，共2914000条，分布于1000+个多层的类别中
+
+- <https://github.com/howl-anderson/tools_for_corpus_of_people_daily>
+
+    人民日报语料处理工具集 | Tools for Corpus of People's Daily
+
+    **YAO**: 支持分词、NER 两个任务
+
+### 2.1.3 Sentiment Analysis
+
+- <http://alt.qcri.org/semeval2014/>
+
+    SemEval-2014 : Semantic Evaluation Exercises, International Workshop on Semantic Evaluation (SemEval-2014).
+
+    - Task 1: Evaluation of Compositional Distributional Semantic Models on Full Sentences through Semantic Relatedness and Entailment
+    - Task 3: Cross-Level Semantic Similarity
+    - Task 4: Aspect Based Sentiment Analysis (ABSA)
+    - Task 6: Supervised Semantic Parsing of Spatial Robot Commands
+    - Task 8: Broad-Coverage Semantic Dependency Parsing
+    - Task 9: Sentiment Analysis in Twitter
+    - Task 10: Multilingual Semantic Textual Similarity
+
+- <http://www.cs.jhu.edu/~mdredze/datasets/sentiment/>
+
+    Multi-Domain Sentiment Dataset
+
+- <http://www.sananalytics.com/lab/twitter-sentiment/>
+
+    twitter 情感分析数据集
+
+- <https://github.com/Roshanson/TextInfoExp>
+
+    自然语言处理实验（sougou数据集），TF-IDF，文本分类、聚类、词向量、情感识别、关系抽取等
+
+- [中文情感分析语料库大全-带下载地址](https://mlln.cn/2018/10/11/%E4%B8%AD%E6%96%87%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E8%AF%AD%E6%96%99%E5%BA%93%E5%A4%A7%E5%85%A8-%E5%B8%A6%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/)
+
+    中文对话情绪语料，微博情感分析测评数据，中文情感词汇本体，中文褒贬义词词典，商品评论情感语料库
+
+- <https://github.com/z17176/Chinese_conversation_sentiment>
+
+    A Chinese sentiment dataset: sentiment_XS_test.txt contains 11577 instances labeled manually. sentiment_XS_30k.txt contains almost 30k instances labeled automatically.
+
 
 ## 2.2 Embedding
 
@@ -74,37 +122,26 @@
 
 ## 2.3 Tool
 
-- <https://github.com/thunlp>
-
 - <https://github.com/huyingxi/Synonyms>
 
     中文近义词工具包，基于Word Embedding和字符串编辑距离等。
 
-- <https://github.com/facebookresearch/pytext>
+- <https://github.com/KimMeen/Weibo-Analyst>
 
-    pytext: A natural language modeling framework based on PyTorch.
-
-    **Documentation**: <https://pytext.readthedocs.io/en/master/>
-
-- <https://github.com/pytorch/text>
-
-    torchtext: Data loaders and abstractions for text and NLP.
-
-    **Documentation**: <https://torchtext.readthedocs.io/en/latest/index.html>
+    微博评论分析工具, 实现功能: 1.微博评论数据爬取; 2.分词与关键词提取; 3.词云与词频统计; 4.情感分析; 5.主题聚类
 
 
 ## 2.4 Practice
 
 - [Working with and analyzing Wikipedia Data](https://github.com/WillKoehrsen/wikipedia-data-science)
 
-- <https://github.com/taozhijiang/chinese_correct_wsd>
+- 【Great!!!】<https://github.com/taozhijiang/chinese_correct_wsd>
 
     简易的中文纠错和消歧
 
+    **YAO**: 特别重要！几乎可以作为所有 NLP 任务最最开始时的处理！比分词还要靠前！
 
+- <https://github.com/liuhuanyong/WordMultiSenseDisambiguation>
 
-
-
-
-
+    基于百科知识库的中文词语多词义/义项获取与特定句子词语语义消歧
 

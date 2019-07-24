@@ -1,6 +1,8 @@
 
 # 20. Sentiment Analysis
 
+YAO's: <https://github.com/liuyaox/sentiment_analysis> (Keras & PyTorch)
+
 ## 20.1 Overview
 
 Sentiment Analysis 按粒度可分为3种：
@@ -28,6 +30,9 @@ Sentiment Analysis 按粒度可分为3种：
 
     **YAO**: 2017年及之前的论文综述，讲了三种粒度级别的情感分析，Related Tasks(包括Aspect Extraction, Opinion Extraction, Sentiment Composition等)，带有词嵌入的情感分析，以及嘲讽 Detection，Emotion 分析等。
 
+- <https://github.com/yw411/aspect_sentiment_classification>
+
+    Aspect-Level Sentiment Analysis 论文大全，包括ATSA和ACSA
 
 #### Practice
 
@@ -67,6 +72,38 @@ Sentiment Analysis 按粒度可分为3种：
 
     基于Word2Vec+SVM对电商的评论数据进行情感分析
 
+- <https://github.com/hehuihui1994/coarse-fine_emotion_classification>
+
+    结合上下文和篇章特征的多标签情绪分类，微博文本中的句子
+
+    **YAO**: 任务是 **Sentence-Level 的分类**， 使用了 MLKNN，情绪转移，卡方统计特征选择
+
+- 【Great!】<https://github.com/jcsyl/news-analyst> (Keras)
+
+    对舆情事件进行词云展示，对评论进行情感分析和观点抽取。情感分析基于lstm 的三分类，观点抽取基于 AP 算法的聚类和MMR的抽取
+
+    **YAO**: 使用 TFIDF 和 TextRank 提取关键词，使用 Word2Vec 和 LSTM 进行情感三分类，通过 AP 聚类进行观点聚类和抽取！
+
+- <https://github.com/peace195/aspect-based-sentiment-analysis> (Tensorflow)
+
+    Aspect Based Sentiment Analysis
+
+- <https://github.com/Zbored/Chinese-sentiment-analysis>
+
+    gensim-word2vec+svm文本情感分析
+
+    **YAO**: SVM如何与Word Embedding结合: Word Embedding --<求均值>--> Document Embedding --> 直接输入SVM
+
+- <https://github.com/soujanyaporia/aspect-extraction> (Tensorflow)
+
+    Aspect extraction from product reviews - window-CNN+maxpool+CRF, BiLSTM+CRF, MLP+CRF
+
+    **YAO**: 注意，只是Aspect Extraction
+
+- <https://github.com/cedias/Hierarchical-Sentiment> (PyTorch)
+
+    Hierarchical Models for Sentiment Analysis in Pytorch
+
 
 #### Competition
 
@@ -92,17 +129,11 @@ Sentiment Analysis 按粒度可分为3种：
   
     第一名解决方案，统一使用tensorflow和pytorch的一个框架
 
-    **YAO**:
-
-    看起来很杂乱的样子。。。暂时放弃吧
+    **YAO**: 看起来很杂乱的样子。。。暂时放弃吧
 
 - <https://github.com/pengshuang/AI-Comp> (Tensorflow & Keras)
   
     Baseline
-
-    **YAO**:
-
-    a. 
 
 - <https://github.com/xueyouluo/fsauor2018> (Tensorflow)
   
@@ -110,9 +141,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - <https://github.com/foamliu/Sentiment-Analysis> (PyTorch)
 
-    **YAO**:
-
-    数据示例和解释还挺全，待看……
+    **YAO**: 数据示例和解释还挺全，待看……
 
 
 **搜狐2019 内容识别算法大赛**:
@@ -155,6 +184,10 @@ Sentiment Analysis 按粒度可分为3种：
     
     貌似也挺好，继续了BertPretrainedModel
 
+- <https://github.com/rebornZH/2019-sohu-algorithm-competition>
+
+    季军，只有PPT
+
 
 **搜狐2018 内容识别大赛**:
 
@@ -193,17 +226,39 @@ Sentiment Analysis 按粒度可分为3种：
 
 ## 20.2 Deep Learning
 
+#### Paper
+
 - [Aspect Level Sentiment Classification with Deep Memory Network - HIT2016](https://arxiv.org/abs/1605.08900)
+
+    **Code**: 1
 
 - [Effective LSTMs for Target-Dependent Sentiment Classification - HIT2016](https://arxiv.org/abs/1512.01100)
 
+    **Code**: 1
+
 - [Attention-based LSTM for Aspect-level Sentiment Classification - THU2016](https://www.aclweb.org/anthology/D16-1058)(ACAS)
 
-    **Code**: <http://coai.cs.tsinghua.edu.cn/media/files/atae-lstm_uVgRmdb.rar>
+    **Code**: 1, <http://coai.cs.tsinghua.edu.cn/media/files/atae-lstm_uVgRmdb.rar>
+
+- [Neural Sentiment Classification with User & Product Attention - THU2016](http://nlp.csai.tsinghua.edu.cn/~chm/publications/emnlp2016_NSCUPA.pdf)
+
+    **Code**: <https://github.com/cedias/Hierarchical-Sentiment> (PyTorch)
 
 - [Interactive Attention Networks for Aspect-Level Sentiment Classification - PKU2017](https://arxiv.org/abs/1709.00893)
 
+    **Code**: 1, <https://github.com/lpq29743/IAN> (Tensorflow)
+
+- [Recurrent Attention Network on Memory for Aspect Sentiment Analysis - Tencent2017](http://www.cs.cmu.edu/~lbing/pub/emnlp17_aspect_sentiment.pdf)
+
+    **Code**: 1, <https://github.com/lpq29743/RAM> (Tensorflow)
+
+- [Content Attention Model for Aspect Based Sentiment Analysis - UESTC2018](http://delivery.acm.org/10.1145/3190000/3186001/p1023-liu.pdf)
+
+    **Code**: 1
+
 - GCAE: [Aspect Based Sentiment Analysis with Gated Convolutional Networks - FIU2018](https://arxiv.org/abs/1805.07043)(ACSA & ATSA)
+
+    **Code**: 2
 
 - [IARM: Inter-Aspect Relation Modeling with Memory Networks in Aspect-Based Sentiment Analysis - Mexico2018](https://aclweb.org/anthology/D18-1377)
 
@@ -211,15 +266,50 @@ Sentiment Analysis 按粒度可分为3种：
 
 - SynATT: [Effective Attention Modeling for Aspect-Level Sentiment Classification - Singapore2018](https://www.aclweb.org/anthology/C18-1096)(ATSA ? ACSA)
 
+    **Code**: 2
+
 - [Exploiting Document Knowledge for Aspect-level Sentiment Classification - Singapore2018](https://arxiv.org/abs/1806.04346)
   
     **Code**: <https://github.com/ruidan/Aspect-level-sentiment> (Keras)
 
+- [Transformation Networks for Target-Oriented Sentiment Classification - CUHK2018](https://arxiv.org/abs/1805.01086)
+
+    **Code**: <https://github.com/lixin4ever/TNet> (Theano)
+
+- [An Interactive Multi-Task Learning Network for End-to-End Aspect-Based Sentiment Analysis - Singapore2019](https://arxiv.org/abs/1906.06906)
+
+    **Code**: <https://github.com/ruidan/IMN-E2E-ABSA> (Keras)
+
+#### Code
+
+- 1. <https://github.com/AlexYangLi/ABSA_Keras> (Keras)
+
+- 2. <https://github.com/BigHeartC/Al_challenger_2018_sentiment_analysis> (Tensorflow)
+  
 
 ## 20.3 Topic Model
 
 主题模型是一种非监督学习方法
 
+#### Paper
+
 - [Joint sentiment/topic model for sentiment analysis - 2009](http://people.sabanciuniv.edu/berrin/share/LDA/YulanHe-JointSentiment-Topic-2009.pdf)
 
 - [Sentiment Analysis with Global Topics and Local Dependency - 2010](http://www.cs.huji.ac.il/~jeff/aaai10/02/AAAI10-242.pdf)
+
+#### Article
+
+- 【Great】[Twitter数据挖掘及其可视化 - 2017](https://www.hrwhisper.me/twitter-data-mining-and-visualization/)
+
+    使用模型有 LDA, OLDA, WOLDA
+
+    **YAO**: 一直对 LDA/SVD 感兴趣，可以看此文章
+
+
+## 20.4 Rule
+
+规则 + 数据挖掘
+
+#### Article
+
+- [基于词典的中文情感倾向分析算法设计 - 2016](https://cloud.tencent.com/developer/article/1059360)
