@@ -11,6 +11,13 @@
 
     综述：总结机器阅读理解领域已经提出的方法和近期发展趋势。
 
+#### Data
+
+- <https://github.com/ymcui/Chinese-Cloze-RC>
+
+    A Chinese Cloze-style Reading Comprehension Dataset: People Daily & Children's Fairy Tale (CFT)
+
+
 #### Competition
 
 **AI Challenger 2018 观点型问题阅读理解**:
@@ -83,4 +90,17 @@ Output Module (Similarity of Query and Hidden State -> Possibility Distribution 
 - <https://github.com/jimfleming/recurrent-entity-networks> (Tensorflow)
 
 - <https://github.com/brightmart/text_classification> (Tensorflow)
+
+
+## 24.5 Code
+
+- <https://github.com/laddie132/Match-LSTM> (PyTorch)
+
+    **Paper**: 1, 2, R-NET
+
+## 24.6 Paper
+
+- 1. [Machine Comprehension Using Match-LSTM and Answer Pointer - Singapore2016](https://arxiv.org/abs/1608.07905)
+
+- 2. [Reinforced Mnemonic Reader for Machine Reading Comprehension - NUDT2018](https://arxiv.org/abs/1705.02798)
 

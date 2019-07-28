@@ -92,6 +92,8 @@ Attention: To get important word/sentence among words/sentences
 
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
+- <https://github.com/indiejoseph/doc-han-att> (Tensorflow)
+
 
 ### 10.3.3 BahdanauAttention & LuongAttention
 

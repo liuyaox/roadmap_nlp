@@ -36,6 +36,12 @@
 
     模型很丰富，且具有结构可视化结果，待看……
 
+- <https://github.com/yanqiangmiffy/sentence-similarity> (Keras)
+
+    问题句子相似度计算，即给定客服里用户描述的两句话，用算法来判断是否表示了相同的语义。
+
+    **YAO**: 里面提到了5个文本相似度计算的比赛
+
 - <https://github.com/liuhuanyong/SentenceSimilarity>
 
     基于同义词词林，知网，指纹，字词向量，向量空间模型的**句子**相似度计算

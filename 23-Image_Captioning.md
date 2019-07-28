@@ -1,20 +1,15 @@
 
-# 29. Dialogue Systems
+# 23 Image Captioning
 
-## 29.1 Overview
-
-CopyNet
+## 23.1 Overview
 
 
-## 29.2 Paper
-
-- [XQA: A Cross-lingual Open-domain Question Answering Dataset - THU2019]
-
-    **Code**: <https://github.com/thunlp/XQA> (Tensorflow)
+#### Practice
 
 
-## 29.3 Practice
 
-- <https://github.com/keyue123/poemKBQA>
+#### Paper
 
-    基于知识图谱的问答系统
+- [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention - 2016](https://arxiv.org/abs/1502.03044)
+
+    **Code**: <https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/eager/python/examples/generative_examples/image_captioning_with_attention.ipynb> (Tensorflow)

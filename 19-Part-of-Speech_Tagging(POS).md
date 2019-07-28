@@ -4,6 +4,13 @@
 
 ## 22.1 Overview
 
+#### Data
+
+- <https://github.com/liwenzhu/corpusZh>
+
+    一个中文的已标注词性的语料库
+
+
 ## 22.2 Using MEM
 
 Link: <https://github.com/yandexdataschool/nlp_course/blob/master/week05_structured/tagger.ipynb>

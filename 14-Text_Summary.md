@@ -11,6 +11,10 @@
 
 - [当深度学习遇见自动文本摘要 - 2018](hts://cloud.tencent.com/developer/article/1029101)
 
+- [Comprehensive Guide to Text Summarization using Deep Learning in Python - 2019](https://www.analyticsvidhya.com/blog/2019/06/comprehensive-guide-text-summarization-using-deep-learning-python/)
+
+    **中文**: [Python利用深度学习进行文本摘要的综合指南](https://mp.weixin.qq.com/s/gDZyTbM1nw3fbEnU--y3nQ)
+
 
 #### Competition
 

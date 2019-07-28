@@ -1,15 +1,24 @@
 
-# 23 Image Captioning
+# 29. Dialogue Systems
 
-## 23.1 Overview
+## 29.1 Overview
 
-
-#### Practice
-
+CopyNet
 
 
-#### Paper
+## 29.2 Paper
 
-- [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention - 2016](https://arxiv.org/abs/1502.03044)
+- [XQA: A Cross-lingual Open-domain Question Answering Dataset - THU2019]
 
-    **Code**: <https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/eager/python/examples/generative_examples/image_captioning_with_attention.ipynb> (Tensorflow)
+    **Code**: <https://github.com/thunlp/XQA> (Tensorflow)
+
+
+## 29.3 Practice
+
+- <https://github.com/keyue123/poemKBQA>
+
+    基于知识图谱的问答系统
+
+- <https://github.com/liuhuanyong/MusicLyricChatbot>
+
+    基于14W歌曲知识库的问答尝试，功能包括歌词接龙，已知歌词找歌曲以及歌曲歌手歌词三角关系的问答。

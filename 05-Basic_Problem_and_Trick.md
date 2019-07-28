@@ -69,3 +69,7 @@
 - <https://github.com/xylander23/New-Word-Detection>
 
     新词发现算法(NewWordDetection)
+
+- <https://github.com/zhanzecheng/Chinese_segment_augment>
+
+    python3实现互信息和左右熵的新词发现

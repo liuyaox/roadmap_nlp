@@ -2,7 +2,12 @@
 # 30. Application
 
 
-#### Github
+
+#### Law
+
+- <https://github.com/thunlp/LegalPapers>
+
+    Must-read Papers on Legal Intelligence
 
 - <https://github.com/bamtercelboo/Awesome-Law-NLP-Research-Work>
 

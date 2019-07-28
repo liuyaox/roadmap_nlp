@@ -97,6 +97,10 @@
 
 - 1. [Neural Knowledge Acquisition via Mutual Attention between Knowledge Graph and Text - THU2018](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16691/16013)
 
+- 2. [Chinese Relation Extraction with Multi-Grained Information and External Linguistic Knowledge - THU2019](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/acl2019_nre4chinese.pdf)
+
+    **Code**: <https://github.com/thunlp/Chinese_NRE> (PyTorch)
+
 
 ## 16.5 End to End
 
@@ -133,3 +137,7 @@
 - 3. [Joint entity recognition and relation extraction as a multi-head selection problem - Belgium2018](https://arxiv.org/abs/1804.07847)
 
 - 4. [Nugget Proposal Networks for Chinese Event Detection - CAS2018](https://arxiv.org/abs/1805.00249)
+
+- 5. [ointly Multiple Events Extraction via Attention-based Graph Information Aggregation - BIT2018](https://arxiv.org/abs/1809.09078)
+
+
