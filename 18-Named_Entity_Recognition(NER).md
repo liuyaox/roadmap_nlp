@@ -148,6 +148,11 @@
 
     基于BI-LSTM+CRF的中文命名实体识别 Pytorch
 
+- <https://github.com/dkarunakaran/entity_recoginition_deep_learning> (Tensorflow)
+
+    **Article**: [Entity extraction using Deep Learning based on Guillaume Genthial work on NER - 2018](https://medium.com/intro-to-artificial-intelligence/entity-extraction-using-deep-learning-8014acac6bb8)
+
+
 
 #### Article
 

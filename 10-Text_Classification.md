@@ -6,6 +6,10 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 ## 9.1 Overview
 
+#### Paper
+
+- [A Brief Survey of Text Mining: Classification, Clustering and Extraction Techniques - UGA2017](https://arxiv.org/abs/1707.02919)
+
 #### Code
 
 - <https://github.com/brightmart/text_classification> (Tensorflow)
@@ -118,6 +122,18 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 #### Competition
 
 **2017知乎看山杯 多标签 文本分类**:
+
+- <https://github.com/chenyuntc/PyTorchText> (PyTorch)
+
+    Rank 1
+
+    **Article**: [知乎“看山杯” 夺冠记](https://zhuanlan.zhihu.com/p/28923961)
+
+- <https://github.com/Magic-Bubble/Zhihu> (PyTorch)
+
+    Rank 2
+
+    **Article**: [2017知乎看山杯 从入门到第二](https://zhuanlan.zhihu.com/p/29020616)
 
 - <https://github.com/yongyehuang/zhihu-text-classification> (Tensorflow)
 

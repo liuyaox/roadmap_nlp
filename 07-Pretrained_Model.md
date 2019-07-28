@@ -25,6 +25,10 @@
 
 - [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
 
+- [NLP's ImageNet moment has arrived - 2018](https://thegradient.pub/nlp-imagenet/)
+
+    词嵌入已死，语言模型当立
+
 
 ## 8.2 EMLO - TOTODO
 
@@ -217,3 +221,8 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 - [XLNet:运行机制及和Bert的异同比较](https://zhuanlan.zhihu.com/p/70257427)
 
 - [XLNet太贵？这位小哥在PyTorch Wrapper上做了微缩版的](https://github.com/graykode/xlnet-pytorch)
+
+
+## 8.11 Application
+
+- [基于LSTM与TensorFlow Lite，kika输入法是如何造就的 - 2018](https://cloud.tencent.com/developer/article/1118053)

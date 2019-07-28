@@ -89,6 +89,8 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - [Interesting Job: Applying Word2Vec to Recommenders and Advertising](http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/)
 
+- [Using Word2Vec for Music Recommendations](https://towardsdatascience.com/using-word2vec-for-music-recommendations-bb9649ac2484)
+
 - [WSABIE: Scaling Up To Large Vocabulary Image Annotation - Google2017](http://www.thespermwhale.com/jaseweston/papers/wsabie-ijcai.pdf)
   
   **要点**: 指定有限个label，给object打标！
@@ -160,23 +162,32 @@ Phrase2Vec???
 
 #### Paper
 
-- Universal Sentence Encoder-2018
-  
-  **Paper**: <https://arxiv.org/abs/1803.11175>
+- [Skip-Thought Vectors - Toronto2015](https://arxiv.org/abs/1506.06726)
+
+    无监督模型
+
+    **Article**: [My thoughts on Skip-Thoughts](https://medium.com/@sanyamagarwal/my-thoughts-on-skip-thoughts-a3e773605efa)
+
+- [Universal Sentence Encoder - 2018](https://arxiv.org/abs/1803.11175)
 
   **Code**: <https://tfhub.dev/google/universal-sentence-encoder/2>
 
-- Supervised Learning of Universal Sentence Representations from Natural Language Inference Data-2018
-  
-  **Paper**: <https://arxiv.org/abs/1705.02364>
+- [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data - 2018](https://arxiv.org/abs/1705.02364)
 
   **Code**: <https://github.com/facebookresearch/InferSent>
 
-- Shortcut-Stacked Sentence Encoders for Multi-Domain Inference-2017
-  
-  **Paper**: <https://arxiv.org/abs/1708.02312>
+- [Shortcut-Stacked Sentence Encoders for Multi-Domain Inference - 2017](https://arxiv.org/abs/1708.02312)
 
   **Code**: <https://github.com/easonnie/ResEncoder>
+
+
+#### Practice
+
+- [Unsupervised Sentence Representation with Deep Learning](https://blog.myyellowroad.com/unsupervised-sentence-representation-with-deep-learning-104b90079a93)
+
+    介绍对比了3种表征句子的无监督深度学习方法：自编码器，语言模型和Skip-Thought向量模型，并与基线模型Average Word2Vec进行对比。
+
+    **中文**: [简述表征句子的3种无监督深度学习方法 - 2018](http://www.sohu.com/a/229225932_164987)
 
 
 ## 7.6 Doc2Vec & Paragraph2Vec

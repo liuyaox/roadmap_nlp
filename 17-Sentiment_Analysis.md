@@ -313,3 +313,9 @@ Sentiment Analysis 按粒度可分为3种：
 #### Article
 
 - [基于词典的中文情感倾向分析算法设计 - 2016](https://cloud.tencent.com/developer/article/1059360)
+
+#### Practice
+
+- <https://github.com/Azure-rong/Review-Helpfulness-Prediction>
+
+    使用情感词典进行情感分析

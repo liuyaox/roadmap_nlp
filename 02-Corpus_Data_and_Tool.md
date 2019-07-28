@@ -10,6 +10,10 @@
   
     Alphabetical list of free/public domain datasets with text data for use in NLP
 
+    **中文**: [100+个自然语言处理数据集大放送，再不愁找不到数据！](https://www.sohu.com/a/230090656_642762)
+
+- [Datasets for Natural Language Processing - 2017](https://machinelearningmastery.com/datasets-natural-language-processing/)
+
 - <https://dumps.wikimedia.org/zhwiki/>
 
     中文 Wikipedia

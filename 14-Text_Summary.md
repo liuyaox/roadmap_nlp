@@ -9,6 +9,7 @@
 
     类似于综述，较为全面！
 
+- [当深度学习遇见自动文本摘要 - 2018](hts://cloud.tencent.com/developer/article/1029101)
 
 
 #### Competition
@@ -20,6 +21,15 @@
     Rank 6
 
     **Paper**: Paper1, 2, 3
+
+
+#### Practice
+
+- [How To Create Data Products That Are Magical Using Sequence-to-Sequence Models](https://towardsdatascience.com/how-to-create-data-products-that-are-magical-using-sequence-to-sequence-models-703f86a231f8)
+
+    对Github项目进行文本摘要总结
+
+    **中文**: [手把手教你用seq2seq模型创建数据产品 - 2018](https://yq.aliyun.com/articles/560596)
 
 
 ## 27.2 Deep Learning
