@@ -151,6 +151,8 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 
     **Article**: [知乎看山杯 夺冠记](https://zhuanlan.zhihu.com/p/28923961)
 
+    **YAO**: 直接处理**1999标签二分类**，模型输出结构为**Dense(1999, 'sigmoid')**，注意激活是Sigmoid，而非Softmax！详见下面Summary处的c.1
+
 - <https://github.com/Magic-Bubble/Zhihu> (PyTorch)
 
     Rank 2
@@ -169,21 +171,62 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 
     **YAO**: 
     
-    - 问题转化：**1999标签二分类**-->**1999分类**，模型结构(**Softmax**)和Label编码(01向量)都同单标签多分类问题，应用时取概率值Top5
+    - 问题转化：**1999标签二分类**-->**1999分类**，模型输出结构(**Dense(1999, 'softmax')**)和Label编码(01向量)都同单标签多分类问题，应用时取概率值Top5.详见下面Summary处的c.2
 
     - 似有不妥：Softmax会过于突出1999中的某一个值？Sigmoid似乎更适合Multi-label类问题？
+
+#### Practice
+
+- [Guide To Multi-Class Multi-Label Classification With Neural Networks In Python - 2017](https://www.depends-on-the-definition.com/guide-to-multi-label-classification-with-neural-networks/)
+
+    **Chinese**: [keras解决多标签分类问题](https://blog.csdn.net/somtian/article/details/79614570)
+
+    **YAO**: 讲述了为什么多标签多分类问题要使用Sigmoid激活而非Softmax
+
+- [Multi-label classification with Keras - 2018](https://www.pyimagesearch.com/2018/05/07/multi-label-classification-with-keras/)
+
+    **Code**: <https://github.com/ItchyHiker/Multi_Label_Classification_Keras> (Keras)
+
+    **Chinese**: [手把手教你用Keras进行多标签分类](https://blog.csdn.net/tMb8Z9Vdm66wH68VX1/article/details/81090757)
+
+    **YAO**: 对于**3标签多分类**问题，比如标签1衣服有裙子、衬衫、卫衣3种，标签2颜色有红、蓝、黑、白4种，标签3质地有棉、丝2种，则需要使用**mlb=MulLabelBinarizer**处理这种3标签多分类的标签取值，处理后mlb.classes_=3+4+2=9，即问题转化为**9标签二分类**问题！！！(本质理念：把多标签多分类问题，转化为**在每个标签上的二分类问题**！)
+    
+    - 模型搭建：activation='sigmoid'，类别数量=mlb.classes_
+
+    - 模型编译：loss='binary_crossentropy', metrics=['accuracy']，因为目标是将每个输出标签视作一个独立伯努利分布，我们需要独立地惩罚每个输出节点！(而Softmax用于单标签多分类)
+
+    - 模型应用：得到长度为K的概率向量prob，np.argsort(prob)[::-1][:3]即为最有可能的前3个标签(所对应的标签索引)。
+
+    - 思考：3个标签及取值完全平铺开了，各新标签之间独立和并列，但**不用担心Top3标签中会有多个衣服或颜色或质地**，因为训练数据中压根就没有这种模式的数据，模型自然也不会凭空学到这种模式！Top3标签一定是衣服、颜色和质地各有一个！
+
+- [How to train a multi-label Classifier - 2015](https://github.com/keras-team/keras/issues/741)
 
 
 #### Summary
 
-|  | 类型 | 问题转换 | 模型输出结构 | Label编码 | 应用时策略 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| a | 单标签二分类 | \ | Dense(1, activation='sigmoid') | 取值01的标量 | 1个概率值，判断与阈值(一般为0.5)大小关系 |
-| b | 单标签K分类 |  | Dense(K, activation='softmax') | 长度为K取值01且有且只有1个1的一维向量(LabelBinarizer/to_categorical) | K个概率值，取Top1 |
-| c.1 | K标签二分类 | 一个输出: ->K分类 | 同b | 长度为K取值01且不限01个数的一维向量(MultiLabelBinarizer) | K个概率值，取TopM |
-| c.2 | K标签二分类 | M个输出：每个输出都是a | 每个输出，同a | 每个输出，同a |  |
-| d.1 | M标签K分类 | 一个输出: ->MK标签二分类->c->a, ->MK分类->b |  |  |  |
-| d.2 | M标签K分类 | M个输出：每个输出都是b | 每个输出，同b | 每个输出，同b |  |
+<https://github.com/pytorch/tnt>: Simple tools for logging and visualizing, loading and training.
+
+分类问题总结：
+
+- a. 单标签二分类：模型输出结构为Dense(1, activation='sigmoid')，Label编码为取值01的标量，应用时结果为1个概率值，判断其与阈值(一般为0.5)大小关系
+
+- b. 单标签N分类：模型输出结构为Dense(N, activation='softmax')，Label编码为Onehot编码(长度为N取值01且有且只有1个1的一维向量, by LabelBinarizer/to_categorical)，应用时结果为N个概率值，取Top1
+
+- c. N标签二分类
+
+    - c.1 一个输出: **直接处理这类问题，模型输出结构为Dense(N, activation='sigmoid')**，Label编码为Multi-Onehot编码(长度为N取值01且不限01个数的一维向量, by MultiLabelBinarizer)，应用时结果为N个概率值，取TopK
+
+    - c.2 一个输出：问题转化为N分类，类似于b，模型输出结构、Label编码同b，应用时结果同c.1
+
+    - c.3 N个输出：每个输出都是a，模型输出结构、Label编码、应用时结果都同a
+
+- d. N标签M分类
+
+    - d.1 一个输出：问题转化为NM标签二分类，同c.1
+
+    - d.2 一个输出：问题转化为NM分类，同c.2
+
+    - d.3 N个输出：每个输出都是b，模型输出结构、Label编码、应用时结果都同b
 
 
 ## 9.2 fastText
