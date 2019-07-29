@@ -73,21 +73,29 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/)
 
+- [word2vec原理推导与代码分析](http://www.hankcs.com/nlp/word2vec.html)
+
+- [word2vec 中的数学原理详解](https://www.cnblogs.com/peghoty/p/3857839.html)
+
 
 #### Practice - TODO
 
 - [使用维基从头训练词嵌入](https://github.com/HoratioJSY/cn-words)
 
+- [中英文维基百科语料上的Word2Vec实验](http://www.52nlp.cn/%E4%B8%AD%E8%8B%B1%E6%96%87%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E8%AF%AD%E6%96%99%E4%B8%8A%E7%9A%84word2vec%E5%AE%9E%E9%AA%8C)
+
 - <https://github.com/AimeeLee77/wiki_zh_word2vec>
 
     利用Python构建Wiki中文语料词向量模型试验
+
+- [Word2vec Tutorial](https://rare-technologies.com/word2vec-tutorial/)
 
 - 参考<https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py>中gensim的使用
 
 
 #### Further - TODO
 
-- [Interesting Job: Applying Word2Vec to Recommenders and Advertising](http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/)
+- [Applying Word2Vec to Recommenders and Advertising - 2018](http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/)
 
 - [Using Word2Vec for Music Recommendations](https://towardsdatascience.com/using-word2vec-for-music-recommendations-bb9649ac2484)
 
@@ -115,6 +123,8 @@ GloVe: [Global Vectors for Word Representation](https://nlp.stanford.edu/project
 - [理解GloVe模型（Global vectors for word representation）](https://blog.csdn.net/coderTC/article/details/73864097)
   
   Yao：本质上是想让词向量(经一定的函数处理后)具有共现矩阵的性质，方法上使用了较多脑洞和技巧，有种强行凑出来的感觉，而非严谨的数学推导，不过对于想做研究的人来说，可以是一种有启发的借鉴，借鉴的不是想法，而是做法！
+
+- [理解GloVe模型（+总结）](https://blog.csdn.net/u014665013/article/details/79642083)
 
 #### Practice
 

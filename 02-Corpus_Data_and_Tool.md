@@ -74,8 +74,9 @@
 
     **YAO**: 支持分词、NER 两个任务
 
-### 2.1.2 
+- <https://github.com/Roshanson/TextInfoExp>
 
+    自然语言处理实验（sougou数据集），TF-IDF，文本分类、聚类、词向量、情感识别、关系抽取等
 
 ### 2.1.3 Sentiment Analysis
 
@@ -126,6 +127,9 @@
 
     100+ Chinese Word Vectors 上百种预训练中文词向量 from 北师大和人大
 
+- [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
+
+    有Wikipedia+Gigaword, Common Crawl, Twitter三种语料
 
 ## 2.3 Tool
 
@@ -142,13 +146,5 @@
 
 - [Working with and analyzing Wikipedia Data](https://github.com/WillKoehrsen/wikipedia-data-science)
 
-- 【Great!!!】<https://github.com/taozhijiang/chinese_correct_wsd>
 
-    简易的中文纠错和消歧
-
-    **YAO**: 特别重要！几乎可以作为所有 NLP 任务最最开始时的处理！比分词还要靠前！
-
-- <https://github.com/liuhuanyong/WordMultiSenseDisambiguation>
-
-    基于百科知识库的中文词语多词义/义项获取与特定句子词语语义消歧
 

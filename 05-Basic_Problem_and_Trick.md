@@ -50,6 +50,12 @@
 
 ## 4.5 Dependency Parsing
 
+#### Practice
+
+- <https://github.com/Samurais/text-dependency-parser>
+
+    依存关系分析
+
 
 ## 4.6 Small Data
 
@@ -73,3 +79,28 @@
 - <https://github.com/zhanzecheng/Chinese_segment_augment>
 
     python3实现互信息和左右熵的新词发现
+    
+- <https://github.com/Rayarrow/New-Word-Discovery>
+
+    新词发现 基于词频、凝聚系数和左右邻接信息熵
+
+
+## 4.8 Disambiguation
+
+词语纠错和语义消歧
+
+#### Practice
+
+- 【Great!!!】<https://github.com/taozhijiang/chinese_correct_wsd>
+
+    简易的中文纠错和消歧
+
+    **YAO**: 特别重要！几乎可以作为所有 NLP 任务最最开始时的处理！比分词还要靠前！
+
+- <https://github.com/beyondacm/Autochecker4Chinese>
+
+    中文文本错别字检测以及自动纠错 / Autochecker & autocorrecter for chinese
+
+- <https://github.com/liuhuanyong/WordMultiSenseDisambiguation>
+
+    基于百科知识库的中文词语多词义/义项获取与特定句子词语语义消歧

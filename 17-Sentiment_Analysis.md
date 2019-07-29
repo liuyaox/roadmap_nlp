@@ -154,35 +154,23 @@ Sentiment Analysis 按粒度可分为3种：
 
     Baseline
 
-    **YAO**:
-
-    好像还挺好，可以学习一下！
-        
-    任务过程为2个子任务--Aspect 识别 + 对 Aspect 进行情感极性三分类，前者类似于 NER，后者使用了 Attention 机制
+    **YAO**: 好像还挺好，可以学习一下！任务过程为2个子任务--Aspect 识别 + 对 Aspect 进行情感极性三分类，前者类似于 NER，后者使用了 Attention 机制
 
 - <https://github.com/sys1874/seq2seq-model-for-Sohu-2019> (PyTorch)
 
     完全端到端的核心实体识别与情感预测
 
-    **YAO**:
-    
-    任务过程是 End-to-End，模型是 Attention(Seq2Seq)+ELMo+ensemble
+    **YAO**: 任务过程是 End-to-End，模型是 Attention(Seq2Seq)+ELMo+ensemble
 
 - <https://github.com/lmhgithi/2019-sohu-competition>
 
     决赛解决方案ppt、实体 LightGBM 单模代码
 
-    **YAO**:
-    
-    任务类型只包括**Document-Level的二分类**，模型是 LightGBM，使用了一些常规通用常用的方法，如自己训练 word2vec、doc2vec 模型、tfidf 模型
+    **YAO**: 任务类型只包括**Document-Level的二分类**，模型是 LightGBM，使用了一些常规通用常用的方法，如自己训练 word2vec、doc2vec 模型、tfidf 模型
 
 - <https://github.com/LLouice/Sohu2019> (PyTorch)
 
-    **YAO**:
-
-    挺详细的，待看……
-    
-    貌似也挺好，继续了BertPretrainedModel
+    **YAO**: 挺详细的，待看……  貌似也挺好，使用了BertPretrainedModel
 
 - <https://github.com/rebornZH/2019-sohu-algorithm-competition>
 
@@ -234,11 +222,11 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Effective LSTMs for Target-Dependent Sentiment Classification - HIT2016](https://arxiv.org/abs/1512.01100)
 
-    **Code**: 1
+    **Code**: 1     Article: 1
 
 - [Attention-based LSTM for Aspect-level Sentiment Classification - THU2016](https://www.aclweb.org/anthology/D16-1058)(ACAS)
 
-    **Code**: 1, <http://coai.cs.tsinghua.edu.cn/media/files/atae-lstm_uVgRmdb.rar>
+    **Code**: 1, <http://coai.cs.tsinghua.edu.cn/media/files/atae-lstm_uVgRmdb.rar>     Article: 1
 
 - [Neural Sentiment Classification with User & Product Attention - THU2016](http://nlp.csai.tsinghua.edu.cn/~chm/publications/emnlp2016_NSCUPA.pdf)
 
@@ -246,11 +234,15 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Interactive Attention Networks for Aspect-Level Sentiment Classification - PKU2017](https://arxiv.org/abs/1709.00893)
 
-    **Code**: 1, <https://github.com/lpq29743/IAN> (Tensorflow)
+    **Code**: 1, <https://github.com/lpq29743/IAN> (Tensorflow)     Article: 1
 
 - [Recurrent Attention Network on Memory for Aspect Sentiment Analysis - Tencent2017](http://www.cs.cmu.edu/~lbing/pub/emnlp17_aspect_sentiment.pdf)
 
     **Code**: 1, <https://github.com/lpq29743/RAM> (Tensorflow)
+
+- [Learning to Attend via Word-Aspect Associative Fusion for Aspect-based Sentiment Analysis - Singapore2017](https://arxiv.org/abs/1712.05403)
+
+    Article: 1
 
 - [Content Attention Model for Aspect Based Sentiment Analysis - UESTC2018](http://delivery.acm.org/10.1145/3190000/3186001/p1023-liu.pdf)
 
@@ -286,6 +278,13 @@ Sentiment Analysis 按粒度可分为3种：
 
 - 2. <https://github.com/BigHeartC/Al_challenger_2018_sentiment_analysis> (Tensorflow)
   
+
+#### Article
+
+- 【Great】[【论文】基于特定实体的文本情感分类总结（PART I）](https://blog.csdn.net/kaiyuan_sjtu/article/details/89788314)
+
+    讲解对比了4篇论文
+
 
 ## 20.3 Topic Model
 

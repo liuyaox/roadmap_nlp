@@ -7,7 +7,17 @@
 
 ## 19.2 Paper
 
-- [Siamese Recurrent Architectures for Learning Sentence Similarity - 2016](https://www.mit.edu/~jonasm/info/MuellerThyagarajan_AAAI16.pdf)
+- [Siamese Recurrent Architectures for Learning Sentence Similarity - MIT2016](https://www.mit.edu/~jonasm/info/MuellerThyagarajan_AAAI16.pdf)
+
+    **Code**: <https://github.com/LuJunru/Sentences_Pair_Similarity_Calculation_Siamese_LSTM> (Keras)
+
+    **Code**: [基于Simaese LSTM的句子相似度计算](https://blog.csdn.net/android_ruben/article/details/78427068) (Keras)
+
+    **Code**: <https://github.com/eliorc/Medium/blob/master/MaLSTM.ipynb> (Keras)
+
+    **Article**: [How to predict Quora Question Pairs using Siamese Manhattan LSTM - 2017](https://medium.com/mlreview/implementing-malstm-on-kaggles-quora-question-pairs-competition-8b31b0b16a07)
+
+    **Article**: [中文翻译](https://www.jianshu.com/p/f3d0d94a4913?utm_campaign)
 
 - [Learning Text Similarity with Siamese Recurrent Networks - 2016](http://www.aclweb.org/anthology/W16-16)
 

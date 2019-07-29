@@ -94,7 +94,7 @@
     dense_conv = TimeDistributed(Dense(50))(conv_d)
 
     # X1 + X2 -> merge -> TimeDistributed(Dense) -> CRF
-    rnn_cnn_merge = merge([bilstm_d, dense_conv], mode='concat', concat_axis=2)     # merge???
+    rnn_cnn_merge = merge([bilstm_d, dense_conv], mode='concat', concat_axis=2)     # merge??? concatenate?
     dense = TimeDistributed(Dense(class_label_count))(rnn_cnn_merge)
     crf = CRF(class_label_count, sparse_target=False)
     crf_output = crf(dense)
@@ -114,25 +114,39 @@
 
 #### Practice
 
-- <https://github.com/Determined22/zh-NER-TF> (Tensorflow)
+- <https://github.com/stephen-v/zh-NER-keras> (Keras)
 
-    A very simple BiLSTM-CRF model for Chinese Named Entity Recognition 中文命名实体识别  [中文解读](https://blog.csdn.net/liangjiubujiu/article/details/79674606)
+    中文解读：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
 
-- [基于深度学习的命名实体识别详解](https://zhuanlan.zhihu.com/p/29412214)
+- <https://github.com/fangwater/Medical-named-entity-recognition-for-ccks2017> (PyTorch)
 
-    **Structure**: BiRNN + CRF
-    
-    **Github**: <https://github.com/shiyybua/NER> (Tensorflow)
+    A LSTM+CRF model for the seq2seq task for Medical named entity recognition in ccks2017
+
+    **YAO**: PyTorch实现的CRF
 
 - <https://github.com/yanwii/ChinsesNER-pytorch> (PyTorch)
 
     基于BI-LSTM+CRF的中文命名实体识别
 
+- <https://github.com/phychaos/transformer_crf> (Tensorflow)
+
+    Transformer + CRF
+
+- <https://github.com/Determined22/zh-NER-TF> (Tensorflow)
+
+    A very simple BiLSTM-CRF model for Chinese Named Entity Recognition 中文命名实体识别  [中文解读](https://blog.csdn.net/liangjiubujiu/article/details/79674606)
+    
+- <https://github.com/shiyybua/NER> (Tensorflow)
+
+    BiRNN + CRF
+
+    **Article**: [基于深度学习的命名实体识别详解](https://zhuanlan.zhihu.com/p/29412214)
+
 - <https://github.com/pumpkinduo/KnowledgeGraph_NER> (Tensorflow)
 
     中文医学知识图谱命名实体识别，模型有：BiLSTM+CRF, Transformer+CRF
 
-- [Great]<https://github.com/baiyyang/medical-entity-recognition> (Tensorflow)
+- 【Great】<https://github.com/baiyyang/medical-entity-recognition> (Tensorflow)
 
     包含传统的基于统计模型(CRF)和基于深度学习(Embedding-Bi-LSTM-CRF)下的医疗数据命名实体识别
 
@@ -151,7 +165,6 @@
 - <https://github.com/dkarunakaran/entity_recoginition_deep_learning> (Tensorflow)
 
     **Article**: [Entity extraction using Deep Learning based on Guillaume Genthial work on NER - 2018](https://medium.com/intro-to-artificial-intelligence/entity-extraction-using-deep-learning-8014acac6bb8)
-
 
 
 #### Article

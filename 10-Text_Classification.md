@@ -12,21 +12,39 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 #### Code
 
+- 【Great】<https://github.com/yongzhuo/Keras-TextClassification> (Keras)
+
+    中文长文本分类、短句子分类（Chinese Text Classification of Keras NLP, or sentence classify, long or short），字词句向量嵌入层（embeddings）和网络层（graph）构建基类
+    
+    模型：FastText, TextCNN，CharCNN，TextRNN, RCNN, DCNN, DPCNN, VDCNN, CRNN, Bert, Attention, DeepMoji, HAN, CapsuleNet, Transformer-encode, Seq2seq, ENT, DMN
+
+    **Article**: 【Great!】[中文短文本分类实例1-12](https://blog.csdn.net/rensihui)
+
+- <https://github.com/ShawnyXiao/TextClassification-Keras> (Keras)
+
+    Text classification models implemented in Keras, including: FastText, TextCNN, TextRNN, TextBiRNN, TextAttBiRNN, HAN, RCNN, RCNNVariant, etc.
+
+- <https://github.com/AlexYangLi/TextClassification> (Keras)
+
+    All kinds of neural text classifiers implemented by Keras: TextCNN, DCNN, RCNN, HAN, DPCNN, VDCNN, MultiTextCNN, BiLSTM, RNNCNN, CNNRNN.
+
+- 【Great】<https://github.com/649453932/Chinese-Text-Classification-Pytorch> (PyTorch)
+
+    中文文本分类，TextCNN，TextRNN，FastText，TextRCNN，BiLSTM_Attention，DPCNN，基于pytorch，开箱即用
+
+- <https://github.com/songyingxin/TextClassification-Pytorch> (PyTorch)
+
+    Pytorch + NLP, 一份友好的项目实践仓库
+
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
-    模型有：
+    模型：FastText, TextCNN, TextRNN, TextRCNN, BERT, HAN, Attention, Transformer, Dynamic Memory Network, EntityNetwork, BiLSTMTextRelation, TwoCNNTextRelation, BiLSTMTextRelationTwoRNN
 
 - <https://github.com/brightmart/ai_law> (Tensorflow)
 
-    All kinds of baseline models for long text classificaiton (text categorization): 
-
-    HAN, TextCNN, DPCNN, CNN-GRU, GRU-CNN, Simple Pooling, Transformer(todo)
+    All kinds of baseline models for long text classificaiton (text categorization): HAN, TextCNN, DPCNN, CNN-GRU, GRU-CNN, Simple Pooling, Transformer(todo)
 
 - <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
-
-- <https://github.com/649453932/Chinese-Text-Classification-Pytorch> (PyTorch)
-
-    中文文本分类，TextCNN，TextRNN，FastText，TextRCNN，BiLSTM_Attention，DPCNN，基于pytorch，开箱即用。
 
 - <https://github.com/pengming617/text_classification> (Tensorflow)
 
@@ -41,6 +59,8 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 
 #### Article
+
+- 【Great】[在文本分类任务中，有哪些论文中很少提及却对性能有重要影响的tricks](https://www.zhihu.com/question/265357659/answer/578944550)
 
 - 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
 
@@ -191,6 +211,11 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 - <https://github.com/panyang/fastText-for-AI-Challenger-Sentiment-Analysis>
 
     AI Challenger 2018 Sentiment Analysis Baseline with fastText
+
+#### Article
+
+- [文本分类需要CNN？No！fastText完美解决你的需求 - 2017](https://blog.csdn.net/weixin_36604953/article/details/78324834)
+
 
 
 ## 9.3 TextCNN

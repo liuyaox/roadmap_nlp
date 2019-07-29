@@ -31,6 +31,10 @@
 
     Github: <https://github.com/hse-aml/natural-language-processing>
 
+- CMU Neural Nets for NLP 2018
+
+- CS224n Stanford - Natural Language Processing with Deep Learning
+  
 
 #### Code
 
@@ -42,6 +46,10 @@
 #### Book
 
 - [Natural Language Processing with PyTorch: Build Intelligent Language Applications Using Deep LearningNatural Language Processing with PyTorch](https://github.com/joosthub/PyTorchNLPBook)
+
+- Transfer Learning in Natural Language Processing (PPT)
+
+- Writing Code for NLP Research (PPT)
 
 
 #### Website
@@ -71,7 +79,10 @@
 
     **Article**: [15年来，自然语言处理发展史上的8大里程碑](https://cloud.tencent.com/developer/news/329628)
 
+- [观点 | 预见未来：NLP将迎来黄金十年](https://mp.weixin.qq.com/s?__biz=MzAxMzA2MDYxMw==&mid=2651567692&idx=1&sn=8b7c84fbc4ecd9cb566365d8ea2eeb9b)
+
 
 #### Case
 
 - [案例分享|美团如何用NLP完成5大应用场景](https://cloud.tencent.com/developer/article/1107169)
+

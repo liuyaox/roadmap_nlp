@@ -46,6 +46,8 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 - <https://github.com/pengshuang/Text-Similarity> (PyTorch)
 
+    **Article**: [短文本匹配的利器-ESIM](https://zhuanlan.zhihu.com/p/47580077)
+
 #### Practice
 
 - [Python实战——ESIM 模型搭建（keras版）](https://blog.csdn.net/wcy23580/article/details/84990923)

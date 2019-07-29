@@ -14,6 +14,15 @@ NLP领域的任务的输入输出有以下几种：
 
 除7.2外，其他模型结构都是或类似于双胞胎网络(Siamese Network)，2个网络的结构是完全一致的，但其参数，有时共享，有时不同？
 
+#### Paper
+
+- [Neural Network Models for Paraphrase Identification, Semantic Textual Similarity, Natural Language Inference, and Question Answering - Ohio2018](https://arxiv.org/abs/1806.04330)
+
+    研究的模型有：InferSent, SSE, DecAtt, ESIM, PWIM
+
+    **Article**: [基于神经网络模型的释义识别、语义文本相似性、自然语言推理和问题回答](https://blog.csdn.net/u010859324/article/details/80746491)
+
+
 #### Practice
 
 - <https://github.com/brightmart/nlu_sim> (Tensorflow)
@@ -70,6 +79,6 @@ Dot Product作用：To measure the similarity of the predicted response r' and t
 
 #### Paper
 
-[Pairwise relation classification with mirror instances and a combined convolutional neural network - Singapore2016](https://www.aclweb.org/anthology/C16-1223)
+- [Pairwise relation classification with mirror instances and a combined convolutional neural network - Singapore2016](https://www.aclweb.org/anthology/C16-1223)
 
-Github: <https://github.com/jefferyYu/Pairwise-relation-classification> (Torch, Lua)
+    **Code**: <https://github.com/jefferyYu/Pairwise-relation-classification> (Torch, Lua)
