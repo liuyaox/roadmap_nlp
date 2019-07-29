@@ -30,6 +30,12 @@ Sentiment Analysis 按粒度可分为3种：
 
     **YAO**: 2017年及之前的论文综述，讲了三种粒度级别的情感分析，Related Tasks(包括Aspect Extraction, Opinion Extraction, Sentiment Composition等)，带有词嵌入的情感分析，以及嘲讽 Detection，Emotion 分析等。
 
+- 【Great】[Deep learning for Aspect-level Sentiment Classification: Survey, Vision and Challenges - ECNU2019](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8726353&tag=1)
+
+    综述了目前基于深度学习的Aspect Level Sentiment Classification，提供了数据集，并对比了经典的SOTA模型。
+
+    **Code**: <https://github.com/12190143/deep-learning-for-aspect-level-sentiment-classification-baselines> (PyTorch)
+
 - <https://github.com/yw411/aspect_sentiment_classification>
 
     Aspect-Level Sentiment Analysis 论文大全，包括ATSA和ACSA

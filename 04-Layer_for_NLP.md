@@ -34,7 +34,34 @@
     **Article**: [21种NLP任务激活函数大比拼：你一定猜不到谁赢了](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650756158&idx=2&sn=90cb49c49be078e7406539eb93561c9e)
 
 
+#### Article
+
+- [聊一聊深度学习的activation function - 2017](https://zhuanlan.zhihu.com/p/25110450)
+
+- [从ReLU到Sinc，26种神经网络激活函数可视化 - 2017](http://www.dataguru.cn/article-12255-1.html)
+
+- [ReLu(Rectified Linear Units)激活函数 - 2015](https://www.cnblogs.com/neopenx/p/4453161.html)
+
+- [Softmax](http://neuralnetworksanddeeplearning.com/chap3.html#softmax)
+
+
 ## 3.2 CNN
+
+
+#### Tool
+
+- [3D Visualization of a CNN](http://scs.ryerson.ca/~aharley/vis/conv/)
+
+
+#### Article
+
+- [YJango的卷积神经网络——介绍 - 2019](https://zhuanlan.zhihu.com/p/27642620)
+
+- [Convolutional Neural Networks backpropagation: from intuition to derivation - 2016](https://grzegorzgwardys.wordpress.com/2016/04/22/8/)
+
+- [机器学习原来这么有趣！第三章:图像识别【鸟or飞机】？深度学习与卷积神经网络 - 2017](https://zhuanlan.zhihu.com/p/24524583)
+
+- [CNN详解——反向传播过程](https://blog.csdn.net/HappyRocking/article/details/80512587)
 
 
 ## 3.3 RNN
@@ -103,5 +130,3 @@ AWD-LSTM 对 LSTM 模型进行了改进，包括在隐藏层间加入 dropout �
     将IndRNN单元配合ReLu等非饱和激活函数一起使用，会使模型表现出更好的鲁棒性。
 
 - JANET: [The unreasonable effectiveness of the forget gate - Cambridge2018](https://arxiv.org/abs/1804.04849)
-
-

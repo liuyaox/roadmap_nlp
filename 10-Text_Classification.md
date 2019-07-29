@@ -143,11 +143,13 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 **2017知乎看山杯 多标签 文本分类**:
 
+a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Label，20W测试数据，每个样本需要打5个Label
+
 - <https://github.com/chenyuntc/PyTorchText> (PyTorch)
 
     Rank 1
 
-    **Article**: [知乎“看山杯” 夺冠记](https://zhuanlan.zhihu.com/p/28923961)
+    **Article**: [知乎看山杯 夺冠记](https://zhuanlan.zhihu.com/p/28923961)
 
 - <https://github.com/Magic-Bubble/Zhihu> (PyTorch)
 
@@ -157,13 +159,31 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/yongyehuang/zhihu-text-classification> (Tensorflow)
 
-    ye组(第六名) 解题方案
+    Rank 6
 
-- <https://github.com/coderSkyChen/zhihu_kanshan_cup_2017> (keras)
+- <https://github.com/coderSkyChen/zhihu_kanshan_cup_2017> (Keras)
 
-    Rank 9
+    Rank 9  模型和技术：TextCNN, VDCNN, LSTM, C-LSTM, BiLSTM, RCNN, RCNN+Attention(单模型得分最高), Multi-Channel, Multi-Loss
 
     **Article**: 【Great!】[大规模文本分类实践-知乎看山杯总结](http://coderskychen.cn/2017/08/20/zhihucup/)
+
+    **YAO**: 
+    
+    - 问题转化：**1999标签二分类**-->**1999分类**，模型结构(**Softmax**)和Label编码(01向量)都同单标签多分类问题，应用时取概率值Top5
+
+    - 似有不妥：Softmax会过于突出1999中的某一个值？Sigmoid似乎更适合Multi-label类问题？
+
+
+#### Summary
+
+|  | 类型 | 问题转换 | 模型输出结构 | Label编码 | 应用时策略 |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| a | 单标签二分类 | \ | Dense(1, activation='sigmoid') | 取值01的标量 | 1个概率值，判断与阈值(一般为0.5)大小关系 |
+| b | 单标签K分类 |  | Dense(K, activation='softmax') | 长度为K取值01且有且只有1个1的一维向量(LabelBinarizer/to_categorical) | K个概率值，取Top1 |
+| c.1 | K标签二分类 | 一个输出: ->K分类 | 同b | 长度为K取值01且不限01个数的一维向量(MultiLabelBinarizer) | K个概率值，取TopM |
+| c.2 | K标签二分类 | M个输出：每个输出都是a | 每个输出，同a | 每个输出，同a |  |
+| d.1 | M标签K分类 | 一个输出: ->MK标签二分类->c->a, ->MK分类->b |  |  |  |
+| d.2 | M标签K分类 | M个输出：每个输出都是b | 每个输出，同b | 每个输出，同b |  |
 
 
 ## 9.2 fastText

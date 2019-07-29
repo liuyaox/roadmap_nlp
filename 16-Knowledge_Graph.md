@@ -8,7 +8,11 @@
 
 - [COMET: Commonsense Transformers for Automatic Knowledge Graph Construction - Allen2019](https://arxiv.org/abs/1906.05317)
 
-    中文解读: [ACL 2019 | AI2等提出自动知识图谱构建模型COMET，接近人类表现](https://mp.weixin.qq.com/s/TKGQxPBA1XVNxR4nVtl8mg)
+    **Chinese**: [ACL 2019 | AI2等提出自动知识图谱构建模型COMET，接近人类表现](https://mp.weixin.qq.com/s/TKGQxPBA1XVNxR4nVtl8mg)
+
+- [How much is a Triple? Estimating the Cost of Knowledge Graph Creation - Germany2018](http://ceur-ws.org/Vol-2180/ISWC_2018_Outrageous_Ideas_paper_10.pdf)
+
+    **Chinese**: [67 亿美金搞个图，创建知识图谱的成本有多高你知道吗？](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650757216&idx=1&sn=aea53429d390c783a7bf2a961da05c63)
 
 
 #### Code
@@ -139,5 +143,3 @@
 - 4. [Nugget Proposal Networks for Chinese Event Detection - CAS2018](https://arxiv.org/abs/1805.00249)
 
 - 5. [ointly Multiple Events Extraction via Attention-based Graph Information Aggregation - BIT2018](https://arxiv.org/abs/1809.09078)
-
-

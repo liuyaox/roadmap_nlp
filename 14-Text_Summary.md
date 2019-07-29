@@ -47,3 +47,7 @@
 - 3. [Fast Abstractive Summarization with Reinforce-Selected Sentence Rewriting - UNC2018](https://arxiv.org/abs/1805.11080)
 
     **Code**: <https://github.com/ChenRocks/fast_abs_rl> (PyTorch)
+
+- 4. [Fine-tune BERT for Extractive Summarization - Edinburgh2019](https://arxiv.org/abs/1903.10318)
+
+    **Code**: <https://github.com/nlpyang/bertsum> (PyTorch)

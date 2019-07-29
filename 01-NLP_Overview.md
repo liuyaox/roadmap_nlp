@@ -8,10 +8,6 @@
 
     **Github**: <https://github.com/Tixierae/deep_learning_NLP> (Keras)
 
-- [Recent Advances in Deep Learning: An Overview - Bangladesh2018](https://arxiv.org/abs/1807.08169v1)
-
-    这篇综述论文列举了近年来深度学习的重要研究成果，从方法、架构、正则化、优化技术等方面进行概述，对于刚入门的NLPer是一份不错的参考资料。
-
 - [Paper reading list in natural language processing](https://github.com/iwangjian/Paper-Reading)
 
 - <https://github.com/Kyubyong/nlp_tasks>
