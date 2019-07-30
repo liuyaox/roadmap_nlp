@@ -4,6 +4,10 @@
 
 ## 19.1 Overview
 
+#### Tool
+
+- [百度短文本相似度](http://ai.baidu.com/tech/nlp/simnet)
+
 
 ## 19.2 Paper
 

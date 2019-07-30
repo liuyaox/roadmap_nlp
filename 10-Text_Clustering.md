@@ -10,10 +10,8 @@
 
 
 
-## 11.2 Code
+## 11.2 Paper
 
-- <https://github.com/zqhZY/short_text_cnn_cluster> (Keras)
+- [Self-Taught convolutional neural networks for short text clustering - CAS2017](https://arxiv.org/abs/1701.00185)
 
-    Implement of paper Self-Taught Convolutional Neural Networks for Short Text Clustering using Keras.
-
-    **Paper**: [Self-Taught convolutional neural networks for short text clustering - CAS2017](https://arxiv.org/abs/1701.00185)
+    **Code**: <https://github.com/zqhZY/short_text_cnn_cluster> (Keras)

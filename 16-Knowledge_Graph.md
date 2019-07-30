@@ -59,6 +59,10 @@
 
     知识表示相关学习算法
 
+- <https://github.com/liuhuanyong/ProductKnowledgeGraph>
+
+    基于京东网站的商品上下级概念、商品品牌之间关系和商品描述维度等知识库，可以支持商品属性库构建、商品销售问答、品牌物品生产等知识查询服务，也可用于情感分析等下游应用。
+
 
 ## 16.3 Entity Extraction
 
@@ -106,7 +110,7 @@
     **Code**: <https://github.com/thunlp/Chinese_NRE> (PyTorch)
 
 
-## 16.5 End to End
+## 16.5 End-to-end
 
 #### Practice
 

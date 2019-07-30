@@ -47,7 +47,7 @@ e.g. input: "How much is the computer ? EOS Price of laptop", where 'EOS' is a s
 
 ## 18.3 twoCNNTextRelation - OK
 
-**Structure**: Seq1(Input1 -> Embedding -> TextCNN) + Seq2(Input2 -> Embedding -> TextCNN) -> Concatenate -> Softmax
+**Structure**: (Input1 -> Embedding -> TextCNN) * 2 -> Concatenate -> Softmax
 
 产品词关系项目中使用的模型与此类似，在此基础上增加了第3个Input（结构化输入）。
 

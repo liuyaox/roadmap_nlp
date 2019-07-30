@@ -136,7 +136,7 @@ Attention: To get important word/sentence among words/sentences
 
 #### Code
 
-- <https://github.com/brightmart/text_classification> (Tensorflow)
+- <https://github.com/CyberZHG/keras-transformer> (Keras)
 
 - [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html) (PyTorch)
 

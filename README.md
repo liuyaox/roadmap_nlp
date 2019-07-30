@@ -1,103 +1,125 @@
+# Roadmap for NLP
 
+## 1. NLP Overview
 
-# Part I Basic and Overview
+Paper, Course, Code, Book, Website, Article, Case, etc.
 
-## 01. Machine Learning, Deep Learning and NLP Overview
+## 2. Corpus, Data and Tool
 
-<>
+Data, Embedding, Tool, Practice.
 
-## 02. Corpus and Data
+## 3. Traditional Method
 
-<>
+TFIDF, TextRank, AP Clustering, etc.
 
-# Part II NLP Basic in Details
+## 4. Basic Problem
 
-## 06. Concept and Method
+Vocabulary, OOV, Segmentation, Dependency Parsing, Small Data, New Word, Disambiguation, etc.
 
-<>
+## 5. Language Model
 
-## 07. Embedding
+NGram, BoW, NNLM, Char-level Model, etc.
 
-<>
+## 6. Embedding
 
-## 08. Language Model
+Models: Word2Vec, GloVe, Char-level Embedding, Ngram2Vec, Sentence2Vec, Doc2Vec, Paragraph2Vec, StarSpace, Item2Vec, Node2Vec, Wiki2Vec, Tweet2Vec, etc.
 
-<>
+Embeddings Dimensionality Reduction.
 
-## 09. Text Classification
+## 7. Pretrained Model
 
-<>
+Models: EMLo, BERT, GPT1, GPT2, ULMFit, Flair, ERNIE, CoVe, XLM, XLNet, etc.
 
-## 10. Seq2Seq, Attention and Transformer
+## 8. Seq2Seq, Attention and Transformer
 
-<>
+Models: Seq2Seq, Encoder-Decoder, Attention, HAN, LuongAttention, Transformer, Transformer-XL, etc.
 
-## 11. Probabilistic Graphical Models (PGM)
+## 9. Transfer Learning and Multi-task Learning
 
-<>
+Transfer Learning, Multi-task Learning.
 
-## 12. Topic Models
+## 10. Text Classification
 
-<>
+Overview: Paper, Code, Practice, Competition, Article, Library, Multi-label Classification
 
-## 13. Transfer Learning and Multi-task Learning
+Models: FastText, TextCNN, TextRNN, TextRCNN, VDCNN, DRNN, DPCNN, multiChannelCNN, DeepCNN, LSTM-CNN, Tree-LSTM, etc.
 
-<>
+Traditional Method: 
 
-## 15. Generative Model
+## 10. Text Clustering
 
-<>
+Overview: Paper, Code, Practice, Article, etc.
+
+## 11. Text Similarity
+
+Overview: Paper, Tool, Practice, Competition
+
+## 12. Text Matching
+
+Overview: Paper
+
+Models: MatchZoo
+
+## 13. Text Entailment
+
+Overview: Code, Article, Book, etc.
+
+Models: ESIM, ABCNN, etc.
+
+## 14. Text Summary
+
+Overview: Article, Competition, Practice
+
+Models: Deep Learning Papers
+
+## 15. Pairwise Input
+
+Overview: Paper, Practice, etc.
+
+Models: BiLSTMTextRelation, twoCNNTextRelation, BiLSTMTextRelationTwoRNN, etc.
 
 ## 16. Knowledge Graph
 
-<>
+Overview: Papaer, Code, Competition, etc.
 
-# Part III NLP Application
+Models: Representation Learning, Entity Extraction, Relation Extraction, End-to-end, etc.
 
-## 18. Pairwise Input
+## 17. Sentiment Analysis
 
-<>
+Overview: Paper, Practice, Competition, Article, etc.
 
-## 19. Text Similarity
+Models: Deep Learning models, Topic Model, Rule
 
-<>
+## 18. Named Entity Recognition (NER)
 
-## 20. Sentiment Analysis
+Overview: Article
 
-<>
+Models: HMM&CRF, RNN, RNN+CRF, CNN, etc.
 
-## 21. Named Entity Recognition (NER)
+## 19. Part-of-Speech Tagging (POS)
 
-<>
+Models: MEM, RNN, RNN+CRF, etc.
 
-## 22. Part-of-Speech Tagging (POS)
+## 20. Machine Translation
 
-<>
+Overview: Paper
 
-## 23. Machine Translation
+## 21. Machine Comprehension
 
-<>
+Overivew: Paper, Data, Competition
 
-## 24. NLU
+Models: Memory Network, R-NET, Recurrent Entity Network, etc.
 
-<>
+## 22. Dialogue Systems
 
-## 25. Text Matching
+Overview: Paper, Practice, Competition
 
-<>
+## 23. Image Captioning
 
-## 26. Text Entailment
+Overview: Paper
 
-<>
+## 24. Other Application
 
-## 27. Text Summary
+Law: Paper, Practice
 
-<>
-
-## 28. Information Extraction
-
-<>
-
-## 29. Dialogue Systems
-
-<>
+etc.

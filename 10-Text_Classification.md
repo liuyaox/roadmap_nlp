@@ -10,6 +10,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - [A Brief Survey of Text Mining: Classification, Clustering and Extraction Techniques - UGA2017](https://arxiv.org/abs/1707.02919)
 
+
 #### Code
 
 - 【Great】<https://github.com/yongzhuo/Keras-TextClassification> (Keras)
@@ -46,9 +47,11 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
+    模型：TextCNN, CharCNN, BiLSTM, BiLSTM+Attention, TextRCNN, adversarialLSTM, Transformer, ELMo, BERT
+
 - <https://github.com/pengming617/text_classification> (Tensorflow)
 
-    文本分类的许多方法，主要涉及到TextCNN，TextRNN, LEAM, Transformer，Attention, fasttext, HAN等
+    模型：TextCNN，TextRNN, LEAM, Transformer，Attention, fasttext, HAN等
 
 
 #### Practice
@@ -60,9 +63,29 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 #### Article
 
+- 【Great】[用深度学习（CNN RNN Attention）解决大规模文本分类问题 - 综述和实践 - 2017](https://zhuanlan.zhihu.com/p/25928551)
+
+    **YAO**: 类似于综述，有传统方法和深度学习方法，还有经验思考
+
 - 【Great】[在文本分类任务中，有哪些论文中很少提及却对性能有重要影响的tricks](https://www.zhihu.com/question/265357659/answer/578944550)
 
 - 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
+
+    **YAO**:
+
+    | Layer | Function |
+    | :-: | :-: |
+    | LSTM/GRU | 解决依赖问题，适合第一层建模，缺点是慢 |
+    | CNN | 配合池化抓取关键词特征 |
+    | Capsules | 可以替代CNN，效果一般优于CNN |
+    | MaxPooling | 只要关键特征，其他全部过滤 |
+    | Attention | 突出关键特征，但难以过滤掉所有非重点特征，类似于池化机制 |
+
+    由此，可得出以下若干小结论：
+
+    - 对于短文本，LSTM/GRU+Capsules是一个不错的模型
+
+    - 对于长文本，只使用CNN几乎没法用，最好在前面加一层LSTM/GRU，以及Attention机制
 
 
 #### Library
@@ -78,9 +101,9 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 > **单标签多分类**问题，共有19种分类，原始数据是字id序列和词id序列
 
-- 【Great！】<https://github.com/ShawnyXiao/2018-DC-DataGrand-TextIntelProcess>
+- <https://github.com/ShawnyXiao/2018-DC-DataGrand-TextIntelProcess>
 
-    冠军 (1st/3131)，任务是通过长文本的字和词的序列数据，判断文本类别。
+    Top1    任务是通过长文本的字和词的序列数据，判断文本类别。
 
     特征构建：TFIDF特征，LDA特征，LSI特征，Word2Vec特征
 
@@ -94,18 +117,21 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - 【Great！】<https://github.com/nlpjoe/daguan-classify-2018> (Keras)
 
-    Top18 解决方案，使用模型：Attention, Attention+RNN, Capsule, ConvLSTM, DPCNN, LSTM-GRU, RCNN, SimpleCNN, TextCNN, TextRNN, LightGBM
+    Rank 18   使用模型：Attention, Attention+RNN, Capsule, ConvLSTM, DPCNN, LSTM-GRU, RCNN, SimpleCNN, TextCNN, TextRNN, LightGBM
 
-    **YAO**: 
+    **YAO**: OK
     
-    - Baseline有2种：LR和LinearSVC，**特征都只有TFIDF特征**，评估指标都是Accuracy和F1值，都有非CV版和CV版，其中CV版**手动进行K次模型训练应用和评估**
-    - 模型：首先定义BasicModel, BasicDeepModel, BasicStaticModel，并实现通用方法如计算评估指标, 模型训练与评估等；随后继承BasicDeepModel来实现各种分类模型，继承BasicStaticModel来实现XGBoost和LightGBM模型
+    - Baseline：LR和LinearSVC，**特征只有TFIDF特征**，评估指标是Accuracy和F1值，都有非CV版和CV版，其中CV版**手动进行K次模型训练和评估**
+
+    - 模型：首先定义BasicModel, 基于此定义BasicDeepModel和BasicStaticModel，并实现通用方法如计算评估指标、模型训练与评估等；随后继承BasicDeepModel以实现各种深度学习模型，继承BasicStaticModel以实现XGBoost和LightGBM模型
+
     - 特征：自己训练Word2Vec, LSA特征
-    - Trick: **数据增强(打乱原样本序列顺序生成新样本)**， 模型融合使用Stacking
+
+    - Trick: **数据增强(打乱原样本序列顺序生成新样本)**， 模型融合Stacking
 
 - <https://github.com/hecongqing/2018-daguan-competition> (Keras)
 
-    Rank4
+    Rank 4
 
 - <https://github.com/Rowchen/Text-classifier> (Tensorflow)
 
@@ -113,7 +139,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/moneyDboat/data_grand> (PyTorch)
 
-    Top10 解决方案（10/3830）
+    Rank 10/3830
 
 
 ## 9.2 Multi-label Classification
@@ -130,10 +156,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     使用GRU+attention进行多标签二分类
 
-- <https://github.com/zhangfazhan/Multi_Label_TextCNN> (Tensorflow)
-
-    textcnn多标签文本分类
-
 - <https://github.com/chenzhi1992/Multi-Label-Text-Classification> (Tensorflow)
 
     bilstm+attention, multi label text classify
@@ -143,37 +165,42 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 **2017知乎看山杯 多标签 文本分类**:
 
-a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Label，20W测试数据，每个样本需要打5个Label
+> 300W个训练数据，每个样本标注为1个或多个Label，共1999个Label，20W测试数据，每个样本需要打5个Label
+
+> 官方总结：[「2017知乎·看山杯机器学习挑战赛」结束，谁获奖了？知乎还会做什么？](https://zhuanlan.zhihu.com/p/28912353)
 
 - <https://github.com/chenyuntc/PyTorchText> (PyTorch)
 
-    Rank 1
+    Rank 1   模型和技术：TextCNN, TextRNN, TextRCNN, TextInception, MultiModel, 概率等权重融合
 
     **Article**: [知乎看山杯 夺冠记](https://zhuanlan.zhihu.com/p/28923961)
 
-    **YAO**: 直接处理**1999标签二分类**，模型输出结构为**Dense(1999, 'sigmoid')**，注意激活是Sigmoid，而非Softmax！详见下面Summary处的c.1
+    **YAO**: 直接处理**1999标签二分类**，模型输出结构类似于**Dense(1999, 'sigmoid')**，注意激活是Sigmoid，而非Softmax！Loss使用torch.nn.MultiLabelSoftMarginLoss，Summary处的c.1类做法。
 
 - <https://github.com/Magic-Bubble/Zhihu> (PyTorch)
 
-    Rank 2
+    Rank 2  模型和技术：FastText, TextCNN, TextRNN, TextRCNN, HAN, 核心思路是：**使用类似AdaBoost的方式来修复单模型** + 模型融合
 
     **Article**: [2017知乎看山杯 从入门到第二](https://zhuanlan.zhihu.com/p/29020616)
 
+    **YAO**: 问题定义、模型输出结构、Loss同Rank1
+
 - <https://github.com/yongyehuang/zhihu-text-classification> (Tensorflow)
 
-    Rank 6
+    Rank 6  模型和技术：TextCNN, BiGRU, HAN, FastText, RNN+CNN
+
+    **Article**: [2017知乎看山杯总结(多标签文本分类)](https://blog.csdn.net/Jerr__y/article/details/77751885)
+
+    **YAO**: 问题定义、模型输出结构同Rank1，Loss使用tf.nn.sigmoid_cross_entropy_with_logits
 
 - <https://github.com/coderSkyChen/zhihu_kanshan_cup_2017> (Keras)
 
     Rank 9  模型和技术：TextCNN, VDCNN, LSTM, C-LSTM, BiLSTM, RCNN, RCNN+Attention(单模型得分最高), Multi-Channel, Multi-Loss
 
-    **Article**: 【Great!】[大规模文本分类实践-知乎看山杯总结](http://coderskychen.cn/2017/08/20/zhihucup/)
+    **Article**: [大规模文本分类实践-知乎看山杯总结](http://coderskychen.cn/2017/08/20/zhihucup/)
 
-    **YAO**: 
-    
-    - 问题转化：**1999标签二分类**-->**1999分类**，模型输出结构(**Dense(1999, 'softmax')**)和Label编码(01向量)都同单标签多分类问题，应用时取概率值Top5.详见下面Summary处的c.2
+    **YAO**: 问题转化：**1999标签二分类**-->**1999分类**，模型输出结构为**Dense(1999, 'softmax')**，Label编码为长度1999的01向量，应用时取概率值Top5，Summary处的c.2类做法。 但似有不妥：Softmax会过于突出1999中的某一个值？Sigmoid似乎更适合Multi-label类问题？
 
-    - 似有不妥：Softmax会过于突出1999中的某一个值？Sigmoid似乎更适合Multi-label类问题？
 
 #### Practice
 
@@ -189,22 +216,20 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 
     **Chinese**: [手把手教你用Keras进行多标签分类](https://blog.csdn.net/tMb8Z9Vdm66wH68VX1/article/details/81090757)
 
-    **YAO**: 对于**3标签多分类**问题，比如标签1衣服有裙子、衬衫、卫衣3种，标签2颜色有红、蓝、黑、白4种，标签3质地有棉、丝2种，则需要使用**mlb=MulLabelBinarizer**处理这种3标签多分类的标签取值，处理后mlb.classes_=3+4+2=9，即问题转化为**9标签二分类**问题！！！(本质理念：把多标签多分类问题，转化为**在每个标签上的二分类问题**！)
+    **YAO**: 对于**3标签多分类**问题，比如标签1是衣服，有裙子、衬衫、卫衣3种，标签2是颜色，有红、蓝、黑、白4种，标签3是质地，有棉、丝2种，需要使用mlb=MulLabelBinarizer处理这种标签取值，处理后mlb.classes_=3+4+2=9，即问题转化为**9标签二分类**问题！！！(本质理念：把多标签多分类问题，转化为**在每个标签上的二分类问题**！)
     
     - 模型搭建：activation='sigmoid'，类别数量=mlb.classes_
 
     - 模型编译：loss='binary_crossentropy', metrics=['accuracy']，因为目标是将每个输出标签视作一个独立伯努利分布，我们需要独立地惩罚每个输出节点！(而Softmax用于单标签多分类)
 
-    - 模型应用：得到长度为K的概率向量prob，np.argsort(prob)[::-1][:3]即为最有可能的前3个标签(所对应的标签索引)。
+    - 模型应用：得到长度为9的概率向量prob，np.argsort(prob)[::-1][:3]即为最有可能的前3个标签(所对应的标签索引)。
 
     - 思考：3个标签及取值完全平铺开了，各新标签之间独立和并列，但**不用担心Top3标签中会有多个衣服或颜色或质地**，因为训练数据中压根就没有这种模式的数据，模型自然也不会凭空学到这种模式！Top3标签一定是衣服、颜色和质地各有一个！
 
-- [How to train a multi-label Classifier - 2015](https://github.com/keras-team/keras/issues/741)
+- [Keras Issue: How to train a multi-label Classifier - 2015](https://github.com/keras-team/keras/issues/741)
 
 
 #### Summary
-
-<https://github.com/pytorch/tnt>: Simple tools for logging and visualizing, loading and training.
 
 分类问题总结：
 
@@ -218,7 +243,7 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 
     - c.2 一个输出：问题转化为N分类，类似于b，模型输出结构、Label编码同b，应用时结果同c.1
 
-    - c.3 N个输出：每个输出都是a，模型输出结构、Label编码、应用时结果都同a
+    - c.3 N个输出：每个输出都是a，模型输出结构、Label编码、应用时结果都同a  目前没见过有人这样处理，待尝试？
 
 - d. N标签M分类
 
@@ -226,10 +251,12 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 
     - d.2 一个输出：问题转化为NM分类，同c.2
 
-    - d.3 N个输出：每个输出都是b，模型输出结构、Label编码、应用时结果都同b
+    - d.3 N个输出：每个输出都是b，模型输出结构、Label编码、应用时结果都同b  目前没见过有人这样处理，待尝试？
+
+疑问：使用Sigmoid处理多标签分类问题，前提假设是各标签之间是并列且独立的，这合理么？相同的模型主体，只是输出层开始不同，那么在模型主体处会学习各标签之间隐含的关系么？
 
 
-## 9.2 fastText
+## 9.3 FastText
 
 #### Paper
 
@@ -237,9 +264,9 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 
 #### Code
 
-- **Github**: <https://github.com/facebookresearch/fastText>
+- <https://github.com/facebookresearch/fastText>
 
-- **Website**: <https://fasttext.cc/>
+- <https://fasttext.cc/>
 
 #### Library
 
@@ -267,7 +294,7 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 
   > Schema: __label__0 , 贴膜 金刚膜
 
-- 还有一种自己搭建模型的方式，不确定是否合理
+- 自己搭建模型，不确定是否合理
 
   **Structure**: inputs-->Embedding-->SpatialDropout1D-->GlobalAveragePooling1D-->Dense-->Softmax/Sigmoid  ???
 
@@ -280,8 +307,7 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 - [文本分类需要CNN？No！fastText完美解决你的需求 - 2017](https://blog.csdn.net/weixin_36604953/article/details/78324834)
 
 
-
-## 9.3 TextCNN
+## 9.4 TextCNN
 
 #### Paper
 
@@ -348,7 +374,7 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
 - [tf18: 根据姓名判断性别](https://blog.csdn.net/u014365862/article/details/53869732)
 
 
-## 9.4 TextRNN
+## 9.5 TextRNN
 
 其实就是使用LSTM或BiLSTM按一般方式去处理Sequnce，没什么花样。
 
@@ -373,7 +399,7 @@ a. 300W个训练数据，每个样本标注为1个或多个Label，共1999个Lab
     嵌入Word2vec词向量的RNN+ATTENTION中文文本分类
 
 
-## 9.5 TextRCNN
+## 9.6 TextRCNN
 
 #### Paper
 
@@ -424,7 +450,7 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
     **YAO**: 论文里公式1和2实现得似乎不对，处理left和right时没有考虑word embedding ???
 
 
-## 9.6 VDCNN
+## 9.7 VDCNN
 
 #### Paper
 
@@ -435,7 +461,7 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 - <https://github.com/lethienhoa/Very-Deep-Convolutional-Networks-for-Natural-Language-Processing> (Tensorflow)
 
 
-## 9.7 DRNN
+## 9.8 DRNN
 
 #### Paper
 
@@ -446,11 +472,6 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 - <https://github.com/zepingyu0512/disconnected-rnn> (Keras)
 
 - <https://github.com/liuning123/DRNN> (Tensorflow)
-
-
-## 9.8 HAN
-
-Please go to 08-Seq2Seq_Attention_and_Transformer.md
 
 
 ## 9.9 DPCNN
@@ -468,7 +489,7 @@ Please go to 08-Seq2Seq_Attention_and_Transformer.md
     A simple version for DPCNN
 
 
-## 9.8 multiChannelCNN & DeepCNN & LSTM-CNN & Tree-LSTM
+## 9.10 multiChannelCNN & DeepCNN & LSTM-CNN & Tree-LSTM
 
 multiChannelCNN: 同一个Sequence，用多个Embedding，其一是随机初始化，其二是预训练Embedding如Word2Vec或GloVe等，然后Concatenate
 
@@ -478,7 +499,7 @@ LSTM-CNN:
 
 Tree-LSTM:
 
-### 9.8.1 multiChannelCNN
+### 9.10.1 multiChannelCNN
 
 #### Code
 
@@ -489,7 +510,7 @@ Tree-LSTM:
 - [详解文本分类之多通道CNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485817&idx=1&sn=fc0c3a4a5f6afc111b57045ff929cc2b)
 
 
-### 9.8.2 DeepCNN
+### 9.10.2 DeepCNN
 
 #### Code
 
@@ -500,10 +521,10 @@ Tree-LSTM:
 - [详解文本分类之DeepCNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428)
 
 
-### 9.8.3 LSTM-CNN
+### 9.10.3 LSTM-CNN
 
 
-### 9.8.4 Tree-LSTM
+### 9.10.4 Tree-LSTM
 
 
 ## 9.11 Others

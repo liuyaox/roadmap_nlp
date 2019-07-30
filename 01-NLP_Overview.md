@@ -71,6 +71,8 @@
 
     An overview of best practices relevant for most tasks in NLP.
 
+    **YAO**: 很有启发，能够答疑解惑，经验总结很到位！
+
 - [A Review of the Neural History of Natural Language Processing - 2018](http://blog.aylien.com/a-review-of-the-recent-history-of-natural-language-processing/)
 
     **Article**: [15年来，自然语言处理发展史上的8大里程碑](https://cloud.tencent.com/developer/news/329628)
