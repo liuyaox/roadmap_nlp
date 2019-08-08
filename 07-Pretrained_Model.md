@@ -69,6 +69,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - <https://github.com/codertimo/BERT-pytorch> (PyTorch)
 
+
 #### Article
 
 - 编码器: [Dissecting BERT Part 1: The Encoder](https://medium.com/dissecting-bert/dissecting-bert-part-1-d3c3d495cdb3)
@@ -80,6 +81,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](http://jalammar.github.io/illustrated-bert/)
 
 - [彻底搞懂BERT](https://www.cnblogs.com/rucwxb/p/10277217.html)
+
 
 #### Practice
 
@@ -96,6 +98,13 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - [Multi-label Text Classification using BERT – The Mighty Transformer](https://medium.com/huggingface/multi-label-text-classification-using-bert-the-mighty-transformer-69714fa3fb3d)
 
     [中文解读](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667790&idx=1&sn=c051c993ee561c7ada8c03b58679f305)
+
+- <https://github.com/bamtercelboo/PyTorch_Bert_Text_Classification> (PyTorch)
+
+    PyTorch Bert Text Classification
+
+- [关于最近实践 Bert 的一些坑 - 2019](https://zhuanlan.zhihu.com/p/69389583)
+
 
 #### Further
 
@@ -171,9 +180,15 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 百度提出知识增强的语义表示模型 ERNIE（Enhanced Representation from kNowledge IntEgration），并发布了基于 PaddlePaddle 的开源代码与模型，在语言推断、语义相似度、命名实体识别、情感分析、问答匹配等自然语言处理（NLP）各类中文任务上的验证显示，模型效果全面超越 BERT。
 
+#### Paper
+
+- [ERNIE: Enhanced Representation through Knowledge Integration - Baidu2019](https://arxiv.org/abs/1904.09223)
+
+- [ERNIE 2.0: A Continual Pre-training Framework for Language Understanding - Baidu2019](https://arxiv.org/abs/1907.12412v1)
+
 #### Code
 
-- <https://github.com/PaddlePaddle/LARK/tree/develop/ERNIE>
+- <https://github.com/PaddlePaddle/ERNIE> (PaddlePaddle)
 
 #### Article
 

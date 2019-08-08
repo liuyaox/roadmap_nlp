@@ -182,6 +182,10 @@ Sentiment Analysis 按粒度可分为3种：
 
     季军，只有PPT
 
+- <https://github.com/yuankeyi/2019-SOHU-Contest> ()
+
+    Rank 16
+
 
 **搜狐2018 内容识别大赛**:
 
@@ -250,6 +254,10 @@ Sentiment Analysis 按粒度可分为3种：
 
     Article: 1
 
+- [Multi-grained Attention Network for Aspect-Level Sentiment Classification - PKU2018](https://www.aclweb.org/anthology/D18-1380)
+
+- [Aspect Level Sentiment Classification with Attention-over-Attention Neural Networks - CMU2018](https://arxiv.org/abs/1804.06536)
+
 - [Content Attention Model for Aspect Based Sentiment Analysis - UESTC2018](http://delivery.acm.org/10.1145/3190000/3186001/p1023-liu.pdf)
 
     **Code**: 1
@@ -258,17 +266,21 @@ Sentiment Analysis 按粒度可分为3种：
 
     **Code**: 2
 
-- [IARM: Inter-Aspect Relation Modeling with Memory Networks in Aspect-Based Sentiment Analysis - Mexico2018](https://aclweb.org/anthology/D18-1377)
-
-    **Code**: <https://github.com/SenticNet/IARM> (PyTorch)
-
 - SynATT: [Effective Attention Modeling for Aspect-Level Sentiment Classification - Singapore2018](https://www.aclweb.org/anthology/C18-1096)(ATSA ? ACSA)
 
     **Code**: 2
 
+- [IARM: Inter-Aspect Relation Modeling with Memory Networks in Aspect-Based Sentiment Analysis - Mexico2018](https://aclweb.org/anthology/D18-1377)
+
+    **Code**: <https://github.com/SenticNet/IARM> (PyTorch)
+
 - [Exploiting Document Knowledge for Aspect-level Sentiment Classification - Singapore2018](https://arxiv.org/abs/1806.04346)
   
     **Code**: <https://github.com/ruidan/Aspect-level-sentiment> (Keras)
+
+- [Targeted Aspect-Based Sentiment Analysis via Embedding Commonsense Knowledge into an Attentive LSTM - Nanyang2018](https://www.sentic.net/sentic-lstm.pdf)
+
+- [CAN: Constrained Attention Networks for Multi-Aspect Sentiment Analysis - Nankai2018](https://arxiv.org/abs/1812.10735)
 
 - [Transformation Networks for Target-Oriented Sentiment Classification - CUHK2018](https://arxiv.org/abs/1805.01086)
 
@@ -277,6 +289,9 @@ Sentiment Analysis 按粒度可分为3种：
 - [An Interactive Multi-Task Learning Network for End-to-End Aspect-Based Sentiment Analysis - Singapore2019](https://arxiv.org/abs/1906.06906)
 
     **Code**: <https://github.com/ruidan/IMN-E2E-ABSA> (Keras)
+
+- [Attentional Encoder Network for Targeted Sentiment Classification - SYSU2019](https://arxiv.org/abs/1902.09314)
+
 
 #### Code
 
@@ -287,9 +302,13 @@ Sentiment Analysis 按粒度可分为3种：
 
 #### Article
 
-- 【Great】[【论文】基于特定实体的文本情感分类总结（PART I）](https://blog.csdn.net/kaiyuan_sjtu/article/details/89788314)
+- 【Great】【论文】基于特定实体的文本情感分类总结 
 
-    讲解对比了4篇论文
+    - [PART I](https://blog.csdn.net/kaiyuan_sjtu/article/details/89788314)
+
+    - [PART II](https://blog.csdn.net/Kaiyuan_sjtu/article/details/89811824)
+
+    - [PART III](https://blog.csdn.net/Kaiyuan_sjtu/article/details/89850685)
 
 
 ## 20.3 Topic Model

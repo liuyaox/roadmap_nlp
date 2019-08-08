@@ -84,3 +84,7 @@
 
 - [案例分享|美团如何用NLP完成5大应用场景](https://cloud.tencent.com/developer/article/1107169)
 
+- [技术反低俗究竟有多难？这一次，今日头条率先引入了 BERT - 2019](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650767073&idx=2&sn=78b1122d8c1e0a601b427a0e4380c1e5)
+
+    *YAO**: 灵犬系统文本分类模型，1.0=词向量+CNN，2.0=LSTM+Attention，3.0=BERT+半监督技术
+

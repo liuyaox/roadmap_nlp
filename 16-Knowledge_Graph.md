@@ -14,6 +14,10 @@
 
     **Chinese**: [67 亿美金搞个图，创建知识图谱的成本有多高你知道吗？](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650757216&idx=1&sn=aea53429d390c783a7bf2a961da05c63)
 
+- <https://github.com/liuhuanyong/KnowledgeGraphSlides>
+
+    中文知识图谱计算会议CCKS报告合集，涵盖从2013年至2018年，共48篇，从中可以看出从谷歌2012年推出知识图谱以来，中国学术界及工业界这6年来知识图谱的主流思想变迁。
+
 
 #### Code
 

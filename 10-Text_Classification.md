@@ -121,11 +121,11 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **YAO**: OK
     
-    - Baseline：LR和LinearSVC，**特征只有TFIDF特征**，评估指标是Accuracy和F1值，都有非CV版和CV版，其中CV版**手动进行K次模型训练和评估**
+    - Baseline：LR和LinearSVC，**特征只有TFIDF特征**，评估指标是Accuracy和F1值，都有非CV版和CV版
 
     - 模型：首先定义BasicModel, 基于此定义BasicDeepModel和BasicStaticModel，并实现通用方法如计算评估指标、模型训练与评估等；随后继承BasicDeepModel以实现各种深度学习模型，继承BasicStaticModel以实现XGBoost和LightGBM模型
 
-    - 特征：自己训练Word2Vec, LSA特征
+    - 特征：自己训练Word2Vec, TFIDF特征，LSA特征，对于深度模型，未使用TFIDF,LSA这些结构化特征！
 
     - Trick: **数据增强(打乱原样本序列顺序生成新样本)**， 模型融合Stacking
 

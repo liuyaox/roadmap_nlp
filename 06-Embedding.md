@@ -32,7 +32,6 @@
 
 ## 7.2 Word2Vec
 
-
 缺点：一个单词对应一个固定的向量，无法很好处理多义词。
 
 #### Paper - OK
@@ -56,6 +55,10 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 - <http://deeplearning4j.org/word2vec> (Java)
 
 - <https://github.com/danielfrg/word2vec> (Python)
+
+- <https://github.com/bamtercelboo/pytorch_word2vec> (PyTorch)
+
+- <https://github.com/lonePatient/chinese-word2vec-pytorch> (PyTorch)
 
 
 #### Library

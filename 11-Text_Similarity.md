@@ -82,6 +82,10 @@
 
     SiameseSentenceSimilarity,个人实现的基于Siamese bilstm模型的相似句子判定模型,提供训练数据集和测试数据集.
 
+- <https://github.com/fssqawj/SentenceSim>
+
+    中文短文句相似读, 2016年项目，比较传统，方法有：基于知网、onehot向量模型、基于Word2Vec、基于哈工大SDP、融合算法、LSTM
+
 
 ## 19.4 Competition
 

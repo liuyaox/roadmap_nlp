@@ -36,6 +36,13 @@
     **中文**: [手把手教你用seq2seq模型创建数据产品 - 2018](https://yq.aliyun.com/articles/560596)
 
 
+#### Data
+
+- <https://github.com/wonderfulsuccess/chinese_abstractive_corpus>
+
+    教育行业新闻 自动文摘 语料库 自动摘要
+
+
 ## 27.2 Deep Learning
 
 #### Paper

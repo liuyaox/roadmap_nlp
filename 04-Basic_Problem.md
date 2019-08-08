@@ -104,3 +104,19 @@
 - <https://github.com/liuhuanyong/WordMultiSenseDisambiguation>
 
     基于百科知识库的中文词语多词义/义项获取与特定句子词语语义消歧
+
+- <https://github.com/ccheng16/correction>
+
+    Chinese "spelling" error correction
+
+- <https://github.com/apanly/proofreadv1>
+
+    中文文本自动纠错
+
+
+## 4.9 打造NLP数据集
+
+#### Article
+
+- [如何打造高质量的机器学习数据集？ - 2019](https://www.zhihu.com/question/333074061/answer/773825458)
+

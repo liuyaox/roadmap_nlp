@@ -17,6 +17,8 @@ Attention, Transformer, Pointer Network
 
 ## 10.3 Attention
 
+### 10.3.1 Overview
+
 Attention的打分机制是关键，表示Encoder的状态a和Decoder的状态s之间的匹配程度，有多种，包括：**加性模型，点积模型，缩放点积模型，双线性模型**，如下图所示：
 
 ![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/attetion_scoring.jpg)
@@ -29,8 +31,18 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 依据这一思想，Attention-based模型可以有很多种，可以很简单。
 
+#### Article
 
-### 10.3.1 Attention
+- 【Great】[Attention注意力机制超全综述 - 2019](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486941&idx=2&sn=53d0a7b224cc8717047fb6eba6e1c368)
+
+    *YAO**: 6种打分机制, Attention发展历程(Attention in Seq2Seq, SoftAttention, HardAttention, GlobalAttention, LocalAttention, Attention in Transformer), 实例分析, 机制实现分析
+
+- [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
+
+- [目前主流的attention方法都有哪些？](https://www.zhihu.com/question/68482809)
+
+
+### 10.3.2 Attention
 
 #### Paper
 
@@ -59,16 +71,12 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 - [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
 
-- [Attention and Memoryin Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
+- [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
 
 - [斯坦福 CS224n 课程对 Attention 机制的介绍 from 1:00:55](https://www.youtube.com/watch?v=XXtpJxZBa2c)
 
-- [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
 
-- [目前主流的attention方法都有哪些？](https://www.zhihu.com/question/68482809)
-
-
-### 10.3.2 Hierarchical Attention Network (HAN)
+### 10.3.3 Hierarchical Attention Network (HAN)
 
 #### Paper
 
@@ -95,7 +103,7 @@ Attention: To get important word/sentence among words/sentences
 - <https://github.com/indiejoseph/doc-han-att> (Tensorflow)
 
 
-### 10.3.3 BahdanauAttention & LuongAttention
+### 10.3.4 BahdanauAttention & LuongAttention
 
 #### Paper
 
@@ -112,7 +120,7 @@ Attention: To get important word/sentence among words/sentences
     在BahdanauAttention类中有一个权重归一化的版本（normed_BahdanauAttention），它可以加快随机梯度下降的收敛速度。在使用时，将初始化函数中的参数normalize设为True即可。
 
 
-### 10.3.4 单调 & 混合 Attention
+### 10.3.5 单调 & 混合 Attention
 
 #### Paper
 

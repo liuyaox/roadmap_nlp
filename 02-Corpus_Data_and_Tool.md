@@ -78,6 +78,13 @@
 
     自然语言处理实验（sougou数据集），TF-IDF，文本分类、聚类、词向量、情感识别、关系抽取等
 
+### 2.1.2 Knowledge Graph
+
+- 大词林：<http://www.bigcilin.com>
+
+    **Article**: [重磅！《大词林》V2.0：自动消歧的开放域中文知识图谱 - 2019](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650795283&idx=1&sn=5c36be2f86b1892401d4588eb4095b9d)
+
+
 ### 2.1.3 Sentiment Analysis
 
 - <http://alt.qcri.org/semeval2014/>
@@ -112,6 +119,10 @@
 
     A Chinese sentiment dataset: sentiment_XS_test.txt contains 11577 instances labeled manually. sentiment_XS_30k.txt contains almost 30k instances labeled automatically.
 
+- <https://github.com/liuhuanyong/ChineseHumorSentiment>
+
+    中文文本幽默情绪计算项目,项目包括幽默文本语料库的构建,幽默计算模型,包括幽默等级识别,幽默类型识别,隐喻类型识别,隐喻情绪识别等
+
 
 ## 2.2 Embedding
 
@@ -145,6 +156,4 @@
 ## 2.4 Practice
 
 - [Working with and analyzing Wikipedia Data](https://github.com/WillKoehrsen/wikipedia-data-science)
-
-
 
