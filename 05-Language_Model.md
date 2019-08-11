@@ -43,3 +43,9 @@ N-gram
 #### Code
 
 - <https://github.com/chiragjn/deep-char-cnn-lstm> (Keras)
+
+#### Article
+
+- [Character Level NLP - 2019](https://www.lighttag.io/blog/character-level-NLP/)
+
+    字符级NLP优劣分析：在某些场景中比词向量更好用

@@ -6,6 +6,19 @@
 CopyNet
 
 
+#### Data
+
+- [Natural Questions: a Benchmark for Question Answering Research](https://ai.google/research/pubs/pub47761)
+
+    **Website**: <https://ai.google.com/research/NaturalQuestions/visualization>
+
+    **Chinese**: [NLP新基准！谷歌重磅发布开放问答数据集，30万自然提问+人工注释答案](http://www.sohu.com/a/291408751_642762)
+
+- <https://github.com/codemayq/chinese_chatbot_corpus>
+
+    中文公开聊天语料库及使用方法
+
+
 ## 29.2 Paper
 
 - [Large-Scale Simple Question Generation by Template-Based Seq2seq Learning - PKU2017](http://tcci.ccf.org.cn/conference/2017/papers/1066.pdf)

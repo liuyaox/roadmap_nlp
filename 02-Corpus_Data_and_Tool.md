@@ -4,7 +4,7 @@
 
 - <https://github.com/thunlp/THUOCL>
 
-    THUOCL（THU Open Chinese Lexicon）中文词库，包括以下数据及其词频统计DF值：IT 财经 成语 地名 历史名人 诗词 医学 饮食 法律 汽车 动物
+    [THUOCL：清华大学开放中文词库](http://thuocl.thunlp.org/)  包括以下数据及其词频统计DF值：IT 财经 成语 地名 历史名人 诗词 医学 饮食 法律 汽车 动物
 
 - <https://github.com/niderhoff/nlp-datasets>
   
@@ -77,6 +77,15 @@
 - <https://github.com/Roshanson/TextInfoExp>
 
     自然语言处理实验（sougou数据集），TF-IDF，文本分类、聚类、词向量、情感识别、关系抽取等
+
+- [A Large Chinese Text Dataset in the Wild](https://ctwdataset.github.io/)
+
+    **Paper**: [A Large Chinese Text Dataset in the Wild - THU2018](https://arxiv.org/abs/1803.00085)
+
+- [Fueling the Gold Rush: The Greatest Public Datasets for AI - 2017](https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2#.3x80s6mw4)
+
+    CV,NLP,语音等6大类
+
 
 ### 2.1.2 Knowledge Graph
 

@@ -100,7 +100,7 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - [Applying Word2Vec to Recommenders and Advertising - 2018](http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/)
 
-- [Using Word2Vec for Music Recommendations](https://towardsdatascience.com/using-word2vec-for-music-recommendations-bb9649ac2484)
+- [Using Word2Vec for Music Recommendations - 2017](https://towardsdatascience.com/using-word2vec-for-music-recommendations-bb9649ac2484)
 
 - [WSABIE: Scaling Up To Large Vocabulary Image Annotation - Google2017](http://www.thespermwhale.com/jaseweston/papers/wsabie-ijcai.pdf)
   
@@ -115,7 +115,7 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 #### Paper
 
-GloVe: [Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
+GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanford.edu/projects/glove/)
 
 #### Code
 

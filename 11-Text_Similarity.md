@@ -113,3 +113,11 @@
 
 - <https://github.com/Lapis-Hong/atec-nlp> (PyTorch)
 
+
+## 9.5 Traditional Method
+
+### 9.5.1 Simhash
+
+#### Article
+
+- [simhash与重复信息识别 - 2011](https://grunt1223.iteye.com/blog/964564simhash与重复信息识别)

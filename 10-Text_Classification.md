@@ -156,10 +156,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     使用GRU+attention进行多标签二分类
 
-- <https://github.com/chenzhi1992/Multi-Label-Text-Classification> (Tensorflow)
-
-    bilstm+attention, multi label text classify
-
 
 #### Competition
 
@@ -201,6 +197,10 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **YAO**: 问题转化：**1999标签二分类**-->**1999分类**，模型输出结构为**Dense(1999, 'softmax')**，Label编码为长度1999的01向量，应用时取概率值Top5，Summary处的c.2类做法。 但似有不妥：Softmax会过于突出1999中的某一个值？Sigmoid似乎更适合Multi-label类问题？
 
+- <https://github.com/chenzhi1992/Multi-Label-Text-Classification> (Tensorflow)
+
+    bilstm+attention, multi label text classify
+
 
 #### Practice
 
@@ -208,7 +208,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **Chinese**: [keras解决多标签分类问题](https://blog.csdn.net/somtian/article/details/79614570)
 
-    **YAO**: 讲述了为什么多标签多分类问题要使用Sigmoid激活而非Softmax
+    **YAO**: 讲述为什么多标签多分类问题要使用Sigmoid激活而非Softmax
 
 - [Multi-label classification with Keras - 2018](https://www.pyimagesearch.com/2018/05/07/multi-label-classification-with-keras/)
 
@@ -227,6 +227,10 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
     - 思考：3个标签及取值完全平铺开了，各新标签之间独立和并列，但**不用担心Top3标签中会有多个衣服或颜色或质地**，因为训练数据中压根就没有这种模式的数据，模型自然也不会凭空学到这种模式！Top3标签一定是衣服、颜色和质地各有一个！
 
 - [Keras Issue: How to train a multi-label Classifier - 2015](https://github.com/keras-team/keras/issues/741)
+
+- [Multi-label Text Classification using BERT – The Mighty Transformer - 2019](https://medium.com/huggingface/multi-label-text-classification-using-bert-the-mighty-transformer-69714fa3fb3d)
+
+    搞定NLP领域的“变形金刚”！手把手教你用BERT进行多标签文本分类
 
 
 #### Summary

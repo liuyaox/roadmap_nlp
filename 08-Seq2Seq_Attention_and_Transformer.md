@@ -31,6 +31,11 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 依据这一思想，Attention-based模型可以有很多种，可以很简单。
 
+#### Paper
+
+- [An Attentive Survey of Attention Models - LinkedIn2019](https://arxiv.org/abs/1904.02874)
+
+
 #### Article
 
 - 【Great】[Attention注意力机制超全综述 - 2019](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486941&idx=2&sn=53d0a7b224cc8717047fb6eba6e1c368)
@@ -40,6 +45,8 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 - [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
 
 - [目前主流的attention方法都有哪些？](https://www.zhihu.com/question/68482809)
+
+- [遍地开花的 Attention ，你真的懂吗？ - 2019](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247491048&idx=1&sn=ceb1cd0fecad478a252b7681ed3231d4)
 
 
 ### 10.3.2 Attention

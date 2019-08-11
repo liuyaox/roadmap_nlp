@@ -38,6 +38,10 @@
 
   亮点：分别使用PyTorch和Tensorflow，用百行代码搭建各类NLP模型，包括词嵌入、CNN、RNN、LSTM、Attention、Transform、BERT等，将诸多模型和代码去粗取精，且能够“一键执行”！
 
+- <https://github.com/lyeoni/nlp-tutorial> (Keras & PyTorch)
+
+    A list of NLP tutorials  覆盖全面的基于 PyTorch 和 keras 的 NLP 学习教程
+
 
 #### Book
 

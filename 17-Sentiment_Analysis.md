@@ -121,7 +121,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - <https://github.com/BigHeartC/Al_challenger_2018_sentiment_analysis> (Tensorflow)
   
-    基于 Aspect Level 思路的解决方案，排名17th
+    Rank 17  基于 Aspect Level 思路的解决方案
 
     **YAO**:
 
@@ -133,7 +133,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - <https://github.com/chenghuige/wenzheng> (Tensorflow & PyTorch)
   
-    第一名解决方案，统一使用tensorflow和pytorch的一个框架
+    Rank 1 解决方案，统一使用tensorflow和pytorch的一个框架
 
     **YAO**: 看起来很杂乱的样子。。。暂时放弃吧
 
@@ -148,6 +148,10 @@ Sentiment Analysis 按粒度可分为3种：
 - <https://github.com/foamliu/Sentiment-Analysis> (PyTorch)
 
     **YAO**: 数据示例和解释还挺全，待看……
+
+- <https://github.com/yuhaitao1994/AIchallenger2018_MachineReadingComprehension> (Tensorflow)
+
+    Rank 8 复赛第8名
 
 
 **搜狐2019 内容识别算法大赛**:

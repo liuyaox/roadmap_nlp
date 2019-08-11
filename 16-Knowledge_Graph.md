@@ -68,14 +68,14 @@
     基于京东网站的商品上下级概念、商品品牌之间关系和商品描述维度等知识库，可以支持商品属性库构建、商品销售问答、品牌物品生产等知识查询服务，也可用于情感分析等下游应用。
 
 
-## 16.3 Entity Extraction
+## 16.3 Entity
 
 - <https://github.com/hendrydong/Chinese-Event-Extraction>
 
     ?
 
 
-## 16.4 Relation Extraction
+## 16.4 Relation
 
 #### Practice
 
@@ -112,6 +112,20 @@
 - 2. [Chinese Relation Extraction with Multi-Grained Information and External Linguistic Knowledge - THU2019](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/acl2019_nre4chinese.pdf)
 
     **Code**: <https://github.com/thunlp/Chinese_NRE> (PyTorch)
+
+#### Article
+
+- 【论文】Awesome Relation Classification Paper - 2019
+
+    [PART I](https://blog.csdn.net/Kaiyuan_sjtu/article/details/89877420)
+
+    [PART II](https://blog.csdn.net/Kaiyuan_sjtu/article/details/89961647)
+
+- 【论文】Awesome Relation Extraction Paper - 2019
+
+    [PART I](https://blog.csdn.net/Kaiyuan_sjtu/article/details/89961674)
+
+    [PART II](https://blog.csdn.net/Kaiyuan_sjtu/article/details/90071703)
 
 
 ## 16.5 End-to-end

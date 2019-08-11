@@ -15,6 +15,8 @@
 
     **中文**: [Python利用深度学习进行文本摘要的综合指南](https://mp.weixin.qq.com/s/gDZyTbM1nw3fbEnU--y3nQ)
 
+- [文本摘要简述 - 2019](https://www.jiqizhixin.com/articles/2019-03-25-7)
+
 
 #### Competition
 

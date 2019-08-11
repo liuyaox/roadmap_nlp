@@ -166,6 +166,8 @@
 
     **Article**: [Entity extraction using Deep Learning based on Guillaume Genthial work on NER - 2018](https://medium.com/intro-to-artificial-intelligence/entity-extraction-using-deep-learning-8014acac6bb8)
 
+- [Pytorch BiLSTM + CRF做NER - 2019](https://zhuanlan.zhihu.com/p/59845590)
+
 
 #### Article
 

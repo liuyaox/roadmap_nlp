@@ -21,7 +21,6 @@
 
 
 
-
 ## 4.4 Segmentation
 
 #### Paper
@@ -46,6 +45,11 @@
 - <https://github.com/liweimin1996/CwsPosNerCNNRNNLSTM>
 
     基于字向量的CNN池化双向BiLSTM与CRF模型的网络，可能一体化的完成中文和英文分词，词性标注，实体识别。主要包括原始文本数据，数据转换,训练脚本,预训练模型,可用于序列标注研究.
+
+
+#### Article
+
+- [深度学习时代，分词真的有必要吗 - 2019](https://zhuanlan.zhihu.com/p/66155616)
 
 
 ## 4.5 Dependency Parsing

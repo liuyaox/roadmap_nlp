@@ -54,6 +54,10 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10235054.html)
 
+- [A Step-by-Step NLP Guide to Learn ELMo for Extracting Features from Text - 2019](https://www.analyticsvidhya.com/blog/2019/03/learn-to-use-elmo-to-extract-features-from-text/)
+
+    NLP详细教程：手把手教你用ELMo模型提取文本特征
+
 
 ## 8.3 BERT - TOTODO
 
@@ -63,7 +67,9 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 #### Code
 
-- <https://github.com/huggingface/pytorch-pretrained-BERT> (PyTorch)
+- 【Great】<https://github.com/huggingface/pytorch-pretrained-BERT> (PyTorch)
+
+    **Chinese**: [BERT、GPT-2这些顶尖工具到底该怎么用到我的模型里？ - 2019](https://baijiahao.baidu.com/s?id=1626146900426049013)
 
 - <https://github.com/google-research/bert> (Tensorflow)
 
@@ -104,6 +110,8 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
     PyTorch Bert Text Classification
 
 - [关于最近实践 Bert 的一些坑 - 2019](https://zhuanlan.zhihu.com/p/69389583)
+
+- [BERT fintune 的艺术 - 2019](https://zhuanlan.zhihu.com/p/62642374)
 
 
 #### Further
