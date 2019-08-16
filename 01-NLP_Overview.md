@@ -14,6 +14,12 @@
 
     NLP Tasks and References
 
+- <https://github.com/didi/ChineseNLP>
+
+    中文自然语言处理相关的开放任务，数据集，以及当前最佳结果
+
+    **Website**: <https://chinesenlp.xyz/>
+
 
 #### Course
 

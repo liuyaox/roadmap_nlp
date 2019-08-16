@@ -151,11 +151,15 @@ Attention: To get important word/sentence among words/sentences
 
 #### Code
 
-- <https://github.com/CyberZHG/keras-transformer> (Keras)
-
 - [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html) (PyTorch)
 
 - <https://github.com/jadore801120/attention-is-all-you-need-pytorch> (PyTorch)
+
+#### Library
+
+- <https://github.com/CyberZHG/keras-transformer> (Keras)
+
+- <https://github.com/CyberZHG/keras-self-attention> (Keras)
 
 #### Article
 
@@ -187,6 +191,8 @@ Attention: To get important word/sentence among words/sentences
 该模型对 Transformer 进行了改进，但这一改进没有被 BERT 采用
 
 #### Code
+
+- <https://github.com/CyberZHG/keras-transformer-xl> (Keras)
 
 - <https://github.com/kimiyoung/transformer-xl/tree/master/pytorch> (PyTorch)
 

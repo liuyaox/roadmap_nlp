@@ -29,6 +29,12 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     All kinds of neural text classifiers implemented by Keras: TextCNN, DCNN, RCNN, HAN, DPCNN, VDCNN, MultiTextCNN, BiLSTM, RNNCNN, CNNRNN.
 
+- 【Great】<https://github.com/wabyking/TextClassificationBenchmark> (PyTorch)
+
+    A Benchmark of Text Classification in PyTorch
+
+    模型：FastText, BasicCNN(KimCNN, MultiLayerCNN, MultiPerspectiveCNN), InceptionCNN, LSTM(BiLSTM, StackLSTM), LSTM with Attention(Self Attention, Quantum Attention), Hybrids between CNN and RNN (RCNN, C-LSTM), Transformer, Capsule, Quantum-inspired NN
+
 - 【Great】<https://github.com/649453932/Chinese-Text-Classification-Pytorch> (PyTorch)
 
     中文文本分类，TextCNN，TextRNN，FastText，TextRCNN，BiLSTM_Attention，DPCNN，基于pytorch，开箱即用
@@ -44,6 +50,10 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 - <https://github.com/brightmart/ai_law> (Tensorflow)
 
     All kinds of baseline models for long text classificaiton (text categorization): HAN, TextCNN, DPCNN, CNN-GRU, GRU-CNN, Simple Pooling, Transformer(todo)
+
+- <https://github.com/Edward1Chou/Textclassification> (Tensorflow)
+
+    分别构建基于传统机器学习(LR, RF)的文本分类和基于深度学习(CNN)的文本分类系统，并在同一数据集上进行测试。
 
 - <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
 
@@ -195,7 +205,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **Article**: [大规模文本分类实践-知乎看山杯总结](http://coderskychen.cn/2017/08/20/zhihucup/)
 
-    **YAO**: 问题转化：**1999标签二分类**-->**1999分类**，模型输出结构为**Dense(1999, 'softmax')**，Label编码为长度1999的01向量，应用时取概率值Top5，Summary处的c.2类做法。 但似有不妥：Softmax会过于突出1999中的某一个值？Sigmoid似乎更适合Multi-label类问题？
+    **YAO**: 问题转化：**1999标签二分类**-->**1999分类**，模型输出结构为**Dense(1999, 'softmax')**，Loss为categorical_crossentropy，Label编码为长度1999的01向量，应用时取概率值Top5，Summary处的c.2类做法。 但似有不妥：Softmax会过于突出1999中的某一个值？Sigmoid似乎更适合Multi-label类问题？
 
 - <https://github.com/chenzhi1992/Multi-Label-Text-Classification> (Tensorflow)
 
@@ -216,7 +226,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **Chinese**: [手把手教你用Keras进行多标签分类](https://blog.csdn.net/tMb8Z9Vdm66wH68VX1/article/details/81090757)
 
-    **YAO**: 对于**3标签多分类**问题，比如标签1是衣服，有裙子、衬衫、卫衣3种，标签2是颜色，有红、蓝、黑、白4种，标签3是质地，有棉、丝2种，需要使用mlb=MulLabelBinarizer处理这种标签取值，处理后mlb.classes_=3+4+2=9，即问题转化为**9标签二分类**问题！！！(本质理念：把多标签多分类问题，转化为**在每个标签上的二分类问题**！)
+    **YAO**: 对于**3标签多分类**问题，比如标签1是衣服，有裙子、衬衫、卫衣3种，标签2是颜色，有红、蓝、黑、白4种，标签3是质地，有棉、丝2种，需要使用mlb=MultiLabelBinarizer处理这种标签取值，处理后mlb.classes_=3+4+2=9，即问题转化为**9标签二分类**问题！！！(本质理念：把多标签多分类问题，转化为**在每个标签上的二分类问题**！)
     
     - 模型搭建：activation='sigmoid'，类别数量=mlb.classes_
 
@@ -298,7 +308,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
   > Schema: __label__0 , 贴膜 金刚膜
 
-- 自己搭建模型，不确定是否合理
+- 自己搭建模型，不确定是否合理([Reference](https://github.com/ShawnyXiao/TextClassification-Keras/blob/master/model/FastText/fast_text.py))
 
   **Structure**: inputs-->Embedding-->SpatialDropout1D-->GlobalAveragePooling1D-->Dense-->Softmax/Sigmoid  ???
 
@@ -337,14 +347,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     论文基于one-layer CNNs，研究了Input Word Vectors、Filter Region Size、Number of Feature Maps for Each Filter Region Size、Activation Function、Pooling Strategy和Regularization等对模型性能的影响，有助于我们参考以选择适合自己的参数。
 
-- charCNN
-
-  **Paper**: [Character-level Convolutional Networks for Text Classification - NYU2016](https://arxiv.org/abs/1509.01626)
-
-  **Practice**: [文本分类实战（三）—— charCNN模型](https://www.cnblogs.com/jiangxinyang/p/10207686.html)
-
-  **Code**: <https://github.com/jiangxinyang227/textClassifier>
-
 #### Code
 
 - Yao(Keras)
@@ -360,7 +362,9 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
         Xs = []
         for fsize in [2, 3, 4]:
             Xi = Conv1D(128, fsize, activation='relu')(X)       # (None, maxlen-fsize+1, 128)
+            # Xi = Conv2D(128, (fsize, emb_dim), activation='relu')(X)      # 同上行
             Xi = GlobalMaxPooling1D()(Xi)                       # (None, 128)
+            # Xi = Flatten()(MaxPool1D(pool_size=(maxlen-fsize+1, ))(Xi))   # 同上行
             Xs.append(Xi)
         X = Concatenate(axis=-1)(Xs)                            # (None, 128*3)
         X = Dropout(0.5)(X)
@@ -376,6 +380,21 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 #### Practice
 
 - [tf18: 根据姓名判断性别](https://blog.csdn.net/u014365862/article/details/53869732)
+
+
+## 9.5 CharCNN
+
+#### Paper
+
+[Character-level Convolutional Networks for Text Classification - NYU2016](https://arxiv.org/abs/1509.01626)
+
+#### Code
+
+- <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
+
+#### Practice
+
+[文本分类实战（三）—— charCNN模型](https://www.cnblogs.com/jiangxinyang/p/10207686.html)
 
 
 ## 9.5 TextRNN

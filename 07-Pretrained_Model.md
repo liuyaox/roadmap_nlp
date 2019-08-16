@@ -29,6 +29,8 @@
 
     词嵌入已死，语言模型当立
 
+- [nlp中的预训练语言模型总结(单向模型、BERT系列模型、XLNet) - 2019](https://zhuanlan.zhihu.com/p/76912493)
+
 
 ## 8.2 EMLo - TOTODO
 
@@ -66,6 +68,8 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2019](https://arxiv.org/abs/1810.04805)
 
 #### Code
+
+- <https://github.com/CyberZHG/keras-bert> (Keras)
 
 - 【Great】<https://github.com/huggingface/pytorch-pretrained-BERT> (PyTorch)
 
@@ -132,6 +136,10 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
   
   主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
 
+- [Bert 改进： 如何融入知识 - 2019](https://zhuanlan.zhihu.com/p/69941989)
+
+    BERT, 百度ERNIE, 清华ERNIE, 
+
 
 ## 8.4 GPT
 
@@ -146,6 +154,8 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - GPT1: <https://github.com/huggingface/pytorch-openai-transformer-lm> (PyTorch)
 
 - GPT1: <https://github.com/openai/finetune-transformer-lm> (Tensorflow)
+
+- GPT2: <https://github.com/CyberZHG/keras-gpt-2> (Keras)
 
 - GPT2: <https://github.com/openai/gpt-2> (Tensorflow)
 
@@ -236,6 +246,8 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 [XLNet: Generalized Autoregressive Pretraining for Language Understanding - CMU2019](https://arxiv.org/abs/1906.08237)
 
 #### Code
+
+- <https://github.com/CyberZHG/keras-xlnet> (Keras)
 
 - <https://github.com/zihangdai/xlnet> (Tensorflow)
 

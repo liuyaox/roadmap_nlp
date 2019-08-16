@@ -42,6 +42,10 @@
   
     最全中华古诗词数据库, 接近5.5万首唐诗，26万宋诗，21050首词
 
+- <https://github.com/pwxcoo/chinese-xinhua>
+
+    中华新华字典数据库。包括歇后语，成语，词语，汉字
+
 - <https://github.com/wb14123/couplet-dataset>
 
     70万条对联数据库
