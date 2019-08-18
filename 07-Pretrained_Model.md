@@ -31,6 +31,8 @@
 
 - [nlp中的预训练语言模型总结(单向模型、BERT系列模型、XLNet) - 2019](https://zhuanlan.zhihu.com/p/76912493)
 
+- [NLP的游戏规则从此改写？从word2vec, ELMo到BERT - 2018](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247484985&idx=1&sn=30075de882e862081f8d8d972f150a70)
+
 
 ## 8.2 EMLo - TOTODO
 
