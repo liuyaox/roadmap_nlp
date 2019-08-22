@@ -155,6 +155,8 @@ Attention: To get important word/sentence among words/sentences
 
 - <https://github.com/jadore801120/attention-is-all-you-need-pytorch> (PyTorch)
 
+- <https://github.com/foamliu/Self-Attention-Keras> (Keras)
+
 #### Library
 
 - <https://github.com/CyberZHG/keras-transformer> (Keras)

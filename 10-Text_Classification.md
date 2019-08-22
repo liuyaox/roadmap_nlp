@@ -10,6 +10,10 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - [A Brief Survey of Text Mining: Classification, Clustering and Extraction Techniques - UGA2017](https://arxiv.org/abs/1707.02919)
 
+- [Towards Explainable NLP: A Generative Explanation Framework for Text Classification - PKU2019](https://arxiv.org/abs/1811.00196)
+
+    **Chinese**: [面向可解释的NLP：北大、哈工大等提出文本分类的生成性解释框架](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489745&idx=5&sn=44e8bfeb5d9d9c1bb2906d941dfc063e)
+
 
 #### Code
 
@@ -391,6 +395,8 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 #### Code
 
 - <https://github.com/jiangxinyang227/textClassifier> (Tensorflow)
+
+- <https://github.com/mhjabreel/CharCNN> (Tensorflow)
 
 #### Practice
 
