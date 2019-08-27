@@ -19,6 +19,9 @@
   
   Embedding是DL的基础，介绍了Word2Vec, Item2Vec
 
+- [如何理解在各类NLP或CTR预估模型中，将embedding求平均这一做法的物理意义？](https://www.zhihu.com/question/332347498)
+
+
 #### Practice
 
 - [How deep learning can represent War and Peace as a vector](https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526)

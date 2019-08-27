@@ -53,8 +53,15 @@ CopyNet
 
 ## 29.4 Competition
 
-**2019语言与智能技术竞赛**:
+**2019语言与智能技术竞赛**
 
 - <https://github.com/zhpmatrix/lic2019-competition> (PyTorch)
 
     基于知识图谱的主动聊天
+
+
+**CCKS2018 开放领域中文问答任务**
+
+- <https://github.com/songlei1994/ccks2018>
+
+    Rank1

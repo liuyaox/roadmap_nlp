@@ -103,7 +103,8 @@
 
     [ACM-CIKM] 2nd place solution at CIKM AnalytiCup 2018, a task for determining **short text** similarities
 
-**2018atec蚂蚁金服NLP智能客服比赛**:
+
+**2018atec蚂蚁金服NLP智能客服比赛**
 
 > 给定客服里用户描述的两句话，判断**问句**相似度
 
@@ -112,6 +113,15 @@
     Rank 16/2631
 
 - <https://github.com/Lapis-Hong/atec-nlp> (PyTorch)
+
+
+**Kaggle: Quora Question Pairs**
+
+> 判断 whether question pairs are duplicates or not
+
+- <https://github.com/HouJP/kaggle-quora-question-pairs> (TextNet)
+
+    Rank 4
 
 
 ## 9.5 Traditional Method

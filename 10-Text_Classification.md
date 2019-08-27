@@ -324,6 +324,8 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - [文本分类需要CNN？No！fastText完美解决你的需求 - 2017](https://blog.csdn.net/weixin_36604953/article/details/78324834)
 
+- [一行代码自动调参，支持模型压缩指定大小，Facebook升级FastText - 2019](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650768854&idx=2&sn=39fcf30127c3291ec4ab90904bd32b45)
+
 
 ## 9.4 TextCNN
 

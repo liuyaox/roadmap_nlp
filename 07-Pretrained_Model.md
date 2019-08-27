@@ -33,6 +33,8 @@
 
 - [NLP的游戏规则从此改写？从word2vec, ELMo到BERT - 2018](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247484985&idx=1&sn=30075de882e862081f8d8d972f150a70)
 
+- [就最近看的paper谈谈预训练语言模型发展 - 2019](https://zhuanlan.zhihu.com/p/79371603)
+
 
 ## 8.2 EMLo - TOTODO
 
@@ -76,6 +78,8 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - 【Great】<https://github.com/huggingface/pytorch-pretrained-BERT> (PyTorch)
 
     **Chinese**: [BERT、GPT-2这些顶尖工具到底该怎么用到我的模型里？ - 2019](https://baijiahao.baidu.com/s?id=1626146900426049013)
+
+- <https://github.com/cdj0311/keras_bert_classification> (Keras)
 
 - <https://github.com/google-research/bert> (Tensorflow)
 
@@ -159,6 +163,10 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - GPT2: <https://github.com/CyberZHG/keras-gpt-2> (Keras)
 
+- GPT2: <https://github.com/morizeyao/gpt2-chinese> (PyTorch)
+
+    Chinese version of GPT2 training code, using BERT tokenizer
+
 - GPT2: <https://github.com/openai/gpt-2> (Tensorflow)
 
 #### Article
@@ -167,6 +175,9 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - GPT2: [Better Language Models and Their Implications](https://www.openai.com/blog/better-language-models/)
 
+- GPT2: [The Illustrated GPT-2 (Visualizing Transformer Language Models) - 2019](https://jalammar.github.io/illustrated-gpt2/)
+
+    **Chinese**: [完全图解GPT-2：看完这篇就够了（一）](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650768689&idx=2&sn=ff46397819b544a19c3200297f180dea)
 
 ## 8.5 ULMFit
 
