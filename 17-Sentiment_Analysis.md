@@ -1,9 +1,9 @@
 
-# 20. Sentiment Analysis
+# 17. Sentiment Analysis
 
 YAO's: <https://github.com/liuyaox/sentiment_analysis> (Keras & PyTorch)
 
-## 20.1 Overview
+## 17.1 Overview
 
 Sentiment Analysis 按粒度可分为3种：
 
@@ -226,7 +226,7 @@ Sentiment Analysis 按粒度可分为3种：
 - 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
 
 
-## 20.2 Deep Learning
+## 17.2 Deep Learning
 
 #### Paper
 
@@ -315,7 +315,7 @@ Sentiment Analysis 按粒度可分为3种：
     - [PART III](https://blog.csdn.net/Kaiyuan_sjtu/article/details/89850685)
 
 
-## 20.3 Topic Model
+## 17.3 Topic Model
 
 主题模型是一种非监督学习方法
 
@@ -334,7 +334,7 @@ Sentiment Analysis 按粒度可分为3种：
     **YAO**: 一直对 LDA/SVD 感兴趣，可以看此文章
 
 
-## 20.4 Rule
+## 17.4 Rule
 
 规则 + 数据挖掘
 

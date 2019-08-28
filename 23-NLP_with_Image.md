@@ -1,5 +1,5 @@
 
-# 23 NLP with Image
+# 23. NLP with Image
 
 ## 23.1 Overview
 

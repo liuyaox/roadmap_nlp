@@ -1,8 +1,8 @@
 
 
-# 18. Pairwise Input
+# 15. Pairwise Input
 
-## 18.1 Overview
+## 15.1 Overview
 
 NLP领域的任务的输入输出有以下几种：
 
@@ -32,7 +32,7 @@ NLP领域的任务的输入输出有以下几种：
     模型有：DualTextCNN, DualBiLSTM, DualBiLSTMCNN, ESIM, SSE, BiLSTM with Attention
 
 
-## 18.2 BiLSTMTextRelation
+## 15.2 BiLSTMTextRelation
 
 **Structure**: Input(Seq EOS Seq) -> Embeddding -> BiLSTM -> Average -> Softmax
 
@@ -45,7 +45,7 @@ e.g. input: "How much is the computer ? EOS Price of laptop", where 'EOS' is a s
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
 
-## 18.3 twoCNNTextRelation - OK
+## 15.3 twoCNNTextRelation - OK
 
 **Structure**: (Input1 -> Embedding -> TextCNN) * 2 -> Concatenate -> Softmax
 
@@ -56,7 +56,7 @@ e.g. input: "How much is the computer ? EOS Price of laptop", where 'EOS' is a s
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
 
-## 18.4 BiLSTMTextRelationTwoRNN
+## 15.4 BiLSTMTextRelationTwoRNN
 
 又叫 Dual Encoder LSTM Network ?
 
@@ -75,7 +75,7 @@ Dot Product作用：To measure the similarity of the predicted response r' and t
 - [Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow](http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/)
 
 
-## 18.5 Others
+## 15.5 Others
 
 #### Paper
 

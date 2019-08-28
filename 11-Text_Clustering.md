@@ -1,7 +1,6 @@
 
 # 11. Text Clustering
 
-
 ## 11.1 Overview
 
 #### Code

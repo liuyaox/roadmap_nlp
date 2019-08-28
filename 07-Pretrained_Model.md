@@ -1,7 +1,7 @@
 
-# 8. Pretrained Model
+# 7. Pretrained Model
 
-## 8.1 Overview
+## 7.1 Overview
 
 #### Article
 
@@ -36,7 +36,7 @@
 - [就最近看的paper谈谈预训练语言模型发展 - 2019](https://zhuanlan.zhihu.com/p/79371603)
 
 
-## 8.2 EMLo - TOTODO
+## 7.2 EMLo - TOTODO
 
 EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
 
@@ -65,7 +65,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
     NLP详细教程：手把手教你用ELMo模型提取文本特征
 
 
-## 8.3 BERT - TOTODO
+## 7.3 BERT - TOTODO
 
 #### Paper
 
@@ -142,12 +142,8 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
   
   主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
 
-- [Bert 改进： 如何融入知识 - 2019](https://zhuanlan.zhihu.com/p/69941989)
 
-    BERT, 百度ERNIE, 清华ERNIE, 
-
-
-## 8.4 GPT
+## 7.4 GPT
 
 #### Paper
 
@@ -179,7 +175,8 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
     **Chinese**: [完全图解GPT-2：看完这篇就够了（一）](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650768689&idx=2&sn=ff46397819b544a19c3200297f180dea)
 
-## 8.5 ULMFit
+
+## 7.5 ULMFit
 
 在 Kaggle 和其他竞赛中，ULMFit 的效果都超越了其他模型。
 
@@ -198,7 +195,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - [fastAI 发布的课程](http://course18.fast.ai/lessons/lesson10.html)
 
 
-## 8.6 Flair
+## 7.6 Flair
 
 混合了BERT, EMLo, GPT-2，其实是一个Framework，一个library.
 
@@ -207,7 +204,9 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - <https://github.com/zalandoresearch/flair> (PyTorch)
 
 
-## 8.7 ERNIE
+## 7.7 ERNIE - (Baidu VS THU)
+
+### 7.7.1 ERNIE - Baidu
 
 百度提出知识增强的语义表示模型 ERNIE（Enhanced Representation from kNowledge IntEgration），并发布了基于 PaddlePaddle 的开源代码与模型，在语言推断、语义相似度、命名实体识别、情感分析、问答匹配等自然语言处理（NLP）各类中文任务上的验证显示，模型效果全面超越 BERT。
 
@@ -225,8 +224,25 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - [中文任务全面超越BERT：百度正式发布NLP预训练模型ERNIE](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489050&idx=2&sn=0474c58819363b84b99d0f9ffe868f6a)
 
+- [ERNIE Tutorial（论文笔记 + 实践指南）- 2019](https://yam.gift/2019/08/02/Paper/2019-08-02-Baidu-ERNIE-Tutorial/)
 
-## 8.8 CoVe
+- [如何评价百度新发布的NLP预训练模型ERNIE？](https://www.zhihu.com/question/316140575/answer/719617103)
+
+
+### 7.7.2 ERNIE - THU
+
+#### Paper
+
+- [ERNIE: Enhanced Language Representation with Informative Entities - THU2019](https://arxiv.org/abs/1905.07129)
+
+#### Article
+
+- [Bert 改进： 如何融入知识 - 2019](https://zhuanlan.zhihu.com/p/69941989)
+
+    BERT, 百度ERNIE, 清华ERNIE
+
+
+## 7.8 CoVe
 
 #### Paper
 
@@ -239,7 +255,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - <https://github.com/rgsachin/CoVe> (Keras)
 
 
-## 8.9 XLM
+## 7.9 XLM
 
 XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步延伸。
 
@@ -252,7 +268,7 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 - <https://github.com/facebookresearch/XLM> (PyTorch)
 
 
-## 8.10 XLNet
+## 7.10 XLNet
 
 #### Paper
 
@@ -271,6 +287,7 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 - [XLNet太贵？这位小哥在PyTorch Wrapper上做了微缩版的](https://github.com/graykode/xlnet-pytorch)
 
 
-## 8.11 Application
+## 7.11 Application
 
 - [基于LSTM与TensorFlow Lite，kika输入法是如何造就的 - 2018](https://cloud.tencent.com/developer/article/1118053)
+

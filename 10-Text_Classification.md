@@ -1,10 +1,10 @@
 
-# 9. Text Classification
+# 10. Text Classification
 
 YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 
-## 9.1 Overview
+## 10.1 Overview
 
 #### Paper
 
@@ -156,7 +156,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
     Rank 10/3830
 
 
-## 9.2 Multi-label Classification
+## 10.2 Multi-label Classification
 
 #### Code
 
@@ -274,7 +274,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 疑问：使用Sigmoid处理多标签分类问题，前提假设是各标签之间是并列且独立的，这合理么？相同的模型主体，只是输出层开始不同，那么在模型主体处会学习各标签之间隐含的关系么？
 
 
-## 9.3 FastText
+## 10.3 FastText
 
 #### Paper
 
@@ -327,7 +327,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 - [一行代码自动调参，支持模型压缩指定大小，Facebook升级FastText - 2019](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650768854&idx=2&sn=39fcf30127c3291ec4ab90904bd32b45)
 
 
-## 9.4 TextCNN
+## 10.4 TextCNN
 
 #### Paper
 
@@ -388,7 +388,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 - [tf18: 根据姓名判断性别](https://blog.csdn.net/u014365862/article/details/53869732)
 
 
-## 9.5 CharCNN
+## 10.5 CharCNN
 
 #### Paper
 
@@ -405,7 +405,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 [文本分类实战（三）—— charCNN模型](https://www.cnblogs.com/jiangxinyang/p/10207686.html)
 
 
-## 9.5 TextRNN
+## 10.6 TextRNN
 
 其实就是使用LSTM或BiLSTM按一般方式去处理Sequnce，没什么花样。
 
@@ -430,7 +430,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
     嵌入Word2vec词向量的RNN+ATTENTION中文文本分类
 
 
-## 9.6 TextRCNN
+## 10.7 TextRCNN
 
 #### Paper
 
@@ -481,7 +481,7 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
     **YAO**: 论文里公式1和2实现得似乎不对，处理left和right时没有考虑word embedding ???
 
 
-## 9.7 VDCNN
+## 10.8 VDCNN
 
 #### Paper
 
@@ -492,7 +492,7 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 - <https://github.com/lethienhoa/Very-Deep-Convolutional-Networks-for-Natural-Language-Processing> (Tensorflow)
 
 
-## 9.8 DRNN
+## 10.9 DRNN
 
 #### Paper
 
@@ -505,7 +505,7 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 - <https://github.com/liuning123/DRNN> (Tensorflow)
 
 
-## 9.9 DPCNN
+## 10.10 DPCNN
 
 #### Paper
 
@@ -520,7 +520,7 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
     A simple version for DPCNN
 
 
-## 9.10 multiChannelCNN & DeepCNN & LSTM-CNN & Tree-LSTM
+## 10.11 multiChannelCNN & DeepCNN & LSTM-CNN & Tree-LSTM
 
 multiChannelCNN: 同一个Sequence，用多个Embedding，其一是随机初始化，其二是预训练Embedding如Word2Vec或GloVe等，然后Concatenate
 
@@ -530,7 +530,7 @@ LSTM-CNN:
 
 Tree-LSTM:
 
-### 9.10.1 multiChannelCNN
+### 10.11.1 multiChannelCNN
 
 #### Code
 
@@ -541,7 +541,7 @@ Tree-LSTM:
 - [详解文本分类之多通道CNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485817&idx=1&sn=fc0c3a4a5f6afc111b57045ff929cc2b)
 
 
-### 9.10.2 DeepCNN
+### 10.11.2 DeepCNN
 
 #### Code
 
@@ -552,13 +552,13 @@ Tree-LSTM:
 - [详解文本分类之DeepCNN的理论与实践](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485837&idx=1&sn=1b8f6e0f1ec21d3b73871179f0471428)
 
 
-### 9.10.3 LSTM-CNN
+### 10.11.3 LSTM-CNN
 
 
-### 9.10.4 Tree-LSTM
+### 10.11.4 Tree-LSTM
 
 
-## 9.11 Others
+## 10.12 Others
 
 #### Paper
 
@@ -593,6 +593,4 @@ Tree-LSTM:
     **Github**: <https://github.com/yao8839836/text_gcn> (Tensorflow)
 
 
-## 10. 12 Traditional Method
-
-#### 
+## 10.13 Traditional Method

@@ -1,9 +1,8 @@
 
 
-# 21. Named Entity Recognition (NER)
+# 18. Named Entity Recognition (NER)
 
-## 21.1 Overview
-
+## 18.1 Overview
 
 #### Article
 
@@ -14,11 +13,11 @@
     包括NER各种模型：CRF, Seq2Seq, LSTM+CRF, LSTM + Char Embedding, Residual LSTM + ELMo, NER with Bert, 
 
 
-## 21.2 HMM & CRF
+## 18.2 HMM & CRF
 
-## 21.3 RNN
+## 18.3 RNN
 
-## 21.4 RNN + CRF
+## 18.4 RNN + CRF
 
 主要以 BiLSTM + CRF 为主
 
@@ -180,7 +179,7 @@
     **中文解读**: [命名实体识别（biLSTM+crf）](https://blog.csdn.net/xxzhix/article/details/81514040)
 
 
-## 21.5 CNN
+## 18.5 CNN
 
 - <https://github.com/nlpdz/Medical-Named-Entity-Rec-Based-on-Dilated-CNN>
 

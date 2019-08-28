@@ -1,8 +1,37 @@
 
+# 13. Text Matching & Entailment
 
-# 26. Text Entailment
+## 13.1 Text Matching
 
-## 26.1 Overview
+Text Matching and Text Entailment both belong to Natural Language Inference (NLI), and sometimes they are very close to each other.
+
+### 13.1.1 Overview
+
+#### Paper
+
+-  <https://github.com/NTMC-Community/awaresome-neural-models-for-semantic-match>
+
+    A curated list of papers dedicated to neural text (semantic) matching.
+
+- <https://github.com/Accagain2014/TextMatching>
+
+    Papers, Methods, Books, Tutorial, Datasets, Competitions, Pretrained Models, Courses
+
+
+### 13.1.2 MatchZoo
+
+#### Paper
+
+[MatchZoo: A Toolkit for Deep Text Matching - CAS2017](https://arxiv.org/abs/1707.07270)
+
+#### Code
+
+- <https://github.com/NTMC-Community/MatchZoo>
+
+
+## 13.2 Text Entailment
+
+### 13.2.1 Overview
 
 Textual entailment (TE) in natural language processing is a directional relation between text fragments. The relation holds whenever the truth of one text fragment follows from another text. In the TE framework, the entailing and entailed texts are termed text (t) and hypothesis (h), respectively. Textual entailment is not the same as pure logical entailment — it has a more relaxed definition: 
 
@@ -28,7 +57,8 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 - [Recognizing Textual Entailment: Models and Applications](https://ieeexplore.ieee.org/document/6812786)
 
-## 26.2 ESIM
+
+### 13.2.2 ESIM
 
 #### Paper
 
@@ -53,7 +83,7 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 - [Python实战——ESIM 模型搭建（keras版）](https://blog.csdn.net/wcy23580/article/details/84990923)
 
 
-## 26.3 ABCNN
+### 13.2.3 ABCNN
 
 #### Paper
 

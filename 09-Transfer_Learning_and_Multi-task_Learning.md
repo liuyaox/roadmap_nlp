@@ -1,10 +1,10 @@
 
 
-# 13. Transfer Learning and Multi-task Learning
+# 9. Transfer Learning and Multi-task Learning
 
-## 13.1 Overview
+## 9.1 Overview
 
-## 13.2 Transfer Learning
+## 9.2 Transfer Learning
 
 #### Article
 
@@ -21,7 +21,7 @@
 
 
 
-## 13.3 Multi-task Learning
+## 9.3 Multi-task Learning
 
 #### Paper
 

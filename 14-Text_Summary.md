@@ -1,7 +1,7 @@
 
-# 27. Text Summary
+# 14. Text Summary
 
-## 27.1 Overview
+## 14.1 Overview
 
 #### Article
 
@@ -45,7 +45,7 @@
     教育行业新闻 自动文摘 语料库 自动摘要
 
 
-## 27.2 Deep Learning
+## 14.2 Deep Learning
 
 #### Paper
 

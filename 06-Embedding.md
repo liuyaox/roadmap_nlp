@@ -1,7 +1,6 @@
+# 6. Embedding
 
-# 7. Embedding
-
-## 7.1 Overview
+## 6.1 Overview
 
 **Keywords**: Word2Vec  Wiki2Vec  GloVe  Ngram2Vec  Para2Vec  Doc2Vec StarSpace
 
@@ -33,7 +32,7 @@
     Self complemented word embedding methods using CBOW，skip-Gram，word2doc matrix , word2word matrix.
 
 
-## 7.2 Word2Vec
+## 6.2 Word2Vec
 
 缺点：一个单词对应一个固定的向量，无法很好处理多义词。
 
@@ -114,7 +113,7 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
   **要点**: 对待打标签的object(的向量)进行线性变换，同时借鉴Word2Vec的思想，把有限个label转换成Embedding，从而把object与label映射到同一向量空间，向量内积即可度量相似性。
 
 
-## 7.3 GloVe
+## 6.3 GloVe
 
 #### Paper
 
@@ -141,7 +140,7 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 - To Create Embedding Layer for Neural Network
 
 
-## 7.4 Character Embedding
+## 6.4 Character Embedding
 
 #### Paper
 
@@ -158,8 +157,7 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
     中文解读：[字符级NLP优劣分析：在某些场景中比词向量更好用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650759154&idx=4&sn=5b823a28c7755427fd0e7e9a1b95dd9f)
 
 
-
-## 7.4 Ngram2Vec
+## 6.5 Ngram2Vec
 
 Maybe it's useful for attr-attrval matching!?!
 
@@ -174,7 +172,7 @@ Phrase2Vec???
 - <https://github.com/zhezhaoa/ngram2vec/>
 
 
-## 7.5 Sentence2Vec
+## 6.6 Sentence2Vec
 
 #### Paper
 
@@ -206,7 +204,7 @@ Phrase2Vec???
     **中文**: [简述表征句子的3种无监督深度学习方法 - 2018](http://www.sohu.com/a/229225932_164987)
 
 
-## 7.6 Doc2Vec & Paragraph2Vec
+## 6.7 Doc2Vec & Paragraph2Vec
 
 #### Paper
 
@@ -224,7 +222,7 @@ Phrase2Vec???
 - Doc2Vec: gensim - <https://radimrehurek.com/gensim/models/doc2vec.html>
 
 
-## 7.6 StarSpace
+## 6.8 StarSpace
 
 #### Paper
 
@@ -241,7 +239,7 @@ Phrase2Vec???
 - [StarSpace（embed all the things嵌入表示）编译和测试](https://blog.csdn.net/sparkexpert/article/details/78957607)
 
 
-## 7.7 Item2Vec - TOTODO
+## 6.9 Item2Vec - TOTODO
 
 #### Paper
 
@@ -256,7 +254,7 @@ Phrase2Vec???
   讲述了item2vec或其理念在分类、推荐召回和语义召回上的应用，以及直接作为深度模型的输入特征。
 
 
-## 7.8 Node2Vec - TOTODO
+## 6.10 Node2Vec - TOTODO
 
 Node2Vec belongs to Graph Embedding. Detailed info about Graph Embedding is at <>.
 
@@ -281,14 +279,14 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 - [node2vec: Embeddings for Graph Data](https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef)
 
 
-## 7.9 Others
+## 6.11 Others
 
-### 7.9.1 Wiki2Vec
+### 6.11.1 Wiki2Vec
 
 **Code**: <https://github.com/idio/wiki2vec>
 
 
-### 7.9.2 Tweet2Vec
+### 6.11.2 Tweet2Vec
 
 一些社交文本中的语言结构跟书面语大不相同，作者别出心裁的特意做了一个基于字符组合的模型，其可以基于整个微博环境下复杂、非正常语言的字符串中学习到一种向量化的表达方式。
 
@@ -297,12 +295,12 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 **Code**: <https://github.com/bdhingra/tweet2vec>
 
 
-### 7.9.3 Illustration-2vec
+### 6.11.3 Illustration-2vec
 
 **Code**: <https://github.com/rezoo/illustration2vec>
 
 
-### 7.9.4 cw2Vec
+### 6.11.4 cw2Vec
 
 基于笔画的中文词向量算法
 
@@ -313,7 +311,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 **Article**: [蚂蚁金服公开最新基于笔画的中文词向量算法](https://www.sohu.com/a/217456047_99940985)
 
 
-### 7.9.5 Lda2Vec
+### 6.11.5 Lda2Vec
 
 **Paper**: [Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec - 2016](https://arxiv.org/abs/1605.02019)
 
@@ -322,41 +320,41 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 **Article**: <http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994>
 
 
-### 7.9.6 TopicVec
+### 6.11.6 TopicVec
 
 **Paper**: [Generative Topic Embedding: a Continuous Representation of Documents - Singapore2016](https://arxiv.org/abs/1606.02979)
 
 **Code**: <https://github.com/askerlee/topicvec>
 
 
-### 7.9.7 Entity2Vec
+### 6.11.7 Entity2Vec
 
 **Paper**: [Fast and space-efficient entity linking in queries - Yahoo201](https://www.dc.fi.udc.es/~roi/publications/wsdm2015.pdf)
 
 **Code**: <https://github.com/ot/entity2vec>
 
 
-### 7.9.8 Str2Vec
+### 6.11.8 Str2Vec
 
 **code**: <https://github.com/pengli09/str2vec>
 
 
-### 7.9.9 Author2Vec
+### 6.11.9 Author2Vec
 
 **Paper**: [Author2Vec: Learning Author Representations by Combining Content and Link Information - Microsoft2016](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/jawahar16_www-2.pdf)
 
 
-### 7.9.10 Playlist2Vec
+### 6.11.10 Playlist2Vec
 
 **Code**: <https://github.com/mattdennewitz/playlist-to-vec>
 
 
-### 7.9.11 Sense2Vec
+### 6.11.11 Sense2Vec
 
 **Paper**: [sense2vec - A Fast and Accurate Method for Word Sense Disambiguation In Neural Word Embeddings - 2015](https://arxiv.org/abs/1511.06388)
 
 
-### 7.9.12 Medical2Vec
+### 6.11.12 Medical2Vec
 
 **Paper**: [Multi-layer Representation Learning for Medical Concepts - Georgia2016](https://arxiv.org/abs/1602.05568)
 
@@ -365,17 +363,17 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 **Code**: <https://github.com/ai-ku/wvec>
 
 
-### 7.9.13 Game2Vec
+### 6.11.13 Game2Vec
 
 **Code**: <https://github.com/warchildmd/game2vec>
 
 
-### 7.9.14 Paper2Vec
+### 6.11.14 Paper2Vec
 
 **Paper**: [Paper2vec: Citation-Context Based Document Distributed Representation for Scholar Recommendation - SYSU2017](https://arxiv.org/abs/1703.06587)
 
 
-## 7.10 Embeddings Dimensionality Reduction
+## 6.12 Embeddings Dimensionality Reduction
 
 #### Paper
 

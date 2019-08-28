@@ -1,15 +1,15 @@
 
 
-# 19. Text Similarity
+# 12. Text Similarity
 
-## 19.1 Overview
+## 12.1 Overview
 
 #### Tool
 
 - [百度短文本相似度](http://ai.baidu.com/tech/nlp/simnet)
 
 
-## 19.2 Paper
+## 12.2 Paper
 
 - [Siamese Recurrent Architectures for Learning Sentence Similarity - MIT2016](https://www.mit.edu/~jonasm/info/MuellerThyagarajan_AAAI16.pdf)
 
@@ -38,7 +38,7 @@
     <https://github.com/aditya1503/Siamese-LSTM> (Theano)
 
 
-## 19.3 Practice
+## 12.3 Practice
 
 - 【Great】<https://github.com/RandolphVI/Text-Pairs-Relation-Classification> (Tensorflow)
 
@@ -87,7 +87,7 @@
     中文短文句相似读, 2016年项目，比较传统，方法有：基于知网、onehot向量模型、基于Word2Vec、基于哈工大SDP、融合算法、LSTM
 
 
-## 19.4 Competition
+## 12.4 Competition
 
 - <https://github.com/Leputa/CIKM-AnalytiCup-2018> (Tensorflow)
 
@@ -124,9 +124,9 @@
     Rank 4
 
 
-## 9.5 Traditional Method
+## 12.5 Traditional Method
 
-### 9.5.1 Simhash
+### 12.5.1 Simhash
 
 #### Article
 

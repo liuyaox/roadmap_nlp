@@ -1,5 +1,3 @@
-
-
 # 4. Basic Problem
 
 ## 4.1 Overview

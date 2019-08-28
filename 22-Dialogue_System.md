@@ -1,7 +1,7 @@
 
-# 29. Dialogue Systems
+# 22. Dialogue Systems
 
-## 29.1 Overview
+## 22.1 Overview
 
 CopyNet
 
@@ -19,7 +19,7 @@ CopyNet
     中文公开聊天语料库及使用方法
 
 
-## 29.2 Paper
+## 22.2 Paper
 
 - [Large-Scale Simple Question Generation by Template-Based Seq2seq Learning - PKU2017](http://tcci.ccf.org.cn/conference/2017/papers/1066.pdf)
 
@@ -36,7 +36,7 @@ CopyNet
     **Code**: <https://github.com/thunlp/XQA> (Tensorflow)
 
 
-## 29.3 Practice
+## 22.3 Practice
 
 - <https://github.com/keyue123/poemKBQA>
 
@@ -51,7 +51,7 @@ CopyNet
     基于14W歌曲知识库的问答尝试，功能包括歌词接龙，已知歌词找歌曲以及歌曲歌手歌词三角关系的问答。
 
 
-## 29.4 Competition
+## 22.4 Competition
 
 **2019语言与智能技术竞赛**
 

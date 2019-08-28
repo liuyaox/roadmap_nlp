@@ -1,7 +1,7 @@
 
-# 24. Machine Comprehension
+# 21. Machine Comprehension
 
-## 24.1 Overview
+## 21.1 Overview
 
 #### Paper
 
@@ -33,7 +33,7 @@
     A pytorch implement of bert joint baseline for machine comprehension task in 2019 cail
 
 
-## 24.2 Memory Network
+## 21.2 Memory Network
 
 #### Paper
 
@@ -50,7 +50,7 @@
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
 
-## 24.3 R-NET
+## 21.3 R-NET
 
 #### Paper
 
@@ -67,7 +67,7 @@
 - [《R-NET：MACHINE READING COMPREHENSION》阅读笔记](https://zhuanlan.zhihu.com/p/61502862)
 
 
-## 24.4 Recurrent Entity Network ?
+## 21.4 Recurrent Entity Network ?
 
 #### Paper
 
@@ -92,13 +92,14 @@ Output Module (Similarity of Query and Hidden State -> Possibility Distribution 
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
 
-## 24.5 Code
+## 21.5 Code
 
 - <https://github.com/laddie132/Match-LSTM> (PyTorch)
 
     **Paper**: 1, 2, R-NET
 
-## 24.6 Paper
+
+## 21.6 Paper
 
 - 1. [Machine Comprehension Using Match-LSTM and Answer Pointer - Singapore2016](https://arxiv.org/abs/1608.07905)
 

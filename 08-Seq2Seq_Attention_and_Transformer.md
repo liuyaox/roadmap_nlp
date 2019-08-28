@@ -1,13 +1,13 @@
 
 
-# 10. Seq2Seq & Attention & Transformer
+# 8. Seq2Seq & Attention & Transformer
 
-## 10.1 Overview
+## 8.1 Overview
 
 Attention, Transformer, Pointer Network
 
 
-## 10.2 Seq2Seq & Encoder2Decoder
+## 8.2 Seq2Seq & Encoder2Decoder
 
 
 #### Practice
@@ -15,9 +15,9 @@ Attention, Transformer, Pointer Network
 - [Play couplet with seq2seq model. 用深度学习对对联](https://github.com/wb14123/seq2seq-couplet) (Tensorflow)
 
 
-## 10.3 Attention
+## 8.3 Attention
 
-### 10.3.1 Overview
+### 8.3.1 Overview
 
 Attention的打分机制是关键，表示Encoder的状态a和Decoder的状态s之间的匹配程度，有多种，包括：**加性模型，点积模型，缩放点积模型，双线性模型**，如下图所示：
 
@@ -49,7 +49,7 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 - [遍地开花的 Attention ，你真的懂吗？ - 2019](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247491048&idx=1&sn=ceb1cd0fecad478a252b7681ed3231d4)
 
 
-### 10.3.2 Attention
+### 8.3.2 Attention
 
 #### Paper
 
@@ -83,7 +83,7 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 - [斯坦福 CS224n 课程对 Attention 机制的介绍 from 1:00:55](https://www.youtube.com/watch?v=XXtpJxZBa2c)
 
 
-### 10.3.3 Hierarchical Attention Network (HAN)
+### 8.3.3 Hierarchical Attention Network (HAN)
 
 #### Paper
 
@@ -110,7 +110,7 @@ Attention: To get important word/sentence among words/sentences
 - <https://github.com/indiejoseph/doc-han-att> (Tensorflow)
 
 
-### 10.3.4 BahdanauAttention & LuongAttention
+### 8.3.4 BahdanauAttention & LuongAttention
 
 #### Paper
 
@@ -127,7 +127,7 @@ Attention: To get important word/sentence among words/sentences
     在BahdanauAttention类中有一个权重归一化的版本（normed_BahdanauAttention），它可以加快随机梯度下降的收敛速度。在使用时，将初始化函数中的参数normalize设为True即可。
 
 
-### 10.3.5 单调 & 混合 Attention
+### 8.3.5 单调 & 混合 Attention
 
 #### Paper
 
@@ -141,9 +141,9 @@ Attention: To get important word/sentence among words/sentences
     混合注意力机制很强大，比一般的注意力专注的地方更多，信息更丰富。因为混合注意力中含有位置信息，所以它可以在输入序列中选择下一个编码的位置。这样的机制更适用于输出序列大于输入序列的Seq2Seq任务，例如语音合成任务。
 
 
-## 10.4 Transformer - TOTODO
+## 8.4 Transformer - TOTODO
 
-### 10.4.1 Transformer
+### 8.4.1 Transformer
 
 #### Paper
 
@@ -184,7 +184,7 @@ Attention: To get important word/sentence among words/sentences
     解读：[为了写春联，我用Transformer训练了一个“对穿肠”](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667456&idx=1&sn=b2ffe9990f8bf8a242e52face2044b65)
 
 
-### 10.4.2 Transformer-XL
+### 8.4.2 Transformer-XL
 
 #### Paper
 

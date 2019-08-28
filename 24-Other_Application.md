@@ -1,7 +1,7 @@
 
-# 30. Application
+# 24. Application
 
-## Law
+## 24.1 Law
 
 #### Paper
 
@@ -28,7 +28,7 @@
     基于领域语料库构建与NLP方法的裁判文书与犯罪案例文本挖掘项目
 
 
-## Medical
+## 24.2 Medical
 
 #### Practice
 
