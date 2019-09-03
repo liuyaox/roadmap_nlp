@@ -14,11 +14,15 @@
 
     **Article**: [NLP中的迁移学习教程来啦！](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652046444&idx=5&sn=27051a1182819d9ef84a2eb50f152d52)
 
+- [The State of Transfer Learning in NLP - 2019](http://ruder.io/state-of-transfer-learning-in-nlp/)
 
-- Neural Transfer Learning for NLP - NLP Ph.D Presentation PPT
+    This post expands on the NAACL 2019 tutorial on Transfer Learning in NLP
+
+    **Chinese**: [NLP领域中的迁移学习现状](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489835&idx=4&sn=2f299bc3d19617025200831eb116ba4c)
+
+- Neural Transfer Learning for NLP - NLP Ph.D Presentation PPT - 2019
   
   **Article**: [NLP博士答辩41页PPT，面向自然语言处理的神经网络迁移学习](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247488995&idx=3&sn=8318d4d9d14b218a675d9832328fa9f1)
-
 
 
 ## 9.3 Multi-task Learning

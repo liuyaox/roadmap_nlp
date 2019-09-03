@@ -13,12 +13,18 @@
 
 ## 19.2 MEM
 
-Link: <https://github.com/yandexdataschool/nlp_course/blob/master/week05_structured/tagger.ipynb>
+#### Paper
 
-Paper: [A Maximum Entrop Model for Part-Of-Speech Tagging](http://www.aclweb.org/anthology/W96-0213)
+- [A Maximum Entrop Model for Part-Of-Speech Tagging](http://www.aclweb.org/anthology/W96-0213)
+
+    **Code**: <https://github.com/yandexdataschool/nlp_course/blob/master/week05_structured/tagger.ipynb>
+
 
 ## 19.3 RNN
 
-Using simpleRNN and BiLSTM: <https://github.com/yandexdataschool/nlp_course/blob/master/week05_structured/rnn_tagger.ipynb>
+- <https://github.com/yandexdataschool/nlp_course/blob/master/week05_structured/rnn_tagger.ipynb>
+
+    Using simpleRNN and BiLSTM
+
 
 ## 19.4 RNN + CRF

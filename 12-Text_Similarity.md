@@ -23,7 +23,7 @@
 
     **Article**: [中文翻译](https://www.jianshu.com/p/f3d0d94a4913?utm_campaign)
 
-- [Learning Text Similarity with Siamese Recurrent Networks - 2016](http://www.aclweb.org/anthology/W16-16)
+- [Learning Text Similarity with Siamese Recurrent Networks - Netherlands2016](http://www.aclweb.org/anthology/W16-16)
 
     **Code**: 
     

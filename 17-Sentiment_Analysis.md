@@ -26,7 +26,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Deep Learning for Sentiment Analysis : A Survey - 2018](https://arxiv.org/abs/1801.07883)
 
-    中文翻译：[就喜欢看综述论文：情感分析中的深度学习](https://cloud.tencent.com/developer/article/1120718)
+    **Chinese**：[就喜欢看综述论文：情感分析中的深度学习](https://cloud.tencent.com/developer/article/1120718)
 
     **YAO**: 2017年及之前的论文综述，讲了三种粒度级别的情感分析，Related Tasks(包括Aspect Extraction, Opinion Extraction, Sentiment Composition等)，带有词嵌入的情感分析，以及嘲讽 Detection，Emotion 分析等。
 
@@ -84,7 +84,7 @@ Sentiment Analysis 按粒度可分为3种：
 
     **YAO**: 任务是 **Sentence-Level 的分类**， 使用了 MLKNN，情绪转移，卡方统计特征选择
 
-- 【Great!】<https://github.com/jcsyl/news-analyst> (Keras)
+- 【Great】<https://github.com/jcsyl/news-analyst> (Keras)
 
     对舆情事件进行词云展示，对评论进行情感分析和观点抽取。情感分析基于lstm 的三分类，观点抽取基于 AP 算法的聚类和MMR的抽取
 
@@ -113,7 +113,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 #### Competition
 
-**AI challenger 2018 餐饮行业细粒度用户评论情感分析**:
+**AI challenger 2018 餐饮行业细粒度用户评论情感分析**
 
 > 国内目前为止最大最全的面向餐饮领域的细分情感分析，任务类型是在 **Document** 中进行 **Aspect-Level** 的情感分析，Aspect 预先设定好！但好像又可以修改？！
 > 
@@ -154,7 +154,7 @@ Sentiment Analysis 按粒度可分为3种：
     Rank 8 复赛第8名
 
 
-**搜狐2019 内容识别算法大赛**:
+**搜狐2019 内容识别算法大赛**
 
 > 给定若干文章，从文章中识别最多三个核心实体以及对核心实体的情感态度(消极，中立，积极)，任务类型是在 **Document** 中进行 **Aspect-Level** 的情感分析。
 > 
@@ -191,7 +191,7 @@ Sentiment Analysis 按粒度可分为3种：
     Rank 16
 
 
-**搜狐2018 内容识别大赛**:
+**搜狐2018 内容识别大赛**
 
 > 对文章和图片乾分类(全部营销、部分营销和无营销)，并从部分营销的文章中抽取属性营销部分的文本片段
 
@@ -206,7 +206,7 @@ Sentiment Analysis 按粒度可分为3种：
     Great在处理了文本和图片特征，把全部特征汇总在一起，使用传统模型和深度模型，并使用模型融合等技巧，非常实用！
 
 
-**BDCI 2018 汽车行业用户观点主题及情感识别比赛**:
+**BDCI 2018 汽车行业用户观点主题及情感识别比赛**
 
 > 任务类型在 **Aspect-Level** 的情感分析，Aspect 预先设定好！
 > 
@@ -236,7 +236,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Effective LSTMs for Target-Dependent Sentiment Classification - HIT2016](https://arxiv.org/abs/1512.01100)
 
-    **Code**: 1     Article: 1
+    **Code**: 1     **Article**: 1
 
 - [Attention-based LSTM for Aspect-level Sentiment Classification - THU2016](https://www.aclweb.org/anthology/D16-1058)(ACAS)
 
@@ -256,7 +256,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Learning to Attend via Word-Aspect Associative Fusion for Aspect-based Sentiment Analysis - Singapore2017](https://arxiv.org/abs/1712.05403)
 
-    Article: 1
+    **Article**: 1
 
 - [Multi-grained Attention Network for Aspect-Level Sentiment Classification - PKU2018](https://www.aclweb.org/anthology/D18-1380)
 

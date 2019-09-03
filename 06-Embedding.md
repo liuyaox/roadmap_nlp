@@ -25,7 +25,7 @@
 
 - [How deep learning can represent War and Peace as a vector](https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526)
 
-    中文解读：[神经网络词嵌入：如何将《战争与和平》表示成一个向量？](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485826&idx=2&sn=8b946e7401f239c819623b6447af8bbc)
+    **Chinese**：[神经网络词嵌入：如何将《战争与和平》表示成一个向量？](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485826&idx=2&sn=8b946e7401f239c819623b6447af8bbc)
 
 - <https://github.com/liuhuanyong/Word2Vector>
 
@@ -67,8 +67,6 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
 
-    ```from gensim.models import Word2Vec```
-
 
 #### Article - OK
 
@@ -106,11 +104,11 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - [WSABIE: Scaling Up To Large Vocabulary Image Annotation - Google2017](http://www.thespermwhale.com/jaseweston/papers/wsabie-ijcai.pdf)
   
-  **要点**: 指定有限个label，给object打标！
+  **Key Points**: 指定有限个label，给object打标！
 
   **Article**: [WSABIE 算法解释](https://heleifz.github.io/14696374110477.html)
 
-  **要点**: 对待打标签的object(的向量)进行线性变换，同时借鉴Word2Vec的思想，把有限个label转换成Embedding，从而把object与label映射到同一向量空间，向量内积即可度量相似性。
+  **Key Points**: 对待打标签的object(的向量)进行线性变换，同时借鉴Word2Vec的思想，把有限个label转换成Embedding，从而把object与label映射到同一向量空间，向量内积即可度量相似性。
 
 
 ## 6.3 GloVe
@@ -127,7 +125,7 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 
 - [理解GloVe模型（Global vectors for word representation）](https://blog.csdn.net/coderTC/article/details/73864097)
   
-  Yao：本质上是想让词向量(经一定的函数处理后)具有共现矩阵的性质，方法上使用了较多脑洞和技巧，有种强行凑出来的感觉，而非严谨的数学推导，不过对于想做研究的人来说，可以是一种有启发的借鉴，借鉴的不是想法，而是做法！
+  **Yao**：本质上是想让词向量(经一定的函数处理后)具有共现矩阵的性质，方法上使用了较多脑洞和技巧，有种强行凑出来的感觉，而非严谨的数学推导，不过对于想做研究的人来说，可以是一种有启发的借鉴，借鉴的不是想法，而是做法！
 
 - [理解GloVe模型（+总结）](https://blog.csdn.net/u014665013/article/details/79642083)
 
@@ -146,7 +144,7 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 
 - CWE - [Joint learning of character and word embeddings - THU2015](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/ijcai2015_character.pdf)
 
-    中文解读：[Character and Word Embedding读书报告](https://zkq1314.github.io/2018/07/14/Character-and-Word-Embedding%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/)
+    **Chinese**：[Character and Word Embedding读书报告](https://zkq1314.github.io/2018/07/14/Character-and-Word-Embedding%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/)
 
 - [Joint Embeddings of Chinese Words, Characters, and Fine-grained Subcharacter Components - HKUST2017](https://www.aclweb.org/anthology/D17-1027)
 
@@ -154,7 +152,7 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 
 - [Character Level NLP](https://www.lighttag.io/blog/character-level-NLP/)
 
-    中文解读：[字符级NLP优劣分析：在某些场景中比词向量更好用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650759154&idx=4&sn=5b823a28c7755427fd0e7e9a1b95dd9f)
+    **Chinese**：[字符级NLP优劣分析：在某些场景中比词向量更好用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650759154&idx=4&sn=5b823a28c7755427fd0e7e9a1b95dd9f)
 
 
 ## 6.5 Ngram2Vec
@@ -201,7 +199,7 @@ Phrase2Vec???
 
     介绍对比了3种表征句子的无监督深度学习方法：自编码器，语言模型和Skip-Thought向量模型，并与基线模型Average Word2Vec进行对比。
 
-    **中文**: [简述表征句子的3种无监督深度学习方法 - 2018](http://www.sohu.com/a/229225932_164987)
+    **Chinese**: [简述表征句子的3种无监督深度学习方法 - 2018](http://www.sohu.com/a/229225932_164987)
 
 
 ## 6.7 Doc2Vec & Paragraph2Vec

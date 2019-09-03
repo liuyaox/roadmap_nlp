@@ -70,9 +70,9 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 #### Practice
 
-- [文本分类实战系列文章](https://www.cnblogs.com/jiangxinyang/p/10207482.html) (Tensorflow)
+- [文本分类实战系列文章 - 2019](https://www.cnblogs.com/jiangxinyang/p/10207482.html) (Tensorflow)
 
-- [阿里AI工程师教你如何用CNN RNN Attention解决大规模文本分类问题](https://www.sohu.com/a/130492867_642762)
+- [阿里AI工程师教你如何用CNN RNN Attention解决大规模文本分类问题 - 2017](https://www.sohu.com/a/130492867_642762)
 
 
 #### Article
@@ -83,7 +83,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - 【Great】[在文本分类任务中，有哪些论文中很少提及却对性能有重要影响的tricks](https://www.zhihu.com/question/265357659/answer/578944550)
 
-- 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
+- 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结 - 2019](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
 
     **YAO**:
 
@@ -111,7 +111,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 #### Competition
 
-**2018-DC-“达观杯”文本智能处理挑战赛**:
+**2018-DC-“达观杯”文本智能处理挑战赛**
 
 > **单标签多分类**问题，共有19种分类，原始数据是字id序列和词id序列
 
@@ -173,7 +173,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 #### Competition
 
-**2017知乎看山杯 多标签 文本分类**:
+**2017知乎看山杯 多标签 文本分类**
 
 > 300W个训练数据，每个样本标注为1个或多个Label，共1999个Label，20W测试数据，每个样本需要打5个Label
 
@@ -385,7 +385,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 #### Practice
 
-- [tf18: 根据姓名判断性别](https://blog.csdn.net/u014365862/article/details/53869732)
+- [tf18: 根据姓名判断性别 - 2016](https://blog.csdn.net/u014365862/article/details/53869732)
 
 
 ## 10.5 CharCNN
@@ -402,7 +402,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 #### Practice
 
-[文本分类实战（三）—— charCNN模型](https://www.cnblogs.com/jiangxinyang/p/10207686.html)
+[文本分类实战（三）—— charCNN模型 - 2019](https://www.cnblogs.com/jiangxinyang/p/10207686.html)
 
 
 ## 10.6 TextRNN

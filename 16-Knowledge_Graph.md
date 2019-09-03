@@ -36,13 +36,14 @@
 
 #### Competition
 
-**瑞金医院MMC人工智能辅助构建知识图谱大赛**:
+**瑞金医院MMC人工智能辅助构建知识图谱大赛**
 
 - <https://github.com/zhpmatrix/tianchi-ruijin> (Keras)
 
     baseline, BiLSTM+CRF, 只做了第一阶段实体识别，作为NER来做，第二阶段是关系抽取，其实可以End-to-End一起做
 
-**2019百度信息抽取比赛**:
+
+**2019百度信息抽取比赛**
 
 > 抽取满足约束的SPO三元组知识, <http://lic2019.ccf.org.cn/kg>
 

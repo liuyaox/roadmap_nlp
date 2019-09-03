@@ -17,6 +17,13 @@
 
 ## 18.3 RNN
 
+#### Practice
+
+- [NLP命名实体识别(NER)开源实战教程 - 2019](https://blog.csdn.net/xiaosongshine/article/details/99622170)
+
+    介绍了多种模型，使用Keras实现了BiLST模型
+
+
 ## 18.4 RNN + CRF
 
 主要以 BiLSTM + CRF 为主
@@ -27,9 +34,9 @@
 
     BiLSTM + CRF
 
-- HSCRF:  [Hybrid semi-Markov CRF for Neural Sequence Labeling - USTC2018](https://arxiv.org/abs/1805.03838)
+- HSCRF: [Hybrid semi-Markov CRF for Neural Sequence Labeling - USTC2018](https://arxiv.org/abs/1805.03838)
 
-    **Github**: <https://github.com/ZhixiuYe/HSCRF-pytorch> (PyTorch)
+    **Code**: <https://github.com/ZhixiuYe/HSCRF-pytorch> (PyTorch)
 
 
 #### Code
@@ -110,12 +117,11 @@
     history = model.fit(x_train, y_train, batch_size=32, epochs=500, callbacks=[checkpointer, losshistory, plotter], verbose=1, validation_split=0.1)
     ```
 
-
 #### Practice
 
 - <https://github.com/stephen-v/zh-NER-keras> (Keras)
 
-    中文解读：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
+    **Chinese**：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
 
 - <https://github.com/fangwater/Medical-named-entity-recognition-for-ccks2017> (PyTorch)
 
@@ -155,7 +161,7 @@
 
 - <https://github.com/stephen-v/zh-NER-keras> (Keras)
 
-    中文解读：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
+    **Chinese**：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
 
 - <https://github.com/yanwii/ChinsesNER-pytorch> (PyTorch)
 
@@ -174,9 +180,9 @@
 
 - [bi-LSTM + CRF with character embeddings for NER and POS - 2017](https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html)
     
-    **Github**: <https://github.com/guillaumegenthial/tf_ner> (Tensorflow)
+    **Code**: <https://github.com/guillaumegenthial/tf_ner> (Tensorflow)
 
-    **中文解读**: [命名实体识别（biLSTM+crf）](https://blog.csdn.net/xxzhix/article/details/81514040)
+    **Chinese**: [命名实体识别（biLSTM+crf）](https://blog.csdn.net/xxzhix/article/details/81514040)
 
 
 ## 18.5 CNN

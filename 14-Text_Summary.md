@@ -13,7 +13,7 @@
 
 - [Comprehensive Guide to Text Summarization using Deep Learning in Python - 2019](https://www.analyticsvidhya.com/blog/2019/06/comprehensive-guide-text-summarization-using-deep-learning-python/)
 
-    **中文**: [Python利用深度学习进行文本摘要的综合指南](https://mp.weixin.qq.com/s/gDZyTbM1nw3fbEnU--y3nQ)
+    **Chinese**: [Python利用深度学习进行文本摘要的综合指南](https://mp.weixin.qq.com/s/gDZyTbM1nw3fbEnU--y3nQ)
 
 - [文本摘要简述 - 2019](https://www.jiqizhixin.com/articles/2019-03-25-7)
 
@@ -35,7 +35,7 @@
 
     对Github项目进行文本摘要总结
 
-    **中文**: [手把手教你用seq2seq模型创建数据产品 - 2018](https://yq.aliyun.com/articles/560596)
+    **Chinese**: [手把手教你用seq2seq模型创建数据产品 - 2018](https://yq.aliyun.com/articles/560596)
 
 
 #### Data

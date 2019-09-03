@@ -6,7 +6,7 @@
 
     综述文章共7章，持续更新中……
 
-    **Github**: <https://github.com/Tixierae/deep_learning_NLP> (Keras)
+    **Code**: <https://github.com/Tixierae/deep_learning_NLP> (Keras)
 
 - [Paper reading list in natural language processing](https://github.com/iwangjian/Paper-Reading)
 
@@ -23,26 +23,26 @@
 
 #### Course
 
-- Natural Language Processing - HSE - Coursera
+- [Natural Language Processing - HSE - Coursera](https://www.coursera.org/learn/language-processing)
 
-    Website: 
+    Language: English   Homework: Jupyter Locally or Using Google Colab
 
-    Language: English
+    **Github**: <https://github.com/hse-aml/natural-language-processing>
 
-    Homework: Jupyter Locally or Using Google Colab
+- [CMU - Neural Networks for NLP 2019](https://phontron.com/class/nn4nlp2019/index.html)
 
-    Github: <https://github.com/hse-aml/natural-language-processing>
+- [Stanford CS224n - Natural Language Processing with Deep Learning - 2019](http://web.stanford.edu/class/cs224n/)
 
-- CMU Neural Nets for NLP 2018
+- [牛津大学 xDeepMind 自然语言处理 - 网易云课堂](https://study.163.com/course/introduction.htm?courseId=1004336028)
 
-- CS224n Stanford - Natural Language Processing with Deep Learning
-  
+    **Github**: <https://github.com/oxford-cs-deepnlp-2017/lectures>
+
 
 #### Code
 
 - [Natural Language Processing Tutorial for Deep Learning Researchers](https://github.com/graykode/nlp-tutorial) (PyTorch, Tensorflow, Keras待定中)
 
-  亮点：分别使用PyTorch和Tensorflow，用百行代码搭建各类NLP模型，包括词嵌入、CNN、RNN、LSTM、Attention、Transform、BERT等，将诸多模型和代码去粗取精，且能够“一键执行”！
+  分别使用PyTorch和Tensorflow，用百行代码搭建各类NLP模型，包括词嵌入、CNN、RNN、LSTM、Attention、Transform、BERT等，将诸多模型和代码去粗取精，且能够“一键执行”！
 
 - <https://github.com/lyeoni/nlp-tutorial> (Keras & PyTorch)
 
@@ -52,10 +52,6 @@
 #### Book
 
 - [Natural Language Processing with PyTorch: Build Intelligent Language Applications Using Deep LearningNatural Language Processing with PyTorch](https://github.com/joosthub/PyTorchNLPBook)
-
-- Transfer Learning in Natural Language Processing (PPT)
-
-- Writing Code for NLP Research (PPT)
 
 
 #### Website
@@ -73,7 +69,7 @@
 
 - 【Great】[How to solve 90% of NLP problems: a step-by-step guide](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e)
 
-    中文解读：[掌握这些套路，你也能解决 90% 的 NLP 问题](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486090&idx=1&sn=1b1da4b81aaff47c5cc4128a4e31889c)
+    **Chinese**：[掌握这些套路，你也能解决 90% 的 NLP 问题](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486090&idx=1&sn=1b1da4b81aaff47c5cc4128a4e31889c)
 
 - [How to get started in NLP - 2017](https://towardsdatascience.com/how-to-get-started-in-nlp-6a62aa4eaeff)
 
@@ -96,5 +92,5 @@
 
 - [技术反低俗究竟有多难？这一次，今日头条率先引入了 BERT - 2019](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650767073&idx=2&sn=78b1122d8c1e0a601b427a0e4380c1e5)
 
-    *YAO**: 灵犬系统文本分类模型，1.0=词向量+CNN，2.0=LSTM+Attention，3.0=BERT+半监督技术
+    **YAO**: 灵犬系统文本分类模型，1.0=词向量+CNN，2.0=LSTM+Attention，3.0=BERT+半监督技术
 

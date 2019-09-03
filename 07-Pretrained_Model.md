@@ -9,19 +9,19 @@
 
     包括：ULMFiT, Transformer, BERT, Transformer-XL, GPT-2, ELMo, Flair, StanfordNLP
 
-    中文解读：[8种优秀预训练模型大盘点，NLP应用so easy！](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651669109&idx=2&sn=29b4e45291eac659af2967a1e246aa03)
+    **Chinese**：[8种优秀预训练模型大盘点，NLP应用so easy！](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651669109&idx=2&sn=29b4e45291eac659af2967a1e246aa03)
 
 - [Generalized Language Models](https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html)
 
     包括：CoVe, ELMo, Croww-View Training, ULMFiT, GPT, BERT, GPT-2
 
-    中文解读：[上下文预训练模型最全整理：原理、应用、开源代码、数据分享](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485551&idx=1&sn=de0a04647870543fe0b36d024f58429e)
+    **Chinese**：[上下文预训练模型最全整理：原理、应用、开源代码、数据分享](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485551&idx=1&sn=de0a04647870543fe0b36d024f58429e)
 
 - [BERT, EMLo and ERNIE Implementation with PaddlePaddle](https://github.com/PaddlePaddle/LARK)
 
 - [Language Models and Contextualised Word Embeddings](http://www.davidsbatista.net/blog/2018/12/06/Word_Embeddings/)
   
-  对 ELMo, BERT 及其他模型进行了一个简单的综述
+    对 ELMo, BERT 及其他模型进行了一个简单的综述
 
 - [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
 
@@ -75,15 +75,17 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - <https://github.com/CyberZHG/keras-bert> (Keras)
 
+- <https://github.com/cdj0311/keras_bert_classification> (Keras)
+
 - 【Great】<https://github.com/huggingface/pytorch-pretrained-BERT> (PyTorch)
 
     **Chinese**: [BERT、GPT-2这些顶尖工具到底该怎么用到我的模型里？ - 2019](https://baijiahao.baidu.com/s?id=1626146900426049013)
 
-- <https://github.com/cdj0311/keras_bert_classification> (Keras)
+- <https://github.com/codertimo/BERT-pytorch> (PyTorch)
 
 - <https://github.com/google-research/bert> (Tensorflow)
 
-- <https://github.com/codertimo/BERT-pytorch> (PyTorch)
+- <https://github.com/renxingkai/BERT_Chinese_Classification> (Tensorflow)
 
 
 #### Article
@@ -98,12 +100,14 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - [彻底搞懂BERT](https://www.cnblogs.com/rucwxb/p/10277217.html)
 
+- [理解BERT每一层都学到了什么 - 2019](https://zhuanlan.zhihu.com/p/74515580)
+
 
 #### Practice
 
 - [Pretrained PyTorch models for BERT, OpenAI GPT & GPT-2, Google/CMU Transformer-XL](https://github.com/huggingface/pytorch-pretrained-bert) (PyTorch)
 
-- Good!!! [Implemention some Baseline Model upon Bert for Text Classification](https://github.com/songyingxin/bert-textclassification) (PyTorch)
+- 【Great】 [Implemention some Baseline Model upon Bert for Text Classification](https://github.com/songyingxin/bert-textclassification) (PyTorch)
 
 - [BERT模型从训练到部署](https://github.com/xmxoxo/BERT-train2deploy)
 
@@ -128,19 +132,19 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 - [哈工大讯飞联合实验室发布基于全词覆盖的中文BERT预训练模型](https://github.com/ymcui/Chinese-BERT-wwm)
   
-  **Paper**: [Pre-Training with Whole Word Masking for Chinese BERT - HIT2019](https://arxiv.org/abs/1906.08101)
+    **Paper**: [Pre-Training with Whole Word Masking for Chinese BERT - HIT2019](https://arxiv.org/abs/1906.08101)
 
 - [站在BERT肩膀上的NLP新秀们（PART I）](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489437&idx=4&sn=d1d7ca7e3b4b0a1710252e8d52affe4d)
   
-  给 BERT 模型增加外部知识信息，使其能更好地感知真实世界，主要讲了 ERNIE from Baidu 和 ERNIE from THU
+    给 BERT 模型增加外部知识信息，使其能更好地感知真实世界，主要讲了 ERNIE from Baidu 和 ERNIE from THU
 
 - [站在BERT肩膀上的NLP新秀们（PART II）](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650409996&idx=1&sn=ddf837339e50001be4514fee743bfe9d)
   
-  主要讲了 XLMs from Facebook, LASER from Facebook, MASS from Microsoft 和 UNILM from Microsoft
+    主要讲了 XLMs from Facebook, LASER from Facebook, MASS from Microsoft 和 UNILM from Microsoft
 
 - [站在BERT肩膀上的NLP新秀们（PART III）](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650410110&idx=1&sn=310f675cf0cc1e2a1f4cc7b919743bc4)
   
-  主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
+    主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
 
 
 ## 7.4 GPT
@@ -204,7 +208,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 - <https://github.com/zalandoresearch/flair> (PyTorch)
 
 
-## 7.7 ERNIE - (Baidu VS THU)
+## 7.7 ERNIE (Baidu VS THU)
 
 ### 7.7.1 ERNIE - Baidu
 

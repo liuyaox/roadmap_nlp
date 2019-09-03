@@ -41,17 +41,15 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 [Wikipedia](https://en.wikipedia.org/wiki/Textual_entailment)
 
-
 #### Code
 
 - <https://github.com/liuhuanyong/ChineseTextualInference>
 
     中文文本推断项目,包括88万文本蕴含中文文本蕴含数据集的翻译与构建,基于深度学习的文本蕴含判定模型构建.
 
-
 #### Article
 
-- [Textual entailment with TensorFlow](https://www.colabug.com/496258.html)
+- [Textual entailment with TensorFlow - 2017](https://www.colabug.com/496258.html)
 
 #### Book
 
@@ -62,7 +60,7 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 #### Paper
 
-[Enhanced LSTM for Natural Language Inference-2017](https://arxiv.org/pdf/1609.06038.pdf)
+[Enhanced LSTM for Natural Language Inference - USTC2017](https://arxiv.org/abs/1609.06038)
 
 #### Code
 
@@ -80,14 +78,14 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 #### Practice
 
-- [Python实战——ESIM 模型搭建（keras版）](https://blog.csdn.net/wcy23580/article/details/84990923)
+- [Python实战——ESIM 模型搭建（keras版）- 2018](https://blog.csdn.net/wcy23580/article/details/84990923)
 
 
 ### 13.2.3 ABCNN
 
 #### Paper
 
-[ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs-2018](https://arxiv.org/abs/1512.05193)
+[ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs - Germany2018](https://arxiv.org/abs/1512.05193)
 
 #### Code
 
