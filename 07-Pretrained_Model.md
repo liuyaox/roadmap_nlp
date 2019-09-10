@@ -184,6 +184,14 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
     PyTorch Bert Text Classification
 
+- <https://github.com/AidenHuen/BERT-BiLSTM-CRF> (Keras)
+
+    BERT-BiLSTM-CRF的Keras版实现  预训练模型为chinese_L-12_H-768_A-12.zip，使用BERT客户端和服务器bert-serving-server和bert-serving-client
+
+- <https://github.com/llcing/BiLSTM-CRF-ChineseNER.pytorch> (PyTorch)
+
+    PyTorch implement of BiLSTM-CRF for Chinese NER
+    
 
 ### 7.3.2 RoBERTa
 
