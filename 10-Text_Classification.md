@@ -276,8 +276,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 ## 10.3 FastText
 
-#### Paper
-
 [Bag of Tricks for Efficient Text Classification - Facebook2016](https://arxiv.org/abs/1607.01759)
 
 #### Code
@@ -329,8 +327,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 ## 10.4 TextCNN
 
-#### Paper
-
 - [Convolutional Neural Networks for Sentence Classification - NYU2014](https://arxiv.org/abs/1408.5882)
 
   **Structure**: Input -> Embedding -> (Conv1D -> GlobalMaxPooling1D) * n_filter_size -> Concatenate -> Dropout -> Dense -> Dropout -> Dense，其中GlobalMaxPooling1D与MaxPooling1D-->Flatten功能相同。
@@ -347,9 +343,9 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
   - Two-Channel: Static Pre-trained + Dynamic Embedding，其中Dynamic有2种：Pre-trained + Finetuning和随机初始化，Dynamic的作用是，通过对语料的学习，模型可以得到task-specific的信息。
 
-- 对TextCNN进行调优
-  
-    **Paper**: [A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification - UTEXAS2016](https://arxiv.org/abs/1510.03820)
+- [A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification - UTEXAS2016](https://arxiv.org/abs/1510.03820)
+
+    对TextCNN进行调优
 
     论文基于one-layer CNNs，研究了Input Word Vectors、Filter Region Size、Number of Feature Maps for Each Filter Region Size、Activation Function、Pooling Strategy和Regularization等对模型性能的影响，有助于我们参考以选择适合自己的参数。
 
@@ -390,8 +386,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 ## 10.5 CharCNN
 
-#### Paper
-
 [Character-level Convolutional Networks for Text Classification - NYU2016](https://arxiv.org/abs/1509.01626)
 
 #### Code
@@ -431,8 +425,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 
 ## 10.7 TextRCNN
-
-#### Paper
 
 [Recurrent Convolutional Neural Networks for Text Classification - CAS2015](https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9745/9552)
 
@@ -483,8 +475,6 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 
 ## 10.8 VDCNN
 
-#### Paper
-
 [Very Deep Convolutional Networks for Text Classification - Facebook2017](https://arxiv.org/abs/1606.01781)
 
 #### Code
@@ -493,8 +483,6 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 
 
 ## 10.9 DRNN
-
-#### Paper
 
 [Disconnected Recurrent Neural Networks for Text Categorization - iFLYTEK2018](https://aclweb.org/anthology/P18-1215)
 
@@ -506,8 +494,6 @@ For Left_context Cl(w4), it uses a recurrent structure, a non-linearity transfor
 
 
 ## 10.10 DPCNN
-
-#### Paper
 
 [Deep Pyramid Convolutional Neural Networks for Text Categorization - Tencent2017](https://ai.tencent.com/ailab/media/publications/ACL3-Brady.pdf)
 

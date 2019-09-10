@@ -5,7 +5,6 @@
 
 CopyNet
 
-
 #### Data
 
 - [Natural Questions: a Benchmark for Question Answering Research](https://ai.google/research/pubs/pub47761)

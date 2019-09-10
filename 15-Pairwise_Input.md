@@ -60,8 +60,6 @@ e.g. input: "How much is the computer ? EOS Price of laptop", where 'EOS' is a s
 
 又叫 Dual Encoder LSTM Network ?
 
-#### Paper
-
 [The Ubuntu Dialogue Corpus: A Large Dataset for Research in Unstructured Multi-Turn Dialogue Systems-2016](https://arxiv.org/abs/1506.08909)
 
 **Structure**: Seq1(Input1 -> Embedding -> BiLSTM) + Seq2(Input2 -> Embedding -> BiLSTM) -> Dot Product -> Softmax

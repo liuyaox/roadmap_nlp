@@ -50,8 +50,6 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 ### 8.3.2 Attention
 
-#### Paper
-
 [Neural Machine Translation by Jointly Learning to Align and Translate - Germany2014](https://arxiv.org/abs/1409.0473v2)
 
 **YAO**: Attention打分机制使用的是**加性模型**
@@ -72,7 +70,6 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
     
     **YAO**: 好像说是：输入(或经简单处理如LSTM处理后)为inputs，inputs输入全连接层(小神经网络)，结果就是Attention，随后与inputs Merge在一起(Merge方式有很多)，再进行后续操作。这就是Attention-Based模型了！？！？
 
-
 #### Article
 
 - [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
@@ -83,8 +80,6 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 
 ### 8.3.3 Hierarchical Attention Network (HAN)
-
-#### Paper
 
 HAN: [Hierarchical Attention Networks for Document Classification - CMU2016](https://www.cs.cmu.edu/~diyiy/docs/naacl16.pdf)
 
@@ -128,12 +123,9 @@ Attention: To get important word/sentence among words/sentences
 
 ### 8.3.5 单调 & 混合 Attention
 
-#### Paper
-
 [Online and Linear-Time Attention by Enforcing Monotonic Alignments - 2017](https://arxiv.org/abs/1704.00784)
 
     单调注意力机制(Monotonic Attention)，是在原有注意力机制上添加了一个单调约束。该单调约束的内容为：已经被关注过的输入序列，其前面的序列中不再被关注。
-
 
 [Attention-Based Models for Speech Recognition - Poland2015](https://arxiv.org/abs/1506.07503)
 
@@ -143,8 +135,6 @@ Attention: To get important word/sentence among words/sentences
 ## 8.4 Transformer - TOTODO
 
 ### 8.4.1 Transformer
-
-#### Paper
 
 [Attention Is All You Need - Google2017](https://arxiv.org/abs/1706.03762)
 
@@ -184,8 +174,6 @@ Attention: To get important word/sentence among words/sentences
 
 
 ### 8.4.2 Transformer-XL
-
-#### Paper
 
 [Transformer-XL: Attentive Language Models Beyond a Fixed Length Context - Google2019](https://arxiv.org/abs/1901.02860)
 

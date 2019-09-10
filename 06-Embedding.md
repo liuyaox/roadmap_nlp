@@ -62,11 +62,9 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - <https://github.com/lonePatient/chinese-word2vec-pytorch> (PyTorch)
 
-
 #### Library
 
 - Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
-
 
 #### Article - OK
 
@@ -79,7 +77,6 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 - [word2vec原理推导与代码分析](http://www.hankcs.com/nlp/word2vec.html)
 
 - [word2vec 中的数学原理详解](https://www.cnblogs.com/peghoty/p/3857839.html)
-
 
 #### Practice - TODO
 
@@ -94,7 +91,6 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 - [Word2vec Tutorial](https://rare-technologies.com/word2vec-tutorial/)
 
 - 参考<https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py>中gensim的使用
-
 
 #### Further - TODO
 
@@ -112,8 +108,6 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 
 ## 6.3 GloVe
-
-#### Paper
 
 GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanford.edu/projects/glove/)
 
@@ -161,8 +155,6 @@ Maybe it's useful for attr-attrval matching!?!
 
 Phrase2Vec???
 
-#### Paper
-
 [Ngram2vec: Learning Improved Word Representations from Ngram Co-occurrence Statistics - RUC2017](http://www.aclweb.org/anthology/D17-1023)
 
 #### Code
@@ -204,8 +196,6 @@ Phrase2Vec???
 
 ## 6.7 Doc2Vec & Paragraph2Vec
 
-#### Paper
-
 - Doc2Vec: [Distributed Representations of Sentences and Documents - Google2014](https://arxiv.org/abs/1405.4053)
 
     和 Word2Vec 一样，该模型也存在两种方法：Distributed Memory(DM) 和 Distributed Bag of Words(DBOW)。DM 试图在给定上下文和段落向量的情况下预测单词的概率。在一个句子或者文档的训练过程中，段落 ID 保持不变，共享着同一个段落向量。DBOW 则在仅给定段落向量的情况下预测段落中一组随机单词的概率。 
@@ -222,8 +212,6 @@ Phrase2Vec???
 
 ## 6.8 StarSpace
 
-#### Paper
-
 [StarSpace: Embed All The Things!](https://arxiv.org/abs/1709.03856)
 
 损失函数：相似Entity之间相似度较高
@@ -239,8 +227,6 @@ Phrase2Vec???
 
 ## 6.9 Item2Vec - TOTODO
 
-#### Paper
-
 [Item2Vec: Neural Item Embedding for Collaborative Filtering - Microsoft2016](https://arxiv.org/abs/1603.04259)
 
 **Keywords**: Collaborative Filtering; Item Similarity; Recommender System; Neural Network Embedding
@@ -255,8 +241,6 @@ Phrase2Vec???
 ## 6.10 Node2Vec - TOTODO
 
 Node2Vec belongs to Graph Embedding. Detailed info about Graph Embedding is at <>.
-
-#### Paper
 
 [node2vec: Scalable Feature Learning for Networks - Stanford2016](https://arxiv.org/abs/1607.00653)
 
@@ -288,7 +272,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 一些社交文本中的语言结构跟书面语大不相同，作者别出心裁的特意做了一个基于字符组合的模型，其可以基于整个微博环境下复杂、非正常语言的字符串中学习到一种向量化的表达方式。
 
-**Paper**: [Tweet2Vec: Character-Based Distributed Representations for Social Media - CMU2016](https://arxiv.org/abs/1605.03481)
+[Tweet2Vec: Character-Based Distributed Representations for Social Media - CMU2016](https://arxiv.org/abs/1605.03481)
 
 **Code**: <https://github.com/bdhingra/tweet2vec>
 
@@ -302,7 +286,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 基于笔画的中文词向量算法
 
-**Paper**: [cw2vec: Learning Chinese Word Embeddings with Stroke n-gram Information - Alibaba2018](https://raw.githubusercontent.com/ShelsonCao/cw2vec/master/cw2vec.pdf)
+[cw2vec: Learning Chinese Word Embeddings with Stroke n-gram Information - Alibaba2018](https://raw.githubusercontent.com/ShelsonCao/cw2vec/master/cw2vec.pdf)
 
 **Code**: <https://github.com/bamtercelboo/cw2vec> (C++)
 
@@ -311,7 +295,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 ### 6.11.5 Lda2Vec
 
-**Paper**: [Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec - 2016](https://arxiv.org/abs/1605.02019)
+[Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec - 2016](https://arxiv.org/abs/1605.02019)
 
 **Code**: <https://github.com/cemoody/lda2vec>
 
@@ -320,14 +304,14 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 ### 6.11.6 TopicVec
 
-**Paper**: [Generative Topic Embedding: a Continuous Representation of Documents - Singapore2016](https://arxiv.org/abs/1606.02979)
+[Generative Topic Embedding: a Continuous Representation of Documents - Singapore2016](https://arxiv.org/abs/1606.02979)
 
 **Code**: <https://github.com/askerlee/topicvec>
 
 
 ### 6.11.7 Entity2Vec
 
-**Paper**: [Fast and space-efficient entity linking in queries - Yahoo201](https://www.dc.fi.udc.es/~roi/publications/wsdm2015.pdf)
+[Fast and space-efficient entity linking in queries - Yahoo201](https://www.dc.fi.udc.es/~roi/publications/wsdm2015.pdf)
 
 **Code**: <https://github.com/ot/entity2vec>
 
@@ -339,7 +323,7 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 ### 6.11.9 Author2Vec
 
-**Paper**: [Author2Vec: Learning Author Representations by Combining Content and Link Information - Microsoft2016](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/jawahar16_www-2.pdf)
+[Author2Vec: Learning Author Representations by Combining Content and Link Information - Microsoft2016](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/jawahar16_www-2.pdf)
 
 
 ### 6.11.10 Playlist2Vec
@@ -349,12 +333,12 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 ### 6.11.11 Sense2Vec
 
-**Paper**: [sense2vec - A Fast and Accurate Method for Word Sense Disambiguation In Neural Word Embeddings - 2015](https://arxiv.org/abs/1511.06388)
+[sense2vec - A Fast and Accurate Method for Word Sense Disambiguation In Neural Word Embeddings - 2015](https://arxiv.org/abs/1511.06388)
 
 
 ### 6.11.12 Medical2Vec
 
-**Paper**: [Multi-layer Representation Learning for Medical Concepts - Georgia2016](https://arxiv.org/abs/1602.05568)
+[Multi-layer Representation Learning for Medical Concepts - Georgia2016](https://arxiv.org/abs/1602.05568)
 
 **Code**: <https://github.com/mp2893/med2vec>
 
@@ -368,12 +352,10 @@ node2vec主要用于处理网络结构中的多分类和链路预测任务，具
 
 ### 6.11.14 Paper2Vec
 
-**Paper**: [Paper2vec: Citation-Context Based Document Distributed Representation for Scholar Recommendation - SYSU2017](https://arxiv.org/abs/1703.06587)
+[Paper2vec: Citation-Context Based Document Distributed Representation for Scholar Recommendation - SYSU2017](https://arxiv.org/abs/1703.06587)
 
 
 ## 6.12 Embeddings Dimensionality Reduction
-
-#### Paper
 
 [Simple & Effective Dimensionality Reduction for Word Embeddings - Microsoft2017](https://arxiv.org/abs/1708.03629)
 

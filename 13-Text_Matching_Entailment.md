@@ -17,10 +17,14 @@ Text Matching and Text Entailment both belong to Natural Language Inference (NLI
 
     Papers, Methods, Books, Tutorial, Datasets, Competitions, Pretrained Models, Courses
 
+#### Code
+
+- <https://github.com/pengming617/text_matching> (Tensorflow)
+
+    文本匹配的相关模型DSSM, ESIM, ABCNN, BIMPM等，数据集为LCQMC官方数据
+
 
 ### 13.1.2 MatchZoo
-
-#### Paper
 
 [MatchZoo: A Toolkit for Deep Text Matching - CAS2017](https://arxiv.org/abs/1707.07270)
 
@@ -58,8 +62,6 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 ### 13.2.2 ESIM
 
-#### Paper
-
 [Enhanced LSTM for Natural Language Inference - USTC2017](https://arxiv.org/abs/1609.06038)
 
 #### Code
@@ -82,8 +84,6 @@ t entails h (t ⇒ h) if, typically, a human reading t would infer that h is mos
 
 
 ### 13.2.3 ABCNN
-
-#### Paper
 
 [ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs - Germany2018](https://arxiv.org/abs/1512.05193)
 

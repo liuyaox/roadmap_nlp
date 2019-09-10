@@ -5,7 +5,7 @@
 
 #### Competition
 
-**[2017 搜狐图文匹配算法大赛](https://biendata.com/competition/luckydata/)**:
+**[2017 搜狐图文匹配算法大赛](https://biendata.com/competition/luckydata/)**
 
 > 训练集：10万条新闻文本+10万张新闻配图，任务：给定新的新闻文本和新的配图集合，为每一篇新闻文本找到匹配度最高的10张图片并排序 
 

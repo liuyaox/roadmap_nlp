@@ -46,25 +46,19 @@ Models: FastText, TextCNN, TextRNN, TextRCNN, VDCNN, DRNN, DPCNN, multiChannelCN
 
 Traditional Method: 
 
-## 10. Text Clustering
+## 11. Text Clustering
 
 Overview: Paper, Code, Practice, Article, etc.
 
-## 11. Text Similarity
+## 12. Text Similarity
 
 Overview: Paper, Tool, Practice, Competition
 
-## 12. Text Matching
+## 13. Text Matching and Entailment
 
-Overview: Paper
+Overview: Paper, Code, Article, Book, etc.
 
-Models: MatchZoo
-
-## 13. Text Entailment
-
-Overview: Code, Article, Book, etc.
-
-Models: ESIM, ABCNN, etc.
+Models: MatchZoo, ESIM, ABCNN, etc.
 
 ## 14. Text Summary
 
@@ -114,9 +108,9 @@ Models: Memory Network, R-NET, Recurrent Entity Network, etc.
 
 Overview: Paper, Practice, Competition
 
-## 23. Image Captioning
+## 23. NLP with Image
 
-Overview: Paper
+Overview: Competition, Image Captioning, etc.
 
 ## 24. Other Application
 

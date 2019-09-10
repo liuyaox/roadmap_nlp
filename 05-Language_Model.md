@@ -35,8 +35,6 @@ N-gram
 
 ## 5.5 Character-Level Model
 
-#### Paper
-
 [Character-Aware Neural Language Models-2015](https://arxiv.org/abs/1508.06615)
 
 #### Code

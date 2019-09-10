@@ -36,11 +36,9 @@
 
 ## 21.2 Memory Network
 
-#### Paper
+[Memory Networks - Facebook2015](https://arxiv.org/abs/1410.3916)
 
-- [Memory Networks - Facebook2015](https://arxiv.org/abs/1410.3916)
-
-- [End-To-End Memory Networks - Facebook2015](http://papers.nips.cc/paper/5846-end-to-end-memory-networks.pdf)
+[End-To-End Memory Networks - Facebook2015](http://papers.nips.cc/paper/5846-end-to-end-memory-networks.pdf)
 
 #### Article
 
@@ -52,8 +50,6 @@
 
 
 ## 21.3 R-NET
-
-#### Paper
 
 [R-Net: Machine Reading Comprehension with Self-Matching- MSRA2017](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf )
 
@@ -69,8 +65,6 @@
 
 
 ## 21.4 Recurrent Entity Network ?
-
-#### Paper
 
 [Tracking the World State with Recurrent Entity Networks - Facebook2017](https://arxiv.org/abs/1612.03969)
 
