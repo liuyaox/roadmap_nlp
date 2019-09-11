@@ -123,11 +123,11 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 
 - [理解GloVe模型（+总结）](https://blog.csdn.net/u014665013/article/details/79642083)
 
+- [为什么很多NLP的工作在使用预训练词向量时选择GloVe而不是Word2Vec或其他](https://www.zhihu.com/question/339184168)
+
 #### Practice
 
-- How to Use Pretrained Word2Vec/GloVe Word Embeddings?
-
-- To Do Simple Job
+- To Use Pretrained Word2Vec/GloVe Word Embeddings
 
 - To Create Embedding Layer for Neural Network
 
