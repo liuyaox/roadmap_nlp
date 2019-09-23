@@ -225,6 +225,8 @@ Sentiment Analysis 按粒度可分为3种：
 
 - 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
 
+- [华为云NLP算法专家：全面解读文本情感分析任务 - 2019](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650770496&idx=3&sn=89e91799bbb4b81af876ac192f987e71)
+
 
 ## 17.2 Deep Learning
 
