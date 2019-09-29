@@ -215,6 +215,12 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     bilstm+attention, multi label text classify
 
+**法研杯要素识别**
+
+- <https://github.com/brightmart/multi-label_classification> (Tensorflow)
+
+    Rank 2   transform multi-label classification as sentence pair task   任务转化：将多标签分类转换为sentence-pair任务！
+
 
 #### Practice
 
