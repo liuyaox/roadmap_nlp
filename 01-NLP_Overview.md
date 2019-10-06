@@ -94,3 +94,5 @@
 
     **YAO**: 灵犬系统文本分类模型，1.0=词向量+CNN，2.0=LSTM+Attention，3.0=BERT+半监督技术
 
+- [阿里妈妈：品牌广告中的 NLP 算法实践 - 2019](https://mp.weixin.qq.com/s?__biz=MzU1NTMyOTI4Mw==&mid=2247494094&idx=1&sn=4c32130746752039fba45a5ba6b7eedb)
+

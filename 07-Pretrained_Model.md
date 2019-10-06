@@ -55,6 +55,10 @@
 
     BERT, EMLo and ERNIE Implementation with PaddlePaddle
 
+#### Practice
+
+- [北大、人大联合开源工具箱UER，3 行代码完美复现BERT、GPT - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490122&idx=3&sn=a2413923ce3e620f26a00edb4d89d878)
+
 #### Library
 
 - 【Great】<https://github.com/huggingface/pytorch-transformers> (PyTorch)
