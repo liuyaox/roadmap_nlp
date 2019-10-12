@@ -5,11 +5,14 @@
 
 #### Paper
 
-- [Must-read papers on Machine Reading Comprehension](https://github.com/thunlp/RCPapers)
+- <https://github.com/thunlp/RCPapers>
+
+    Must-read papers on Machine Reading Comprehension.
 
 - [Neural Machine Reading Comprehension: Methods and Trends - NUDT2019](https://arxiv.org/abs/1907.01118)
 
     综述：总结机器阅读理解领域已经提出的方法和近期发展趋势。
+
 
 #### Data
 
@@ -32,6 +35,13 @@
 - <https://github.com/circlePi/2019Cail-A-Bert-Joint-Baseline-for-Machine-Comprehension> (PyTorch)
 
     A pytorch implement of bert joint baseline for machine comprehension task in 2019 cail
+
+
+#### Project
+
+- <https://github.com/chineseGLUE/chineseGLUE>
+
+    中文语言理解基准测评：Language Understanding Evaluation benchmark for Chinese: datasets, baselines, pre-trained models,corpus and leaderboard
 
 
 ## 21.2 Memory Network

@@ -3,6 +3,12 @@
 
 ## 7.1 Overview
 
+#### Paper
+
+- 【Great】<https://github.com/thunlp/PLMpapers>
+
+    Must-read Papers on pre-trained language models  各预训练模型层次衍生关系图
+
 #### Article
 
 - [8 Excellent Pretrained Models to get you Started with NLP](https://www.analyticsvidhya.com/blog/2019/03/pretrained-models-get-started-nlp/)
@@ -69,6 +75,14 @@
 
     **Chinese**: [BERT、GPT-2这些顶尖工具到底该怎么用到我的模型里？ - 2019](https://baijiahao.baidu.com/s?id=1626146900426049013)
 
+- <https://github.com/zalandoresearch/flair> (PyTorch)
+
+    Flair: 混合了BERT, EMLo, GPT-2
+
+    **Article**: [Text Classification with State of the Art NLP Library — Flair - 2018](https://towardsdatascience.com/text-classification-with-state-of-the-art-nlp-library-flair-b541d7add21f)
+
+    **Chinese**: [简单易用NLP框架Flair发布新版本 - 2018](https://www.jiqizhixin.com/articles/2018-12-27-12)
+
 
 ## 7.2 Chinese
 
@@ -113,7 +127,7 @@
     用BERT进行中文情感分类的详细操作及完整程序
 
 
-## 7.2 EMLo - TOTODO
+## 7.3 EMLo - TOTODO
 
 EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
 
@@ -140,9 +154,9 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
     NLP详细教程：手把手教你用ELMo模型提取文本特征
 
 
-## 7.3 BERT - TOTODO
+## 7.4 BERT - TOTODO
 
-### 7.3.1 BERT
+### 7.4.1 BERT
 
 [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2019](https://arxiv.org/abs/1810.04805)
 
@@ -197,12 +211,12 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
     PyTorch implement of BiLSTM-CRF for Chinese NER
     
 
-### 7.3.2 RoBERTa
+### 7.4.2 RoBERTa
 
 [RoBERTa: A Robustly Optimized BERT Pretraining Approach - Washington2019](https://arxiv.org/abs/1907.11692)
 
 
-## 7.4 GPT
+## 7.5 GPT
 
 GPT1: [Improving Language Understanding by Generative Pre-Training - OpenAI2018](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
 
@@ -233,7 +247,7 @@ GPT2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https:/
     **Chinese**: [完全图解GPT-2：看完这篇就够了（一）](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650768689&idx=2&sn=ff46397819b544a19c3200297f180dea)
 
 
-## 7.5 ULMFit
+## 7.6 ULMFit
 
 [Universal Language Model Fine-tuning for Text Classification - fastAI2018](https://arxiv.org/abs/1801.06146)
 
@@ -250,16 +264,7 @@ GPT2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https:/
 - [fastAI 发布的课程](http://course18.fast.ai/lessons/lesson10.html)
 
 
-## 7.6 Flair
-
-混合了BERT, EMLo, GPT-2，其实是一个Framework，一个library.
-
-#### Code
-
-- <https://github.com/zalandoresearch/flair> (PyTorch)
-
-
-## 7.7 ERNIE (Baidu VS THU)
+## 7.7 ERNIE (Baidu & THU)
 
 ### 7.7.1 ERNIE - Baidu
 
