@@ -21,6 +21,12 @@
 
 ## 4.4 Segmentation
 
+#### Library
+
+- 【Great】<https://github.com/lancopku/PKUSeg-python>
+
+    中文分词工具包，准确度远超 Jieba
+
 #### Paper
 
 - [A Simple and Effective Neural Model for Joint Word Segmentation and POS Tagging - HLJU2018]()

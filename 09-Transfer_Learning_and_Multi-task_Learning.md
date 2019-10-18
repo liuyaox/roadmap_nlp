@@ -46,4 +46,5 @@
 
 - [自然语言处理中的多任务学习 - 2018](https://cloud.tencent.com/developer/news/369528)
 
+ - [Multi-task Learning(Review)多任务学习概述 - 2019](https://zhuanlan.zhihu.com/p/59413549)
 
