@@ -23,6 +23,10 @@ Text Matching and Text Entailment both belong to Natural Language Inference (NLI
 
     文本匹配的相关模型DSSM, ESIM, ABCNN, BIMPM等，数据集为LCQMC官方数据
 
+#### Article
+
+- [文本匹配相关方向打卡点总结 - 2019](https://mp.weixin.qq.com/s/Nlr-VbbfUahYjMNPhquH4w)
+
 
 ### 13.1.2 MatchZoo
 

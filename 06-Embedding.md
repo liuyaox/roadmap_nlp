@@ -30,7 +30,7 @@
 - <https://github.com/liuhuanyong/Word2Vector>
 
     Self complemented word embedding methods using CBOW，skip-Gram，word2doc matrix , word2word matrix.
-
+oro
 
 ## 6.2 Word2Vec
 

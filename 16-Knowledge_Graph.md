@@ -18,6 +18,14 @@
 
     中文知识图谱计算会议CCKS报告合集，涵盖从2013年至2018年，共48篇，从中可以看出从谷歌2012年推出知识图谱以来，中国学术界及工业界这6年来知识图谱的主流思想变迁。
 
+#### Data
+
+- <https://www.ownthink.com/>
+
+    思知 智能时代：史上最大规模1.4亿中文知识图谱开源下载
+
+    **Code**:<https://github.com/ownthink/KnowledgeGraphData>
+
 
 #### Code
 

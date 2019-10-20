@@ -14,11 +14,16 @@
 
 #### Competition
 
-**2019 “达观杯”文本智能信息抽取挑战赛**
+**[2019 “达观杯”文本智能信息抽取挑战赛](https://www.biendata.com/competition/datagrand/)**
 
 > 信息抽取：抽取出特定的事件或事实信息，帮助我们将海量内容自动分类、提取和重构
 
 - [“达观杯”冠军亚军季军分享：预训练模型彻底改变了NLP，但也不能忽略传统方法带来的提升 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651674340&idx=2&sn=9a7b74e461a0d716ba150798f3f5f597)
+
+- <https://github.com/lonePatient/daguan_2019_rank9> (Pytorch)
+
+    Rank 9
+
 
 #### Data
 

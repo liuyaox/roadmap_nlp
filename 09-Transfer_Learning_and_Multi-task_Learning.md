@@ -24,6 +24,10 @@
   
   **Article**: [NLP博士答辩41页PPT，面向自然语言处理的神经网络迁移学习](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247488995&idx=3&sn=8318d4d9d14b218a675d9832328fa9f1)
 
+- 赛尔笔记 | 自然语言处理中的迁移学习 - 2019
+
+    [上篇](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650796010&idx=1&sn=6bb438e3e7e0d57e3a21e31205274c8b) and [下篇](https://mp.weixin.qq.com/s/WlpmZmmqsepwbZJqxXrUhw)
+
 
 ## 9.3 Multi-task Learning
 
