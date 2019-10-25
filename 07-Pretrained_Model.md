@@ -39,21 +39,6 @@
 
 - [就最近看的paper谈谈预训练语言模型发展 - 2019](https://zhuanlan.zhihu.com/p/79371603)
 
-- [8篇论文梳理BERT相关模型进展与反思 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651673864&idx=4&sn=703a1271f3cd40afe85130c80df90cc9)
-
-- 站在BERT肩膀上的NLP新秀们 - 2019
-  
-  - [PART I](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489437&idx=4&sn=d1d7ca7e3b4b0a1710252e8d52affe4d)
-  
-    给 BERT 模型增加外部知识信息，使其能更好地感知真实世界，主要讲了 ERNIE from Baidu 和 ERNIE from THU
-
-  - [PART II](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650409996&idx=1&sn=ddf837339e50001be4514fee743bfe9d)
-    
-    主要讲了 XLMs from Facebook, LASER from Facebook, MASS from Microsoft 和 UNILM from Microsoft
-
-  - [PART III](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650410110&idx=1&sn=310f675cf0cc1e2a1f4cc7b919743bc4)
-    
-    主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
 
 #### Code
 
@@ -156,7 +141,30 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 ## 7.4 BERT - TOTODO
 
-### 7.4.1 BERT
+### 7.4.1 Overview
+
+#### Article
+
+- [8篇论文梳理BERT相关模型进展与反思 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651673864&idx=4&sn=703a1271f3cd40afe85130c80df90cc9)
+
+- 站在BERT肩膀上的NLP新秀们 - 2019
+  
+  - [PART I](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489437&idx=4&sn=d1d7ca7e3b4b0a1710252e8d52affe4d)
+  
+    给 BERT 模型增加外部知识信息，使其能更好地感知真实世界，主要讲了 ERNIE from Baidu 和 ERNIE from THU
+
+  - [PART II](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650409996&idx=1&sn=ddf837339e50001be4514fee743bfe9d)
+    
+    主要讲了 XLMs from Facebook, LASER from Facebook, MASS from Microsoft 和 UNILM from Microsoft
+
+  - [PART III](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650410110&idx=1&sn=310f675cf0cc1e2a1f4cc7b919743bc4)
+    
+    主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
+
+- [BERT 瘦身之路：Distillation，Quantization，Pruning - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490372&idx=7&sn=7fb9c5060796f3f9a92c3f817afc080f)
+
+
+### 7.4.2 BERT
 
 [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2019](https://arxiv.org/abs/1810.04805)
 
@@ -211,7 +219,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
     PyTorch implement of BiLSTM-CRF for Chinese NER
     
 
-### 7.4.2 RoBERTa
+### 7.4.3 RoBERTa
 
 [RoBERTa: A Robustly Optimized BERT Pretraining Approach - Washington2019](https://arxiv.org/abs/1907.11692)
 

@@ -162,6 +162,8 @@ Attention: To get important word/sentence among words/sentences
 
 - [BERT大火却不懂Transformer？读这一篇就够了](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651666707&idx=1&sn=2e9149ccdba746eaec687038ce560349)
 
+- [Transformer (变形金刚，大雾) 三部曲：RNN 的继承者 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411699&idx=3&sn=83286bfa620ebe7297759fb78c31286c)
+
 #### Pratice
 
 - [放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较](https://zhuanlan.zhihu.com/p/54743941)
