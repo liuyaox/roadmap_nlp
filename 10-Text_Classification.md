@@ -21,17 +21,17 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     中文长文本分类、短句子分类（Chinese Text Classification of Keras NLP, or sentence classify, long or short），字词句向量嵌入层（embeddings）和网络层（graph）构建基类
     
-    模型：FastText, TextCNN，CharCNN，TextRNN, RCNN, DCNN, DPCNN, VDCNN, CRNN, Bert, Attention, DeepMoji, HAN, CapsuleNet, Transformer-encode, Seq2seq, ENT, DMN
+    模型：FastText, TextCNN，CharCNN，TextRNN, RCNN, DCNN, DPCNN, VDCNN, CRNN, Bert, Attention, DeepMoji, TextHAN(Transformer), CapsuleNet, Transformer-encode, Seq2seq, ENT, DMN
 
     **Article**: 【Great!】[中文短文本分类实例1-12](https://blog.csdn.net/rensihui)
 
 - <https://github.com/ShawnyXiao/TextClassification-Keras> (Keras)
 
-    Text classification models implemented in Keras, including: FastText, TextCNN, TextRNN, TextBiRNN, TextAttBiRNN, HAN, RCNN, RCNNVariant, etc.
+    Text classification models implemented in Keras, including: FastText, TextCNN, TextRNN, TextBiRNN, TextAttBiRNN, TextHAN, RCNN, RCNNVariant, etc.
 
 - <https://github.com/AlexYangLi/TextClassification> (Keras)
 
-    All kinds of neural text classifiers implemented by Keras: TextCNN, DCNN, RCNN, HAN, DPCNN, VDCNN, MultiTextCNN, BiLSTM, RNNCNN, CNNRNN.
+    All kinds of neural text classifiers implemented by Keras: TextCNN, DCNN, RCNN, TextHAN, DPCNN, VDCNN, MultiTextCNN, BiLSTM, RNNCNN, CNNRNN.
 
 - 【Great】<https://github.com/wabyking/TextClassificationBenchmark> (PyTorch)
 
@@ -49,11 +49,11 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/brightmart/text_classification> (Tensorflow)
 
-    模型：FastText, TextCNN, TextRNN, TextRCNN, BERT, HAN, Attention, Transformer, Dynamic Memory Network, EntityNetwork, BiLSTMTextRelation, TwoCNNTextRelation, BiLSTMTextRelationTwoRNN
+    模型：FastText, TextCNN, TextRNN, TextRCNN, BERT, TextHAN, Attention, Transformer, Dynamic Memory Network, EntityNetwork, BiLSTMTextRelation, TwoCNNTextRelation, BiLSTMTextRelationTwoRNN
 
 - <https://github.com/brightmart/ai_law> (Tensorflow)
 
-    All kinds of baseline models for long text classificaiton (text categorization): HAN, TextCNN, DPCNN, CNN-GRU, GRU-CNN, Simple Pooling, Transformer(todo)
+    All kinds of baseline models for long text classificaiton (text categorization): TextHAN, TextCNN, DPCNN, CNN-GRU, GRU-CNN, Simple Pooling, Transformer(todo)
 
 - <https://github.com/Edward1Chou/Textclassification> (Tensorflow)
 
@@ -65,7 +65,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/pengming617/text_classification> (Tensorflow)
 
-    模型：TextCNN，TextRNN, LEAM, Transformer，Attention, fasttext, HAN等
+    模型：TextCNN，TextRNN, LEAM, Transformer，Attention, fasttext, TextHAN等
 
 
 #### Practice
@@ -115,9 +115,9 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 > **单标签多分类**问题，共有19种分类，原始数据是字id序列和词id序列
 
-- <https://github.com/ShawnyXiao/2018-DC-DataGrand-TextIntelProcess>
+- <https://github.com/ShawnyXiao/2018-DC-DataGrand-TextIntelProcess> (No Code)
 
-    Top1    任务是通过长文本的字和词的序列数据，判断文本类别。
+    Top1  任务是通过长文本的字和词的序列数据，判断文本类别。
 
     特征构建：TFIDF特征，LDA特征，LSI特征，Word2Vec特征
 
@@ -131,7 +131,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - 【Great！】<https://github.com/nlpjoe/daguan-classify-2018> (Keras)
 
-    Rank 18   使用模型：Attention, Attention+RNN, Capsule, ConvLSTM, DPCNN, LSTM-GRU, RCNN, SimpleCNN, TextCNN, TextRNN, LightGBM
+    Rank 18  使用模型：Attention, Attention+RNN, Capsule, ConvLSTM, DPCNN, LSTM-GRU, RCNN, SimpleCNN, TextCNN, TextRNN, LightGBM
 
     **YAO**: OK
     
@@ -145,7 +145,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/hecongqing/2018-daguan-competition> (Keras)
 
-    Rank 4
+    Rank 4   Models: BiGRU, RNNCapsule
 
 - <https://github.com/Rowchen/Text-classifier> (Tensorflow)
 
@@ -189,7 +189,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/Magic-Bubble/Zhihu> (PyTorch)
 
-    Rank 2  模型和技术：FastText, TextCNN, TextRNN, TextRCNN, HAN, 核心思路是：**使用类似AdaBoost的方式来修复单模型** + 模型融合
+    Rank 2  模型和技术：FastText, TextCNN, TextRNN, TextRCNN, TextHAN, 核心思路是：**使用类似AdaBoost的方式来修复单模型** + 模型融合
 
     **Article**: [2017知乎看山杯 从入门到第二](https://zhuanlan.zhihu.com/p/29020616)
 
@@ -197,7 +197,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/yongyehuang/zhihu-text-classification> (Tensorflow)
 
-    Rank 6  模型和技术：TextCNN, BiGRU, HAN, FastText, RNN+CNN
+    Rank 6  模型和技术：TextCNN, BiGRU, TextHAN, FastText, RNN+CNN
 
     **Article**: [2017知乎看山杯总结(多标签文本分类)](https://blog.csdn.net/Jerr__y/article/details/77751885)
 
@@ -213,7 +213,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/chenzhi1992/Multi-Label-Text-Classification> (Tensorflow)
 
-    bilstm+attention, multi label text classify
+    BiLSTM + Attention, multi label text classify
 
 **法研杯要素识别**
 
@@ -360,9 +360,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 - Yao(Keras)
 
     ```Python
-    from keras.layers import Input, Conv1D, GlobalMaxPooling1D, Concatenate, Dropout, Dense
-    from keras.models import Model
-
     def TextCNNModel(input_shape, embedding_layer):
         sentences = Input(input_shape, dtype='int32')
         X = embedding_layer(sentences)                          # (None, maxlen, emb_dim)
@@ -545,9 +542,6 @@ Tree-LSTM:
 
 
 ### 10.11.3 LSTM-CNN
-
-
-### 10.11.4 Tree-LSTM
 
 
 ## 10.12 Others

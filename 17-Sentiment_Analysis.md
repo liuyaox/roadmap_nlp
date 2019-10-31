@@ -298,6 +298,12 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Attentional Encoder Network for Targeted Sentiment Classification - SYSU2019](https://arxiv.org/abs/1902.09314)
 
+- Tree-LSTM: [Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks - Stanford2015](https://arxiv.org/abs/1503.00075)
+
+    **Code**: <https://github.com/dasguptar/treelstm.pytorch> (PyTorch)
+
+    **Code**: <https://github.com/ttpro1995/TreeLSTMSentiment> (PyTorch)
+
 
 #### Code
 

@@ -29,7 +29,16 @@
     [上篇](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650796010&idx=1&sn=6bb438e3e7e0d57e3a21e31205274c8b) and [下篇](https://mp.weixin.qq.com/s/WlpmZmmqsepwbZJqxXrUhw)
 
 
-## 9.3 Multi-task Learning
+## 9.3 Few-shot Learning
+
+少样本学习，其研究领域与迁移学习有一大部分交集部分，即在源域有足够多样本，而在目标域样本不足。
+
+#### Article
+
+- [Few-shot learning 少样本学习 - 2019](https://zhuanlan.zhihu.com/p/66552960)
+
+
+## 9.4 Multi-task Learning
 
 #### Paper
 
@@ -50,5 +59,5 @@
 
 - [自然语言处理中的多任务学习 - 2018](https://cloud.tencent.com/developer/news/369528)
 
- - [Multi-task Learning(Review)多任务学习概述 - 2019](https://zhuanlan.zhihu.com/p/59413549)
+- [Multi-task Learning(Review)多任务学习概述 - 2019](https://zhuanlan.zhihu.com/p/59413549)
 

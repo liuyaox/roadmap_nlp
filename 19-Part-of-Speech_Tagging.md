@@ -15,7 +15,7 @@
 
 #### Paper
 
-- [A Maximum Entrop Model for Part-Of-Speech Tagging](http://www.aclweb.org/anthology/W96-0213)
+- [A Maximum Entrop Model for Part-Of-Speech Tagging - 1996](http://www.aclweb.org/anthology/W96-0213)
 
     **Code**: <https://github.com/yandexdataschool/nlp_course/blob/master/week05_structured/tagger.ipynb>
 

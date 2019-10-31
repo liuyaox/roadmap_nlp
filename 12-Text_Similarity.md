@@ -21,7 +21,7 @@
 
     **Article**: [How to predict Quora Question Pairs using Siamese Manhattan LSTM - 2017](https://medium.com/mlreview/implementing-malstm-on-kaggles-quora-question-pairs-competition-8b31b0b16a07)
 
-    **Article**: [中文翻译](https://www.jianshu.com/p/f3d0d94a4913?utm_campaign)
+    **Chinese**: [Siamese Recurrent Architectures for Learning Sentence Similarity](https://www.jianshu.com/p/f3d0d94a4913?utm_campaign)
 
 - [Learning Text Similarity with Siamese Recurrent Networks - Netherlands2016](http://www.aclweb.org/anthology/W16-16)
 

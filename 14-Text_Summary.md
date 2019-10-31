@@ -31,6 +31,10 @@
 
 #### Practice
 
+- <https://github.com/ztz818/Automatic-generation-of-text-summaries> (Tensorflow)
+
+    使用两种方法（抽取式Textrank和概要式seq2seq）自动提取文本摘要
+
 - [How To Create Data Products That Are Magical Using Sequence-to-Sequence Models](https://towardsdatascience.com/how-to-create-data-products-that-are-magical-using-sequence-to-sequence-models-703f86a231f8)
 
     对Github项目进行文本摘要总结

@@ -85,21 +85,23 @@ HAN: [Hierarchical Attention Networks for Document Classification - CMU2016](htt
 
 Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> Sentence Attention -> Softmax
 
-共有Word和Sentence这2种level的Encoder + Attention
-
-Encoder: To get rich representation of word/sentence
-
-Attention: To get important word/sentence among words/sentences
+共有Word和Sentence这2种level的 Encoder(To get rich representation of word/sentence) + Attention(To get important word/sentence among words/sentences)
 
 ![hierarchical_attention_network_structure](./image/hierarchical_attention_network01.png)
 
-巧妙之处：受Attention启发，这种结构不仅可以获得每个Sentence中哪些words较为重要，而且可获得每个document(很多sentence)中哪些sentences较为重要！It enables the model to capture important information in different levels.
+巧妙之处：受Attention启发，这种结构不仅可以获得Sentence中哪些words较为重要，而且可获得document中哪些sentences较为重要！It enables the model to capture important information in different levels. **在字、词、句子粒度上层次化文本，十分符合人类直觉**。
+
+![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/20191028155714.png)
+
+上图所示的实现方法中使用了Keras中的TimeDistributed，参考[Github](https://github.com/ShawnyXiao/TextClassification-Keras#6-han).
 
 #### Code
 
+- 参考 10-Text_Classification.md，搜索"TextHAN"
+
 - <https://github.com/richliao/textClassifier> (Keras)
 
-- <https://github.com/brightmart/text_classification> (Tensorflow)
+    三个模型：TextHAN, TextCNN, BiLSTM + Attention
 
 - <https://github.com/indiejoseph/doc-han-att> (Tensorflow)
 
@@ -164,6 +166,10 @@ Attention: To get important word/sentence among words/sentences
 
 - [Transformer (变形金刚，大雾) 三部曲：RNN 的继承者 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411699&idx=3&sn=83286bfa620ebe7297759fb78c31286c)
 
+- [Attention机制详解（二）——Self-Attention与Transformer - 2019](https://zhuanlan.zhihu.com/p/47282410)
+
+- [李宏毅机器学习2019之P60-Transformer - 2019](https://www.bilibili.com/video/av46561029/?p=60)
+
 #### Pratice
 
 - [放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较](https://zhuanlan.zhihu.com/p/54743941)
@@ -172,7 +178,9 @@ Attention: To get important word/sentence among words/sentences
 
 - [一个写对联的 Transformer 序列到序列模型](https://github.com/andy-yangz/couplets_seq2seq_transformer) (Tensorflow)
 
-    解读：[为了写春联，我用Transformer训练了一个“对穿肠”](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667456&idx=1&sn=b2ffe9990f8bf8a242e52face2044b65)
+    **Article**：[为了写春联，我用Transformer训练了一个“对穿肠”](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667456&idx=1&sn=b2ffe9990f8bf8a242e52face2044b65)
+
+- [Keras实现Self-Attention文本分类 - 2019](https://blog.csdn.net/xiaosongshine/article/details/90600028)
 
 
 ### 8.4.2 Transformer-XL

@@ -39,6 +39,7 @@
 
 - [就最近看的paper谈谈预训练语言模型发展 - 2019](https://zhuanlan.zhihu.com/p/79371603)
 
+- [李宏毅-ELMO、BERT、GPT视频笔记 - 2019](https://mp.weixin.qq.com/s?__biz=MzIwODI2NDkxNQ==&mid=2247484834&idx=3&sn=0951ac8c768ad7e078754f8baba8e65c)
 
 #### Code
 
@@ -162,6 +163,10 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
     主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
 
 - [BERT 瘦身之路：Distillation，Quantization，Pruning - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490372&idx=7&sn=7fb9c5060796f3f9a92c3f817afc080f)
+
+- [Understanding searches better than ever before - 2019](https://blog.google/products/search/search-language-understanding-bert)
+
+    **Chinese**: [谷歌搜索用上BERT，10%搜索结果将改善](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650772610&idx=2&sn=8770bdfbf950b3651910488722f6873d)
 
 
 ### 7.4.2 BERT
@@ -345,7 +350,16 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 - [XLNet太贵？这位小哥在PyTorch Wrapper上做了微缩版的](https://github.com/graykode/xlnet-pytorch)
 
 
-## 7.11 Application
+## 7.11 T5 Model: NLP Text-to-Text
+
+#### Article
+
+- [如何评价 Google 提出的预训练模型 T5](https://www.zhihu.com/question/352227934/answer/868639851)
+
+- [T5 模型：NLP Text-to-Text 预训练模型超大规模探索 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411701&idx=2&sn=f253b2cde92e0be27e4cdb010f8f957a)
+
+
+## 7.12 Application
 
 - [基于LSTM与TensorFlow Lite，kika输入法是如何造就的 - 2018](https://cloud.tencent.com/developer/article/1118053)
 
