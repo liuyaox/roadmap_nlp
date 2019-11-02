@@ -81,7 +81,7 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 ### 8.3.3 Hierarchical Attention Network (HAN)
 
-HAN: [Hierarchical Attention Networks for Document Classification - CMU2016](https://www.cs.cmu.edu/~diyiy/docs/naacl16.pdf)
+HAN: [Hierarchical Attention Networks for Document Classification - CMU2016](https://www.cc.gatech.edu/~dyang888/docs/naacl16.pdf)
 
 Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> Sentence Attention -> Softmax
 
@@ -89,11 +89,19 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 ![hierarchical_attention_network_structure](./image/hierarchical_attention_network01.png)
 
-巧妙之处：受Attention启发，这种结构不仅可以获得Sentence中哪些words较为重要，而且可获得document中哪些sentences较为重要！It enables the model to capture important information in different levels. **在字、词、句子粒度上层次化文本，十分符合人类直觉**。
+引述论文：Uw is word-level context vector, and can be seen as a high level representation of a fixed query "what is the informative word" over the words. It's **randomly initialized and jointly learned** during the training process. Uw可以表示重要的词特征，通过计算**Uw与X(word经encoder之后的结果)的相似度**来度量word的重要性。Us与之同理，表示重要的句子特征。
 
 ![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/20191028155714.png)
 
-上图所示的实现方法中使用了Keras中的TimeDistributed，参考[Github](https://github.com/ShawnyXiao/TextClassification-Keras#6-han).
+上图所示的实现方法中使用了Keras中的TimeDistributed，参考[Github](https://github.com/ShawnyXiao/TextClassification-Keras#6-han)
+
+**YAO**:
+
+- 巧妙之处：受Attention启发，这种结构不仅可以获得Sentence中哪些words较为重要，而且可获得document中哪些sentences较为重要！It enables the model to capture important information in different levels. **在字、词、句子粒度上层次化文本，十分符合人类直觉**。
+
+- 划分Sentence：一般通过句号、问号、感叹号来划分句子。对于脱敏数据，一般**频次第2高的几乎都是句号**，第1高的是逗号，可以大胆用第2高频词来划分。
+
+- 与ELMo拼接：可以尝试**拼接Word2Vec和EMLo**，即Word2Vec和EMLo分别走Embedding-->Word-BiLSTM-->Self-Attention后向量拼接，然后走Sentence-BiLSTM-->Self-Attention-->MLP
 
 #### Code
 

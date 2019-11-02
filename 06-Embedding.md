@@ -4,6 +4,14 @@
 
 **Keywords**: Word2Vec  Wiki2Vec  GloVe  Ngram2Vec  Para2Vec  Doc2Vec StarSpace
 
+#### Paper
+
+- [On the Dimensionality of Word Embedding - 2018](https://arxiv.org/abs/1812.04224)
+
+    针对Word2Vec(Skip-Gram), GloVe, LSA，找到训练集词向量的最佳维度embed_dim
+
+    **Code**: <https://github.com/ziyin-dl/word-embedding-dimensionality-selection>
+
 #### Article
 
 - [Generalized Language Models](https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html)

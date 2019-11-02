@@ -83,23 +83,43 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - 【Great】[在文本分类任务中，有哪些论文中很少提及却对性能有重要影响的tricks](https://www.zhihu.com/question/265357659/answer/578944550)
 
+    **YAO**: 
+
+    
+
 - 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结 - 2019](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
 
-    **YAO**:
+    **YAO**: OK
 
-    | Layer | Function |
-    | :-: | :-: |
-    | LSTM/GRU | 解决依赖问题，适合第一层建模，缺点是慢 |
-    | CNN | 配合池化抓取关键词特征 |
-    | Capsules | 可以替代CNN，效果一般优于CNN |
-    | MaxPooling | 只要关键特征，其他全部过滤 |
-    | Attention | 突出关键特征，但难以过滤掉所有非重点特征，类似于池化机制 |
+    - token_level: **word和char都要尝试**，只要效果不相差太多，都要保留，为之后的模型整合增加差异性。
+    
+    - word_maxlen: 文本长度，一般用**占比95%或98%的长度**作为最大长度，然后或截断或Padding，Padding的话按Keras默认补在前面。
+    
+    - word embedding: 若数据没有脱敏，可直接用Word2Vec或GloVe，否则可自己训练。
+      - trick: Word2Vec和GloVe可以结合，**直接拼接**会有一定提升效果，但相加或均值效果通常不好
+      - embed_dim: 一般要花费点时间多做测试，而且不同模型可能还不一样。可参考自动找到最优dim的论文On the Dimensionality of Word Embedding
+      - TODO: 公开训练的 VS 自己训练的，哪个效果好，待实验？
+    
+    - pretrained model: 效果基本上都能比Word Embedding高几个点。
 
-    由此，可得出以下若干小结论：
+    - 模型组件选择：文本分类的关键点是**抓取关键词**，影响关键词抓取最重要的一点是文本长度，而如果过于优化长文本性能，则短文本性能就会受影响，因此关注重点是：**关键词特征、长文本和短文本**。深度模型组件和功能拆解如下：
 
-    - 对于短文本，LSTM/GRU+Capsules是一个不错的模型
+        | 组件           | 功能 |
+        | :-:           | :-: |
+        | LSTM/GRU      | 解决依赖问题，适合**第一层建模**，缺点是慢 |
+        | CNN           | 配合池化**抓取关键词**特征 |
+        | Capsules      | 可以替代CNN，效果一般**优于CNN** |
+        | MaxPooling    | **只留**关键特征，其他全部过滤 |
+        | Attention     | **突出**关键特征，但难以过滤掉所有非重点特征，**类似于池化机制** |
 
-    - 对于长文本，只使用CNN几乎没法用，最好在前面加一层LSTM/GRU，以及Attention机制
+        由此可得出以下小结论：
+        - 短文本：关键词比较容易抓取，LSTM/GRU+**CNN/Capsules+Maxpooling** 是不错的组合，是目前Kaggle Quora比赛最好的Baseline之一。
+        - TODO：去Kaggle Quora比赛观察一下，所谓短文本，到底是多短？
+        - 长文本：只使用CNN几乎没法用，TextCNN比HAN低10多个点，最好在前面加一层**LSTM/GRU以及Attention**
+
+    - 模型选择：参考TextCNN和HAN相关内容。
+
+    - Tricks: Stacking, Pseudo Label, Finetuning(Hinton的蒸馏方法更加稳定有效？)
 
 
 #### Library
@@ -339,21 +359,22 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
   ![textcnn_structure](./image/textcnn_01.png)
 
-  **Key Points**：
+  **YAO**:
 
-  TextCNN的输入Embedding有3种：
+  - 抓取关键词的机制：卷积核沿着文本向下滑动，类似于**N-Gram对文本切词**，卷积核和每个词进行**相似度计算**，在后面接个Maxpooling，因此只保留**和卷积核最相近的词**，即所谓关键词。
 
-  - 随机初始化
+  - TextCNN的输入Embedding有3种：
+    - 随机初始化
+    - Static Pre-trained
+    - Two-Channel: Static Pre-trained + Dynamic Embedding，其中Dynamic有2种：Pre-trained + Finetuning和随机初始化，Dynamic的作用是，通过对语料的学习，模型可以得到task-specific的信息。
 
-  - Static Pre-trained
-
-  - Two-Channel: Static Pre-trained + Dynamic Embedding，其中Dynamic有2种：Pre-trained + Finetuning和随机初始化，Dynamic的作用是，通过对语料的学习，模型可以得到task-specific的信息。
+  - Trick: 一般可在TextCNN前加一层LSTM，效果相对不错，也可把CNN换成Capsule，效果也会稍微好一些。 
 
 - [A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification - UTEXAS2016](https://arxiv.org/abs/1510.03820)
 
-    对TextCNN进行调优
+    - 对TextCNN进行调优
 
-    论文基于one-layer CNNs，研究了Input Word Vectors、Filter Region Size、Number of Feature Maps for Each Filter Region Size、Activation Function、Pooling Strategy和Regularization等对模型性能的影响，有助于我们参考以选择适合自己的参数。
+    - 论文基于one-layer CNNs，研究了Input Word Vectors、Filter Region Size、Number of Feature Maps for Each Filter Region Size、Activation Function、Pooling Strategy和Regularization等对模型性能的影响，有助于我们参考以选择适合自己的参数。
 
 #### Code
 
