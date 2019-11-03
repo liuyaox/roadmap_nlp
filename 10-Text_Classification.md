@@ -1,7 +1,7 @@
 
 # 10. Text Classification
 
-YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
+YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 
 ## 10.1 Overview
@@ -83,9 +83,59 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - 【Great】[在文本分类任务中，有哪些论文中很少提及却对性能有重要影响的tricks](https://www.zhihu.com/question/265357659/answer/578944550)
 
-    **YAO**: 
+    **YAO**: OK
 
-    
+    - 数据预处理
+
+      - 理念: 数据量足够大的情况下，**强行破坏数据分布**可能是无用功，比如清洗。但数据量较小或数据分布有偏时，要考验预处理的功底了。
+
+      - vocab: 尝试过滤前N个高频词，以及次数少于3的低频词，或根据TFIDF值来筛选
+
+      - stopword: 在公开停用词基础上，要根据具体任务增加或删除一些
+
+      - 归一化: 必须要做的 ？？？
+
+      - 数据增强: drop, shuffle, replace, 近义词, 扩充, 截取
+      
+      - 文本纠错、词干还原、形态还原、拼音处理可能会有用
+
+      - 文本泛化: 表情、数字、人名、地址、网址、命名实体等，可用关键字代替，视具体的任务而定，也可单独作为一维特征
+
+      - 分词工具：首先要确保分词器与预训练词向量表中的Token能够match，否则就是OOV了。若已知预训练词向量使用的分词工具，直接使用之；若不知，可尝试寻找，多试几个分词工具，分词结果与词向量最接近的即可。同时也要考虑大小写的处理是否一致。
+
+      - 数据噪声的处理：一种是X内部噪声，比如口语化或互联网文本，可使用语言模型或基于编辑距离的文本纠错，然而实际上由于专有名词和超出想象的**假噪声**，实际效果并不很好；另一种是Y噪声，可强行跑模型，然后做Badcase分析，甚至直接把明显判错的样本纠正过来！当然最好是，如果数据量足够，直接删除这些样本。
+
+    - 数据特征
+
+      - meta-feature: 比如词性、情感以及各种语言学特征和元信息等，时好时坏，但有时对于**短文本分类**有神奇的效果！  **TODO**：如何加入这些元特征？？？
+
+      - 英文有字符向量，中文有笔画向量，在某些场景上可能有效
+
+      - 自己训练字词向量: 训练字向量时的窗口要比词向量时大一些，其他预训练超参也最好调一调。WHY?
+
+      - **迁移特征**: 尝试用公开语料库训练模型，然后将模型应用于训练集的结果作为训练集新增的一列特征！当然要考虑到任务的相关性。
+
+    - 模型结构
+
+      - CNN VS RNN: 省事的话直接CNN，因为跑得快，可快速迭代，可作为很强的Baseline；客观决策来说，要先花一小时好好观察数据，若数据中有很多**很强的NGram**可直接帮助得出正确Label，那就CNN起步；若感觉很多样本是那种一个句子看完甚至看好几遍才能得出正确Label，那就RNN起步；如果数据量大，可直接尝试Transformer
+
+      - RNN based: LSTM/GRU推荐使用Bidirectional
+
+      - Embedding: 是否参与训练的效果待定，时好时坏
+
+      - **显然问题使用fastText，简单问题使用TextCNN，复杂问题使用RNN，终极问题使用Bert**
+
+      - Dropout VS BN: 各有千秋，同时对位置和顺序也有要求。对于dropout，推荐几个位置，如**Embedding后、Pooling后、FC后**，刚开始概率可以一样比如0.5，后续有时间再单独微调
+
+      - 类别太多时可考虑**层次分类**，不好分的先合并，然后再做内部分类
+
+    - 模型训练
+
+      - 不均衡采样: **正负比<=9:1**一般都没事，梯度缩放，或者试试何凯明提出的**focal loss**损失函数，提高小类样本准确率的同时，大类样本可能会下降
+
+      - finetuning: 数据量大时适合，数据量小时就别微调了
+
+      - learning_rate: 一个常识般的trick就是，多轮epoch后学习率=学习率/10，从默认学习率开始不断降低学习率进行训练，1e-3, 1e-4, 1e-5, ...
 
 - 【Great】[如何到top5%？NLP文本分类和情感分析竞赛总结 - 2019](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247486159&idx=1&sn=522345e275df807942c7b56b0054fec9)
 
@@ -117,7 +167,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
         - TODO：去Kaggle Quora比赛观察一下，所谓短文本，到底是多短？
         - 长文本：只使用CNN几乎没法用，TextCNN比HAN低10多个点，最好在前面加一层**LSTM/GRU以及Attention**
 
-    - 模型选择：参考TextCNN和HAN相关内容。
+    - 模型选择：参考TextCNN和HAN相关内容
 
     - Tricks: Stacking, Pseudo Label, Finetuning(Hinton的蒸馏方法更加稳定有效？)
 
@@ -256,7 +306,9 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **Chinese**: [手把手教你用Keras进行多标签分类](https://blog.csdn.net/tMb8Z9Vdm66wH68VX1/article/details/81090757)
 
-    **YAO**: 对于**3标签多分类**问题，比如标签1是衣服，有裙子、衬衫、卫衣3种，标签2是颜色，有红、蓝、黑、白4种，标签3是质地，有棉、丝2种，需要使用mlb=MultiLabelBinarizer处理这种标签取值，处理后mlb.classes_=3+4+2=9，即问题转化为**9标签二分类**问题！！！(本质理念：把多标签多分类问题，转化为**在每个标签上的二分类问题**！)
+    **YAO**: 
+    
+    对于**3标签多分类**问题，比如标签1是衣服，有裙子、衬衫、卫衣3种，标签2是颜色，有红、蓝、黑、白4种，标签3是质地，有棉、丝2种，需要使用mlb=MultiLabelBinarizer处理这种标签取值，处理后mlb.classes_=3+4+2=9，即问题转化为**9标签二分类**问题！！！(本质理念：把多标签多分类问题，转化为**在每个标签上的二分类问题**！)
     
     - 模型搭建：activation='sigmoid'，类别数量=mlb.classes_
 
@@ -375,6 +427,8 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
     - 对TextCNN进行调优
 
     - 论文基于one-layer CNNs，研究了Input Word Vectors、Filter Region Size、Number of Feature Maps for Each Filter Region Size、Activation Function、Pooling Strategy和Regularization等对模型性能的影响，有助于我们参考以选择适合自己的参数。
+
+    **Practice**: [Another Twitter Sentiment Analysis with Python - Part11(CNN+Word2Vec) - 2018](https://towardsdatascience.com/another-twitter-sentiment-analysis-with-python-part-11-cnn-word2vec-41f5e28eda74)
 
 #### Code
 
