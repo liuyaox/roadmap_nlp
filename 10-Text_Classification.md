@@ -29,9 +29,13 @@ YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     Text classification models implemented in Keras, including: FastText, TextCNN, TextRNN, TextBiRNN, TextAttBiRNN, TextHAN, RCNN, RCNNVariant, etc.
 
+    **YAO**: 亲测了TextHAN
+
 - <https://github.com/AlexYangLi/TextClassification> (Keras)
 
     All kinds of neural text classifiers implemented by Keras: TextCNN, DCNN, RCNN, TextHAN, DPCNN, VDCNN, MultiTextCNN, BiLSTM, RNNCNN, CNNRNN.
+
+    **YAO**: 亲测了TextHAN
 
 - 【Great】<https://github.com/wabyking/TextClassificationBenchmark> (PyTorch)
 
@@ -72,14 +76,46 @@ YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - [文本分类实战系列文章 - 2019](https://www.cnblogs.com/jiangxinyang/p/10207482.html) (Tensorflow)
 
-- [阿里AI工程师教你如何用CNN RNN Attention解决大规模文本分类问题 - 2017](https://www.sohu.com/a/130492867_642762)
-
 
 #### Article
 
 - 【Great】[用深度学习（CNN RNN Attention）解决大规模文本分类问题 - 综述和实践 - 2017](https://zhuanlan.zhihu.com/p/25928551)
 
-    **YAO**: 类似于综述，有传统方法和深度学习方法，还有经验思考
+    **YAO**: OK  综述，有传统方法和深度学习方法，还有经验思考
+    
+    业务任务：根据商品title预测其所属cid3，典型的**短文本多分类**问题。
+
+    传统方法
+    
+    - 文本表示：词袋模型BoW或向量空间模型VSM、基于语义的文本表示如LDA/LSI/PLSI概率潜在语义索引等
+    
+    - 特征选择：基本思路是根据某个评价指标独立地对原始特征项（词项）进行评分排序，指标有文档频率、互信息、信息增益、卡方统计量等
+    
+    - 特征权重：TFIDF及其扩展方法
+
+    深度学习方法
+    
+    - 分类模型：fastText, TextCNN, TextRNN, TextRNN+Attention, TextRCNN
+
+    工程经验
+    
+    - 模型并不重要：TextCNN已经足以不错，RCNN只提升1%左右，建议**先用TextCNN把整体任务效果调试到最好，再尝试改进模型**
+    
+    - 一定要理解数据：数据Sense很重要，要**重视Badcase分析**，明白数据为什么Bad为什么Good
+    
+    - 搭建快速实验流程：事先搭建好一套流程，能够快速迭代模型，通俗来讲就是写好代码，改变参数后能够快速运行，并做好记录和分析
+    
+    - 超参数调节：推荐资料为[A Sensitivity Analysis of (and Practitioners’ Guide to) Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1510.03820)和[深度学习网络调参技巧](https://zhuanlan.zhihu.com/p/24720954)
+    
+    - 一定要用Dropout：除非有了BN，最好的参数还是0.5
+    
+    - Fine-tuning是必选的
+    
+    - 类目不均衡：如果Loss被一部分类别Dominate，对总体而言大多是负向的。建议尝试类似**Booststrap方法以调整Loss中样本权重**（How???）
+    
+    - 避免训练震荡：一定要增加随机采样使得数据独立同分布，默认Shuffle(fit的参数shuffle=True)机制能使训练结果更稳定。如果仍震荡，尝试**调整一下learning_rate或mini_batch_size**
+    
+    - 没有收敛前不要下结论：一定要等到Loss收敛了才能下结论
 
 - 【Great】[在文本分类任务中，有哪些论文中很少提及却对性能有重要影响的tricks](https://www.zhihu.com/question/265357659/answer/578944550)
 
@@ -203,7 +239,7 @@ YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     Rank 18  使用模型：Attention, Attention+RNN, Capsule, ConvLSTM, DPCNN, LSTM-GRU, RCNN, SimpleCNN, TextCNN, TextRNN, LightGBM
 
-    **YAO**: OK
+    **YAO**: 亲测了除LightGBM外所有模型  OK
     
     - Baseline：LR和LinearSVC，**特征只有TFIDF特征**，评估指标是Accuracy和F1值，都有非CV版和CV版
 
@@ -352,7 +388,7 @@ YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 疑问：使用Sigmoid处理多标签分类问题，前提假设是各标签之间是并列且独立的，这合理么？相同的模型主体，只是输出层开始不同，那么在模型主体处会学习各标签之间隐含的关系么？
 
 
-## 10.3 FastText
+## 10.3 fastText
 
 [Bag of Tricks for Efficient Text Classification - Facebook2016](https://arxiv.org/abs/1607.01759)
 
