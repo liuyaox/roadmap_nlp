@@ -122,7 +122,14 @@
     中文文本自动纠错
 
 
-## 4.9 打造NLP数据集
+## 4.9 Subword
+
+#### Article
+
+- [子词技巧：The Tricks of Subword - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411766&idx=3&sn=c5f92645737b469d386bf303bcbcf71f)
+
+
+## 4.10 打造NLP数据集
 
 #### Article
 

@@ -148,7 +148,11 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 ### 8.4.1 Transformer
 
-[Attention Is All You Need - Google2017](https://arxiv.org/abs/1706.03762)
+- Transformer: [Attention Is All You Need - Google2017](https://arxiv.org/abs/1706.03762)
+
+- [Training Tips for the Transformer Model - Czechia2018](https://arxiv.org/abs/1804.00247)
+
+    训练 Transformer 时会发生的各种现象   推荐阅读！
 
 #### Code
 

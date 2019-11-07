@@ -1,4 +1,4 @@
-# 25. Tricks and Tips
+# 25. Engineering and Tricks
 
 ## 25.1 Overview
 
@@ -10,15 +10,15 @@
 
 - [深度学习的一些经验总结和建议| To do v.s Not To Do - 2019](https://mp.weixin.qq.com/s?__biz=MzUyOTU2MjE1OA==&mid=2247485683&idx=2&sn=759fb3d6bcc3e43dfb9b967e83dbe7dc)
 
-- 【Great】[分分钟带你杀入Kaggle Top 1% - 2017](https://zhuanlan.zhihu.com/p/27424282)
+- [分分钟带你杀入Kaggle Top 1% - 2017](https://zhuanlan.zhihu.com/p/27424282)
 
-- [Ten Techniques Learned From fast.ai](https://blog.floydhub.com/ten-techniques-from-fast-ai/)
+- [Ten Techniques Learned From fast.ai - 2018](https://blog.floydhub.com/ten-techniques-from-fast-ai/)
 
     **Chinese**：[称霸Kaggle的十大深度学习技巧](https://mp.weixin.qq.com/s?__biz=MzU3NjE4NjQ4MA==&mid=2247484049&idx=1&sn=56bb5d502b2ed6e1cbc8b7405b52ad20)
 
-- [训练神经网络的方法分享-Andrej Karpathy](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485845&idx=1&sn=13620bb17dc0fd75d71100dd84cce59d)
+- [训练神经网络的方法分享-Andrej Karpathy - 2019](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485845&idx=1&sn=13620bb17dc0fd75d71100dd84cce59d)
 
-- [12 Key Lessons from ML researchers and practitioners](https://towardsml.com/2019/04/09/12-key-lessons-from-ml-researchers-and-practitioners/)
+- [12 Key Lessons from ML researchers and practitioners - 2019](https://towardsml.com/2019/04/09/12-key-lessons-from-ml-researchers-and-practitioners/)
 
     **Chinese**：[关于机器学习实战，那些教科书里学不到的 12 个“民间智慧”](https://mp.weixin.qq.com/s/jTdhb00HYhfLYiW1q14gtg)
 
@@ -32,22 +32,37 @@
 
     **Chinese**: [训练的神经网络不工作？一文带你跨过这37个坑](https://baijiahao.baidu.com/s?id=1573879911456703)
 
-- 【Great】[如何训练一个性能不错的深度神经网络 - 2018](http://www.sohu.com/a/222666303_609569)
+- [如何训练一个性能不错的深度神经网络 - 2018](http://www.sohu.com/a/222666303_609569)
 
-    **YAO**：HEREHEREHEREHEREHEREHEREHEREHEREHEREHERE
+    **YAO**：OK 归一化推荐一看，其他just soso
+
+    - 零均值化：可避免参数梯度过大
+
+    - 归一化：可使不同维度的数据具有大致相同的分布规模
+        
+        原因：**S=W1\*x1+W2\*x2+b => dS/dW1=x1,dS/dW2=x2参与形成参数的梯度** => x1与x2本身差异巨大会导致梯度差异巨大，影响梯度下降的效果和速度
+        
+        进一步讲，之所以会影响，是因为在实际操作中为了方便，**所有维度共用同一套更新策略，即设置相同的步长**，随着迭代进行，步长的缩减也是同步的，这就要求不同维度数据的分布规模大致相同。BTW，理论上讲，**不同维度需要设置不同的迭代方案**，则不受以上影响了。
+
+    - 初始化：使用非常接近零的随机数初始化参数，以打破网络的对称性
+
+    - 模型集成
+      - 常见的，省略……
+      - 相同模型 + 相同超参 + 不同参数初始化： 缺点是模型多样性仅仅取决于初始化
+      - 单个模型的不同Checkpoint
 
 - [Ten Techniques Learned From fast.ai - 2018](https://blog.floydhub.com/ten-techniques-from-fast-ai/)
 
     **Chinese**: [10大称霸Kaggle的深度学习技巧](https://blog.csdn.net/yH0VLDe8VG8ep9VGe/article/details/81463870)
 
-- [Weight Initialization in Neural Networks: A Journey From the Basics to Kaiming - 2019](https://towardsdatascience.com/weight-initialization-in-neural-networks-a-journey-from-the-basics-to-kaiming-954fb9b47c79)
+- 【Great】[半天2k赞火爆推特！李飞飞高徒发布33条神经网络训练秘技 - 2019](https://zhuanlan.zhihu.com/p/63841572)
 
-    神经网络中的权重初始化一览：从基础到Kaiming
+    **YAO**: HERE HERE HERE HERE HERE HERE
 
 
 #### Practice
 
-- 【Great!!】[How I made top 0.3% on a Kaggle competition](https://www.kaggle.com/lavanyashukla01/how-i-made-top-0-3-on-a-kaggle-competition)
+- 【Great!!】[How I made top 0.3% on a Kaggle competition - 2019](https://www.kaggle.com/lavanyashukla01/how-i-made-top-0-3-on-a-kaggle-competition)
 
     **YAO**: 完整展示了算法项目的流程及各种细节，强烈建议过一遍！！！
 
@@ -99,34 +114,50 @@
       - 训练集和测试集统一：在预处理基础上，统一两者特征抽取的代码和数据源，diff=0.64%
       - 增加特征：在统一基础上，进一步分析B特征对Badcase有很好的区分度，将B引入训练，diff=1.14%
 
-- [Complete Machine Learning Guide to Parameter Tuning in Gradient Boosting (GBM) in Python - 2016](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/)
+- [step-by-step: 夕小瑶版神经网络调参指南 上篇 - 2018](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247484836&idx=1&sn=bafd0e43515d8f29105decf6481af61e)
+
+    **YAO**: GREAT GREAT GREAT GREAT GREAT GREAT TO BE CONTINUED ……   做NER项目时再阅读
+
+    - 调参前请务必
+      - **做好可视化**：可视化每个Step(Batch)的loss和metrics(如准确率或f1-score)，推荐使用tensorboard；建议既输出到屏幕也写入文件，推荐使用logging
+      - **关闭正则化**：如L2, Dropout等，它们很可能会极大影响loss曲线，主要在初始调参前
+
+    - learning_rate & num_steps
+
+    - batch_size & momentum
+
+    - learning_rate衰减策略
+
+- [有哪些deep learning（rnn、cnn）调参的经验 - 2019](https://www.zhihu.com/question/41631631)
+
+    **YAO**: HEREHEREHEREHEREHEREHEREHEREHEREHERE
+
+    - 参数初始化：
+
+    - 数据预处理：
+
+    - 训练技巧之梯度：
+
+
+- [你在训练RNN的时候有哪些特殊的trick？ - 2017](https://www.zhihu.com/question/57828011)
+
+    **YAO**: HEREHEREHEREHEREHEREHEREHEREHEREHERE
+
+- [神经网络训练trick - 2019](https://zhuanlan.zhihu.com/p/59918821)
 
 - [深度学习中训练参数的调节技巧 - 2018](https://www.jianshu.com/p/4eff17d9c4ce)
 
-- [step-by-step: 夕小瑶版神经网络调参指南（上）- 2018](https://mp.weixin.qq.com/s?src=11&timestamp=1572781504&ver=1952&signature=bH5H*UEOjeFIKeFi-0-eRWIw6HdnWjwNCKjCJat4BVktOECHS-s-U8cJQOUbTC8PpwxBpJ2QteN9CioKKa8XYEH3qf*Arh2HysXPxRbA7c*zT2rskeybxOlhkUjFaepa)
+- [深度学习网络调参技巧 - 2017](https://zhuanlan.zhihu.com/p/24720954)
 
-    **YAO**: HEREHEREHEREHEREHEREHEREHEREHEREHERE
+- [调参是否能对深度学习模型的性能有极大提升？ - 2019](https://www.zhihu.com/question/339287819)
+
+- [是否有办法提高深度学习的调参效率？ - 2019](https://www.zhihu.com/question/339102039)
 
 - [Practical guide to hyperparameters search for deep learning models - 2018](https://blog.floydhub.com/guide-to-hyperparameters-search-for-deep-learning-models/)
 
     超参数搜索不够高效？这几大策略了解一下
 
-- [深度学习网络调参技巧](https://zhuanlan.zhihu.com/p/24720954)
-
-- [调参是否能对深度学习模型的性能有极大提升？](https://www.zhihu.com/question/339287819)
-
-- [是否有办法提高深度学习的调参效率？](https://www.zhihu.com/question/339102039)
-
-- [有哪些deep learning（rnn、cnn）调参的经验](https://www.zhihu.com/question/41631631)
-
-    **YAO**: HEREHEREHEREHEREHEREHEREHEREHEREHERE
-
-- [神经网络训练trick](https://zhuanlan.zhihu.com/p/59918821)
-
-- [你在训练RNN的时候有哪些特殊的trick？](https://www.zhihu.com/question/57828011)
-
-    **YAO**: HEREHEREHEREHEREHEREHEREHEREHEREHERE
-
+- [Complete Machine Learning Guide to Parameter Tuning in Gradient Boosting (GBM) in Python - 2016](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/)
 
 ## Library
 
@@ -139,16 +170,15 @@
     **Article**: [python调参神器hyperopt](https://blog.csdn.net/qq_34139222/article/details/60322995)
 
 
-## 25.3 Finetuning
+## 25.3 Learning Rate
 
-#### Article
+最重要的超参，没有之一。
 
-- A Comprehensive guide to Fine-tuning Deep Learning Models in Keras -2016
-  - [Part1](https://flyyufelix.github.io/2016/10/03/fine-tuning-in-keras-part1.html)
-  - [Part2](https://flyyufelix.github.io/2016/10/03/fine-tuning-in-keras-part2.html)
+- [Cyclical Learning Rates for Training Neural Networks - USNavy2017](https://arxiv.org/abs/1506.01186)
 
+    CLR: Cyclic Learning Rate
 
-## 25.4 Learning Rate
+    **Code**: <https://github.com/bckenstler/CLR>
 
 #### Article
 
@@ -161,9 +191,50 @@
 - [Understanding Learning Rates and How It Improves Performance in Deep Learning - 2018](https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10)
 
 
-## 25.5 Model Ensembling
+## 25.4 Finetuning
 
-### 25.5.1 Overview
+#### Article
+
+- A Comprehensive guide to Fine-tuning Deep Learning Models in Keras -2016
+  - [Part1](https://flyyufelix.github.io/2016/10/03/fine-tuning-in-keras-part1.html)
+  - [Part2](https://flyyufelix.github.io/2016/10/03/fine-tuning-in-keras-part2.html)
+
+
+## 25.5 GPU
+
+#### Article
+
+- [深度学习的GPU：深度学习中使用GPU的经验和建议 - 2018](https://blog.csdn.net/sinat_36458870/article/details/78946030)
+
+    **YAO**: HERE HERE HERE HERE HERE HERE
+
+- [给训练踩踩油门——Pytorch加速数据读取 - 2019](https://mp.weixin.qq.com/s/jXaItEwH10-reaiH2pKztw)
+
+#### Practice
+
+- [在深度学习中喂饱gpu - 2019](https://zhuanlan.zhihu.com/p/77633542)
+
+    **Code**: <https://github.com/tanglang96/DataLoaders_DALI> (PyTorch)
+
+- [GPU 显存不足怎么办？- 2019](https://zhuanlan.zhihu.com/p/65002487)
+
+
+## 25.6 Pseudo Labeling
+
+训练集训练好的模型应用于测试集后的结果(即伪标签)，与训练集混合在一起后重新训练模型。？
+
+一般模型能忍受10%的噪音，所以不要把所有测试集与训练集混合，建议保持比例在10:1左右。？
+
+#### Article
+
+- [A Simple Pseudo-Labeling Function Implementation in Keras - 2017](https://shaoanlu.wordpress.com/2017/04/10/a-simple-pseudo-labeling-function-implementation-in-keras/)
+
+- [标签传播算法（Label Propagation）及Python实现 - 2015](https://blog.csdn.net/zouxy09/article/details/49105265)
+
+
+## 25.7 Model Ensembling
+
+### 25.7.1 Overview
 
 #### Paper
 
@@ -186,17 +257,17 @@
     **Article**: [大部分机器学习算法具有随机性，只需多次实验求平均值即可吗？](https://www.zhihu.com/question/328157418/answer/746533382)
 
 
-### 25.5.2 Boosting
+### 25.7.2 Boosting
 
 #### Code
 
 - <https://github.com/brightmart/text_classification/blob/master/a00_boosting/a08_boosting.py> (Tensorflow)
 
 
-### 25.5.3 Bagging
+### 25.7.3 Bagging
 
 
-### 25.5.4 Stacking 
+### 25.7.4 Stacking 
 
 对训练好的基学习器的应用结果进行**非线性融合**(输入并训练一个新的学习器)
 
@@ -246,7 +317,7 @@ Y(x) = E.apply(E1.apply(x), E2.apply(x), ..., ET.apply(x))  # 全流程应用
 - [A Kaggler's Guide to Model Stacking in Practice](http://blog.kaggle.com/2016/12/27/a-kagglers-guide-to-model-stacking-in-practice/)
 
 
-### 25.5.5 Blending
+### 25.7.5 Blending
 
 理念与Stacking比较类似，模型分为两层，不过比Stacking简单一些，不需要通过KFold这种CV策略来获得主模型的特征，而是建立一个Holdout集，直接使用不相交的数据集用于两层的训练。以两层Blending为例，详细来说为：
 
@@ -263,59 +334,11 @@ Step4: 基模型应用于Q的结果，测试主模型，模型应用时与测试
 - [Blending 和 Stacking - 2018](https://blog.csdn.net/u010412858/article/details/80785429)
 
 
-## 25.6 Pseudo Labeling
-
-训练集训练好的模型应用于测试集后的结果(即伪标签)，与训练集混合在一起后重新训练模型。？
-
-一般模型能忍受10%的噪音，所以不要把所有测试集与训练集混合，建议保持比例在10:1左右。？
-
-#### Article
-
-- [A Simple Pseudo-Labeling Function Implementation in Keras - 2017](https://shaoanlu.wordpress.com/2017/04/10/a-simple-pseudo-labeling-function-implementation-in-keras/)
-
-- [标签传播算法（Label Propagation）及Python实现 - 2015](https://blog.csdn.net/zouxy09/article/details/49105265)
-
-
-## 25.7 Engineering
-
-#### Article
-
-- [机器学习框架上的一些实践 - 2019](https://zhuanlan.zhihu.com/p/76541337)
-
-
-## 25.8 Data Augmentation
-
-#### Paper
-
-- [EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks - USA2019](https://arxiv.org/abs/1901.11196)
-
-    **Article**: [NLP中一些简单的数据增强技术](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411500&idx=2&sn=76e635526015ccecd14a1436bda55e2c)
-
-#### Article
-
-- [These are the Easiest Data Augmentation Techniques in NLP you can think of — and they work - 2019](https://towardsdatascience.com/these-are-the-easiest-data-augmentation-techniques-in-natural-language-processing-you-can-think-of-88e393fd610)
-
-
-## 25.9 GPU
-
-#### Article
-
-- [深度学习的GPU：深度学习中使用GPU的经验和建议 - 2018](https://blog.csdn.net/sinat_36458870/article/details/78946030)
-
-- [给训练踩踩油门——Pytorch加速数据读取 - 2019](https://mp.weixin.qq.com/s/jXaItEwH10-reaiH2pKztw)
-
-#### Practice
-
-- [在深度学习中喂饱gpu - 2019](https://zhuanlan.zhihu.com/p/77633542)
-
-    **Code**: <https://github.com/tanglang96/DataLoaders_DALI> (PyTorch)
-
-- [GPU 显存不足怎么办？- 2019](https://zhuanlan.zhihu.com/p/65002487)
-
-
-## 25.10 Others
+## 25.8 Others
 
 #### Article
 
 - [9个大数据竞赛思路分享 - 2016](https://blog.csdn.net/Bryan__/article/details/51713596)
+
+- [机器学习框架上的一些实践 - 2019](https://zhuanlan.zhihu.com/p/76541337)
 
