@@ -249,6 +249,8 @@ GPT2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https:/
 
 - GPT2: <https://github.com/openai/gpt-2> (Tensorflow)
 
+    **Data*: <https://github.com/openai/gpt-2-output-dataset>
+
 #### Article
 
 - GPT1: [Improving Language Understanding with Unsupervised Learning](https://openai.com/blog/language-unsupervised/)

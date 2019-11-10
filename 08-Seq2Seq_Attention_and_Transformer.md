@@ -18,24 +18,23 @@ Attention, Transformer, Pointer Network
 
 ### 8.3.1 Overview
 
-Attention的打分机制是关键，表示Encoder的状态a和Decoder的状态s之间的匹配程度，有多种，包括：**加性模型，点积模型，缩放点积模型，双线性模型**，如下图所示：
+Attention的打分机制是关键，表示**Encoder的状态a和Decoder的状态s之间**的匹配程度，有多种，包括：**加性模型，点积模型，缩放点积模型，双线性模型**，如下图所示：
 
 ![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/attetion_scoring.jpg)
 
 **YAO**: 
 
-有时候在一些模型结构中可简化，比如没有s只有a，把a输入至一个小神经网络里得到a的权重，表示关于a的Attention，随后便可与a加权求和，结果可继续输入后续结构中。
+有时候在一些模型结构中可简化，比如**没有s只有a**，把a输入至一个小神经网络里得到a的权重，表示关于a的Attention，随后便可与a加权求和，结果可继续输入后续结构中。
 
 Attention是一种理念和思想，核心要点在于：**通过小神经网络计算关于输入a的权重p(a)，即Attention**，从而后续结构在使用a时能够加权使用，有所侧重。
 
 依据这一思想，Attention-based模型可以有很多种，可以很简单。
 
-**YAO**: 本质上非常简单，可以表示为：**X-->Attention-->sum(p(X)*X)**，Attention是一种加权求和，有各种方法，对应着不同的权重或概率p(X)
+**YAO**: 本质上非常简单，可以表示为：**X-->Attention-->sum(p(X)\*X)**，Attention是一种加权求和，有各种方法，对应着不同的权重或概率p(X)
 
 #### Paper
 
 - [An Attentive Survey of Attention Models - LinkedIn2019](https://arxiv.org/abs/1904.02874)
-
 
 #### Article
 
@@ -45,7 +44,7 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 - [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
 
-- [目前主流的attention方法都有哪些？](https://www.zhihu.com/question/68482809)
+- [目前主流的attention方法都有哪些？ - 2019](https://www.zhihu.com/question/68482809)
 
 - [遍地开花的 Attention ，你真的懂吗？ - 2019](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247491048&idx=1&sn=ceb1cd0fecad478a252b7681ed3231d4)
 

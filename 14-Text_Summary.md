@@ -64,3 +64,7 @@
 - 4. [Fine-tune BERT for Extractive Summarization - Edinburgh2019](https://arxiv.org/abs/1903.10318)
 
     **Code**: <https://github.com/nlpyang/bertsum> (PyTorch)
+
+
+## 14.3 Other Text Generation
+

@@ -4,7 +4,7 @@
 
 - [Notes on Deep Learning for NLP - 2018](https://arxiv.org/abs/1808.09772)
 
-    综述文章共7章，持续更新中……
+    综述文章共7章，介绍NLP中各种深度技术, 持续更新中……
 
     **Code**: <https://github.com/Tixierae/deep_learning_NLP> (Keras)
 
@@ -13,6 +13,12 @@
 
 #### Github
 
+- 【Great】<https://github.com/didi/ChineseNLP>
+
+    中文自然语言处理相关的开放任务，数据集，以及当前最佳结果
+
+    **Website**: <https://chinesenlp.xyz/>
+
 - <https://github.com/graykode/nlp-roadmap>
 
     ROADMAP(Mind Map) and KEYWORD for students those who have interest in learning NLP
@@ -20,12 +26,6 @@
 - <https://github.com/Kyubyong/nlp_tasks>
 
     NLP Tasks and References
-
-- <https://github.com/didi/ChineseNLP>
-
-    中文自然语言处理相关的开放任务，数据集，以及当前最佳结果
-
-    **Website**: <https://chinesenlp.xyz/>
 
 
 #### Course

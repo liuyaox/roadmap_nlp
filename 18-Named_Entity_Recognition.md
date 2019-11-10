@@ -142,6 +142,10 @@
 
     **Chinese**：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
 
+- <https://github.com/UmasouTTT/keras_bert_ner> (Keras)
+
+    基于keras和keras_bert的中文命名实体识别，搭建的网络为bert+bilstm_crf
+
 - <https://github.com/fangwater/Medical-named-entity-recognition-for-ccks2017> (PyTorch)
 
     A LSTM+CRF model for the seq2seq task for Medical named entity recognition in ccks2017
@@ -151,6 +155,10 @@
 - <https://github.com/yanwii/ChinsesNER-pytorch> (PyTorch)
 
     基于BI-LSTM+CRF的中文命名实体识别
+
+- [Pytorch BiLSTM + CRF做NER - 2019](https://zhuanlan.zhihu.com/p/59845590)
+
+- [如何使用BERT来做命名实体识别 - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490099&idx=3&sn=8416ee9aeb0453e0b1de67abb057f0a0)
 
 - <https://github.com/phychaos/transformer_crf> (Tensorflow)
 
@@ -178,21 +186,9 @@
 
     基于 Bi-LSTM 和 CRF 的中文语义角色标注
 
-- <https://github.com/stephen-v/zh-NER-keras> (Keras)
-
-    **Chinese**：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
-
-- <https://github.com/yanwii/ChinsesNER-pytorch> (PyTorch)
-
-    基于BI-LSTM+CRF的中文命名实体识别 Pytorch
-
 - <https://github.com/dkarunakaran/entity_recoginition_deep_learning> (Tensorflow)
 
     **Article**: [Entity extraction using Deep Learning based on Guillaume Genthial work on NER - 2018](https://medium.com/intro-to-artificial-intelligence/entity-extraction-using-deep-learning-8014acac6bb8)
-
-- [Pytorch BiLSTM + CRF做NER - 2019](https://zhuanlan.zhihu.com/p/59845590)
-
-- [如何使用BERT来做命名实体识别 - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490099&idx=3&sn=8416ee9aeb0453e0b1de67abb057f0a0)
 
 
 #### Article

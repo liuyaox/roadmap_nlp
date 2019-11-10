@@ -304,6 +304,8 @@ Sentiment Analysis 按粒度可分为3种：
 
     **Code**: <https://github.com/ttpro1995/TreeLSTMSentiment> (PyTorch)
 
+- [Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks - BIT2019](https://arxiv.org/abs/1909.03477)
+
 
 #### Code
 
@@ -311,6 +313,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - 2. <https://github.com/BigHeartC/Al_challenger_2018_sentiment_analysis> (Tensorflow)
   
+- 3. <https://github.com/GeneZC/ASGCN> (PyTorch)
 
 #### Article
 

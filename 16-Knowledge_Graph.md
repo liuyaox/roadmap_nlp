@@ -57,6 +57,8 @@
 
 - <https://github.com/bojone/kg-2019> (Keras)
 
+    Rank 7   基于CNN + Attenton + 自行设计的标注结构的信息抽取模型
+
 - <https://github.com/zhengyima/kg-baseline-pytorch> (PyTorch)
 
     使用Pytorch实现苏神的模型，F1在dev集可达到0.75，联合关系抽取，Joint Relation Extraction.
