@@ -2,15 +2,27 @@
 
 # 18. Named Entity Recognition (NER)
 
+YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
+
 ## 18.1 Overview
 
 #### Article
 
-- [浅析深度学习在实体识别和关系抽取中的应用 - 2017](https://blog.csdn.net/u013709270/article/details/78944538)
-
 - 【Great】[Named entity recognition serie - 2018](https://www.depends-on-the-definition.com/introduction-named-entity-recognition-python/) (Keras)
 
-    包括NER各种模型：CRF, Seq2Seq, LSTM+CRF, LSTM + Char Embedding, Residual LSTM + ELMo, NER with Bert, 
+    包括NER各种模型：CRF, Seq2Seq, LSTM+CRF, LSTM + Char Embedding, Residual LSTM + ELMo, NER with Bert
+
+    **YAO**: 
+
+- [浅析深度学习在实体识别和关系抽取中的应用 - 2017](https://blog.csdn.net/u013709270/article/details/78944538)
+
+#### Practice
+
+- 【Great】[NLP命名实体识别(NER)开源实战教程 - 2019](https://blog.csdn.net/xiaosongshine/article/details/99622170) (Keras)
+
+    介绍模型：BiLSTM + CRF, IDCNN + CRF    实现模型：BiLSTM (无CRF)
+
+    **YAO**: 1
 
 #### Competition
 
@@ -18,32 +30,35 @@
 
 > 信息抽取：抽取出特定的事件或事实信息，帮助我们将海量内容自动分类、提取和重构
 
-- [“达观杯”冠军亚军季军分享：预训练模型彻底改变了NLP，但也不能忽略传统方法带来的提升 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651674340&idx=2&sn=9a7b74e461a0d716ba150798f3f5f597)
+- [冠亚季军分享：预训练模型彻底改变了NLP，但也不能忽略传统方法带来的提升 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651674340&idx=2&sn=9a7b74e461a0d716ba150798f3f5f597)
+
+    冠军：GloVe + Pretrained(Flair/ELMo/BERT/XLNet) + LSTM + CNN + CRF   亚军：Bert + BiLSTM + CRF   季军：Transformer + BiLSTM + CRF
+
+- <https://github.com/cdjasonj/datagrand> (Keras & Tensorflow)
+
+    Rank 6   Embedding有2种：char, bichar    模型1：BiLSTM + SelfAttention + CRF   模型2：BiLSTM + CNN + CRF    模型3：GRU + LocalAttention + CRF
+
+    **YAO**: 
 
 - <https://github.com/lonePatient/daguan_2019_rank9> (Pytorch)
 
-    Rank 9
+    Rank 9   模型1：BERT + LSTM + CRF   模型2：BERT + LSTM + MDP + CRF   模型3：BERT + LSTM + SPAN
 
+- <https://github.com/renjunxiang/daguan_2019> (PyTorch)
+
+    自行训练BERT，过程比较详细值得学习
 
 #### Data
 
 - <https://github.com/LG-1/video_music_book_datasets>
 
-    大约10000条视频/音乐/书籍标注数据
+    9632条视频/音乐/书籍标注数据
 
 
 ## 18.2 HMM & CRF
 
-## 18.3 RNN
 
-#### Practice
-
-- [NLP命名实体识别(NER)开源实战教程 - 2019](https://blog.csdn.net/xiaosongshine/article/details/99622170)
-
-    介绍了多种模型，使用Keras实现了BiLST模型
-
-
-## 18.4 RNN + CRF
+## 18.3 RNN + CRF
 
 主要以 BiLSTM + CRF 为主
 
@@ -57,94 +72,21 @@
 
     **Code**: <https://github.com/ZhixiuYe/HSCRF-pytorch> (PyTorch)
 
-
-#### Code
-
-- [BiLTSM + CRF](http://www.voidcn.com/article/p-pykfinyn-bro.html) (Keras)
-
-    ```python
-    from keras.layers import Sequential, Embedding, LSTM, bidirectional, Dropout, TimeDistributed, Dense
-    from keras_contrib.layers.crf import CRF
-    from keras_contrib.utils import save_load_utils
-
-    HIDDEN_UNITS = 200
-    NUM_CLASS = 5
- 
-    model = Sequential()
-    model.add(Embedding(2500, output_dim=128, input_length=100))
-    model.add(Bidirectional(LSTM(HIDDEN_UNITS, return_sequences=True)))
-    model.add(Dropout(0.3))
-    model.add(Bidirectional(LSTM(HIDDEN_UNITS, return_sequences=True)))
-    model.add(Dropout(0.3))
-    model.add(TimeDistributed(Dense(NUM_CLASS)))
-    crf_layer = CRF(NUM_CLASS)
-    model.add(crf_layer)
-
-    model.compile('rmsprop', loss=crf_layer.loss_function, metrics=[crf_layer.accuracy])
-
-    model_path = 'xxx'
-    save_load_utils.save_all_weights(model, model_path)     # 保存模型
-    save_load_utils.load_all_weights(model, model_path)     # 加载模型
-    ```
-
-- [BiLSTM + CNN + CRF](https://blog.csdn.net/xinfeng2005/article/details/78485748) (Keras)
-
-    ```python
-    from keras.callbacks import ModelCheckpoint, Callback
-    from keras.layers import Input, Embedding, Bidirectional, LSTM, Dropout, ZeroPadding1D, Conv1D, TimeDistributed, Dense
-    from keras.models import Model
-    from keras_contrib.layers import CRF
-    from visual_callbacks import AccLossPlotter
-
-    class LossHistory(Callback):
-        def on_train_begin(self, logs={}):
-            self.losses = []
-
-        def on_batch_end(self, batch, logs={}):
-            self.losses.append(logs.get('loss'))
-
-    # Input -> Embedding
-    word_input = Input(shape=(max_len,), dtype='int32', name='word_input')
-    word_emb = Embedding(len(char_value_dict)+2, output_dim=64, input_length=max_len, dropout=0.2, name='word_emb')(word_input)
-
-    # Embedding -> BiLSTM -> Dropout => X1
-    bilstm = Bidirectional(LSTM(32, dropout_W=0.1, dropout_U=0.1, return_sequences=True))(word_emb)
-    bilstm_d = Dropout(0.1)(bilstm)
-
-    # Embedding -> ZeroPadding1D -> Conv1D -> Dropout -> TimeDistributed(Dense) => X2
-    half_window_size = 2
-    paddinglayer = ZeroPadding1D(padding=half_window_size)(word_emb)
-    conv = Conv1D(nb_filter=50, filter_length=(2 * half_window_size + 1), border_mode='valid')(paddinglayer)
-    conv_d = Dropout(0.1)(conv)
-    dense_conv = TimeDistributed(Dense(50))(conv_d)
-
-    # X1 + X2 -> merge -> TimeDistributed(Dense) -> CRF
-    rnn_cnn_merge = merge([bilstm_d, dense_conv], mode='concat', concat_axis=2)     # merge??? concatenate?
-    dense = TimeDistributed(Dense(class_label_count))(rnn_cnn_merge)
-    crf = CRF(class_label_count, sparse_target=False)
-    crf_output = crf(dense)
-
-    # Build & Compile
-    model = Model(input=[word_input], output=[crf_output])
-    model.compile(loss=crf.loss_function, optimizer='adam', metrics=[crf.accuracy])
-    model.summary()
-
-    # Train
-    checkpointer = ModelCheckpoint(filepath="bilstm_1102_k205_tf130.w", verbose=0, save_best_only=True, save_weights_only=True)
-    losshistory = LossHistory()
-    plotter = AccLossPlotter(graphs=['acc', 'loss'], save_graph=True, save_graph_path=sys.path[0])
-    history = model.fit(x_train, y_train, batch_size=32, epochs=500, callbacks=[checkpointer, losshistory, plotter], verbose=1, validation_split=0.1)
-    ```
-
 #### Practice
+
+##### Keras
 
 - <https://github.com/stephen-v/zh-NER-keras> (Keras)
 
     **Chinese**：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
 
-- <https://github.com/UmasouTTT/keras_bert_ner> (Keras)
+- 【Great】<https://github.com/UmasouTTT/keras_bert_ner> (Keras)
 
-    基于keras和keras_bert的中文命名实体识别，搭建的网络为bert+bilstm_crf
+    中文命名实体识别   模型结构：BERT + BiLSTM + CRF   **BERT结构直接融入模型并且参与训练**
+
+    **YAO**: 
+
+##### PyTorch
 
 - <https://github.com/fangwater/Medical-named-entity-recognition-for-ccks2017> (PyTorch)
 
@@ -154,11 +96,13 @@
 
 - <https://github.com/yanwii/ChinsesNER-pytorch> (PyTorch)
 
-    基于BI-LSTM+CRF的中文命名实体识别
+    基于 BiLSTM + CRF 的中文命名实体识别
 
-- [Pytorch BiLSTM + CRF做NER - 2019](https://zhuanlan.zhihu.com/p/59845590)
+- [Pytorch BiLSTM + CRF做NER - 2019](https://zhuanlan.zhihu.com/p/59845590) (PyTorch)
 
 - [如何使用BERT来做命名实体识别 - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490099&idx=3&sn=8416ee9aeb0453e0b1de67abb057f0a0)
+
+##### Tensorflow
 
 - <https://github.com/phychaos/transformer_crf> (Tensorflow)
 
@@ -166,13 +110,15 @@
 
 - <https://github.com/Determined22/zh-NER-TF> (Tensorflow)
 
-    A very simple BiLSTM-CRF model for Chinese Named Entity Recognition 中文命名实体识别  [中文解读](https://blog.csdn.net/liangjiubujiu/article/details/79674606)
+    A very simple BiLSTM-CRF model for Chinese Named Entity Recognition 中文命名实体识别
+    
+    **Article**: [序列标注：BiLSTM-CRF模型做基于字的中文命名实体识别 - 2017](https://blog.csdn.net/liangjiubujiu/article/details/79674606)
     
 - <https://github.com/shiyybua/NER> (Tensorflow)
 
     BiRNN + CRF
 
-    **Article**: [基于深度学习的命名实体识别详解](https://zhuanlan.zhihu.com/p/29412214)
+    **Article**: [基于深度学习的命名实体识别详解 - 2017](https://zhuanlan.zhihu.com/p/29412214)
 
 - <https://github.com/pumpkinduo/KnowledgeGraph_NER> (Tensorflow)
 
@@ -202,8 +148,9 @@
     **Chinese**: [命名实体识别（biLSTM+crf）](https://blog.csdn.net/xxzhix/article/details/81514040)
 
 
-## 18.5 CNN
+## 18.4 CNN
 
 - <https://github.com/nlpdz/Medical-Named-Entity-Rec-Based-on-Dilated-CNN>
 
     基于膨胀卷积神经网络（Dilated Convolutions）训练好的医疗命名实体识别工具
+

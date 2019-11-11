@@ -1,7 +1,7 @@
 
 # 10. Text Classification
 
-YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
+YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 
 ## 10.1 Overview
@@ -373,9 +373,7 @@ YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     - c.1 一个输出: **直接处理这类问题，模型输出结构为Dense(N, activation='sigmoid')**，Label编码为Multi-Onehot编码(长度为N取值01且不限01个数的一维向量, by MultiLabelBinarizer)，应用时结果为N个概率值，取TopK
 
-    - c.2 一个输出：问题转化为N分类，类似于b，模型输出结构、Label编码同b，应用时结果同c.1
-
-    - c.3 N个输出：每个输出都是a，模型输出结构、Label编码、应用时结果都同a  目前没见过有人这样处理，待尝试？
+    - c.2 一个输出：问题转化为N分类，类似于b，模型输出结构、Label编码同b，应用时方法同c.1
 
 - d. N标签M分类
 
@@ -383,7 +381,7 @@ YAO: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     - d.2 一个输出：问题转化为NM分类，同c.2
 
-    - d.3 N个输出：每个输出都是b，模型输出结构、Label编码、应用时结果都同b  目前没见过有人这样处理，待尝试？
+    - d.3 N个输出：每个输出都是b，模型输出结构、Label编码、应用时方法都同b  目前没见过有人这样处理，待尝试？
 
 疑问：使用Sigmoid处理多标签分类问题，前提假设是各标签之间是并列且独立的，这合理么？相同的模型主体，只是输出层开始不同，那么在模型主体处会学习各标签之间隐含的关系么？
 

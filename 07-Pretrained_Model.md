@@ -175,11 +175,13 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
 #### Code
 
+- <https://github.com/google-research/bert> (Tensorflow)
+
+#### Library
+
 - <https://github.com/CyberZHG/keras-bert> (Keras)
 
 - <https://github.com/codertimo/BERT-pytorch> (PyTorch)
-
-- <https://github.com/google-research/bert> (Tensorflow)
 
 #### Article
 
