@@ -1,8 +1,6 @@
-
 # 10. Text Classification
 
 YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
-
 
 ## 10.1 Overview
 
@@ -14,6 +12,15 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **Chinese**: [面向可解释的NLP：北大、哈工大等提出文本分类的生成性解释框架](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489745&idx=5&sn=44e8bfeb5d9d9c1bb2906d941dfc063e)
 
+#### Library
+
+- NeuralNLP-NeuralClassifier: <https://github.com/Tencent/NeuralNLP-NeuralClassifier>
+
+    An Open-source Neural Hierarchical Multi-label Text Classification Toolkit from Tencent.
+
+- THUCTC: <http://thuctc.thunlp.org/>
+
+    一个高效的中文文本分类工具包，包含Data: 中文文本分类数据集THUCNews
 
 #### Code
 
@@ -206,13 +213,6 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
     - 模型选择：参考TextCNN和HAN相关内容
 
     - Tricks: Stacking, Pseudo Label, Finetuning(Hinton的蒸馏方法更加稳定有效？)
-
-
-#### Library
-
-- NeuralNLP-NeuralClassifier: <https://github.com/Tencent/NeuralNLP-NeuralClassifier>
-
-    An Open-source Neural Hierarchical Multi-label Text Classification Toolkit from Tencent.
 
 
 #### Competition

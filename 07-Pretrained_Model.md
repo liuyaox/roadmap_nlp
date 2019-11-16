@@ -41,6 +41,8 @@
 
 - [李宏毅-ELMO、BERT、GPT视频笔记 - 2019](https://mp.weixin.qq.com/s?__biz=MzIwODI2NDkxNQ==&mid=2247484834&idx=3&sn=0951ac8c768ad7e078754f8baba8e65c)
 
+    **Video**: <https://www.bilibili.com/video/av46561029/?p=61>
+
 #### Code
 
 - <https://github.com/PaddlePaddle/LARK> (PaddlePaddle)
@@ -252,6 +254,12 @@ GPT2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https:/
 - GPT2: <https://github.com/openai/gpt-2> (Tensorflow)
 
     **Data*: <https://github.com/openai/gpt-2-output-dataset>
+
+#### Practice
+
+- <https://github.com/imcaspar/gpt2-ml>
+
+    **Article**: [只需单击三次，让中文GPT-2为你生成定制故事 - 2019](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650773965&idx=4&sn=c974e222235d79af62c83c74bc5251b3)
 
 #### Article
 

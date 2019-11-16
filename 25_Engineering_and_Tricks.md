@@ -59,6 +59,8 @@
 
     **YAO**: HERE HERE HERE HERE HERE HERE
 
+- [笔记之Troubleshooting Deep Neural Networks - 2019](https://zhuanlan.zhihu.com/p/89566632)
+
 
 #### Practice
 
@@ -200,7 +202,7 @@
   - [Part2](https://flyyufelix.github.io/2016/10/03/fine-tuning-in-keras-part2.html)
 
 
-## 25.5 GPU
+## 25.5 GPU & Hardware
 
 #### Article
 
@@ -209,6 +211,8 @@
     **YAO**: HERE HERE HERE HERE HERE HERE
 
 - [给训练踩踩油门——Pytorch加速数据读取 - 2019](https://mp.weixin.qq.com/s/jXaItEwH10-reaiH2pKztw)
+
+- [不止显卡！这些硬件因素也影响着你的深度学习模型性能 - 2019](https://zhuanlan.zhihu.com/p/67785062)
 
 #### Practice
 

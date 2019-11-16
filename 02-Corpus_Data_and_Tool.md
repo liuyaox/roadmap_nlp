@@ -6,6 +6,12 @@
 
     [THUOCL：清华大学开放中文词库](http://thuocl.thunlp.org/)  包括以下数据及其词频统计DF值：IT 财经 成语 地名 历史名人 诗词 医学 饮食 法律 汽车 动物
 
+- <https://github.com/brightmart/nlp_chinese_corpus>
+  
+    大规模中文自然语言处理语料Large Scale Chinese Corpus for NLP  包括：维基百科、新闻语料、百科问答、社区问答、翻译语料
+    
+    用途：预训练通用语料，QA(知识/百科/社区问答)构建，文本生成/抽取(标题/关键词生成)，文本分类(新闻类型分类、问题话题分类)，文本预测(文本相似性、答案评分)，中英文翻译
+
 - <https://github.com/niderhoff/nlp-datasets>
   
     Alphabetical list of free/public domain datasets with text data for use in NLP
@@ -21,10 +27,6 @@
 - <https://radimrehurek.com/gensim/corpora/wikicorpus.html>
 
     Gensim中的Corpus from a Wikipedia dump
-
-- <https://github.com/brightmart/nlp_chinese_corpus>
-  
-    大规模中文自然语言处理语料Large Scale Chinese Corpus for NLP
 
 - <https://pan.baidu.com/s/1hsHTEU4>
 

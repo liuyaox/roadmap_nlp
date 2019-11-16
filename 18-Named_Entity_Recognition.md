@@ -1,5 +1,3 @@
-
-
 # 18. Named Entity Recognition (NER)
 
 YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
@@ -22,7 +20,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     介绍模型：BiLSTM + CRF, IDCNN + CRF    实现模型：BiLSTM (无CRF)
 
-    **YAO**: 1
+    **YAO**: 
 
 #### Competition
 
@@ -34,11 +32,17 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     冠军：GloVe + Pretrained(Flair/ELMo/BERT/XLNet) + LSTM + CNN + CRF   亚军：Bert + BiLSTM + CRF   季军：Transformer + BiLSTM + CRF
 
-- <https://github.com/cdjasonj/datagrand> (Keras & Tensorflow)
+- 【Great】<https://github.com/cdjasonj/datagrand> (Keras & Tensorflow)
 
-    Rank 6   Embedding有2种：char, bichar    模型1：BiLSTM + SelfAttention + CRF   模型2：BiLSTM + CNN + CRF    模型3：GRU + LocalAttention + CRF
+    Rank 6
+    
+    输出：Embedding有6+1=7种：(char, bichar) * (Word2Vec, GloVe, fastText) + ELMo
+    
+    中间：模型1：BiLSTMs + SelfAttention  模型2：BiLSTM + CNNs + SelfAttention  模型3：(BiGRU + LocalAttention)s  模型4：BiONLSTMs + SelfAttention
+    
+    输出：TimeDistributed(Dense) + CRF
 
-    **YAO**: 
+    **YAO**: 先BERT，然后EMLo，最后再此 HERE HERE HERE HERE HERE HERE
 
 - <https://github.com/lonePatient/daguan_2019_rank9> (Pytorch)
 
@@ -46,7 +50,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 - <https://github.com/renjunxiang/daguan_2019> (PyTorch)
 
-    自行训练BERT，过程比较详细值得学习
+    **自行训练BERT**，过程详细值得学习
 
 #### Data
 
@@ -80,9 +84,17 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     **Chinese**：[基于keras的BiLstm与CRF实现命名实体标注 - 2018](https://www.cnblogs.com/vipyoumay/p/ner-chinese-keras.html)
 
+    **YAO**: OK
+    
+    - 基本内容：中文实体  基于字，采用BIO标注集，实体有Person/Location/Organization，则tags共有3*2+1=7个，模型结构: Embedding -> BiLSTM -> CRF
+
+    - 数据处理：对于X，正常地，向量化编码，补零截断；对于Y，向量化编码(不同tag转化为0-6)，随后**也要补零截断**！
+
+    - FAQ：注意各Library的版本，当(tensorflow=1.10.0, keras=2.2.0, keras-contrib=0.0.2)时CRF没问题
+
 - 【Great】<https://github.com/UmasouTTT/keras_bert_ner> (Keras)
 
-    中文命名实体识别   模型结构：BERT + BiLSTM + CRF   **BERT结构直接融入模型并且参与训练**
+    中文实体   模型结构：BERT -> BiLSTM -> CRF   **BERT结构直接融入模型并且参与训练**
 
     **YAO**: 
 

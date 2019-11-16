@@ -17,6 +17,8 @@
 
 - [文本摘要简述 - 2019](https://www.jiqizhixin.com/articles/2019-03-25-7)
 
+- [文本自动摘要任务的“不完全”心得总结 - 2019](https://zhuanlan.zhihu.com/p/83596443)
+
 
 #### Competition
 
