@@ -145,6 +145,8 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 ## 8.4 Transformer - TOTODO
 
+Seq2Seq Model with Self-attention
+
 ### 8.4.1 Transformer
 
 - Transformer: [Attention Is All You Need - Google2017](https://arxiv.org/abs/1706.03762)
@@ -155,11 +157,13 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 #### Code
 
-- [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html) (PyTorch)
+- [The Annotated Transformer - 2018](http://nlp.seas.harvard.edu/2018/04/03/attention.html) (PyTorch)
 
 - <https://github.com/jadore801120/attention-is-all-you-need-pytorch> (PyTorch)
 
 - <https://github.com/foamliu/Self-Attention-Keras> (Keras)
+
+- <https://github.com/Kyubyong/transformer> (Tensorflow)
 
 #### Library
 
@@ -169,13 +173,17 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 #### Article
 
-- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- 【Great】[放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较 - 2019](https://zhuanlan.zhihu.com/p/54743941)
 
-- [Transformer: A Novel Neural Network Architecture for Language Understanding](https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html)
+- 【Great】[BERT大火却不懂Transformer？读这一篇就够了 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651666707&idx=1&sn=2e9149ccdba746eaec687038ce560349)
+
+- 【Great】[The Illustrated Transformer - 2018](https://jalammar.github.io/illustrated-transformer/)
+
+    **Chinese**: [The Illustrated Transformer【译】](https://blog.csdn.net/yujianmin1990/article/details/85221271)
+
+- [Transformer: A Novel Neural Network Architecture for Language Understanding - 2017](https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html)
   
 - [Google 发布的 attention 机制介绍官方视频](https://www.youtube.com/watch?v=rBCqOTEfxvg)
-
-- [BERT大火却不懂Transformer？读这一篇就够了](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651666707&idx=1&sn=2e9149ccdba746eaec687038ce560349)
 
 - [Transformer (变形金刚，大雾) 三部曲：RNN 的继承者 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411699&idx=3&sn=83286bfa620ebe7297759fb78c31286c)
 
@@ -183,13 +191,17 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 - [李宏毅机器学习2019之P60-Transformer - 2019](https://www.bilibili.com/video/av46561029/?p=60)
 
-#### Pratice
+    **YAO**:
+    
+    Self-Attention可以替代所有RNN做的事情
 
-- [放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较](https://zhuanlan.zhihu.com/p/54743941)
+    Self-Attention机理：输入为$I$，则 $Q=W^qI$, $K=W^kI$, $V=W^vI$，分别表示 Query(to match others), Key(to be matched), Information(extracted from I)，然后Attention为 $A=K^TQ$，经softmax后为 $\hat{A}$，最后输出为 $O=V\hat{A}$
+
+#### Pratice
   
 - [使用一个简单的 Transformer 模型进行序列标注](https://medium.com/@kolloldas/building-the-mighty-transformer-for-sequence-tagging-in-pytorch-part-i-a1815655cd8)
 
-- [一个写对联的 Transformer 序列到序列模型](https://github.com/andy-yangz/couplets_seq2seq_transformer) (Tensorflow)
+- [一个写对联的 Transformer 序列到序列模型 - 2019](https://github.com/andy-yangz/couplets_seq2seq_transformer) (Tensorflow)
 
     **Article**：[为了写春联，我用Transformer训练了一个“对穿肠”](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651667456&idx=1&sn=b2ffe9990f8bf8a242e52face2044b65)
 
@@ -212,4 +224,4 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 #### Article
 
-- [Transformer-XL — CombiningTransformers and RNNs Into a State-of-the-art Language Model](https://www.lyrn.ai/2019/01/16/transformer-xl-sota-language-model)
+- [Transformer-XL — CombiningTransformers and RNNs Into a State-of-the-art Language Model - 2019](https://www.lyrn.ai/2019/01/16/transformer-xl-sota-language-model)
