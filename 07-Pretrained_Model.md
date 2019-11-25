@@ -170,6 +170,8 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
 
     **Chinese**: [谷歌搜索用上BERT，10%搜索结果将改善](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650772610&idx=2&sn=8770bdfbf950b3651910488722f6873d)
 
+- [美团BERT的探索和实践 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411834&idx=1&sn=26cb6dd832e68caaddc19527cd993fc4)
+
 
 ### 7.4.2 BERT
 

@@ -68,6 +68,11 @@
     BERT + CNN
 
 
+#### Article
+
+- [知识图谱从哪里来：实体关系抽取的现状与未来 - 2019](https://zhuanlan.zhihu.com/p/91762831)
+
+
 ## 16.2 Representation Learning
 
 - <https://github.com/chenbjin/RepresentationLearning>

@@ -66,6 +66,20 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 主要以 BiLSTM + CRF 为主
 
+[CRF Loss](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/losses/crf_losses.py)
+
+
+[CRF Accuracy](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/metrics/crf_accuracies.py)
+
+y_true和y_pred，会在每一桢timestep上都进行对比，以计算准确率
+
+```python
+# y: <n_samples, n_timesteps, n_labels>   sparse_target=False
+accuracy = K.mean(K.equal(K.argmax(y_true, -1), K.argmax(y_pred, -1)))
+# y: <n_samples, n_timesteps, 1>   sparse_target=True
+accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
+```
+
 #### Paper
 
 - [Neural Architectures for Named Entity Recognition - CMU2016](https://arxiv.org/abs/1603.01360)
@@ -88,7 +102,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
     
     - 基本内容：中文实体  基于字，采用BIO标注集，实体有Person/Location/Organization，则tags共有3*2+1=7个，模型结构: Embedding -> BiLSTM -> CRF
 
-    - 数据处理：对于X，正常地，向量化编码，补零截断；对于Y，向量化编码(不同tag转化为0-6)，随后**也要补零截断**！
+    - 数据处理：对于X，正常地，向量化编码，补零截断；对于Y，向量化编码(不同tag转化为0-6)，随后**也要补零截断**！注意，Padding的mask_value，X与Y要相同。
 
     - FAQ：注意各Library的版本，当(tensorflow=1.10.0, keras=2.2.0, keras-contrib=0.0.2)时CRF没问题
 
@@ -151,7 +165,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 #### Article
 
-- [CRF Layer on the Top of BiLSTM 1-8 - 2017](https://github.com/createmomo/CRF-Layer-on-the-Top-of-BiLSTM) (Chainer)
+- 【Great】[CRF Layer on the Top of BiLSTM 1-8 - 2017](https://github.com/createmomo/CRF-Layer-on-the-Top-of-BiLSTM) (Chainer)
 
 - [bi-LSTM + CRF with character embeddings for NER and POS - 2017](https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html)
     
@@ -159,6 +173,15 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     **Chinese**: [命名实体识别（biLSTM+crf）](https://blog.csdn.net/xxzhix/article/details/81514040)
 
+- [如何理解LSTM后接 CRF？](https://www.zhihu.com/question/62399257)
+
+    **YAO**:
+
+    接CRF是为了Model label sequence **jointly**, instead of decoding each label independently.
+
+    CRF所需要的各种特征，由LSTM提供了？
+
+- [CRF 和 LSTM 模型在序列标注上的优劣？](https://www.zhihu.com/question/46688107)
 
 ## 18.4 CNN
 
