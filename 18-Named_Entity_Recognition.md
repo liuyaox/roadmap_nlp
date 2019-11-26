@@ -68,7 +68,6 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 [CRF Loss](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/losses/crf_losses.py)
 
-
 [CRF Accuracy](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/metrics/crf_accuracies.py)
 
 y_true和y_pred，会在每一桢timestep上都进行对比，以计算准确率
@@ -188,4 +187,10 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 - <https://github.com/nlpdz/Medical-Named-Entity-Rec-Based-on-Dilated-CNN>
 
     基于膨胀卷积神经网络（Dilated Convolutions）训练好的医疗命名实体识别工具
+
+## 18.5 Others
+
+#### Article
+
+- [用腻了 CRF，试试 LAN 吧 - 2019](https://zhuanlan.zhihu.com/p/91031332)
 

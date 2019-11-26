@@ -4,7 +4,7 @@
 
 ## 8.1 Overview
 
-Attention, Transformer, Pointer Network
+**Keywords**: Attention, HAN, Transformer
 
 
 ## 8.2 Seq2Seq & Encoder2Decoder
@@ -18,9 +18,23 @@ Attention, Transformer, Pointer Network
 
 ### 8.3.1 Overview
 
-Attention的打分机制是关键，表示**Encoder的状态a和Decoder的状态s之间**的匹配程度，有多种，包括：**加性模型，点积模型，缩放点积模型，双线性模型**，如下图所示：
+通俗来讲：对于某时刻的输出$Y_j$，它在输入$X$各timestep上的注意力，注意力是表示各输入$X_i$对某时刻$Y_j$贡献大小的权重。
 
-![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/attetion_scoring.jpg)
+貌似有3种：**正常的有X和Y的Attention，只有X的Attention，只有X的Self-Attention**  TODO TODO TODO
+
+
+
+以下存疑，待完善！！！
+
+Attention的打分机制是关键，表示**关键信息Key(to be matched)$k_i$和目标相关的查询Query(to match others)$q_j$之间**的匹配程度，有多种：
+
+- General：$score(k_i, q_j)=k_i^TW_aq_j$
+
+- Dot-Product：$score(k_i, q_j)=k_i^Tq_j$
+
+- Scaled Dot-Product：$score(k_i, q_j)=k_i^Tq_j/\sqrt{d}$
+
+- Additive：$score(k_i, q_j)=v_a^Ttanh(W_kk_i+W_qq_j)$
 
 **YAO**: 
 
@@ -35,6 +49,8 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 #### Paper
 
 - [An Attentive Survey of Attention Models - LinkedIn2019](https://arxiv.org/abs/1904.02874)
+
+    从4个方面对Attention分类：Number of Sequences, Number of Abstraction Levels, Number of Positions, Number of Representations.
 
 #### Article
 

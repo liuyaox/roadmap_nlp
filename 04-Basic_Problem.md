@@ -121,6 +121,10 @@
 
     中文文本自动纠错
 
+#### Article
+
+- [中文文本纠错算法--错别字纠正的二三事 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411874&idx=3&sn=f78fa6e6ba3493086503cbb7d11a7ff2)
+
 
 ## 4.9 Subword
 

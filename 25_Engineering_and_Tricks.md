@@ -4,10 +4,6 @@
 
 #### Article
 
-- [Rules of Machine Learning](https://developers.google.cn/machine-learning/rules-of-ml/)
-
-    谷歌机器学习43条规则：机器学习工程的最佳实践经验
-
 - [深度学习的一些经验总结和建议| To do v.s Not To Do - 2019](https://mp.weixin.qq.com/s?__biz=MzUyOTU2MjE1OA==&mid=2247485683&idx=2&sn=759fb3d6bcc3e43dfb9b967e83dbe7dc)
 
 - [分分钟带你杀入Kaggle Top 1% - 2017](https://zhuanlan.zhihu.com/p/27424282)
@@ -17,16 +13,6 @@
     **Chinese**：[称霸Kaggle的十大深度学习技巧](https://mp.weixin.qq.com/s?__biz=MzU3NjE4NjQ4MA==&mid=2247484049&idx=1&sn=56bb5d502b2ed6e1cbc8b7405b52ad20)
 
 - [训练神经网络的方法分享-Andrej Karpathy - 2019](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485845&idx=1&sn=13620bb17dc0fd75d71100dd84cce59d)
-
-- [12 Key Lessons from ML researchers and practitioners - 2019](https://towardsml.com/2019/04/09/12-key-lessons-from-ml-researchers-and-practitioners/)
-
-    **Chinese**：[关于机器学习实战，那些教科书里学不到的 12 个“民间智慧”](https://mp.weixin.qq.com/s/jTdhb00HYhfLYiW1q14gtg)
-
-- [Kaggle 数据挖掘比赛经验分享 - 2017](https://zhuanlan.zhihu.com/p/26820998)
-
-- [Three pitfalls to avoid in machine learning - 2019](https://www.nature.com/articles/d41586-019-02307-y)
-
-    **Chinese**: [谷歌高级研究员Nature发文：避开机器学习三大坑](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650766995&idx=4&sn=2417570839b7ccb2e630cef36a363e0a)
 
 - [37 Reasons why your Neural Network is not working - 2017](https://medium.com/@slavivanov/4020854bd607)
 
@@ -60,24 +46,6 @@
     **YAO**: HERE HERE HERE HERE HERE HERE
 
 - [笔记之Troubleshooting Deep Neural Networks - 2019](https://zhuanlan.zhihu.com/p/89566632)
-
-
-#### Practice
-
-- 【Great!!】[How I made top 0.3% on a Kaggle competition - 2019](https://www.kaggle.com/lavanyashukla01/how-i-made-top-0-3-on-a-kaggle-competition)
-
-    **YAO**: 完整展示了算法项目的流程及各种细节，强烈建议过一遍！！！
-
-- [万字长文总结机器学习的模型评估与调参 - 2019](https://mp.weixin.qq.com/s?__biz=MzIwOTc2MTUyMg==&mid=2247492923&idx=2&sn=15fd5960ca20f1bd81916e625f929448)
-
-
-#### Library
-
-- <https://www.scikit-yb.org>
-
-    Yellowbrick: 结合了Scikit-Learn和Matplotlib并且最好得传承了Scikit-Learn文档，对你的模型进行可视化！
-
-    **Chinese**: <http://www.scikit-yb.org/zh/latest/>
 
 
 ## 25.2 Parameter Tuning
@@ -139,7 +107,6 @@
     - 数据预处理：
 
     - 训练技巧之梯度：
-
 
 - [你在训练RNN的时候有哪些特殊的trick？ - 2017](https://www.zhihu.com/question/57828011)
 
@@ -234,115 +201,3 @@
 - [A Simple Pseudo-Labeling Function Implementation in Keras - 2017](https://shaoanlu.wordpress.com/2017/04/10/a-simple-pseudo-labeling-function-implementation-in-keras/)
 
 - [标签传播算法（Label Propagation）及Python实现 - 2015](https://blog.csdn.net/zouxy09/article/details/49105265)
-
-
-## 25.7 Model Ensembling
-
-### 25.7.1 Overview
-
-#### Paper
-
-- [Snapshot Ensembles: Train 1, get M for free - 2017](https://arxiv.org/abs/1704.00109)
-
-#### Article
-
-- [KAGGLE ENSEMBLING GUIDE - 2015](https://mlwave.com/kaggle-ensembling-guide/)
-
-- [Introduction to Python Ensembles - 2018](https://www.dataquest.io/blog/introduction-to-ensembles/)
-
-#### Library
-
-- <https://github.com/yzhao062/combo>
-
-    A Python Toolbox for Machine Learning Model Combination
-
-    **Doc**: <https://pycombo.readthedocs.io/en/latest/>
-
-    **Article**: [大部分机器学习算法具有随机性，只需多次实验求平均值即可吗？](https://www.zhihu.com/question/328157418/answer/746533382)
-
-
-### 25.7.2 Boosting
-
-#### Code
-
-- <https://github.com/brightmart/text_classification/blob/master/a00_boosting/a08_boosting.py> (Tensorflow)
-
-
-### 25.7.3 Bagging
-
-
-### 25.7.4 Stacking 
-
-对训练好的基学习器的应用结果进行**非线性融合**(输入并训练一个新的学习器)
-
-偷懒的话，可直接使用 **Out-of-fold(OOF)** 做 Stacking
-
-**解读方式1：先循环KFold，然后再循环各基模型**
-
-![](https://raw.githubusercontent.com/liuyaox/ImageHosting/master/for_markdown/Stacking.png)
-
-定义训练集P={(x1, y1), (x2, y2), ..., (xm, ym)}，测试集Q，基模型E1, E2, ..., ET，主模型E，则伪代码如下：
-
-```
-for P1, P2 in KFold(P) do       # 训练集拆分：训练集分成P1(k-1 folds)和P2(1 fold)，分别用于训练和验证，要遍历所有KFold
-    for t = 1, 2, ..., T do
-        Et.train(P1)            # 基模型训练：使用P1训练每个基模型
-        prt = Et.apply(P2)      # 基模型应用：基模型应用于P2生成prt
-        qrt = Et.apply(Q)       # 基模型应用：基模型应用于Q 生成qrt
-    
-    pr = [pr1, pr2, ..., prT]   # 收集每个基模型应用结果prt，用于主模型训练，只是1/K份的训练数据
-    qr = [qr1, qr2, ..., qrT]   # 收集每个基模型应用结果qrt，用于主模型测试，是全份的测试数据
-
-PR = concate(pr)                # 训练数据纵向堆叠，共同组成总训练数据，共T列，表示T个新特征
-QR = average(qr)                # 测试数据纵向求均值，当作最终测试数据，列同上
-
-E.train(PR)                     # 主模型训练
-score = E.evaluate(QR)          # 主模型测试
-
-Y(x) = E.apply(E1.apply(x), E2.apply(x), ..., ET.apply(x))  # 全流程应用
-```
-
-注意：各Fold的结果是**纵向堆叠或纵向均值**
-
-**解读方式2：先循环各基模型，然后再循环KFold**
-
-每个基模型内先做交叉验证，交叉验证的valid结果纵向拼接为1列，test结果求均值，共同组成该基模型的结果，**表示1列特征**，最后各基模型的结果**横向拼接成T列**
-
-#### Article
-
-- [模型融合之stacking&blending](https://zhuanlan.zhihu.com/p/42229791)
-
-    **Code**: <https://github.com/InsaneLife/MyPicture/blob/master/ensemble_stacking.py>
-
-- [图解Blending&Stacking](https://blog.csdn.net/sinat_35821976/article/details/83622594)
-
-- [为什么做stacking ensemble的时候需要固定k-fold？](https://www.zhihu.com/question/61467937/answer/188191424)
-
-- [A Kaggler's Guide to Model Stacking in Practice](http://blog.kaggle.com/2016/12/27/a-kagglers-guide-to-model-stacking-in-practice/)
-
-
-### 25.7.5 Blending
-
-理念与Stacking比较类似，模型分为两层，不过比Stacking简单一些，不需要通过KFold这种CV策略来获得主模型的特征，而是建立一个Holdout集，直接使用不相交的数据集用于两层的训练。以两层Blending为例，详细来说为：
-
-Step1: 训练集划分为两部分P1和P2，测试集为Q
-
-Step2: 用P1训练每个基模型
-
-Step3: 基模型应用于P2的结果，训练主模型
-
-Step4: 基模型应用于Q的结果，测试主模型，模型应用时与测试流程一样。
-
-#### Article
-
-- [Blending 和 Stacking - 2018](https://blog.csdn.net/u010412858/article/details/80785429)
-
-
-## 25.8 Others
-
-#### Article
-
-- [9个大数据竞赛思路分享 - 2016](https://blog.csdn.net/Bryan__/article/details/51713596)
-
-- [机器学习框架上的一些实践 - 2019](https://zhuanlan.zhihu.com/p/76541337)
-
