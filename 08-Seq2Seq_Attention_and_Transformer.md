@@ -159,13 +159,13 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
     混合注意力机制很强大，比一般的注意力专注的地方更多，信息更丰富。因为混合注意力中含有位置信息，所以它可以在输入序列中选择下一个编码的位置。这样的机制更适用于输出序列大于输入序列的Seq2Seq任务，例如语音合成任务。
 
 
-## 8.4 Transformer - TOTODO
+## 8.4 Transformer
 
-Seq2Seq Model with Self-attention
+其实就是 Seq2Seq Model with Self-attention
 
 ### 8.4.1 Transformer
 
-- Transformer: [Attention Is All You Need - Google2017](https://arxiv.org/abs/1706.03762)
+- [Attention Is All You Need - Google2017](https://arxiv.org/abs/1706.03762)
 
 - [Training Tips for the Transformer Model - Czechia2018](https://arxiv.org/abs/1804.00247)
 
@@ -191,11 +191,36 @@ Seq2Seq Model with Self-attention
 
 - 【Great】[放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较 - 2019](https://zhuanlan.zhihu.com/p/54743941)
 
+    **YAO**:
+
+
+
 - 【Great】[BERT大火却不懂Transformer？读这一篇就够了 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651666707&idx=1&sn=2e9149ccdba746eaec687038ce560349)
 
 - 【Great】[The Illustrated Transformer - 2018](https://jalammar.github.io/illustrated-transformer/)
 
     **Chinese**: [The Illustrated Transformer【译】](https://blog.csdn.net/yujianmin1990/article/details/85221271)
+
+    **YAO**:
+
+    $a^{1,i}=q^1k^i/\sqrt{dim(k^i)}$作为一个分数，决定着编码$x^1$时（某个固定位置时），每个输入词(x1,x2,...,xn)需要集中多少注意力，是**各输入$x^i$自己跟自己**的注意力关系。
+
+    Transformer整体结构(以左右各2个Encoders/Decoders示例)
+
+    ![]()
+
+    Transformer左半部分有多个Encoder(比如6个)，结构相同但不共享参数：
+    
+    - 每个Encoder内：**Input -> SelfAttention + Residual -> Add & Norm > FeedForwards + Residual -> Add & Norm -> Output**
+
+      - SelfAttention里各输入两两依赖(以计算Attention)
+      - FeedForwards中没有这些依赖性(**TODO**: SelfAttention的各个输出在FeedForwards中不共享参数？每个输出对应一个独立的FeedForward?)！
+      - Add & Norm用于先Add来自SelfAttention或FeedForward的输入与输出然后进行Layer Normalization
+
+    - 各个Encoder间：首尾相连，前一Encoder的Output是后一Encoder的Input，最后一个Encoder的Output才输入到Transformer右半部分，且输入到各个Decoder(的Encoder-Decoder Attention中)！
+
+    Transformer右半部分有多个Decoder(比如6个)，
+
 
 - [Transformer: A Novel Neural Network Architecture for Language Understanding - 2017](https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html)
   
@@ -207,11 +232,23 @@ Seq2Seq Model with Self-attention
 
 - [李宏毅机器学习2019之P60-Transformer - 2019](https://www.bilibili.com/video/av46561029/?p=60)
 
-    **YAO**:
+    **YAO**: OK
     
     Self-Attention可以替代所有RNN做的事情
 
-    Self-Attention机理：输入为$I$，则 $Q=W^qI$, $K=W^kI$, $V=W^vI$，分别表示 Query(to match others), Key(to be matched), Information(extracted from I)，然后Attention为 $A=K^TQ$，经softmax后为 $\hat{A}$，最后输出为 $O=V\hat{A}$
+    Self-Attention机理：输入为$I$，则 **$Q=W^qI$, $K=W^kI$, $V=W^vI$**，分别表示 Query(to match others), Key(to be matched), Value(extracted from I)，然后Attention为 **$A=K^TQ$**，经softmax后为 $\hat{A}$，最后输出为 **$O=V\hat{A}$**，全是矩阵运算，可并行处理。写在一起为：
+
+    $$O=(W^vI)softmax((W^kI)^T(W^qI)/\sqrt{dim(K)})$$
+
+    Self-Attention可以是**Multi-head**的，即$a^i$可以有不止一组的<$q^i$,$k^i$,$v^i$>，各组用于集中不同位置以表征不同的特征，比如有些用于抓取Local信息，有些用于抓取相对全局的信息，等等。相应地，输出$O_i$也有多个，拼接在一起，需再乘以矩阵$W^o$为最终的输出$O$
+
+    Self-Attention没有Positional信息，为此让每个$a^i$直接加上一个表示Positional信息的$e^i$，代替原来的$a^i$，$e^i$是事先指定的，而非Learned from data。
+    
+    (解释：$p^i$是i处为1其余为0的onehot向量，使其与$x^i$拼接，则 **$W[x^i;p^i]^T=[W_I,W_p][x^i;p^i]^T=W_Ix^i+W_pp^i=a^i+e^i$**，所以$e^i$与$a^i$直接相加，就是$p^i$与$x^i$拼接)
+
+    Seq2Seq模型中的Encoder和Decoder，都可以用Self-Attention来代替其中的RNN，即为Transformer。
+
+    **TODO** 疑问：**Transformer的Decoder部分是并行的么**？当前cell在处理时仍然需要上一cell的output作为输入啊？
 
 #### Pratice
   
