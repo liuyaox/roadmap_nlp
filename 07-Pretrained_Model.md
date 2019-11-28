@@ -29,6 +29,10 @@
 
 - [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
 
+    **YAO**:
+
+    预训练+Finetuning将成为NLP领域的流行方法
+
 - [NLP's ImageNet moment has arrived - 2018](https://thegradient.pub/nlp-imagenet/)
 
     词嵌入已死，语言模型当立

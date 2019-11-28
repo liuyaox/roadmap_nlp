@@ -478,7 +478,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
             Xi = Conv1D(128, fsize, activation='relu')(X)       # (None, maxlen-fsize+1, 128)
             # Xi = Conv2D(128, (fsize, emb_dim), activation='relu')(X)      # 同上行
             Xi = GlobalMaxPooling1D()(Xi)                       # (None, 128)
-            # Xi = Flatten()(MaxPool1D(pool_size=(maxlen-fsize+1, ))(Xi))   # 同上行
+            # Xi = Flatten()(MaxPooling1D(pool_size=maxlen-fsize+1)(Xi))    # 同上行
             Xs.append(Xi)
         X = Concatenate(axis=-1)(Xs)                            # (None, 128*3)
         X = Dropout(0.5)(X)

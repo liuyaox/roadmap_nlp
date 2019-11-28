@@ -9,9 +9,20 @@
 
 ## 8.2 Seq2Seq & Encoder2Decoder
 
+#### Paper
+
+- [Convolutional Sequence to Sequence Learning - Facebook2017](https://arxiv.org/abs/1705.03122)
+
+    ConvS2S：使用CNN创建Seq2Seq模型，Encoder有15层CNN，覆盖输入长度为25
+
 #### Practice
 
 - [Play couplet with seq2seq model. 用深度学习对对联](https://github.com/wb14123/seq2seq-couplet) (Tensorflow)
+
+- [从《Convolutional Sequence to Sequence Learning》到《Attention Is All You Need》 - 2018](https://zhuanlan.zhihu.com/p/27464080)
+
+- [Convolutional Sequence to Sequence Learning - 2019](https://dzapathy.github.io/2019/02/14/fairseq/)
+
 
 
 ## 8.3 Attention
@@ -67,9 +78,9 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 ### 8.3.2 Attention
 
-[Neural Machine Translation by Jointly Learning to Align and Translate - Germany2014](https://arxiv.org/abs/1409.0473v2)
+[Neural Machine Translation by Jointly Learning to Align and Translate - Germany2014](https://arxiv.org/abs/1409.0473)
 
-**YAO**: Attention打分机制使用的是**加性模型**
+**YAO**: 经典的Encoder-Decoder机器翻译，使用的打分机制是**Additive**：$score(a_i, h_t)=v^atanh(W^aa_i+W^hh_t)$，其实就是A Single-layer MLP
 
 #### Code
 
@@ -79,17 +90,17 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 - <https://github.com/Choco31415/Attention_Network_With_Keras> (Keras)
 
-    **YAO**: **加性模型**，与吴恩达课程练习5-3-1里的Attention实现方式差不多
+    **YAO**: **Additive模型**，与吴恩达课程练习5-3-1里的Attention实现方式差不多
 
 - [基于Keras的attention实战](https://blog.csdn.net/jinyuan7708/article/details/81909549)
 
-    **YAO**: 大道至简，2种简单的另类Attention。
-    
-    **YAO**: 好像说是：输入(或经简单处理如LSTM处理后)为inputs，inputs输入全连接层(小神经网络)，结果就是Attention，随后与inputs Merge在一起(Merge方式有很多)，再进行后续操作。这就是Attention-Based模型了！？！？
+    **YAO**: 大道至简，2种简单的另类Attention。好像说是：输入(或经简单处理如LSTM处理后)为inputs，inputs输入全连接层(小神经网络)，结果就是Attention，随后与inputs Merge在一起(Merge方式有很多)，再进行后续操作。这就是Attention-Based模型了！？！？
 
 #### Article
 
 - [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
+
+    以经典的Encoder-Decoder机器翻译为示例，讲解Encoder的状态A与Decoder的状态H之间的Attention关系
 
 - [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
 
@@ -191,36 +202,108 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 - 【Great】[放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较 - 2019](https://zhuanlan.zhihu.com/p/54743941)
 
-    **YAO**:
+    **YAO**: 
+
+    从NLP领域的特征抽取角度来说，Transformer会逐步取代RNN成为最主流的特征抽取器，CNN如果改造得当，还有一席之地。
+
+    NLP任务的特点：一维线性序列，不定长，相对位置很重要，长距离特征很关键。模型改进的方向，就是让它更匹配NLP领域的这些特点。
+
+    特征抽取器是否具备**长距离特征捕获能力**对于解决NLP任务是很关键的。
+
+    NLP四大类任务：序列标签(分词/NER/POS/语义标注)，分类任务(情感分析/文本分类)，句子关系判断(QA/Entailment/文本推理)，生成式任务(机器翻译/文本摘要/看画说话)
+
+    **RNN**:
+
+    RNN本身线性序列结构在反向传播时因路径太长导致优化困难(梯度消失或爆炸)，为此引入LSTM/GRU，通过增加中间状态直接向后传播，以缓解梯度消失问题，成为RNN的标准模型。后来引入的Encoder-Decoder框架和Attention机制，极大拓展了RNN的能力和效果。RNN之前占据主导地位，主要原因是因为它的结构天然适配NLP任务的特点(RNN本身就是个可接纳不定长输入序列的由前向后线性传导信息的结构)。
+
+    RNN现在面临2个严重问题：Transformer或经过改造的CNN，其应用效果明显优于RNN；RNN本身的序列依赖结构(RNN本质特征：t时刻的隐层状态$S_t$要依赖t-1时刻的隐层状态$S_{t-1}$)不利于大规模并行计算。目前解决无法并行计算的办法有2种：
+
+    方法1：若每个timestep的隐层有多个神经元，t时刻的某个隐层神经元只与t-1时刻对应层的神经元有连接，断开与其他神经元的全连接（在说DeepRNN吗？DeepRNN好像本来也不是全连接啊？另外同一时刻各神经元也有依赖啊？），每层是一路，可以并行，每层内部仍保留前后依赖关系。这种方法并行能力上限很低，受隐层神经元数量影响，且仍然存在序列依赖。
+
+    方法2：部分断开隐层之间的连接，比如每隔2个timestep断开1次，即由x1->x2->x3->x4->x5->x6变成x1->x2,x3->x4,x5->x6，然后通过加深层级，在后面层级上建立远距离特征之间的联系。但这其实就是简化版的TextCNN模型，速度又比CNN慢。
+
+    **CNN**:
+
+    最早将CNN引入NLP的工作是TextCNN，用于文本分类任务，结构简洁且与RNN模型效果相当，但在文本分类之外的任务领域，远远不如RNN模型。
+
+    TextCNN运作机制：CNN捕获到的特征基本都体现在那个长度为k的滑动窗口里，它捕获的是单词的k-gram片段信息，k的大小决定了能捕获多远距离的特征。
+    
+    TextCNN有2个严重问题：一是单层CNN，无法捕获远距离特征，目前解决办法有2种：
+
+    方法1：仍是单层CNN，滑动窗口仍是k=3，窗口覆盖区域由连续区域改为跳着覆盖，即由覆盖(x1,x2,x3)变成覆盖(x1,x3,x5)，此为Dilated CNN的思想。
+
+    方法2：由单层CNN变成多层CNN，在后面层捕获远距离特征，第1层只捕获(x1,x2,x3)的话，第2层可捕获((x1,x2,x3),(x2,x3,x4),(x3,x4,x5))的信息，距离为5，继续叠加CNN层的话能捕获的距离会越来越大，此是主流发展方向。但现实无情，人们发现，CNN做到2到3层后，网络加深对效果帮助不大。不是深层没用，而是深层网络参数优化的方法不足导致的。后来考虑把Skip Connection和各种Norm等参数优化技术引入，才能慢慢把CNN深度做起来。
+
+    问题2是MaxPooling层会导致位置信息舍弃：CNN捕获的特征是有位置信息的，但如果后面立马接MaxPooling的话，由于它只选中并保留最强的那个特征，位置信息就扔掉了。
+    
+    现在NLP领域，CNN的一个发展趋势和主流方向是：不用Pooling层，使用Conv1D叠加网络深度，同时使用Skip Connectiont来辅助优化。这种理念的模型有ConvS2S, TCN等。
+
+    关于位置编码，CNN的滑动窗口从左到右滑动，捕获的特征在结构上是有相对位置信息的，不需要额外的Positional Embedding，当然也可以给每个单词增加一个，与单词的词向量叠加在一起形成单词输入，这也是常规做法，另外CNN的并行计算能力非常强。
+
+    CNN进化总结：想方设法把CNN的深度做起来，随着深度的增加，很多看似无关的问题随之解决了。
+
+    **Transformer**:
+
+    
 
 
 
-- 【Great】[BERT大火却不懂Transformer？读这一篇就够了 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651666707&idx=1&sn=2e9149ccdba746eaec687038ce560349)
 
 - 【Great】[The Illustrated Transformer - 2018](https://jalammar.github.io/illustrated-transformer/)
 
     **Chinese**: [The Illustrated Transformer【译】](https://blog.csdn.net/yujianmin1990/article/details/85221271)
 
-    **YAO**:
+    **YAO**: OK
+
+    **SelfAttention**
 
     $a^{1,i}=q^1k^i/\sqrt{dim(k^i)}$作为一个分数，决定着编码$x^1$时（某个固定位置时），每个输入词(x1,x2,...,xn)需要集中多少注意力，是**各输入$x^i$自己跟自己**的注意力关系。
 
-    Transformer整体结构(以左右各2个Encoders/Decoders示例)
+    SelfAttention输入输出的矩阵运算关系：
 
-    ![]()
+    ![](./image/Self-attention-matrix-calculation.png)
 
-    Transformer左半部分有多个Encoder(比如6个)，结构相同但不共享参数：
+    **Transformer**
     
-    - 每个Encoder内：**Input -> SelfAttention + Residual -> Add & Norm > FeedForwards + Residual -> Add & Norm -> Output**
+    以左右各2个Encoders/Decoders示例
+
+    ![](./image/Transformer_with_2_Encoders_Decoders.png)
+
+    **Encoders**
+    
+    有多个Encoder(比如6个)，结构相同但不共享参数，**所有timestep的输入同时输入Encoders，同时流通整个Encoders，并同时输出**
+    
+    - 每个Encoder内：**Input -> SelfAttention + Residual -> Add & Norm -> FeedForwards + Residual -> Add & Norm -> Output**
 
       - SelfAttention里各输入两两依赖(以计算Attention)
       - FeedForwards中没有这些依赖性(**TODO**: SelfAttention的各个输出在FeedForwards中不共享参数？每个输出对应一个独立的FeedForward?)！
       - Add & Norm用于先Add来自SelfAttention或FeedForward的输入与输出然后进行Layer Normalization
 
-    - 各个Encoder间：首尾相连，前一Encoder的Output是后一Encoder的Input，最后一个Encoder的Output才输入到Transformer右半部分，且输入到各个Decoder(的Encoder-Decoder Attention中)！
+    - 各个Encoder间：首尾相连，前一Encoder的Output是后一Encoder的Input，最后1个Encoder的Output(被转换为**K和V**)才输入到Transformer右半部分，且输入到每个Decoder的**Encoder-Decoder Attention**中，以帮助Decoder集中于输入序列的合适位置！
 
-    Transformer右半部分有多个Decoder(比如6个)，
+    **Decoders**
+    
+    有多个Decoder(比如6个)，每个timestep的输入单独输入Decoders，**待前1个timestep的输入流通整个Decoders并输出后，后1个timestep的输入才开始**，并且要使用前1个timestep的输出
 
+    - 每个Decoder内：**Input -> Masked SelfAttention + Residual -> Add & Norm -> Encoder-Decoder Attention + Residual -> Add & Norm -> FeedForwards + Residual -> Add & Norm -> Output**
+
+      - Input: 第1个Decoder的Input也需要增加Positional信息
+      - Masked SelfAttention: SelfAttention环节要使用目前所有已流通过的tiemstep，**后面的timestep被mask，只关注之前各timestep**，因此叫Masked
+      - Encoder-Decoder Attention：工作方式同Multi-head SelfAttention，但是它的输入中，**Key和Value来自Encoders最后的输出，只有Query来自前一层Add & Norm层**
+
+    **Linear & Softmax**
+    
+    inear将Deocders每一timestep的输出映射为一个非常大的logits向量，每个值表示某个词的可能倾向值，随后Softmax将这些值转换为概率值log_probs。
+
+    **Training**
+    
+    模型每一timestep的输出是1个概率分布(长度为|Vocab|的一维向量)，与目标概率分布之间的Loss采用**Cross-Entropy或KL散度**。如下所示，当考虑所有timesteps时，右边是训练模型的目标概率分布，左边是实际输出的概率分布。
+
+    ![](./image/transformer_probability_distributions.png)
+
+    **Inference**
+    
+    有2种解码方法：**Greedy解码和Beam Search**，前者是每一timestep只保留概率最大的，扔掉其他部分，后者是每一timestep保留最大的K个部分，根据这K个部分再预测下一timestep，K是超参数。
 
 - [Transformer: A Novel Neural Network Architecture for Language Understanding - 2017](https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html)
   
@@ -248,7 +331,7 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
     Seq2Seq模型中的Encoder和Decoder，都可以用Self-Attention来代替其中的RNN，即为Transformer。
 
-    **TODO** 疑问：**Transformer的Decoder部分是并行的么**？当前cell在处理时仍然需要上一cell的output作为输入啊？
+    **TODO** 疑问：**Transformer-Decoders是并行么**？当前timestep在处理时需要上一timestep的output作为输入，所以**每个timestep内是并行，各timestep之间是串行**。
 
 #### Pratice
   
