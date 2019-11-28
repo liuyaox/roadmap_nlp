@@ -244,9 +244,21 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
     **Transformer**:
 
+    Transformer不像RNN或CNN，必须明确的在输入端将Positon信息编码，Transformer是用位置函数来进行位置编码的，而Bert等模型给每个单词一个Position embedding，将单词embedding和对应的position embedding加起来形成单词的输入embedding，类似ConvS2S。
+
+    **RNN VS CNN VS Transformer**:
+
+    从以下几个角度进行对比，模型分别是RNNS2S, ConvS2S, Transformer：
+
+    句法特征提取能力：CNN > RNN，暂时没有Transformer的对比
+
+    语义特征提取能力：Transformer >> 原生CNN == 原生RNN，在考察语义能力的任务(比如机器翻译？)中，Transformer超过RNN和CNN大约4-8个绝对百分点。
     
+    长距离特征捕获能力；Transformer > 原生RNN >> 原生CNN，在该类任务(主语-谓语一致性检测，比如we……..are…)，当主谓距离<13时，Transformer微弱优于RNN，当距离>13时，Transformer微弱弱于RNN，综合看可以认为Transformer和RNN在这方面能力差不太多，而CNN则显著弱于前两者。对于Transformer来说，Multi-head attention的head数量严重影响Long-range特征捕获能力，head越多越有利于捕获long-range特征。
 
+    任务综合特征抽取能力；
 
+    并行计算能力及运行效率
 
 
 - 【Great】[The Illustrated Transformer - 2018](https://jalammar.github.io/illustrated-transformer/)

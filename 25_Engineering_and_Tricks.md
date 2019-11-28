@@ -47,6 +47,10 @@
 
 - [笔记之Troubleshooting Deep Neural Networks - 2019](https://zhuanlan.zhihu.com/p/89566632)
 
+- [Practical Advice for Building Deep Neural Networks](https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/)
+
+    **Chinese**: [构建神经网络的一些实战经验和建议](https://mp.weixin.qq.com/s/c00PXpJHctdm_YEbk4NTQA)
+
 
 ## 25.2 Parameter Tuning
 
