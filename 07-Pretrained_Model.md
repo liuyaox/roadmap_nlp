@@ -29,7 +29,7 @@
 
 - [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
 
-    **YAO**:
+    **YAO**: HERE HERE HERE 
 
     预训练+Finetuning将成为NLP领域的流行方法
 
@@ -46,6 +46,10 @@
 - [李宏毅-ELMO、BERT、GPT视频笔记 - 2019](https://mp.weixin.qq.com/s?__biz=MzIwODI2NDkxNQ==&mid=2247484834&idx=3&sn=0951ac8c768ad7e078754f8baba8e65c)
 
     **Video**: <https://www.bilibili.com/video/av46561029/?p=61>
+
+    **YAO**: HERE HERE HERE
+
+
 
 #### Code
 
@@ -80,6 +84,18 @@
 
 中文预训练语言模型
 
+#### Paper
+
+- 【Great】[Pre-Training with Whole Word Masking for Chinese BERT - HIT2019](https://arxiv.org/abs/1906.08101)
+
+    中文BERT-wwm预训练模型
+
+    **Code**: <https://github.com/ymcui/Chinese-BERT-wwm> (Tensorflow & PyTorch)
+
+    **Article**: [中文最佳，哈工大讯飞联合发布全词覆盖中文BERT预训练模型](https://mp.weixin.qq.com/s/88OwaHqnrVMQ7vH98INA3w)
+
+    **YAO**: HERE HERE HERE
+
 #### Code
 
 - <https://github.com/brightmart/roberta_zh> (Tensorflow)
@@ -91,14 +107,6 @@
 - <https://github.com/thunlp/OpenCLaP> (PyTorch)
 
     OpenCLaP：多领域开源中文预训练语言模型仓库   可被PyTorch-Transformers直接使用   包含：百度百科ERT, 民事文书BERT, 刑事文书BERT
-
-- 【Great】<https://github.com/ymcui/Chinese-BERT-wwm> (Tensorflow & PyTorch)
-
-    Pre-Training with Whole Word Masking for Chinese BERT（中文BERT-wwm预训练模型）
-  
-    **Paper**: [Pre-Training with Whole Word Masking for Chinese BERT - HIT2019](https://arxiv.org/abs/1906.08101)
-
-    **Article**: [中文最佳，哈工大讯飞联合发布全词覆盖中文BERT预训练模型](https://mp.weixin.qq.com/s/88OwaHqnrVMQ7vH98INA3w)
 
 #### Practice
 
@@ -119,9 +127,9 @@
     用BERT进行中文情感分类的详细操作及完整程序
 
 
-## 7.3 EMLo - TOTODO
+## 7.3 EMLo
 
-EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
+EMLo: Embeddings from Language Model，是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
 
 [Deep contextualized word representations - AllenAI2018](https://arxiv.org/abs/1802.05365)
 
@@ -146,7 +154,7 @@ EMLo 是第一个使用预训练模型进行词嵌入的方法，将句子输入
     NLP详细教程：手把手教你用ELMo模型提取文本特征
 
 
-## 7.4 BERT - TOTODO
+## 7.4 BERT
 
 ### 7.4.1 Overview
 

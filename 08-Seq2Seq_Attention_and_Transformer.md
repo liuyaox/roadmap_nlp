@@ -172,7 +172,7 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 ## 8.4 Transformer
 
-其实就是 Seq2Seq Model with Self-attention
+其实就是 Seq2Seq + Attention Model with SelfAttention
 
 ### 8.4.1 Transformer
 
@@ -202,11 +202,11 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 - 【Great】[放弃幻想，全面拥抱Transformer：自然语言处理三大特征抽取器（CNN/RNN/TF）比较 - 2019](https://zhuanlan.zhihu.com/p/54743941)
 
-    **YAO**: 
+    **YAO**: OK
 
     从NLP领域的特征抽取角度来说，Transformer会逐步取代RNN成为最主流的特征抽取器，CNN如果改造得当，还有一席之地。
 
-    NLP任务的特点：一维线性序列，不定长，相对位置很重要，长距离特征很关键。模型改进的方向，就是让它更匹配NLP领域的这些特点。
+    NLP任务的特点：**一维线性序列，不定长，相对位置很重要，长距离特征很关键**。模型改进的方向，就是让它更匹配NLP领域的这些特点。
 
     特征抽取器是否具备**长距离特征捕获能力**对于解决NLP任务是很关键的。
 
@@ -214,29 +214,29 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
     **RNN**:
 
-    RNN本身线性序列结构在反向传播时因路径太长导致优化困难(梯度消失或爆炸)，为此引入LSTM/GRU，通过增加中间状态直接向后传播，以缓解梯度消失问题，成为RNN的标准模型。后来引入的Encoder-Decoder框架和Attention机制，极大拓展了RNN的能力和效果。RNN之前占据主导地位，主要原因是因为它的结构天然适配NLP任务的特点(RNN本身就是个可接纳不定长输入序列的由前向后线性传导信息的结构)。
+    RNN本身线性序列结构在反向传播时因路径太长导致优化困难(梯度消失或爆炸)，为此引入LSTM/GRU，通过增加中间状态直接向后传播，以缓解梯度消失问题，成为RNN的标准模型。后来引入的Encoder-Decoder框架和Attention机制，极大拓展了RNN的能力和效果。RNN之前占据主导地位，主要原因是因为它的**结构天然适配NLP任务的特点**(RNN本身就是个可接纳不定长输入序列的由前向后线性传导信息的结构)。
 
-    RNN现在面临2个严重问题：Transformer或经过改造的CNN，其应用效果明显优于RNN；RNN本身的序列依赖结构(RNN本质特征：t时刻的隐层状态$S_t$要依赖t-1时刻的隐层状态$S_{t-1}$)不利于大规模并行计算。目前解决无法并行计算的办法有2种：
+    RNN现在面临2个严重问题：Transformer或经过改造的CNN，其应用效果明显优于RNN；RNN本身的**序列依赖结构不利于大规模并行计算**。目前解决无法并行计算的办法有2种：
 
-    方法1：若每个timestep的隐层有多个神经元，t时刻的某个隐层神经元只与t-1时刻对应层的神经元有连接，断开与其他神经元的全连接（在说DeepRNN吗？DeepRNN好像本来也不是全连接啊？另外同一时刻各神经元也有依赖啊？），每层是一路，可以并行，每层内部仍保留前后依赖关系。这种方法并行能力上限很低，受隐层神经元数量影响，且仍然存在序列依赖。
+    - 方法1：若每个timestep的隐层有多个神经元，t时刻的某个隐层神经元只与t-1时刻对应层的神经元有连接，断开与其他神经元的全连接（在说DeepRNN吗？DeepRNN好像本来也不是全连接啊？另外同一时刻各神经元也有依赖啊？），每层是一路，可以并行，每层内部仍保留前后依赖关系。这种方法并行能力上限很低，受隐层神经元数量影响，且仍然存在序列依赖。
 
-    方法2：部分断开隐层之间的连接，比如每隔2个timestep断开1次，即由x1->x2->x3->x4->x5->x6变成x1->x2,x3->x4,x5->x6，然后通过加深层级，在后面层级上建立远距离特征之间的联系。但这其实就是简化版的TextCNN模型，速度又比CNN慢。
+    - 方法2：部分断开隐层之间的连接，比如每隔2个timestep断开1次，即**由x1->x2->x3->x4->x5->x6变成x1->x2,x3->x4,x5->x6**，然后通过加深层级，在后面层级上建立远距离特征之间的联系。但这其实就是简化版的TextCNN模型，速度又比CNN慢。
 
     **CNN**:
 
     最早将CNN引入NLP的工作是TextCNN，用于文本分类任务，结构简洁且与RNN模型效果相当，但在文本分类之外的任务领域，远远不如RNN模型。
 
-    TextCNN运作机制：CNN捕获到的特征基本都体现在那个长度为k的滑动窗口里，它捕获的是单词的k-gram片段信息，k的大小决定了能捕获多远距离的特征。
+    TextCNN运作机制：CNN捕获到的特征基本都体现在那个长度为k的滑动窗口里，它捕获的是**单词的k-gram片段信息**，k的大小决定了能捕获多远距离的特征。
     
-    TextCNN有2个严重问题：一是单层CNN，无法捕获远距离特征，目前解决办法有2种：
+    TextCNN有2个严重问题：一是**单层CNN无法捕获远距离特征**，目前解决办法有2种：
 
-    方法1：仍是单层CNN，滑动窗口仍是k=3，窗口覆盖区域由连续区域改为跳着覆盖，即由覆盖(x1,x2,x3)变成覆盖(x1,x3,x5)，此为Dilated CNN的思想。
+    - 方法1：仍是单层CNN，滑动窗口仍是k=3，窗口覆盖区域由连续区域改为**跳着覆盖**，即由覆盖(x1,x2,x3)变成覆盖(x1,x3,x5)，此为Dilated CNN的思想。
 
-    方法2：由单层CNN变成多层CNN，在后面层捕获远距离特征，第1层只捕获(x1,x2,x3)的话，第2层可捕获((x1,x2,x3),(x2,x3,x4),(x3,x4,x5))的信息，距离为5，继续叠加CNN层的话能捕获的距离会越来越大，此是主流发展方向。但现实无情，人们发现，CNN做到2到3层后，网络加深对效果帮助不大。不是深层没用，而是深层网络参数优化的方法不足导致的。后来考虑把Skip Connection和各种Norm等参数优化技术引入，才能慢慢把CNN深度做起来。
+    - 方法2：由**单层CNN变成多层CNN**，在后面层捕获远距离特征，第1层只捕获(x1,x2,x3)的话，第2层可捕获((x1,x2,x3),(x2,x3,x4),(x3,x4,x5))的信息，距离为5，继续叠加CNN层的话能捕获的距离会越来越大，此是主流发展方向。但现实无情，人们发现，CNN做到2到3层后，网络加深对效果帮助不大。不是深层没用，而是**深层网络参数优化的方法不足**导致的。后来考虑把Skip Connection和各种Norm等参数优化技术引入，才能慢慢把CNN深度做起来。
 
-    问题2是MaxPooling层会导致位置信息舍弃：CNN捕获的特征是有位置信息的，但如果后面立马接MaxPooling的话，由于它只选中并保留最强的那个特征，位置信息就扔掉了。
+    问题2是**MaxPooling层会导致位置信息舍弃**：CNN捕获的特征是有位置信息的，但如果后面立马接MaxPooling的话，由于它只选中并保留最强的那个特征，位置信息就扔掉了。
     
-    现在NLP领域，CNN的一个发展趋势和主流方向是：不用Pooling层，使用Conv1D叠加网络深度，同时使用Skip Connectiont来辅助优化。这种理念的模型有ConvS2S, TCN等。
+    现在NLP领域，CNN的一个发展趋势和主流方向是：不用Pooling层，**使用Conv1D叠加网络深度，同时使用Skip Connectiont来辅助优化**。这种理念的模型有ConvS2S, TCN等。
 
     关于位置编码，CNN的滑动窗口从左到右滑动，捕获的特征在结构上是有相对位置信息的，不需要额外的Positional Embedding，当然也可以给每个单词增加一个，与单词的词向量叠加在一起形成单词输入，这也是常规做法，另外CNN的并行计算能力非常强。
 
@@ -250,15 +250,32 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
     从以下几个角度进行对比，模型分别是RNNS2S, ConvS2S, Transformer：
 
-    句法特征提取能力：CNN > RNN，暂时没有Transformer的对比
+    - 句法特征提取能力：**原生RNN < 原生CNN**，暂时没有Transformer的对比
 
-    语义特征提取能力：Transformer >> 原生CNN == 原生RNN，在考察语义能力的任务(比如机器翻译？)中，Transformer超过RNN和CNN大约4-8个绝对百分点。
+    - 语义特征提取能力：**Transformer >> 原生RNN == 原生CNN**  在考察语义能力的任务(比如机器翻译？)中，Transformer超过RNN和CNN大约4-8个绝对百分点。
     
-    长距离特征捕获能力；Transformer > 原生RNN >> 原生CNN，在该类任务(主语-谓语一致性检测，比如we……..are…)，当主谓距离<13时，Transformer微弱优于RNN，当距离>13时，Transformer微弱弱于RNN，综合看可以认为Transformer和RNN在这方面能力差不太多，而CNN则显著弱于前两者。对于Transformer来说，Multi-head attention的head数量严重影响Long-range特征捕获能力，head越多越有利于捕获long-range特征。
+    - 长距离特征捕获能力：**Transformer > 原生RNN >> 原生CNN**  在该类任务(主语-谓语一致性检测，比如we……..are…)，当主谓距离<13时，Transformer微弱优于RNN，当距离>13时，Transformer微弱弱于RNN，综合看可以认为Transformer和RNN在这方面能力差不多，而CNN则显著弱于前两者。对于Transformer来说，Multi-head attention的head数量严重影响Long-range特征捕获能力，head越多越有利于捕获long-range特征。
 
-    任务综合特征抽取能力；
+    - 任务综合特征抽取能力：**Transformer >> 原生RNN == 原生CNN**  原生CNN略微比原生RNN稍微好一点  NLP中最具代表性的任务是机器翻译，它基本上是对NLP各项处理能力综合要求最高的任务之一，对句法、语义、上下文、长距离特征等都需要考察。
 
-    并行计算能力及运行效率
+    - 并行计算能力：**Transformer == 原生CNN >> 原生RNN**
+
+    - 计算复杂度和效率：**SelfAttention=$O(T^2D)$, RNN=$O(TD^2)$, CNN=$O(KTD^2)$**，三者都包含平方项，取决于D和T谁的平均值大，T是sequence length，D是representation dimension，K是kernel size of CNN。一般情况下，句子平均长度T都小于词向量维度D时，SelfAttention计算量要小于RNN和CNN，反之大于RNN和CNN。但是如果考虑到并行计算，对于Transformer和CNN，那个T是可以通过并行计算来消除的，情况就不一样了。有些论文证明：在训练和在线推理方面，CNN比RNN快9.3倍到21倍；Transformer和CNN训练速度比双向LSTM快3到5倍；Transformer Base速度最快，CNN速度次之，但是比Transformer Base慢了将近一倍，Transformer Big速度再次，因为它的参数量最大，而最慢的是RNN，比前两者慢了3倍到几十倍。
+
+        其实从复杂度可以看出Transformer的一个缺点：当任务输入是篇章级别(如文本摘要)时，**输入很长，即T很大，Transformer会有巨大的计算复杂度$O(T^2D)$，导致速度急剧变慢**，所以短期内这些领域还是RNN或长成Transformer的CNN合适，尤其是CNN。Transformer的解决办法：长输入强制性切为多份，分别输入Transformer，高层再合并，比如Transformer-XL
+
+    - 综合排序：**Transformer > CNN > RNN**，从速度和效果折衷的角度看，对于工业界应用，在特征抽取方面，**推荐Transformer-base**
+
+    **三者合流**:
+
+    基本思路：把CNN/RNN成为Transformer的一个构件。比如，**把SelfAttention用BiRNN或CNN替代**，其他构件不变。
+
+    合流效果：机器翻译的BLEU得分上，某论文有如下结论：
+    
+    - Transformer=25.4
+    - 原生RNN=23.2, 原生RNN+multihead=23.7, +position=23.9, +norm=23.7, +multiattention=24.5, +feedforward=25.1，可知RNN在合流过程中效果不断提升，但与Transformer还是有一定差距
+    - 原生CNN=23.6, 原生CNN+norm=24.3, +multihead=24.2, +feedforward=25.3，可知与RNN类似，合流中效果不断提升，但与Transformer也还是有一定差距
+    - 说明：Transformer之所有效果这么好，不仅仅是multihead attention在发生作用，而是**几乎所有构件都在共同发挥作用，是一个小的系统工程**。而CNN/RNN唯一出路在于寄生在Transformer Block里
 
 
 - 【Great】[The Illustrated Transformer - 2018](https://jalammar.github.io/illustrated-transformer/)
@@ -300,7 +317,7 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
     - 每个Decoder内：**Input -> Masked SelfAttention + Residual -> Add & Norm -> Encoder-Decoder Attention + Residual -> Add & Norm -> FeedForwards + Residual -> Add & Norm -> Output**
 
       - Input: 第1个Decoder的Input也需要增加Positional信息
-      - Masked SelfAttention: SelfAttention环节要使用目前所有已流通过的tiemstep，**后面的timestep被mask，只关注之前各timestep**，因此叫Masked
+      - Masked SelfAttention: **它的Key/Query/Value均来自前一层**，同时**只关注之前各timestep，后面的timestep被mask**，即：在预测第t个词时把t+1到末尾的词遮住，只对前面t个词做Self Attention
       - Encoder-Decoder Attention：工作方式同Multi-head SelfAttention，但是它的输入中，**Key和Value来自Encoders最后的输出，只有Query来自前一层Add & Norm层**
 
     **Linear & Softmax**
@@ -322,6 +339,14 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 - [Google 发布的 attention 机制介绍官方视频](https://www.youtube.com/watch?v=rBCqOTEfxvg)
 
 - [Transformer (变形金刚，大雾) 三部曲：RNN 的继承者 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411699&idx=3&sn=83286bfa620ebe7297759fb78c31286c)
+
+    **YAO**:
+
+    输入序列X与输出序列Y之间的Attention其实有3种：**X内部($X_i$与$X_j$的Attention)，Y内部($Y_i$与$Y_j$的Attention)，X与Y之间($X_i$与$Y_j$的Attention)**
+
+    经典架构RNN+Seq2Seq+Attention只侧重于X与Y之间的Attention，X内部和Y内部仍然使用RNN，而Transformer通过SelfAttention侧重X内部和Y内部的Attention，通过Encoder-Decoder Attention来侧重X与Y之间的Attention。
+
+    TODO 继续……
 
 - [Attention机制详解（二）——Self-Attention与Transformer - 2019](https://zhuanlan.zhihu.com/p/47282410)
 
