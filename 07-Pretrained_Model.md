@@ -11,27 +11,29 @@
 
 #### Article
 
-- [8 Excellent Pretrained Models to get you Started with NLP](https://www.analyticsvidhya.com/blog/2019/03/pretrained-models-get-started-nlp/)
+- [8 Excellent Pretrained Models to get you Started with NLP - 2019](https://www.analyticsvidhya.com/blog/2019/03/pretrained-models-get-started-nlp/)
 
     包括：ULMFiT, Transformer, BERT, Transformer-XL, GPT-2, ELMo, Flair, StanfordNLP
 
     **Chinese**：[8种优秀预训练模型大盘点，NLP应用so easy！](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651669109&idx=2&sn=29b4e45291eac659af2967a1e246aa03)
 
-- [Generalized Language Models](https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html)
+- [Generalized Language Models - 2019](https://lilianweng.github.io/lil-log/2019/01/31/generalized-language-models.html)
 
     包括：CoVe, ELMo, Croww-View Training, ULMFiT, GPT, BERT, GPT-2
 
     **Chinese**：[上下文预训练模型最全整理：原理、应用、开源代码、数据分享](https://mp.weixin.qq.com/s?__biz=MzIxNDgzNDg3NQ==&mid=2247485551&idx=1&sn=de0a04647870543fe0b36d024f58429e)
 
-- [Language Models and Contextualised Word Embeddings](http://www.davidsbatista.net/blog/2018/12/06/Word_Embeddings/)
+- [Language Models and Contextualised Word Embeddings - 2018](http://www.davidsbatista.net/blog/2018/12/06/Word_Embeddings/)
   
     对 ELMo, BERT 及其他模型进行了一个简单的综述
 
-- [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林](https://zhuanlan.zhihu.com/p/49271699)
+- [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林 - 2018](https://zhuanlan.zhihu.com/p/49271699)
 
-    **YAO**: HERE HERE HERE 
+    **YAO**: 
 
     预训练+Finetuning将成为NLP领域的流行方法
+
+
 
 - [NLP's ImageNet moment has arrived - 2018](https://thegradient.pub/nlp-imagenet/)
 
@@ -47,9 +49,85 @@
 
     **Video**: <https://www.bilibili.com/video/av46561029/?p=61>
 
-    **YAO**: HERE HERE HERE
+    **YAO**: OK
 
+    Onehot Vector --> Word Embedding --> Contextualized Word Embedding
 
+    **ELMo - Embeddings from Language Models**
+
+    RNN-based Language Models trained from lots of sentences
+    
+    ![](./image/EMLo_demo.png)
+    
+    训练方法：给一个sentence，对于每个timestep，即对于每个token，经过上下2个RNN Cell后预测下一个token，预测出来的token会用于下一个timestep，2个timestep之间相应层左右2个RNN Cell也有连接，则上下2个RNN Cell之间的向量即为当前token的Contextualized Word Embedding，记为$h_{1,1}$，它会考虑到当前token和之前所有token。
+    
+    当是BiRNN时，也会考虑之后所有token，此时的Contextualized Word Embedding是正向和反向2个向量的拼接$h_1=concat(h_{1,1}, h_{1,2})$；以上只是一层(上下2个RNN Cell)，EMLo实际上有多层时，每层都有一个$h_i$，同时最开始每个token有个原始的静态的Embedding，记为$h_0$，最终EMLo取它们的Weighted Sum，即$h=\sum_{i=0}\alpha_ih_i$
+    
+    注意$\alpha_i$ is learned with downstream task，**而$h_i$在接task前是训练好的，与task一起学习的仅仅是$\alpha$**，EMLo后接不同的task，会学到不同的$\alpha$，从而学到不同的最终的Embedding。
+    
+    **TODO**: ，也就是说，
+
+    **BERT - Bidirectional Encoder Representations from Transformers**
+
+    BERT = Encoders of Transformer. Learned from a large amount of text without annotations.
+
+    对于中文来说，char粒度可能比word粒度更合适一些，因为常用char大约4千左右，而word无法穷举，使用char的话，输入时onehot向量没word时那么大。也有弊端，中文里word与其中的char可能含义差别很大，于是有了ERNIE，它mask的是word，如"黑龙江"而非"龙"或"黑"。
+    
+    **TODO**: 使用char的onehot向量？不使用char或word的静态Embedding吗？
+
+    BERT有很多层Encoder，比如24层或48层，每层负责关注不同的特征，类似于EMLo，每一层输出经Weighted Sum后是最终结果，观察每一层的Weight，可以分析各个层更适用于哪些任务，即更关注哪类特征。如靠前的层更关注文法相关的特征如POS,Consts,Deps等，靠后的层更关注复杂的如Coref.,SRL，而Entities,Relations,SPR这些任务被几乎所有层均匀关注。
+
+    **Traning of Bert** :
+
+    Approach1：Masked LM
+    
+    输入token以15%概率被mask，一起输入BERT里，mask输入对应的那个输出vector，再输入一个Linear Multi-class Classifier里，让它去预测这个mask输入。Linear分类器其实很简单，这就要求BERT输出的那个vector，要对mask输入有很强的表征能力才行，于是vector就可以是mask输入的Embedding。如果2个token填在同一个位置没有违和感，那它们就有类似的Embedding.
+
+    ![](./image/Bert_training_approach1.png)
+
+    Approach2：Next Sentence Prediction
+    
+    输入2个句子，以\<SEP>分隔，在开头添加一个\<CLS>，一起输入BERT里，\<CLS>对应的那个输出vector，再输入一个Linear Binary Classifier里，让它去预测这2个句子是否是接在一起的。BERT和Linear Binary Classifier是一起训练学习的，前者是finetuning，后者是Learned from Scratch，共同学习到vector，于是vector就可以是XXX的Embedding。
+
+    **TODO**: 什么叫2个句子是相连的？能够从语料库里直接得到yes/no吗？vector是谁的Embedding？2个句子的吗？
+
+    ![](./image/Bert_training_approach2.png)
+
+    注意：方法1和方法2是同时开展的。？？？
+
+    **Usecase of Bert** :
+
+    Usecase1: 单标签分类
+    
+    输入1个句子，输出1个class，则\<CLS>对应的vector后接1个Linear Classifier用于预测这个class
+
+    ![](./image/Bert_usecase1.png)
+
+    Usecase2: 序列标注
+    
+    输入1个句子，输出T个class，则句子中每个token都对应1个vector，每个vector都后接1个Linear Classifier用于预测这个token的标注类别
+
+    ![](./image/Bert_usecase2.png)
+
+    Usecase3: 自然语言推断NLI
+    
+    输入2个句子，句子1是假设，句子2是推断，输出1个class，则\<CLS>对应的vector后接1个Linear Classifier用于判断推断是正确、错误或未知
+
+    ![](./image/Bert_usecase3.png)
+
+    Usecase4: 抽取式QA
+    
+    输入1篇文章D={d1,d2,...,dn}和1个问题Q={q1,q2,...,qm}，输出2个整数(s,e)，表示问题的答案是D中的片段A={ds,...,de}，di和qj都是token。红色向量与d1,d2,...,dn对应的各个输出vector做dot product后经softmax后输出n个概率值，最大概率值对应的i即为s，同理蓝色向量得到的最大概率值对应的i即为e，红色向量和蓝色向量与各个vector的维度相同，都是与Bert一起训练出来。
+
+    ![](./image/Bert_usecase4.png)
+
+    **GPT: Generative Pre-Training**
+
+    GPT = Decoders of Transformer. 使用的是Decoders里的Masked SelfAttention，也属于Language Models范畴。当前输入的所有tokens经很多层的Masked SelfAttention后输出$O^3$来预测下一个token，预测完后当作下一个timestep的输入$a^4$，重复之前的行为。
+
+    ![](./image/GPT_demo.png)
+
+    GPT-2很神奇，可以做到Zero-shot Learning，即在完全没有训练语料的情况下去做Reading Comprehension(输入document和query，再输入一个'A:'，随即便能输出Answer), Summarization(输入document，再输入一个'TL;DR:'，随即便能输出摘要), Translation(输入多个英法句子对，如english sentence=french sentence，之后输入1个english sentence和'='后，便能输出相应的french sentence)，不过效果不是特别好。
 
 #### Code
 
@@ -59,7 +137,7 @@
 
 #### Practice
 
-- [北大、人大联合开源工具箱UER，3 行代码完美复现BERT、GPT - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490122&idx=3&sn=a2413923ce3e620f26a00edb4d89d878)
+- [北大、人大联合开源工具箱UER，3行代码完美复现BERT、GPT - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490122&idx=3&sn=a2413923ce3e620f26a00edb4d89d878)
 
 #### Library
 
@@ -141,13 +219,15 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 #### Article
 
-- [ELMO模型(Deep contextualized word representation)](https://www.cnblogs.com/jiangxinyang/p/10060887.html)
+- [Allten官网文章：ELMo - 2018](https://allennlp.org/elmo)
+
+- [ELMO模型(Deep contextualized word representation) - 2018](https://www.cnblogs.com/jiangxinyang/p/10060887.html)
 
 - [对 ELMo 的视频介绍](https://vimeo.com/277672840)
 
 #### Practice
 
-- [文本分类实战（九）—— ELMO 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10235054.html)
+- [文本分类实战（九）—— ELMO 预训练模型 - 2019](https://www.cnblogs.com/jiangxinyang/p/10235054.html)
 
 - [A Step-by-Step NLP Guide to Learn ELMo for Extracting Features from Text - 2019](https://www.analyticsvidhya.com/blog/2019/03/learn-to-use-elmo-to-extract-features-from-text/)
 
@@ -209,7 +289,7 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 - [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](http://jalammar.github.io/illustrated-bert/)
 
-- [彻底搞懂BERT](https://www.cnblogs.com/rucwxb/p/10277217.html)
+- [彻底搞懂BERT - 2019](https://www.cnblogs.com/rucwxb/p/10277217.html)
 
 - [理解BERT每一层都学到了什么 - 2019](https://zhuanlan.zhihu.com/p/74515580)
 
@@ -223,7 +303,7 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
     BERT模型从训练到部署
 
-- [文本分类实战（十）—— BERT 预训练模型](https://www.cnblogs.com/jiangxinyang/p/10241243.html) (Tensorflow)
+- [文本分类实战（十）—— BERT 预训练模型 - 2019](https://www.cnblogs.com/jiangxinyang/p/10241243.html) (Tensorflow)
 
 - [Multi-label Text Classification using BERT – The Mighty Transformer](https://medium.com/huggingface/multi-label-text-classification-using-bert-the-mighty-transformer-69714fa3fb3d)
 
@@ -295,6 +375,10 @@ GPT2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https:/
 #### Code
 
 - <https://github.com/fastai/fastai/tree/ulmfit_v1> (PyTorch)
+
+#### Library
+
+- <https://github.com/fastai/fastai>
 
 #### Article
 
