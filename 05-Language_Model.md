@@ -30,7 +30,15 @@ BOW, BOW + NGram, BOW + TFIDF, BOW + NGram + TFIDF, 其实还可以再推进一�
 
 Purpose: To predict N-th word using previous N-1 words
 
-N-gram
+2003年提出神经网络语言模型NNLM，模型结构很简单：
+
+**Input(1~N-1 words, onehot)-->Embedding(Lookup Table)-->Concate-->Dense(tanh)-->Softmax(N-th word)**
+
+Word2Vec与NNLM基本类似，结构非常相似，Word2Vec中的CBOW和Skip-gram结构更简化一些，删除了隐层Dense(tanh)，
+
+因为是语言模型，而语言模型本质上就是看到上文预测下文，Word Embedding只是它的副产品，它的训练方式是：上文 --> 下一个word
+
+而Word2Vec是专门为了Word Embedding而生的，更加灵活一些，有CBOW和Skip-gram这2种训练方式，CBOW: 上下文 --> 中间的word，Skip-gram：中间的word --> 上下文
 
 
 ## 5.5 Character-Level Model

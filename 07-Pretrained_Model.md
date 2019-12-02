@@ -27,11 +27,11 @@
   
     对 ELMo, BERT 及其他模型进行了一个简单的综述
 
-- [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林 - 2018](https://zhuanlan.zhihu.com/p/49271699)
+- 【Great】[从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林 - 2018](https://zhuanlan.zhihu.com/p/49271699)
 
     **YAO**: 
 
-    预训练+Finetuning将成为NLP领域的流行方法
+    NLP里面做预训练一般的选择是用语言模型任务来做；预训练+Finetuning将成为NLP领域的流行方法；
 
 
 
