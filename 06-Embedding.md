@@ -40,13 +40,11 @@
 - <https://github.com/liuhuanyong/Word2Vector>
 
     Self complemented word embedding methods using CBOW，skip-Gram，word2doc matrix , word2word matrix.
-oro
+
 
 ## 6.2 Word2Vec
 
-缺点：一个单词对应一个固定的向量，无法很好处理多义词。
-
-#### Paper - OK
+#### Paper
 
 - Word2Vec - [Efficient Estimation of Word Representations in Vector Space - Google2013](https://arxiv.org/abs/1301.3781)
 
@@ -76,17 +74,23 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>
 
-#### Article - OK
+#### Article
 
-- Skip-Gram: [Word2Vec Tutorial - The Skip-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
+- [Word2Vec Tutorial - The Skip-Gram Model - 2016](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 
-- Negative Sampling & Subsampling of Frequent Words & Phrase Learning: [Word2Vec Tutorial Part 2 - Negative Sampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)
+- [Word2Vec Tutorial Part 2 - Negative Sampling - 2017](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)
 
-- [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/)
+    Negative Sampling & Subsampling of Frequent Words & Phrase Learning
+
+- 【Great】[The Illustrated Word2vec - 2019](http://jalammar.github.io/illustrated-word2vec/)
+
+    **Chinese**: [图解Word2vec，读这一篇就够了](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651669277&idx=2&sn=bc8f0590f9e340c1f1359982726c5a30)
+
+    **YAO**: 
 
 - [word2vec原理推导与代码分析](http://www.hankcs.com/nlp/word2vec.html)
 
-- [word2vec 中的数学原理详解](https://www.cnblogs.com/peghoty/p/3857839.html)
+- [word2vec中的数学原理详解](https://www.cnblogs.com/peghoty/p/3857839.html)
 
 #### Practice - TODO
 

@@ -36,21 +36,23 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     Rank 6
     
-    输出：Embedding有6+1=7种：(char, bichar) * (Word2Vec, GloVe, fastText) + ELMo
+    输入：Embedding有2*3+1=7种：(char, bichar) * (Word2Vec, GloVe, fastText) + \<char, ELMo>，每种又有4种维度dim=(150, 200, 250, 300)
     
-    中间：模型1：BiLSTMs + SelfAttention  模型2：BiLSTM + CNNs + SelfAttention  模型3：(BiGRU + LocalAttention)s  模型4：BiONLSTMs + SelfAttention
+    中间：模型1：BiLSTMs + SelfAttention  模型2：BiLSTM + CNNs(kernel: 3,5,7) + SelfAttention  模型3：(BiGRU + LocalAttention)s  模型4：BiONLSTMs + SelfAttention
     
     输出：TimeDistributed(Dense) + CRF
 
-    **YAO**: 先BERT，然后EMLo，最后再此 HERE HERE HERE HERE HERE HERE
+    **YAO**: 
+
+    
 
 - <https://github.com/lonePatient/daguan_2019_rank9> (Pytorch)
 
     Rank 9   模型1：BERT + LSTM + CRF   模型2：BERT + LSTM + MDP + CRF   模型3：BERT + LSTM + SPAN
 
-- <https://github.com/renjunxiang/daguan_2019> (PyTorch)
+- 【Great】<https://github.com/renjunxiang/daguan_2019> (PyTorch)
 
-    **自行训练BERT**，过程详细值得学习
+    **自行训练BERT**，而非直接使用训练好的BERT，过程详细值得学习
 
 #### Data
 
@@ -67,6 +69,8 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 主要以 BiLSTM + CRF 为主
 
 [CRF Loss](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/losses/crf_losses.py)
+
+**TODO**: 详细定义是啥？需要仔细研究！
 
 [CRF Accuracy](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/metrics/crf_accuracies.py)
 
@@ -99,9 +103,9 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
     **YAO**: OK
     
-    - 基本内容：中文实体  基于字，采用BIO标注集，实体有Person/Location/Organization，则tags共有3*2+1=7个，模型结构: Embedding -> BiLSTM -> CRF
+    - 基本内容：中文实体  **基于字，采用BIO标注集**，实体有Person/Location/Organization，则tags共有3*2+1=7个，模型结构: Embedding -> BiLSTM -> CRF
 
-    - 数据处理：对于X，正常地，向量化编码，补零截断；对于Y，向量化编码(不同tag转化为0-6)，随后**也要补零截断**！注意，Padding的mask_value，X与Y要相同。
+    - 数据处理：对于X，正常地，向量化编码，补零截断；对于Y，向量化编码(不同tag转化为0-6)，随后**也要补零截断**！注意，Padding的mask_value，X与Y要相同
 
     - FAQ：注意各Library的版本，当(tensorflow=1.10.0, keras=2.2.0, keras-contrib=0.0.2)时CRF没问题
 
@@ -109,7 +113,13 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
     中文实体   模型结构：BERT -> BiLSTM -> CRF   **BERT结构直接融入模型并且参与训练**
 
-    **YAO**: 
+    **YAO**: HERE HERE HERE HERE HERE
+
+- 【Great】<https://github.com/AidenHuen/BERT-BiLSTM-CRF> (Keras)
+
+    BERT-BiLSTM-CRF的Keras版实现  预训练模型为chinese_L-12_H-768_A-12.zip，使用BERT客户端和服务器bert-serving-server和bert-serving-client
+
+    **YAO**: HERE HERE HERE HERE HERE
 
 ##### PyTorch
 
@@ -118,6 +128,10 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
     A LSTM+CRF model for the seq2seq task for Medical named entity recognition in ccks2017
 
     **YAO**: PyTorch实现的CRF
+
+- <https://github.com/llcing/BiLSTM-CRF-ChineseNER.pytorch> (PyTorch)
+
+    PyTorch implement of BiLSTM-CRF for Chinese NER
 
 - <https://github.com/yanwii/ChinsesNER-pytorch> (PyTorch)
 

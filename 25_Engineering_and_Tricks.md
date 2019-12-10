@@ -193,6 +193,12 @@
 
 - [GPU 显存不足怎么办？- 2019](https://zhuanlan.zhihu.com/p/65002487)
 
+- [Speed Up your Algorithms Part 1 — PyTorch - 2018](https://towardsdatascience.com/speed-up-your-algorithms-part-1-pytorch-56d8a4ae7051)
+
+    **Chinese**: [PyTorch 算法加速指南](https://mp.weixin.qq.com/s?__biz=MzU3NjE4NjQ4MA==&mid=2247486517&idx=3&sn=ed7db64a5b43191786167d83368cae8f)
+
+    **Github**: <https://github.com/PuneetGrov3r/MediumPosts/tree/master/SpeedUpYourAlgorithms>
+
 
 ## 25.6 Pseudo Labeling
 

@@ -29,10 +29,95 @@
 
 - 【Great】[从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史 - 张俊林 - 2018](https://zhuanlan.zhihu.com/p/49271699)
 
-    **YAO**: 
+    **YAO**: OK
 
     NLP里面做预训练一般的选择是用语言模型任务来做；预训练+Finetuning将成为NLP领域的流行方法；
 
+    **Word2Vec**
+
+    Word Embedding作为预训练过程的方式：Embedding矩阵是网络的**Onehot层到Embedding层映射的初始化参数矩阵**，初始化后可以Frozen OR Finetuning
+
+    这是2018年之前NLP预训练的典型做法，但Word Embedding有一个致命缺点：多义词问题，Word Embedding是静态的，无法区分多义词的不同语义。直接解决这个问题比较成本太高或太繁，从而催生了更简洁优雅的解决方案：ELMo
+
+    **ELMo**
+
+    解决多义词问题的理念：事先用语言模型学好单词Bank的Embedding，是静态的，也无法区分多义性，但随后在实际使用时，单词Bank具备了特定的上下文，这时再根据上下文去调整Bank的Embedding。ELMO本质思想是：**根据上下文对Embedding动态调整**。
+
+    预训练阶段：输入原始静态Embedding，通过多层编码器学习一个通用语言模型，**ELMo预训练好的是各层编码器的参数，或者说是一个通用语言模型**
+
+    **TODO**: 每层编码器是两层RNN，对应一个Embedding？还是说两层RNN对应两个Embedding？
+
+    使用阶段：输入1个句子，对于句子中的1个单词，每层编码器都会输出1个动态的Embedding，再结合下游任务学习权重，把各层的Embedding加权整合为一个，就是下游任务中该单词的Embedding，所以ELMo代表的是一种**基于特征融合的预训练**方法。由于ELMo给下游提供的是**每个单词**的特征形式，所以这一类预训练方法被称为Feature-based Pre-Training。
+
+    **TODO**: 补充特征？Embedding加权整合为一个后，还需要再加上原始静态的Embedding吗？
+
+    尧：形象来说，预训练模型朝上竖着站立，ELMo是横着各层给右侧的下游任务；而Bert和GPT是上面最后一层给上面的下游任务。？？？
+
+    对比Bert和GPT，ELMo的缺点有：RNN/LSTM抽取特征的能力远远弱于Transformer；双向拼接这种特征融合能力可能弱于Bert那种一体化的特征融合方式(只是推断，没有实验证明)。
+
+    **GPT**
+
+    预训练阶段：与ELMo比，有2点不同：一是使用Transformer(的Decoders)来替代RNN进行特征抽取；二是语言模型是单向的，即只使用上文来预测下一单词，并未使用下文，这一点并不明智。
+
+    使用阶段：对于不同的下游任务，要把任务的网络结构改造成**和GPT一样的网络结构**，然后使用预训练阶段学到的参数去**初始化**这个网络结构，这样通过预训练学到的语言知识就引入到下游任务中了。另外，这个网络结构可以Finetuning。这种模式与图像领域使用预训练的模式是一样的：**先构建一样的结构，然后加载预训练好的参数**。
+
+    任务结构改造的重点其实**只需要修改输入的形式**，GPT论文里有详细说明，比如：
+
+    - 文本分类：Text --> START + Text + EXTRACT
+
+    - 文本推断：Premise + Hypothesis --> START + Premise + DELIM + Hypothesis + EXTRACT
+
+    - 文本相似：Text1 + Text2 --> (START + Text1 + DELIM + Text2), (START + Text2 + DELIM + Text1)
+
+    - 多项选择：Context + Answer1 + Answer2 + Answer3 --> (START + Context + DELIM + Answer1 + EXTRACT), (START + Context + DELIM + Answer2 + EXTRACT), (START + Context + DELIM + Answer3 + EXTRACT)
+
+    GPT缺点：语言模型是单向而非双向的
+
+    **BERT**
+
+    特征提取，ELMo使用的是RNN，GPT使用的是Transformer的Decoders(Masked SelfAttention，单向)，而BERT使用的是Transformer的Encoders(SelfAttention，双向)，数据规模要比GPT大。BERT其实并没太大创新，更像是一个最近几年NLP重要技术的集大成者。
+
+    **ELMo + 特征提取由RNN改成Transformer --> BERT**
+
+    **GPT + 语言模型由单向改成双向 --> BERT**
+
+    预训练阶段：受完型填空任务的启发，BERT用上下文去预测中间的单词，即Masked LM，本质思想与CBOW类似；另外还有一个Next Sentence Prediction，句子连续性预测。
+
+    - Masked LM：随机选择语料中15%的单词，这些单词，有80%被Mask标记，10%随机替换成另外一个单词，10%保持不变，训练任务是基于上下文预测这个单词
+
+    - Next Sentence Prediction: 句子级负采样，即从语料库中选两个句子A和B构成一条样本，50%的时候B的确取自A的后面，是A的Next Sentence，另外50%的时候B是从语料库中随机选择的，训练任务是判断B是否是A的Next Sentence (因此BERT可以直接得出一个整句的Embedding表示)
+
+    这2种训练方法一起做，是个多任务过程，因为NLP很多任务是句子关系判断任务，**单词粒度的数据训练不到句子粒度**，增加第2个任务有助于下游的句子关系任务。样本数据示例如下：
+
+    ```
+    Input = '[CLS] the man went to [MASK] store [SEP] he bought a gallon [MASK] milk [SEP]'
+    Label = IsNext
+
+    Input = '[CLS] the man [MASK] to the store [SEP] penguin [MASK] are flight birds [SEP]'
+    Label = NotNext
+    ```
+
+    输入部分是个线性序列，两个句子通过\[SEP]分割，最前面加个\[CLS]，最后面加个\[SEP]，句子中**每个单词有3种Embedding**，它们叠加后是BERT的输入：
+
+    - Token Embeddings: 单词Toekn原始的静态Embedding
+
+    - Sentence Embeddings: 样本中有2个句子，每个句子都有个整体的Embedding，然后对应给每个单词，\[CLS]跟随第1个句子，\[SEP]跟随它前面那个句子
+
+    - Position Embeddings: 位置Embedding，同Transformer
+
+    有效因子分析：与GPT相比，**双向语言模型起最主要作用**，尤其对于那些需要看到下文的任务，而NSP(Next Sentence Prediction)对整体性能影响不算大，跟具体任务关联度比较高。
+
+    使用阶段：与GPT类似，也需要改造下游任务的网络结构(输入输出形式)，详情参考下面的"李宏毅-ELMO、BERT、GPT视频笔记"。BERT普适性很强，几乎可以做任何NLP下游任务。
+
+    归纳来说，BERT的特点如下：
+    
+    - 两阶段模型：阶段1是双向语言模型预训练，阶段2是具体任务Finetuning或做特征集成
+
+    - 特征抽取：使用Transformer而非RNN/CNN
+
+    - 双向语言模型：采用CBOW那样的方法去做
+    
+    **预训练的本质**：设计一个网络结构来做语言模型任务，然后用大量的无标注语料预训练这个语言模型，从而**把大量语言学知识抽取出来编码到网络结构中**，作为各种下游任务的先验知识。
 
 
 - [NLP's ImageNet moment has arrived - 2018](https://thegradient.pub/nlp-imagenet/)
@@ -55,21 +140,21 @@
 
     **ELMo - Embeddings from Language Models**
 
-    RNN-based Language Models trained from lots of sentences
+    属于RNN-based **Language Models**范畴
     
     ![](./image/EMLo_demo.png)
     
-    训练方法：给一个sentence，对于每个timestep，即对于每个token，经过上下2个RNN Cell后预测下一个token，预测出来的token会用于下一个timestep，2个timestep之间相应层左右2个RNN Cell也有连接，则上下2个RNN Cell之间的向量即为当前token的Contextualized Word Embedding，记为$h_{1,1}$，它会考虑到当前token和之前所有token。
+    训练方法：给一个sentence，对于每个timestep，即对于每个token，经过上下2个RNN Cell后预测下一个token，预测出来的token会用于下一个timestep，2个timestep之间相应层的左右2个RNN Cell也有连接，则上下2个RNN Cell之间的向量即为当前token的Contextualized Word Embedding，记为$h_{1,1}$，它会考虑到当前token和之前所有token。
     
-    当是BiRNN时，也会考虑之后所有token，此时的Contextualized Word Embedding是正向和反向2个向量的拼接$h_1=concat(h_{1,1}, h_{1,2})$；以上只是一层(上下2个RNN Cell)，EMLo实际上有多层时，每层都有一个$h_i$，同时最开始每个token有个原始的静态的Embedding，记为$h_0$，最终EMLo取它们的Weighted Sum，即$h=\sum_{i=0}\alpha_ih_i$
+    当是BiRNN时，也会考虑之后所有token，此时的Contextualized Word Embedding是正向和反向2个向量的拼接$h_1=concat(h_{1,1}, h_{1,2})$；以上只是一层编码器(上下2个RNN Cell)，EMLo实际上**可以有多层编码器，每层都对应一个$h_i$**，同时最开始每个token有个原始的静态的Embedding，记为$h_0$，最终EMLo取它们的Weighted Sum，即$h=\sum_{i=0}\alpha_ih_i$
     
+    原始静态Embedding表示的是单词的**单词特征**，EMLo各层编码器输出的$h_i$表示的是单词的**句法特征、语义特征等更加Contextual**的特征
+
     注意$\alpha_i$ is learned with downstream task，**而$h_i$在接task前是训练好的，与task一起学习的仅仅是$\alpha$**，EMLo后接不同的task，会学到不同的$\alpha$，从而学到不同的最终的Embedding。
-    
-    **TODO**: ，也就是说，
 
     **BERT - Bidirectional Encoder Representations from Transformers**
 
-    BERT = Encoders of Transformer. Learned from a large amount of text without annotations.
+    BERT = Encoders of Transformer. Learned from a large amount of text without annotations. **TODO: 不属于Language Models范畴？**
 
     对于中文来说，char粒度可能比word粒度更合适一些，因为常用char大约4千左右，而word无法穷举，使用char的话，输入时onehot向量没word时那么大。也有弊端，中文里word与其中的char可能含义差别很大，于是有了ERNIE，它mask的是word，如"黑龙江"而非"龙"或"黑"。
     
@@ -89,11 +174,7 @@
     
     输入2个句子，以\<SEP>分隔，在开头添加一个\<CLS>，一起输入BERT里，\<CLS>对应的那个输出vector，再输入一个Linear Binary Classifier里，让它去预测这2个句子是否是接在一起的。BERT和Linear Binary Classifier是一起训练学习的，前者是finetuning，后者是Learned from Scratch，共同学习到vector，于是vector就可以是XXX的Embedding。
 
-    **TODO**: 什么叫2个句子是相连的？能够从语料库里直接得到yes/no吗？vector是谁的Embedding？2个句子的吗？
-
     ![](./image/Bert_training_approach2.png)
-
-    注意：方法1和方法2是同时开展的。？？？
 
     **Usecase of Bert** :
 
@@ -123,7 +204,7 @@
 
     **GPT: Generative Pre-Training**
 
-    GPT = Decoders of Transformer. 使用的是Decoders里的Masked SelfAttention，也属于Language Models范畴。当前输入的所有tokens经很多层的Masked SelfAttention后输出$O^3$来预测下一个token，预测完后当作下一个timestep的输入$a^4$，重复之前的行为。
+    GPT = Decoders of Transformer. 使用的是Decoders里的Masked SelfAttention，也**属于Language Models范畴**。当前输入的所有tokens经很多层的Masked SelfAttention后输出$O^3$来预测下一个token，预测完后当作下一个timestep的输入$a^4$，重复之前的行为。
 
     ![](./image/GPT_demo.png)
 
@@ -192,7 +273,7 @@
 
     使用 chinese_L-12_H-768_A-12，模型为BERT + FC/LSTM
 
-- 【Great】<https://github.com/songyingxin/bert-textclassification> (PyTorch)
+- <https://github.com/songyingxin/bert-textclassification> (PyTorch)
 
     Implemention some Baseline Model upon Bert for Text Classification
 
@@ -211,6 +292,8 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 [Deep contextualized word representations - AllenAI2018](https://arxiv.org/abs/1802.05365)
 
+低层编码器提取语料中的句法信息，高层编码器提取语料中的语义信息。
+
 #### Code
 
 - <https://github.com/allenai/allennlp> (PyTorch)
@@ -220,10 +303,6 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 #### Article
 
 - [Allten官网文章：ELMo - 2018](https://allennlp.org/elmo)
-
-- [ELMO模型(Deep contextualized word representation) - 2018](https://www.cnblogs.com/jiangxinyang/p/10060887.html)
-
-- [对 ELMo 的视频介绍](https://vimeo.com/277672840)
 
 #### Practice
 
@@ -289,8 +368,6 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 - [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](http://jalammar.github.io/illustrated-bert/)
 
-- [彻底搞懂BERT - 2019](https://www.cnblogs.com/rucwxb/p/10277217.html)
-
 - [理解BERT每一层都学到了什么 - 2019](https://zhuanlan.zhihu.com/p/74515580)
 
 - [关于最近实践 Bert 的一些坑 - 2019](https://zhuanlan.zhihu.com/p/69389583)
@@ -299,7 +376,7 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 #### Practice
 
-- 【Great】<https://github.com/xmxoxo/BERT-train2deploy> (Tensorlfow)
+- <https://github.com/xmxoxo/BERT-train2deploy> (Tensorlfow)
 
     BERT模型从训练到部署
 
@@ -312,14 +389,6 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 - <https://github.com/bamtercelboo/PyTorch_Bert_Text_Classification> (PyTorch)
 
     PyTorch Bert Text Classification
-
-- <https://github.com/AidenHuen/BERT-BiLSTM-CRF> (Keras)
-
-    BERT-BiLSTM-CRF的Keras版实现  预训练模型为chinese_L-12_H-768_A-12.zip，使用BERT客户端和服务器bert-serving-server和bert-serving-client
-
-- <https://github.com/llcing/BiLSTM-CRF-ChineseNER.pytorch> (PyTorch)
-
-    PyTorch implement of BiLSTM-CRF for Chinese NER
     
 
 ### 7.4.3 RoBERTa
@@ -347,7 +416,7 @@ GPT2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https:/
 
 - GPT2: <https://github.com/openai/gpt-2> (Tensorflow)
 
-    **Data*: <https://github.com/openai/gpt-2-output-dataset>
+    **Data**: <https://github.com/openai/gpt-2-output-dataset>
 
 #### Practice
 

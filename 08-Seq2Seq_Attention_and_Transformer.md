@@ -69,6 +69,12 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
     **YAO**: 6种打分机制, Attention发展历程(Attention in Seq2Seq, SoftAttention, HardAttention, GlobalAttention, LocalAttention, Attention in Transformer), 实例分析, 机制实现分析
 
+- 【Great】[深度学习中的注意力模型（2017版）](https://zhuanlan.zhihu.com/p/37601161)
+
+    **YAO**: HERE HERE HERE
+
+    
+
 - [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
 
 - [目前主流的attention方法都有哪些？ - 2019](https://www.zhihu.com/question/68482809)
