@@ -50,6 +50,10 @@
 
     模型很丰富，且具有结构可视化结果，待看……
 
+- <https://github.com/Vincent131499/TextSim_cn_finetune> (Tensorflow)
+
+    微调预训练语言模型(BERT、Roberta、XLBert等),用于计算两个中文文本之间的相似度（通过句子对分类任务转换）
+
 - <https://github.com/yanqiangmiffy/sentence-similarity> (Keras)
 
     问题句子相似度计算，即给定客服里用户描述的两句话，用算法来判断是否表示了相同的语义。

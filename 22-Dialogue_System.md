@@ -17,6 +17,8 @@ CopyNet
 
     中文公开聊天语料库及使用方法
 
+- [LCQMC:A Large-scale Chinese Question Matching Corpus - HIT2018](https://www.aclweb.org/anthology/C18-1166/)
+
 
 ## 22.2 Paper
 
@@ -36,6 +38,10 @@ CopyNet
 
 
 ## 22.3 Practice
+
+- <https://github.com/yangjianxin1/GPT2-chitchat>
+
+    用于中文闲聊的GPT2模型
 
 - <https://github.com/keyue123/poemKBQA>
 

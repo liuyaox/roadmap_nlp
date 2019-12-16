@@ -36,7 +36,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     Rank 6
     
-    输入：Embedding有2*3+1=7种：(char, bichar) * (Word2Vec, GloVe, fastText) + \<char, ELMo>，每种又有4种维度dim=(150, 200, 250, 300)
+    输入：Embedding有2*3+1=7种：(char, bichar) * (Word2Vec, GloVe, fastText) + \<char, ELMo>，每种有4种维度dim=(150, 200, 250, 300)
     
     中间：模型1：BiLSTMs + SelfAttention  模型2：BiLSTM + CNNs(kernel: 3,5,7) + SelfAttention  模型3：(BiGRU + LocalAttention)s  模型4：BiONLSTMs + SelfAttention
     

@@ -162,7 +162,7 @@
 
     BERT有很多层Encoder，比如24层或48层，每层负责关注不同的特征，类似于EMLo，每一层输出经Weighted Sum后是最终结果，观察每一层的Weight，可以分析各个层更适用于哪些任务，即更关注哪类特征。如靠前的层更关注文法相关的特征如POS,Consts,Deps等，靠后的层更关注复杂的如Coref.,SRL，而Entities,Relations,SPR这些任务被几乎所有层均匀关注。
 
-    **Traning of Bert** :
+    **Traning of Bert**:
 
     Approach1：Masked LM
     
@@ -245,7 +245,7 @@
 
 #### Paper
 
-- 【Great】[Pre-Training with Whole Word Masking for Chinese BERT - HIT2019](https://arxiv.org/abs/1906.08101)
+- [Pre-Training with Whole Word Masking for Chinese BERT - HIT2019](https://arxiv.org/abs/1906.08101)
 
     中文BERT-wwm预训练模型
 
@@ -255,17 +255,31 @@
 
     **YAO**: HERE HERE HERE
 
-#### Code
+- [ALBERT: A Lite BERT for Self-supervised Learning of Language Representations - Google2019](https://arxiv.org/abs/1909.11942)
 
-- <https://github.com/brightmart/roberta_zh> (Tensorflow)
+    海量中文预训练ALBERT模型
+
+    **Code**: <https://github.com/brightmart/albert_zh> (Tensorflow)
+
+- [RoBERTa: A Robustly Optimized BERT Pretraining Approach - Wangshtaon2019](https://arxiv.org/abs/1907.11692)
+
+    **Code**: <https://github.com/brightmart/roberta_zh> (Tensorflow)
 
     RoBERTa for Chinese   目前只是base版训练数据：10G文本，包含新闻、社区问答、百科数据等
 
     **Article**: [RoBERTa中文预训练模型，你离中文任务的SOTA只差个它](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650769391&idx=2&sn=b5f90a2a60c7929469f622db37ef4b1e)
 
+- [NEZHA: Neural Contextualized Representation for Chinese Language Understanding - Huawei2019](https://arxiv.org/abs/1909.00204)
+
+    **Code**: <https://github.com/huawei-noah/Pretrained-Language-Model>
+
+    **Article**: [“哪吒”出世！华为开源中文版BERT模型](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652059869&idx=5&sn=bdde2493f9cc888423f5fbdb6b4c9f02)
+
+#### Code
+
 - <https://github.com/thunlp/OpenCLaP> (PyTorch)
 
-    OpenCLaP：多领域开源中文预训练语言模型仓库   可被PyTorch-Transformers直接使用   包含：百度百科ERT, 民事文书BERT, 刑事文书BERT
+    OpenCLaP：多领域开源中文预训练语言模型仓库   可被PyTorch-Transformers直接使用   包含：百度百科BERT, 民事文书BERT, 刑事文书BERT
 
 #### Practice
 
@@ -288,9 +302,9 @@
 
 ## 7.3 EMLo
 
-EMLo: Embeddings from Language Model，是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
-
 [Deep contextualized word representations - AllenAI2018](https://arxiv.org/abs/1802.05365)
+
+EMLo: Embeddings from Language Model，是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
 
 低层编码器提取语料中的句法信息，高层编码器提取语料中的语义信息。
 
@@ -311,6 +325,10 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 - [A Step-by-Step NLP Guide to Learn ELMo for Extracting Features from Text - 2019](https://www.analyticsvidhya.com/blog/2019/03/learn-to-use-elmo-to-extract-features-from-text/)
 
     NLP详细教程：手把手教你用ELMo模型提取文本特征
+
+- <https://github.com/searobbersduck/ELMo_Chin> (Tensorflow)
+
+    use ELMo in chinese environment
 
 
 ## 7.4 BERT

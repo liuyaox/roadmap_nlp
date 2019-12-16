@@ -17,7 +17,7 @@ Statistical Language Models
 
 #### Article
 
-- [自然语言处理中的N-Gram模型详解](https://blog.csdn.net/baimafujinji/article/details/51281816)
+- [自然语言处理中的N-Gram模型详解 - 2016](https://blog.csdn.net/baimafujinji/article/details/51281816)
 
 
 ## 5.3 Bag-of-Word (BOW)
@@ -44,7 +44,7 @@ Word2Vec与NNLM基本类似，结构非常相似，Word2Vec中的CBOW和Skip-gra
 
 ## 5.5 Character-Level Model
 
-[Character-Aware Neural Language Models-2015](https://arxiv.org/abs/1508.06615)
+[Character-Aware Neural Language Models - Harvard2015](https://arxiv.org/abs/1508.06615)
 
 #### Code
 

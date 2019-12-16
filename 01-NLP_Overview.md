@@ -10,6 +10,8 @@
 
 - [Paper reading list in natural language processing](https://github.com/iwangjian/Paper-Reading)
 
+- [NLP领域，你推荐哪些综述性的文章？ - 2019](https://www.zhihu.com/question/355125622)
+
 
 #### Github
 

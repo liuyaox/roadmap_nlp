@@ -211,3 +211,11 @@
 - [A Simple Pseudo-Labeling Function Implementation in Keras - 2017](https://shaoanlu.wordpress.com/2017/04/10/a-simple-pseudo-labeling-function-implementation-in-keras/)
 
 - [标签传播算法（Label Propagation）及Python实现 - 2015](https://blog.csdn.net/zouxy09/article/details/49105265)
+
+
+## 25.7 Others
+
+#### Article
+
+- [标签平滑&深度学习：Google Brain解释了为什么标签平滑有用以及什么时候使用它(SOTA tips)​ - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490838&idx=4&sn=a8900b30647184fe37fbdbde64fb3098)
+

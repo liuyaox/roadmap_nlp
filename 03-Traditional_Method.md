@@ -78,6 +78,10 @@
 
     基于Textrank算法的文本摘要抽取与关键词抽取，基于TFIDF算法的关键词抽取
 
+- <https://github.com/liuhuanyong/ImportantEventExtractor>
+
+    针对某一事件话题下的新闻报道集合，通过使用TextRank & DocRank算法，对新闻报道进行重要性识别，并通过新闻报道时间挑选出时间线上重要新闻
+
 
 ## 3.4 AP Clustering
 
