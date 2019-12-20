@@ -30,25 +30,39 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 - [冠亚季军分享：预训练模型彻底改变了NLP，但也不能忽略传统方法带来的提升 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651674340&idx=2&sn=9a7b74e461a0d716ba150798f3f5f597)
 
-    冠军：GloVe + Pretrained(Flair/ELMo/BERT/XLNet) + LSTM + CNN + CRF   亚军：Bert + BiLSTM + CRF   季军：Transformer + BiLSTM + CRF
+    冠军：GloVe + Pretrained(Flair/ELMo/BERT/XLNet) + LSTM + CNN + CRF   
+    亚军：Bert + BiLSTM + CRF   
+    季军：Transformer + BiLSTM + CRF
 
 - 【Great】<https://github.com/cdjasonj/datagrand> (Keras & Tensorflow)
 
     Rank 6
     
-    输入：Embedding有2*3+1=7种：(char, bichar) * (Word2Vec, GloVe, fastText) + \<char, ELMo>，每种有4种维度dim=(150, 200, 250, 300)
+    输入：Embedding有2*3+1=7种：(char, bichar) * (Word2Vec, GloVe, FastText) + \<char, ELMo>，每种有4种维度dim=(150, 200, 250, 300)
     
-    中间：模型1：BiLSTMs + SelfAttention  模型2：BiLSTM + CNNs(kernel: 3,5,7) + SelfAttention  模型3：(BiGRU + LocalAttention)s  模型4：BiONLSTMs + SelfAttention
+    中间：模型4未使用
+    - 模型1：BiLSTMs + SelfAttention  
+    - 模型2：BiLSTM + CNNs(kernel: 3, 5, 7) + SelfAttention  
+    - 模型3：(BiGRU + LocalAttention)s  
+    - 模型4：BiONLSTMs + SelfAttention
     
     输出：TimeDistributed(Dense) + CRF
 
-    **YAO**: 
+    **YAO**: [Detailed Notes](https://github.com/liuyaox/forked_repos_with_notes/tree/master/datagrand-master)
 
-    
+    - 特点1：**数据不Padding！也没有使用Masking！** 按Batch训练模型，每一Batch内输入具有相同的Seq_length；应用时同样，相同Seq_length的输入一并应用。
+
+    - 特点2：使用ELMo，且融合了Word2Vec, GloVe, FastText三种静态Embedding的特点。
+
+    HERE HERE HERE HERE HERE
 
 - <https://github.com/lonePatient/daguan_2019_rank9> (Pytorch)
 
-    Rank 9   模型1：BERT + LSTM + CRF   模型2：BERT + LSTM + MDP + CRF   模型3：BERT + LSTM + SPAN
+    Rank 9
+    
+    模型1：BERT + LSTM + CRF  
+    模型2：BERT + LSTM + MDP + CRF    
+    模型3：BERT + LSTM + SPAN 
 
 - 【Great】<https://github.com/renjunxiang/daguan_2019> (PyTorch)
 
