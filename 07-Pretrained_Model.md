@@ -105,6 +105,15 @@
 
     - Position Embeddings: 位置Embedding，同Transformer
 
+    keras_bert源码里分别被称为Input-Token, Input-Segment, Input-Masked
+
+    ```
+    def get_inputs(seq_len):
+        """Get input layers.  :param seq_len: Length of the sequence or None."""
+        names = ['Token', 'Segment', 'Masked']
+        return [keras.layers.Input(shape=(seq_len, ), name='Input-%s' % name) for name in names]
+    ```
+
     有效因子分析：与GPT相比，**双向语言模型起最主要作用**，尤其对于那些需要看到下文的任务，而NSP(Next Sentence Prediction)对整体性能影响不算大，跟具体任务关联度比较高。
 
     使用阶段：与GPT类似，也需要改造下游任务的网络结构(输入输出形式)，详情参考下面的"李宏毅-ELMO、BERT、GPT视频笔记"。BERT普适性很强，几乎可以做任何NLP下游任务。
