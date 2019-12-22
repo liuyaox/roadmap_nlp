@@ -129,7 +129,7 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
     **YAO**: HERE HERE HERE HERE HERE
 
-
+    TODO pad id是0，与O这个tag的id是一样的？
 
 - 【Great】<https://github.com/AidenHuen/BERT-BiLSTM-CRF> (Keras)
 
