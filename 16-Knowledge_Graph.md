@@ -131,6 +131,8 @@
 
 #### Article
 
+- [关系提取简述 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412040&idx=1&sn=8d580639fa1b65d948a187ac41340087)
+
 - 【论文】Awesome Relation Classification Paper - 2019
 
     [PART I](https://blog.csdn.net/Kaiyuan_sjtu/article/details/89877420)

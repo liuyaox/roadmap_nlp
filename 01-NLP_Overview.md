@@ -94,6 +94,8 @@
 
 - [观点 | 预见未来：NLP将迎来黄金十年](https://mp.weixin.qq.com/s?__biz=MzAxMzA2MDYxMw==&mid=2651567692&idx=1&sn=8b7c84fbc4ecd9cb566365d8ea2eeb9b)
 
+- [自然语言理解难在哪儿？ - 2019](https://zhuanlan.zhihu.com/p/96801863)
+
 
 #### Case
 

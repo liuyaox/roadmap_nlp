@@ -123,13 +123,13 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
     - Library版本：当(tensorflow=1.10.0, keras=2.2.0, keras-contrib=0.0.2)时CRF没问题
 
-- 【Great】<https://github.com/UmasouTTT/keras_bert_ner> (Keras)
+- <https://github.com/UmasouTTT/keras_bert_ner> (Keras)
 
-    中文实体   模型结构：BERT + BiLSTM + CRF   **BERT结构直接融入模型并且参与训练**
+    中文实体，模型结构：BERT + BiLSTM + CRF，数据和其他信息同上(zh-NER-keras)
 
-    **YAO**: HERE HERE HERE HERE HERE
-
-    TODO pad id是0，与O这个tag的id是一样的？
+    **YAO**: OK  [Detailed Notes](https://github.com/liuyaox/forked_repos_with_notes/tree/master/keras_bert_ner-master)
+    
+    使用keras-bert，基于chinese_L-12_H-768_A-12加载BERT模型，直接融入模型并且参与训练(Finetuning)
 
 - 【Great】<https://github.com/AidenHuen/BERT-BiLSTM-CRF> (Keras)
 

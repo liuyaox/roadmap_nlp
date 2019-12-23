@@ -13,6 +13,11 @@
 
     近年来NLP在法律领域的相关研究工作，包括论文、竞赛和一些优秀项目、在线系统。
 
+- [Deep Learning for Symbolic Mathematics - Facebook2019](https://arxiv.org/abs/1912.01412)
+
+    **Article**: [求解微分方程，用seq2seq就够了，性能远超 Mathematica、Matlab](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490925&idx=3&sn=a7f071b770c5b263b49e777ea085fd72)
+
+
 #### Practice
 
 - <https://github.com/jingyihiter/mycail>
