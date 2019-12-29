@@ -105,7 +105,9 @@
 
     - Position Embeddings: 位置Embedding，同Transformer
 
-    keras_bert源码里分别被称为Input-Token, Input-Segment, Input-Masked
+    keras_bert源码里前2个分别被称为Input-Token, Input-Segment, 第3个没有Input，直接在后面与前2个结合，结合方法有三种：ADD, CONCAT, EXPAND，详见[HERE](https://github.com/CyberZHG/keras-pos-embd/blob/master/keras_pos_embd/pos_embd.py)。
+    
+    **TODO**：Input-Masked另有它用，是MLM的Input的Mask？还有一个Input-Task？
 
     ```
     def get_inputs(seq_len):

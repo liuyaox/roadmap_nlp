@@ -88,6 +88,20 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
     **YAO**: 
 
+    假设文本是[x1,x2,x3,x4,x5,x6]
+
+    CBOW: 两边预测中间
+
+    Skip-Gram: 中间预测两边，比如<x2, x1>,<x2, x3>都是训练样本
+
+    SGNS: Skip-Gram + Negative Sampling，上文训练样本变成<x2, x1, 1>和<x2, x3, 1>，label=1表示是相邻，label=0表示不是相邻。目前问题是只是正例，没有负例，于是需要负采样。即x2不变，从Vocabulary中随机选择若干单词如x7,x8与x2组成负例<x2, x7, 0>和<x2, x8, 0>。以上，**把Softmax问题转化为Sigmoid问题**，训练速度大大提高！这里有2个超参数，窗口大小和负样本数量。
+
+    - 窗口大小：较小时，表示2个word更可以互换，较大时，表示更相关，Gensim默认是5
+
+    - 负样本数量：论文认为5-20个比较理想，Gensim默认是5
+
+    Train: 随机化Embedding和Context两个矩阵，shape都是<vocab_size, embed_dim>，前者用于x2找到对应的vector1，后者用于x1,x3,x7,x8这些找到对应的vector2，分别计算vector1与各个vector2的Dot-Product，以表示x2与xi的相似程度，再用sigmoid转化为概率，与真实Label计算Loss，随后训练更新Embedding和Context。训练结束，Embedding即为所需的Word Embedding
+
 - [word2vec原理推导与代码分析](http://www.hankcs.com/nlp/word2vec.html)
 
 - [word2vec中的数学原理详解](https://www.cnblogs.com/peghoty/p/3857839.html)
