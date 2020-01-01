@@ -112,6 +112,14 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
 - [斯坦福 CS224n 课程对 Attention 机制的介绍 from 1:00:55](https://www.youtube.com/watch?v=XXtpJxZBa2c)
 
+#### Application
+
+- [【多标签分类】基于类别属性的注意力机制解决标签不均衡和标签相似问题 - 2019](https://mp.weixin.qq.com/s/w06kv4Pi4keDRafqzoOxXw)
+
+    **Paper**: [Few Shot Charge Prediction with Discriminative Legal Attributes - THU2018](http://nlp.csai.tsinghua.edu.cn/~tcc/publications/coling2018_attribute.pdf)
+
+    **Code**: <https://github.com/thunlp/attribute_charge> (Tensorflow)
+
 
 ### 8.3.3 Hierarchical Attention Network (HAN)
 
