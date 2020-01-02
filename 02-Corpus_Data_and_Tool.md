@@ -58,6 +58,10 @@
 
     包含250首中文歌的 midi 文件，以及对应的歌词文本
 
+- <https://github.com/yangjianxin1/QQMusicSpider>
+
+    基于Scrapy的QQ音乐爬虫(QQ Music Spider)，爬取歌曲信息、歌词、精彩评论等，并且分享了QQ音乐中排名前6400名的内地和港台歌手的49万+的音乐语料
+
 - <https://github.com/andy-yangz/chinese>
 
     中文形近字
