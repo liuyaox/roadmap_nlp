@@ -139,6 +139,12 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
 ##### PyTorch
 
+- <https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Sequence-Labeling> (PyTorch)
+
+    模型结构：Language Model + BiLSTM + CRF，使用了Highway Networks
+
+    **Article**: [一文完全搞懂序列标注算法](https://mp.weixin.qq.com/s?__biz=MzU0MDQ1NjAzNg==&mid=2247488405&idx=1&sn=c7fc862082f6e6d432912b2d70d5b5ee)
+
 - <https://github.com/fangwater/Medical-named-entity-recognition-for-ccks2017> (PyTorch)
 
     A LSTM+CRF model for the seq2seq task for Medical named entity recognition in ccks2017

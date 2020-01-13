@@ -221,6 +221,11 @@
 
     GPT-2很神奇，可以做到Zero-shot Learning，即在完全没有训练语料的情况下去做Reading Comprehension(输入document和query，再输入一个'A:'，随即便能输出Answer), Summarization(输入document，再输入一个'TL;DR:'，随即便能输出摘要), Translation(输入多个英法句子对，如english sentence=french sentence，之后输入1个english sentence和'='后，便能输出相应的french sentence)，不过效果不是特别好。
 
+- [2019: The Year of BERT - 2019](https://towardsdatascience.com/2019-the-year-of-bert-354e8106f7ba)
+
+    **Chinese**: [2019: 属于BERT预训练语言模型之年](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247487886&idx=2&sn=6fb673abde96827508c7ae67432ebe51)
+
+
 #### Code
 
 - <https://github.com/PaddlePaddle/LARK> (PaddlePaddle)

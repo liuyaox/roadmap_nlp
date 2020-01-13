@@ -5,7 +5,6 @@
 
 ## 4.2 Vocabulary
 
-
 #### Article
 
 - [非主流自然语言处理：大规模语料词库自动生成 - 2017](http://www.sohu.com/a/157426068_609569)
@@ -39,7 +38,6 @@
 
     **Code**: <https://github.com/hankcs/multi-criteria-cws> (Dynet)
 
-
 #### Practice
 
 - <https://github.com/FanhuaandLuomu/BiLstm_CNN_CRF_CWS> (Tensorflow & Keras)
@@ -49,7 +47,6 @@
 - <https://github.com/liweimin1996/CwsPosNerCNNRNNLSTM>
 
     基于字向量的CNN池化双向BiLSTM与CRF模型的网络，可能一体化的完成中文和英文分词，词性标注，实体识别。主要包括原始文本数据，数据转换,训练脚本,预训练模型,可用于序列标注研究.
-
 
 #### Article
 
@@ -69,7 +66,7 @@
 
 #### Article
 
-- 【Great!!!】[Lessons Learned from Applying Deep Learning for NLP Without Big Data - 2018](https://towardsdatascience.com/lessons-learned-from-applying-deep-learning-for-nlp-without-big-data-d470db4f27bf)
+- 【Great】[Lessons Learned from Applying Deep Learning for NLP Without Big Data - 2018](https://towardsdatascience.com/lessons-learned-from-applying-deep-learning-for-nlp-without-big-data-d470db4f27bf)
 
     数据增强，同义词替换，等
 
@@ -77,6 +74,10 @@
 
 
 ## 4.7 New Word
+
+#### Article
+
+- 【Great】[限定域文本语料的短语挖掘(Phrase Mining) - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485406&idx=2&sn=9a0b7f06184fb2da452620e429eca748)
 
 #### Practice
 
@@ -99,7 +100,7 @@
 
 #### Practice
 
-- 【Great!!!】<https://github.com/taozhijiang/chinese_correct_wsd>
+- 【Great】<https://github.com/taozhijiang/chinese_correct_wsd>
 
     简易的中文纠错和消歧
 
