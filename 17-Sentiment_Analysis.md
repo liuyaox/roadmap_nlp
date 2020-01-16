@@ -42,6 +42,14 @@ Sentiment Analysis 按粒度可分为3种：
 
 #### Practice
 
+- 【Great】<https://github.com/bentrevett/pytorch-sentiment-analysis> (PyTorch)
+
+    Tutorials on getting started with PyTorch and TorchText for sentiment analysis.
+
+- <https://github.com/songyouwei/ABSA-PyTorch> (PyTorch)
+
+    Aspect Based Sentiment Analysis, PyTorch Implementations. 基于方面的情感分析，使用PyTorch实现
+
 - 【Great】<https://github.com/zenRRan/Sentiment-Analysis> (PyTorch)
 
     **YAO**: 
