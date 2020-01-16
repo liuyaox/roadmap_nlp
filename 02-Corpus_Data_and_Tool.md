@@ -12,6 +12,10 @@
     
     用途：预训练通用语料，QA(知识/百科/社区问答)构建，文本生成/抽取(标题/关键词生成)，文本分类(新闻类型分类、问题话题分类)，文本预测(文本相似性、答案评分)，中英文翻译
 
+- <https://github.com/OYE93/Chinese-NLP-Corpus>
+
+    **Article**: [中文自然语言处理医疗、法律等公开数据集整理分享](https://mp.weixin.qq.com/s/EIOGIpWbaeFzOEdHBEUfHw)
+
 - <https://github.com/niderhoff/nlp-datasets>
   
     Alphabetical list of free/public domain datasets with text data for use in NLP

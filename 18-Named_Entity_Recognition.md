@@ -151,6 +151,12 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
     **YAO**: PyTorch实现的CRF
 
+- <https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Sequence-Labeling> (PyTorch)
+
+    LM + BiLSTM + CRF
+
+    **Artichle**: [NLP | 一文完全搞懂序列标注算法](https://mp.weixin.qq.com/s/RsPTqmtp4tBTsTaKH0-5YA)
+
 - <https://github.com/llcing/BiLSTM-CRF-ChineseNER.pytorch> (PyTorch)
 
     PyTorch implement of BiLSTM-CRF for Chinese NER
