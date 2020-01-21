@@ -82,20 +82,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 主要以 BiLSTM + CRF 为主
 
-[CRF Loss](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/losses/crf_losses.py)
-
-**TODO**: 详细定义是啥？需要仔细研究！
-
-[CRF Accuracy](https://github.com/keras-team/keras-contrib/blob/382f6a2b7739064a1281c1cacdb792bb96436f27/keras_contrib/metrics/crf_accuracies.py)
-
-y_true和y_pred，会在每一桢timestep上都进行对比，以计算准确率
-
-```python
-# y: <n_samples, n_timesteps, n_labels>   sparse_target=False
-accuracy = K.mean(K.equal(K.argmax(y_true, -1), K.argmax(y_pred, -1)))
-# y: <n_samples, n_timesteps, 1>   sparse_target=True
-accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
-```
+关于CRF和Loss推导和实现细节，以及解码细节，请参考：[04_Probabilistic_Graphical_Model](https://github.com/liuyaox/Machine_Learning_Awesome/blob/master/04_Probabilistic_Graphical_Model.md)
 
 #### Paper
 
@@ -165,9 +152,15 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
     基于 BiLSTM + CRF 的中文命名实体识别
 
+- <https://github.com/chenxiaoyouyou/Bert-BiLSTM-CRF-pytorch> (PyTorch)
+
+    基于BERT做字嵌入的BiLSTM-CRF序列标注模型
+
 - [Pytorch BiLSTM + CRF做NER - 2019](https://zhuanlan.zhihu.com/p/59845590) (PyTorch)
 
 - [如何使用BERT来做命名实体识别 - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490099&idx=3&sn=8416ee9aeb0453e0b1de67abb057f0a0)
+
+- [NLP实战-中文命名实体识别 - 2019](https://zhuanlan.zhihu.com/p/61227299) (PyTorch)
 
 ##### Tensorflow
 
@@ -208,6 +201,8 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
 - 【Great】[CRF Layer on the Top of BiLSTM 1-8 - 2017](https://github.com/createmomo/CRF-Layer-on-the-Top-of-BiLSTM) (Chainer)
 
+    **YAO**: 详细介绍Emission Score和Transition Score，以及Path Score, All Path Score和Loss
+
 - [bi-LSTM + CRF with character embeddings for NER and POS - 2017](https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html)
     
     **Code**: <https://github.com/guillaumegenthial/tf_ner> (Tensorflow)
@@ -220,9 +215,10 @@ accuracy = K.mean(K.equal(y_true[:, :, 0], y_pred[:, :, 0]))
 
     接CRF是为了Model label sequence **jointly**, instead of decoding each label independently.
 
-    CRF所需要的各种特征，由LSTM提供了？
+    CRF所需要的各种特征：转移概率矩阵G，直接是模型待学习的参数；发射概率矩阵H，由模型编码部分(如LSTM)完成对X的编码
 
 - [CRF 和 LSTM 模型在序列标注上的优劣？](https://www.zhihu.com/question/46688107)
+
 
 ## 18.4 CNN
 

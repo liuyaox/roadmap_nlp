@@ -305,6 +305,18 @@
 
 #### Practice
 
+- <https://github.com/zhanlaoban/ccf_bdci_2019_datafountain350> (PyTorch)
+
+    CCF BDCI 2019 互联网新闻情感分析 复赛top8 代码，3分类
+    
+    已整理为支持BERT/BERT-wwm/ERNIE/XLNet/RoBERTa/ALBERT等基于transformer模型的文本分类工具，支持transformer接CNN/LSTM/GRU等
+
+    **Article**: [互联网新闻情感分析复赛top8(8/2745)解决方案及总结](https://zhuanlan.zhihu.com/p/101554661)
+
+- 【Great】<https://github.com/zhanlaoban/Transformers_for_Text_Classification> (PyTorch)
+
+    基于Transformers的文本分类，模型有：BERT, BERT+CNN, BERT+LSTM, BERT+GRU, XLNET, XLNET+LSTM, XLNET+GRU
+
 - <https://github.com/cdj0311/keras_bert_classification> (Keras)
 
     使用 chinese_L-12_H-768_A-12，模型为BERT + FC/LSTM

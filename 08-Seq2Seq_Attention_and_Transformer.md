@@ -386,10 +386,6 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 #### Pratice
 
-- <https://github.com/zhanlaoban/Transformers_for_Text_Classification> (PyTorch)
-
-    基于Transformers的文本分类
-
 - 【Great】[Step-by-step to Transformer：深入解析工作原理（以Pytorch机器翻译为例） - 2019](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485185&idx=1&sn=6d33a07715e5c8247b968cceaa7ae322)
 
 - [使用一个简单的 Transformer 模型进行序列标注](https://medium.com/@kolloldas/building-the-mighty-transformer-for-sequence-tagging-in-pytorch-part-i-a1815655cd8)
