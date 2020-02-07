@@ -173,13 +173,22 @@
 
     BERT = Encoders of Transformer. Learned from a large amount of text without annotations. **TODO: 不属于Language Models范畴？**
 
-    对于中文来说，char粒度可能比word粒度更合适一些，因为常用char大约4千左右，而word无法穷举，使用char的话，输入时onehot向量没word时那么大。也有弊端，中文里word与其中的char可能含义差别很大，于是有了ERNIE，它mask的是word，如"黑龙江"而非"龙"或"黑"。
+    对于中文来说，char粒度可能比word粒度更合适一些，因为常用char大约4千左右，而word无法穷举，使用char的话，**输入时onehot向量**没word时那么大。也有弊端，中文里word与其中的char可能含义差别很大，于是有了ERNIE，它mask的是word，如"黑龙江"而非"龙"或"黑"。
     
-    **TODO**: 使用char的onehot向量？不使用char或word的静态Embedding吗？
+    **TODO**: 使用char的onehot向量？不使用char或word的静态Embedding吗？应该是的，好像xi是onehot向量，而ai=W*xi中的ai就相当于静态Embedding，而W就相当于Embedding Matrix。能不能让BERT直接接收ai作为输入，ai是char/word的静态Embedding，比如Word2Vec,GloVe这些？
 
-    BERT有很多层Encoder，比如24层或48层，每层负责关注不同的特征，类似于EMLo，每一层输出经Weighted Sum后是最终结果，观察每一层的Weight，可以分析各个层更适用于哪些任务，即更关注哪类特征。如靠前的层更关注文法相关的特征如POS,Consts,Deps等，靠后的层更关注复杂的如Coref.,SRL，而Entities,Relations,SPR这些任务被几乎所有层均匀关注。
+    BERT有很多层Encoder，比如12/24/48层，每层关注不同的特征，下游Task有2种使用BERT的方法：
+
+    - Fine-tuning: 改变BERT参数，与下游Task一起参与训练，效果最好
+    - Feature Extraction: 抽取若干Encoder层的输出并Concat在一起，效果差于Fine-tuning，但好处是预先保存好Concat后的向量后，可重复使用，且快速使用
+    
+    BERT是一个句子级别的语言模型，不像ELMo在后接下游Task时需要每层加上权重做全局池化，BERT可以直接获得一整个句子的唯一向量表示(对[CLS]进行深度encoding)
+
+    有人做过实验，观察每一层的侧重点：方法是**类似于EMLo，每一层输出经Weighted Sum后得最终结果并输入到下游Task**，观察每一层的Weight(learned from task)，可以分析各个层更适用于哪些Task，即更关注哪类特征。如靠前的层更关注文法相关的特征如POS,Consts,Deps等，靠后的层更关注复杂的如Coref.,SRL，而Entities,Relations,SPR这些Task被几乎所有层均匀关注。
 
     **Traning of Bert**:
+
+    BERT是一个多任务模型，以下2种训练其实是同时使用
 
     Approach1：Masked LM
     
@@ -190,6 +199,8 @@
     Approach2：Next Sentence Prediction
     
     输入2个句子，以\<SEP>分隔，在开头添加一个\<CLS>，一起输入BERT里，\<CLS>对应的那个输出vector，再输入一个Linear Binary Classifier里，让它去预测这2个句子是否是接在一起的。BERT和Linear Binary Classifier是一起训练学习的，前者是finetuning，后者是Learned from Scratch，共同学习到vector，于是vector就可以是XXX的Embedding。
+
+    YAO: vector是谁的Embedding???
 
     ![](./image/Bert_training_approach2.png)
 
@@ -394,6 +405,8 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
     **Chinese**: [谷歌搜索用上BERT，10%搜索结果将改善](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650772610&idx=2&sn=8770bdfbf950b3651910488722f6873d)
 
 - [美团BERT的探索和实践 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411834&idx=1&sn=26cb6dd832e68caaddc19527cd993fc4)
+
+- [Bert时代的创新（应用篇）：Bert在NLP各领域的应用进展 - 2019](https://zhuanlan.zhihu.com/p/68446772)
 
 
 ### 7.4.2 BERT

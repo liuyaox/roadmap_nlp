@@ -90,9 +90,11 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
     假设文本是[x1,x2,x3,x4,x5,x6]
 
-    CBOW: 两边预测中间
+    三层结构：输入层-->隐层-->输出层，输入层和输出层维度都是|V|，输入层至隐层的权重矩阵W1，隐层至输出层的权重矩阵W2，前者即为待计算的Embedding
 
-    Skip-Gram: 中间预测两边，比如<x2, x1>,<x2, x3>都是训练样本
+    CBOW: 两边预测中间，对context的处理是经W1处理后直接相加求平均得到一个向量，再经W2处理，输入Softmax处理后输出
+
+    Skip-Gram: 中间预测两边，比如<x2, x1>,<x2, x3>都是训练样本，对word直接经W1处理后就是一个向量，随后同CBOW
 
     SGNS: Skip-Gram + Negative Sampling，上文训练样本变成<x2, x1, 1>和<x2, x3, 1>，label=1表示是相邻，label=0表示不是相邻。目前问题是只是正例，没有负例，于是需要负采样。即x2不变，从Vocabulary中随机选择若干单词如x7,x8与x2组成负例<x2, x7, 0>和<x2, x8, 0>。以上，**把Softmax问题转化为Sigmoid问题**，训练速度大大提高！这里有2个超参数，窗口大小和负样本数量。
 
@@ -101,6 +103,8 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
     - 负样本数量：论文认为5-20个比较理想，Gensim默认是5
 
     Train: 随机化Embedding和Context两个矩阵，shape都是<vocab_size, embed_dim>，前者用于x2找到对应的vector1，后者用于x1,x3,x7,x8这些找到对应的vector2，分别计算vector1与各个vector2的Dot-Product，以表示x2与xi的相似程度，再用sigmoid转化为概率，与真实Label计算Loss，随后训练更新Embedding和Context。训练结束，Embedding即为所需的Word Embedding
+
+    Hierarchy Softmax: 根据词频构建的一个Huffman二叉树，每个非叶子节点是个二分类器，每个叶子节点对应V中的一个单词，词频高的单词所在叶子节点离root较近。Softmax的求和会被一系列的二分类器替代，最终输出是相关路径上所有二分类器输出的乘积，在梯度更新时，只需更新相关路径上的二分类器的参数即可。现在很少采取了，主要使用NS
 
 - [word2vec原理推导与代码分析](http://www.hankcs.com/nlp/word2vec.html)
 

@@ -29,6 +29,10 @@
 
     NLP Tasks and References
 
+- <https://github.com/NLP-LOVE/ML-NLP/tree/master/NLP>
+
+    NLP面试中常考到的知识点和代码实现
+
 
 #### Course
 

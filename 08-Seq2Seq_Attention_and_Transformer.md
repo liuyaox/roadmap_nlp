@@ -302,6 +302,8 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
     $a^{1,i}=q^1k^i/\sqrt{dim(k^i)}$作为一个分数，决定着编码$x^1$时（某个固定位置时），每个输入词(x1,x2,...,xn)需要集中多少注意力，是**各输入$x^i$自己跟自己**的注意力关系。
 
+    YAO: 注意$q^1$与$k^i$生成score的Attention机制是scaled dot-product，还有其他机制: general, dot-product,  additive等。
+
     SelfAttention输入输出的矩阵运算关系：
 
     ![](./image/Self-attention-matrix-calculation.png)
@@ -333,6 +335,7 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
       - Input: 第1个Decoder的Input也需要增加Positional信息
       - Masked SelfAttention: **它的Key/Query/Value均来自前一层**，同时**只关注之前各timestep，后面的timestep被mask**，即：在预测第t个词时把t+1到末尾的词遮住，只对前面t个词做Self Attention
       - Encoder-Decoder Attention：工作方式同Multi-head SelfAttention，但是它的输入中，**Key和Value来自Encoders最后的输出，只有Query来自前一层Add & Norm层**
+      - 相较而言，Decoder比Encoder多一个Encoder-Decoder Attention及其后的Add&Normalize，其他结构一样
 
     **Linear & Softmax**
     
@@ -370,19 +373,29 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
     
     Self-Attention可以替代所有RNN做的事情
 
+    ![](./image/SelfAttention.png)
+
+    YAO: 注意所有$\alpha_{1,i}$共同经过Softmax，此时与各个$\alpha_{2,i}$无关
+
     Self-Attention机理：输入为$I$，则 **$Q=W^qI$, $K=W^kI$, $V=W^vI$**，分别表示 Query(to match others), Key(to be matched), Value(extracted from I)，然后Attention为 **$A=K^TQ$**，经softmax后为 $\hat{A}$，最后输出为 **$O=V\hat{A}$**，全是矩阵运算，可并行处理。写在一起为：
 
     $$O=(W^vI)softmax((W^kI)^T(W^qI)/\sqrt{dim(K)})$$
 
+    ![](./image/SelfAttention_Multihead.png)
+
     Self-Attention可以是**Multi-head**的，即$a^i$可以有不止一组的<$q^i$,$k^i$,$v^i$>，各组用于集中不同位置以表征不同的特征，比如有些用于抓取Local信息，有些用于抓取相对全局的信息，等等。相应地，输出$O_i$也有多个，拼接在一起，需再乘以矩阵$W^o$为最终的输出$O$
+
+    YAO: 注意多个head是建立在单个head之上的，比如$q^{i,1}$与$q^{i,2}$都来自于$q^i$
 
     Self-Attention没有Positional信息，为此让每个$a^i$直接加上一个表示Positional信息的$e^i$，代替原来的$a^i$，$e^i$是事先指定的，而非Learned from data。
     
-    (解释：$p^i$是i处为1其余为0的onehot向量，使其与$x^i$拼接，则 **$W[x^i;p^i]^T=[W_I,W_p][x^i;p^i]^T=W_Ix^i+W_pp^i=a^i+e^i$**，所以$e^i$与$a^i$直接相加，就是$p^i$与$x^i$拼接)
+    (解释：$p^i$是i处为1其余为0的onehot向量，使其与$x^i$拼接，则 **$W[x^i;p^i]^T=[W_I,W_p][x^i;p^i]^T=W_Ix^i+W_pp^i=a^i+e^i$**，所以$p^i$与$x^i$拼接，等价于$e^i$与$a^i$直接相加，注意，$W_p$是人工设置的，paper中有说明)
 
     Seq2Seq模型中的Encoder和Decoder，都可以用Self-Attention来代替其中的RNN，即为Transformer。
 
-    **TODO** 疑问：**Transformer-Decoders是并行么**？当前timestep在处理时需要上一timestep的output作为输入，所以**每个timestep内是并行，各timestep之间是串行**。
+    **TODO** 疑问：**Transformer-Decoders是并行么**？当前timestep在处理时需要上一timestep的output作为输入，所以**每个timestep内是并行，各timestep之间是串行**。详见下图：
+
+    ![](./image/Transformer_dataflow.png)
 
 #### Pratice
 

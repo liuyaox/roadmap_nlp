@@ -11,12 +11,11 @@ Sentiment Analysis 按粒度可分为3种：
 - Sentence Level
 - Aspect Level
 
-其中, Aspect Level 的 Sentiment Analysis 按 Aspect 类型又可分为2种：
+其中, Aspect Level 的 Sentiment Analysis (ABSA) 按 Aspect 类型又可分为2种：
 
 - ATSA: Aspect-Term Sentiment Analysis
 
-    Aspect-Term：不固定，不唯一，有很多Term共同表示同一种 Aspect，如 image,photo,picture 都是 Term
-相关任务是 To group the same aspect expressions into a category，如上面三者可都归为 Image 这一 category
+    Aspect-Term：不固定，不唯一，有很多Term共同表示同一种 Aspect，如 image, photo, picture 都是 Term。相关任务是 To group the same aspect expressions into a category，如上面三者可都归为 Image 这一 category
 
 - ACSA: Aspect-Category Sentiment Analysis
 
@@ -40,19 +39,32 @@ Sentiment Analysis 按粒度可分为3种：
 
     Aspect-Level Sentiment Analysis 论文大全，包括ATSA和ACSA
 
+
 #### Practice
+
+##### Aspect-based Sentiment Analysis
+
+- 【Great】<https://github.com/songyouwei/ABSA-PyTorch> (PyTorch)
+
+    **Aspect Based** Sentiment Analysis, PyTorch Implementations
+
+    **YAO**: [forked_repos_with_notes](https://github.com/liuyaox/forked_repos_with_notes/tree/master/ABSA-PyTorch)
+
+    - 问题转化：转化为**Sentence + Aspect的双输入、三种情感倾向为输出**的'单标签三分类任务'
+    - Loss: CrossEntropyLoss，同多分类任务，对于AEN模型，为真实分布添加均匀分布的噪声，Loss中相应多一份关于噪声的Loss
+    - Metrics: accuracy指猜对Label(不管哪个Label)的样本占比，macro-f1score指各个Label分别计算f1score后求均值
+    
+- <https://github.com/soujanyaporia/aspect-extraction> (Tensorflow)
+
+    Aspect extraction from product reviews - window-CNN+maxpool+CRF, BiLSTM+CRF, MLP+CRF
+
+    **YAO**: 注意，只是Aspect Extraction
+
+##### Sentence Level Sentiment Analysis
 
 - 【Great】<https://github.com/bentrevett/pytorch-sentiment-analysis> (PyTorch)
 
-    Tutorials on getting started with PyTorch and TorchText for sentiment analysis.
-
-- <https://github.com/songyouwei/ABSA-PyTorch> (PyTorch)
-
-    Aspect Based Sentiment Analysis, PyTorch Implementations. 基于方面的情感分析，使用PyTorch实现
-    
-- <https://github.com/YZHANG1270/Aspect-Based-Sentiment-Analysis> (Keras)
-
-    Sentence-based Analysis  相关Github, Paper, Data资料挺齐全
+    Tutorials on getting started with PyTorch and TorchText for sentiment analysis. **Sentence-Level** Sentiment Analysis.
 
 - 【Great】<https://github.com/zenRRan/Sentiment-Analysis> (PyTorch)
 
@@ -66,6 +78,10 @@ Sentiment Analysis 按粒度可分为3种：
 
     b. 任务类型是 **Sentence-Level 的二或多分类**，包括Question Type 六分类，主观客观二分类，电影评论正负二分类，商品评论正负二分类，文章opinion正负二分类
 
+- <https://github.com/YZHANG1270/Aspect-Based-Sentiment-Analysis> (Keras)
+
+    **Sentence-based** Analysis  相关Github, Paper, Data资料挺齐全
+
 - <https://github.com/ami66/ChineseTextClassifier> (Tensorflow)
 
     京东商城中文商品评论短文本分类器，可用于情感分析。模型包括：Transformer, TextCNN, FastText, LSTM/GRU, LSTM/GRU+Attention, BiLSTM+Attention
@@ -77,6 +93,20 @@ Sentiment Analysis 按粒度可分为3种：
     基于深度学习（LSTM）的情感分析(京东商城数据)
 
     **YAO**: 任务类型是 **Sentence-Level 的正负二分类**
+
+- <https://github.com/hehuihui1994/coarse-fine_emotion_classification>
+
+    结合上下文和篇章特征的多标签情绪分类，微博文本中的句子
+
+    **YAO**: 任务是 **Sentence-Level 的分类**， 使用了 MLKNN，情绪转移，卡方统计特征选择
+
+##### To Be Confirmed
+
+- 【Great】<https://github.com/jcsyl/news-analyst> (Keras)
+
+    对舆情事件进行词云展示，对评论进行情感分析和观点抽取。情感分析基于lstm 的三分类，观点抽取基于 AP 算法的聚类和MMR的抽取
+
+    **YAO**: 使用 TFIDF 和 TextRank 提取关键词，使用 Word2Vec 和 LSTM 进行情感三分类，通过 AP 聚类进行观点聚类和抽取！
 
 - <https://github.com/BUPTLdy/Sentiment-Analysis> (Keras)
 
@@ -90,18 +120,6 @@ Sentiment Analysis 按粒度可分为3种：
 
     基于Word2Vec+SVM对电商的评论数据进行情感分析
 
-- <https://github.com/hehuihui1994/coarse-fine_emotion_classification>
-
-    结合上下文和篇章特征的多标签情绪分类，微博文本中的句子
-
-    **YAO**: 任务是 **Sentence-Level 的分类**， 使用了 MLKNN，情绪转移，卡方统计特征选择
-
-- 【Great】<https://github.com/jcsyl/news-analyst> (Keras)
-
-    对舆情事件进行词云展示，对评论进行情感分析和观点抽取。情感分析基于lstm 的三分类，观点抽取基于 AP 算法的聚类和MMR的抽取
-
-    **YAO**: 使用 TFIDF 和 TextRank 提取关键词，使用 Word2Vec 和 LSTM 进行情感三分类，通过 AP 聚类进行观点聚类和抽取！
-
 - <https://github.com/peace195/aspect-based-sentiment-analysis> (Tensorflow)
 
     Aspect Based Sentiment Analysis
@@ -111,12 +129,6 @@ Sentiment Analysis 按粒度可分为3种：
     gensim-word2vec+svm文本情感分析
 
     **YAO**: SVM如何与Word Embedding结合: Word Embedding --<求均值>--> Document Embedding --> 直接输入SVM
-
-- <https://github.com/soujanyaporia/aspect-extraction> (Tensorflow)
-
-    Aspect extraction from product reviews - window-CNN+maxpool+CRF, BiLSTM+CRF, MLP+CRF
-
-    **YAO**: 注意，只是Aspect Extraction
 
 - <https://github.com/cedias/Hierarchical-Sentiment> (PyTorch)
 
@@ -137,11 +149,13 @@ Sentiment Analysis 按粒度可分为3种：
 
     **YAO**:
 
-    a. 实现并修改了 GCAE 和 SynATT 两个模型(论文见20.2)并进行了模型融合，特征包括特征化特征(TFIDF+SVD)和 Embedding 特征(Char-level & Word-level)
+    a. 实现并修改了 GCAE 和 SynATT 两个模型(论文见17.2)并进行了模型融合，特征包括特征化特征(TFIDF+SVD)和 Embedding 特征(Char-level & Word-level)
 
     b. 关键技术有：词向量和字向量联合表示，GCAE，SynATT
 
-    c. 详细解析和注释见：[forked_repos_with_notes](https://github.com/liuyaox/forked_repos_with_notes/tree/master/Al_challenger_2018_sentiment_analysis-master)
+    c. **Aspect提取**：使用LightGBM跑了20个二分类的，根据特征重要性取TopK作为Aspect
+
+    d. 详细解析和注释见：[forked_repos_with_notes](https://github.com/liuyaox/forked_repos_with_notes/tree/master/Al_challenger_2018_sentiment_analysis-master)
 
 - <https://github.com/chenghuige/wenzheng> (Tensorflow & PyTorch)
   
@@ -246,6 +260,12 @@ Sentiment Analysis 按粒度可分为3种：
 
 #### Paper
 
+- Tree-LSTM: [Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks - Stanford2015](https://arxiv.org/abs/1503.00075)
+
+    **Code**: <https://github.com/dasguptar/treelstm.pytorch> (PyTorch)
+
+    **Code**: <https://github.com/ttpro1995/TreeLSTMSentiment> (PyTorch)
+
 - [Aspect Level Sentiment Classification with Deep Memory Network - HIT2016](https://arxiv.org/abs/1605.08900)
 
     **Code**: 1
@@ -312,11 +332,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Attentional Encoder Network for Targeted Sentiment Classification - SYSU2019](https://arxiv.org/abs/1902.09314)
 
-- Tree-LSTM: [Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks - Stanford2015](https://arxiv.org/abs/1503.00075)
-
-    **Code**: <https://github.com/dasguptar/treelstm.pytorch> (PyTorch)
-
-    **Code**: <https://github.com/ttpro1995/TreeLSTMSentiment> (PyTorch)
+    **Code**: <https://github.com/liuyaox/forked_repos_with_notes/blob/master/ABSA-PyTorch> (PyTorch)
 
 - [Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks - BIT2019](https://arxiv.org/abs/1909.03477)
 
@@ -328,6 +344,7 @@ Sentiment Analysis 按粒度可分为3种：
 - 2. <https://github.com/BigHeartC/Al_challenger_2018_sentiment_analysis> (Tensorflow)
   
 - 3. <https://github.com/GeneZC/ASGCN> (PyTorch)
+
 
 #### Article
 
