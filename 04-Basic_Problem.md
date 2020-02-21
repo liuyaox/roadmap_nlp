@@ -17,7 +17,6 @@
 - [word2vec缺少单词怎么办？](https://www.zhihu.com/question/329708785)
 
 
-
 ## 4.4 Segmentation
 
 #### Library
@@ -98,13 +97,13 @@
 
 词语纠错和语义消歧
 
+**YAO**: 特别重要！几乎可以作为所有 NLP 任务最最开始时的处理！比分词还要靠前！
+
 #### Practice
 
 - 【Great】<https://github.com/taozhijiang/chinese_correct_wsd>
 
     简易的中文纠错和消歧
-
-    **YAO**: 特别重要！几乎可以作为所有 NLP 任务最最开始时的处理！比分词还要靠前！
 
 - <https://github.com/beyondacm/Autochecker4Chinese>
 
@@ -125,6 +124,16 @@
 #### Article
 
 - [中文文本纠错算法--错别字纠正的二三事 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411874&idx=3&sn=f78fa6e6ba3493086503cbb7d11a7ff2)
+
+    **YAO**: 对当前一些Library/Tool的概述和测试
+
+    主要技术：错别字词典，编辑距离，语言模型(NGram, DNN)
+
+    三个关键点：分词质量，领域相关词典质量，语言模型的种类和质量
+
+    语言模型：计算序列的合理性；
+    
+    规则约束：优先选择拼音相同的候选字词，其次是形似的；纠正后分词个数更少；
 
 
 ## 4.9 Subword

@@ -211,7 +211,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 - [如何理解LSTM后接 CRF？](https://www.zhihu.com/question/62399257)
 
-    **YAO**:
+    **YAO**: 
 
     接CRF是为了Model label sequence **jointly**, instead of decoding each label independently.
 
@@ -226,9 +226,17 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     基于膨胀卷积神经网络（Dilated Convolutions）训练好的医疗命名实体识别工具
 
+
 ## 18.5 Others
+
+
 
 #### Article
 
-- [用腻了 CRF，试试 LAN 吧 - 2019](https://zhuanlan.zhihu.com/p/91031332)
+- [用腻了 CRF，试试 LAN 吧 - Xihu2019](https://zhuanlan.zhihu.com/p/91031332)
+
+    LAN: 逐层改进的基于标签注意力机制的网络
+
+    **Code**: <https://github.com/Nealcly/BiLSTM-LAN> (PyTorch)
+
 

@@ -35,9 +35,26 @@ Sentiment Analysis 按粒度可分为3种：
 
     **Code**: <https://github.com/12190143/deep-learning-for-aspect-level-sentiment-classification-baselines> (PyTorch)
 
-- <https://github.com/yw411/aspect_sentiment_classification>
+    **YAO**: 
+
+- 【Great】<https://github.com/yw411/aspect_sentiment_classification>
 
     Aspect-Level Sentiment Analysis 论文大全，包括ATSA和ACSA
+
+    **YAO**: 值得细看和研究
+
+    难点：Multi-Aspect时，相同Context，Attention容易重叠，极性容易一样，要从Attention方法和对象、Loss着手！
+
+    多输入单输出，基本框架包括特征编码器+Attention，不同点在于以下6处：
+
+    - 输入层：最简单是单输入Sentence，绝大多数是双输入，其中大多是Context与Aspect，也有Left + Aspect与Aspect + Right
+    - 编码层：有些是RNN，有些是SelfAttention，还有一些是CNN
+    - Attention层：
+        - Attention方式：直接Attention，多次Attention，细粒度Attention，双向Attention(Aspect2Context, Context2Aspect)，多层次Attention
+        - Attention对象：Context与Aspect，Left,Right分别与Aspect，Context,Left,Right分别与Aspect，甚至还有Label与输入的Attention
+    - 输出层：有些直接是模型输出层前的最后输出，有些还要拼接一些中间结果
+    - Loss：有些是原生的交叉熵，有些还要添加额外Loss，如Aspect Alignment Loss
+    - 额外内容：包括信息和约束，位置编码，词性POS，Multi-hop，情感词典，传统LSI/LDA特征，char粒度，其他结构化特征(比如user,sentence打分等)
 
 
 #### Practice
@@ -54,6 +71,10 @@ Sentiment Analysis 按粒度可分为3种：
     - Loss: CrossEntropyLoss，同多分类任务，对于AEN模型，为真实分布添加均匀分布的噪声，Loss中相应多一份关于噪声的Loss
     - Metrics: accuracy指猜对Label(不管哪个Label)的样本占比，macro-f1score指各个Label分别计算f1score后求均值
     
+- <https://github.com/lixin4ever/BERT-E2E-ABSA> (PyTorch)
+
+    Exploiting BERT for **End-to-End** Aspect-based Sentiment Analysis
+
 - <https://github.com/soujanyaporia/aspect-extraction> (Tensorflow)
 
     Aspect extraction from product reviews - window-CNN+maxpool+CRF, BiLSTM+CRF, MLP+CRF
@@ -268,15 +289,15 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Aspect Level Sentiment Classification with Deep Memory Network - HIT2016](https://arxiv.org/abs/1605.08900)
 
-    **Code**: 1
+    **Code**: 1, 4
 
 - [Effective LSTMs for Target-Dependent Sentiment Classification - HIT2016](https://arxiv.org/abs/1512.01100)
 
-    **Code**: 1     **Article**: 1
+    **Code**: 1, 4     **Article**: 1
 
 - [Attention-based LSTM for Aspect-level Sentiment Classification - THU2016](https://www.aclweb.org/anthology/D16-1058)(ACAS)
 
-    **Code**: 1, <http://coai.cs.tsinghua.edu.cn/media/files/atae-lstm_uVgRmdb.rar>     Article: 1
+    **Code**: 1, 4, <http://coai.cs.tsinghua.edu.cn/media/files/atae-lstm_uVgRmdb.rar>     Article: 1
 
 - [Neural Sentiment Classification with User & Product Attention - THU2016](http://nlp.csai.tsinghua.edu.cn/~chm/publications/emnlp2016_NSCUPA.pdf)
 
@@ -284,11 +305,11 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Interactive Attention Networks for Aspect-Level Sentiment Classification - PKU2017](https://arxiv.org/abs/1709.00893)
 
-    **Code**: 1, <https://github.com/lpq29743/IAN> (Tensorflow)     Article: 1
+    **Code**: 1, 4, <https://github.com/lpq29743/IAN> (Tensorflow)     Article: 1
 
 - [Recurrent Attention Network on Memory for Aspect Sentiment Analysis - Tencent2017](http://www.cs.cmu.edu/~lbing/pub/emnlp17_aspect_sentiment.pdf)
 
-    **Code**: 1, <https://github.com/lpq29743/RAM> (Tensorflow)
+    **Code**: 1, 4, <https://github.com/lpq29743/RAM> (Tensorflow)
 
 - [Learning to Attend via Word-Aspect Associative Fusion for Aspect-based Sentiment Analysis - Singapore2017](https://arxiv.org/abs/1712.05403)
 
@@ -296,11 +317,21 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Multi-grained Attention Network for Aspect-Level Sentiment Classification - PKU2018](https://www.aclweb.org/anthology/D18-1380)
 
+    **Code**: 4
+
+    **YAO**:
+    - context和aspect分别embedding+BiLSTM后为H,Q
+    - context里根据各word与aspect的距离，设置不同的权重(**Location Encoding**)，权重直接相乘word对应的向量，生成新的H
+    - 细粒度Attention: Context中wordi与Aspect中wordj的相似度为Uij=Wu([Hi;Qj;Hi*Qj])，基于这个**对齐矩阵**(各行/列取max和归一化后为权重Aij，赋给原始Hi或Qj)，计算新的Hi,Qj
+    - 添加**Aspect Alignment Loss**: dij=sigmoid(Wd([Qi;Qj;Qi*Qj]), Lalign=-sigma(dij*(Aik-Ajk)^2)，其中dij表示aspecti与aspectj的距离(作为weight)，本质上Loss度量的是**两个aspect的对Context的Attention的差异**，让这个差异大一些（注意，只计算yi!=yj的样本，即同一Context中极性不同的Aspect）
+
 - [Aspect Level Sentiment Classification with Attention-over-Attention Neural Networks - CMU2018](https://arxiv.org/abs/1804.06536)
+
+    **Code**: 4
 
 - [Content Attention Model for Aspect Based Sentiment Analysis - UESTC2018](http://delivery.acm.org/10.1145/3190000/3186001/p1023-liu.pdf)
 
-    **Code**: 1
+    **Code**: 1, 4
 
 - GCAE: [Aspect Based Sentiment Analysis with Gated Convolutional Networks - FIU2018](https://arxiv.org/abs/1805.07043)(ACSA & ATSA)
 
@@ -324,7 +355,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Transformation Networks for Target-Oriented Sentiment Classification - CUHK2018](https://arxiv.org/abs/1805.01086)
 
-    **Code**: <https://github.com/lixin4ever/TNet> (Theano)
+    **Code**: 4, <https://github.com/lixin4ever/TNet> (Theano)
 
 - [An Interactive Multi-Task Learning Network for End-to-End Aspect-Based Sentiment Analysis - Singapore2019](https://arxiv.org/abs/1906.06906)
 
@@ -332,7 +363,7 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [Attentional Encoder Network for Targeted Sentiment Classification - SYSU2019](https://arxiv.org/abs/1902.09314)
 
-    **Code**: <https://github.com/liuyaox/forked_repos_with_notes/blob/master/ABSA-PyTorch> (PyTorch)
+    **Code**: 4, <https://github.com/liuyaox/forked_repos_with_notes/blob/master/ABSA-PyTorch> (PyTorch)
 
 - [Aspect-based Sentiment Classification with Aspect-specific Graph Convolutional Networks - BIT2019](https://arxiv.org/abs/1909.03477)
 
@@ -344,6 +375,8 @@ Sentiment Analysis 按粒度可分为3种：
 - 2. <https://github.com/BigHeartC/Al_challenger_2018_sentiment_analysis> (Tensorflow)
   
 - 3. <https://github.com/GeneZC/ASGCN> (PyTorch)
+
+- 4. <https://github.com/songyouwei/ABSA-PyTorch> (PyTorch)
 
 
 #### Article

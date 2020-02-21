@@ -15,6 +15,8 @@ Statistical Language Models
 
 ## 5.2 NGram Model
 
+**P(w1,w2,⋯,wm)=P(w1)P(w2|w1)P(w3|w1,w2)⋯P(wm|w1,⋯,wm−1)**，随后可使用马尔可夫假设(P(wi|w1,⋯,wi−1)=P(wi|wi−n+1,⋯,wi−1))进行简化，n=1,2,3,...
+
 #### Article
 
 - [自然语言处理中的N-Gram模型详解 - 2016](https://blog.csdn.net/baimafujinji/article/details/51281816)
@@ -23,6 +25,8 @@ Statistical Language Models
 ## 5.3 Bag-of-Word (BOW)
 
 BOW, BOW + NGram, BOW + TFIDF, BOW + NGram + TFIDF, 其实还可以再推进一步：BOW + NGram + TFIDF + SVD
+
+并非严格狭义的语言模型，不是用于预测下一个字或句子，而是用于表征文本
 
 
 ## 5.4 NNLM

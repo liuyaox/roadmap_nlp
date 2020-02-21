@@ -18,6 +18,12 @@
 
     中文知识图谱计算会议CCKS报告合集，涵盖从2013年至2018年，共48篇，从中可以看出从谷歌2012年推出知识图谱以来，中国学术界及工业界这6年来知识图谱的主流思想变迁。
 
+- [Distant supervision for relation extraction without labeled data - Stanford2009](http://www.stanfordlibrary.us/~jurafsky/mintz.pdf)
+
+    远程监督 = 监督学习 + Bootstrapping
+
+    **Article**: [关系抽取之远程监督算法 - 2019](https://www.cnblogs.com/Luv-GEM/p/11598294.html)
+
 #### Data
 
 - <https://www.ownthink.com/>

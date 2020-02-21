@@ -314,6 +314,10 @@
 
     OpenCLaP：多领域开源中文预训练语言模型仓库   可被PyTorch-Transformers直接使用   包含：百度百科BERT, 民事文书BERT, 刑事文书BERT
 
+- GPT2: <https://github.com/morizeyao/gpt2-chinese> (PyTorch)
+
+    Chinese version of GPT2 training code, using BERT tokenizer
+
 #### Practice
 
 - <https://github.com/zhanlaoban/ccf_bdci_2019_datafountain350> (PyTorch)

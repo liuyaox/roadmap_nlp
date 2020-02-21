@@ -39,7 +39,7 @@ CopyNet
 
 ## 22.3 Practice
 
-- <https://github.com/yangjianxin1/GPT2-chitchat>
+- <https://github.com/yangjianxin1/GPT2-chitchat> (PyTorch)
 
     用于中文闲聊的GPT2模型
 
@@ -54,6 +54,10 @@ CopyNet
 - <https://github.com/liuhuanyong/MusicLyricChatbot>
 
     基于14W歌曲知识库的问答尝试，功能包括歌词接龙，已知歌词找歌曲以及歌曲歌手歌词三角关系的问答。
+
+- <https://github.com/jkszw2014/bert-kbqa-NLPCC2017> (Tensorflow)
+
+    A trial of kbqa based on bert for NLPCC2016/2017 Task 5  基于BERT的中文知识库问答实践
 
 
 ## 22.4 Competition
