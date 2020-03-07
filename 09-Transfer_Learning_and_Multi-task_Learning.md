@@ -28,6 +28,8 @@
 
     [上篇](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650796010&idx=1&sn=6bb438e3e7e0d57e3a21e31205274c8b) and [下篇](https://mp.weixin.qq.com/s/WlpmZmmqsepwbZJqxXrUhw)
 
+- [什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何 - 2018](https://www.zhihu.com/question/41979241/answer/123545914)
+
 
 ## 9.3 Few-shot Learning
 
