@@ -11,6 +11,10 @@
 
 - [SOHU图文匹配竞赛-方案分享](https://blog.csdn.net/wzmsltw/article/details/73330439)
 
+#### Article
+
+- [【赛尔笔记】 多模态情感分析简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247492349&idx=6&sn=40bec66b380eb190d1c3e61918701f8b)
+
 
 ## 23.2 Image Captioning
 

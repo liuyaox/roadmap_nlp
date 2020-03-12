@@ -96,6 +96,10 @@
 
     ?
 
+#### Article
+
+- [如何为实体抽取描述性短语 - 2020](https://mp.weixin.qq.com/s?__biz=MzUyMDY0OTg3Nw==&mid=2247484085&idx=1&sn=375cc2c9f60f0bae98a83e044abc6f2d)
+
 
 ## 16.4 Relation
 

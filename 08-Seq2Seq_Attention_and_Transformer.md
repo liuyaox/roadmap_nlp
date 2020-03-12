@@ -73,7 +73,9 @@ Attention是一种理念和思想，核心要点在于：**通过小神经网络
 
     **YAO**: HERE HERE HERE
 
-    
+- [More About Attention - 2020](https://zhuanlan.zhihu.com/p/106662375)
+
+- [一文搞懂NLP中的Attention机制（附详细代码讲解） - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247491856&idx=1&sn=daab7643d8c12e3a712403e1a63997b3)
 
 - [从各种注意力机制窥探深度学习在NLP中的神威](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247485751&idx=1&sn=4a76c7864f09b13764b0e9a6108a5a56)
 
@@ -367,6 +369,8 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 - [Attention机制详解（二）——Self-Attention与Transformer - 2019](https://zhuanlan.zhihu.com/p/47282410)
 
+- [从语言模型到Seq2Seq：Transformer如戏，全靠Mask - 2019](https://kexue.fm/archives/6933)
+
 - [李宏毅机器学习2019之P60-Transformer - 2019](https://www.bilibili.com/video/av46561029/?p=60)
 
     **YAO**: OK
@@ -396,6 +400,9 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
     **TODO** 疑问：**Transformer-Decoders是并行么**？当前timestep在处理时需要上一timestep的output作为输入，所以**每个timestep内是并行，各timestep之间是串行**。详见下图：
 
     ![](./image/Transformer_dataflow.png)
+
+- [ICLR 6-6-6！自注意力可以替代CNN，能表达任何卷积滤波层丨代码已开源 - 2020](https://mp.weixin.qq.com/s?__biz=MzUxNjcxMjQxNg==&mid=2247495990&idx=3&sn=dcbcf4d240bc6938adf80d41ada47ad3)
+
 
 #### Pratice
 
@@ -427,3 +434,12 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 #### Article
 
 - [Transformer-XL — CombiningTransformers and RNNs Into a State-of-the-art Language Model - 2019](https://www.lyrn.ai/2019/01/16/transformer-xl-sota-language-model)
+
+
+### 8.4.3 Others
+
+#### Article
+
+- [Set Transformer: 处理集合型数据的Transformer - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247491281&idx=5&sn=70643fd8e29206b9e6a3a3aba9a3f87e)
+
+- [Reformer: The Efficient Transformer - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247491946&idx=4&sn=51c772e7b39b8a9dc7a2ac1d109fa4db)

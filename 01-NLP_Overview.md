@@ -100,6 +100,16 @@
 
 - [自然语言理解难在哪儿？ - 2019](https://zhuanlan.zhihu.com/p/96801863)
 
+- [NLP Year in Review — 2019](https://medium.com/dair-ai/nlp-year-in-review-2019-fb8d523bcb19)
+
+    **Chinese**: [【2019 NLP汇总】论文、博客、教程、工程进展全梳理](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488207&idx=2&sn=6102f25599d21bb76efef5a8c11b4ab4)
+
+- [【学术】2020上的NLP有哪些研究风向 - 2020](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488009&idx=3&sn=8edd113ddd1e68d6db183f8b547099cc)
+
+- [NLPer复工了！先看看这份2019机器学习与NLP年度盘点吧 - 2020](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650779644&idx=4&sn=a55deda9abf77c41f94cf5836e259fa6)
+
+- [一些在NLP的面试中提问频率非常高的问题 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwODI2NDkxNQ==&mid=2247487735&idx=4&sn=63216274b83c398f15a31d3f106839ba)
+
 
 #### Case
 
@@ -111,3 +121,9 @@
 
 - [阿里妈妈：品牌广告中的 NLP 算法实践 - 2019](https://mp.weixin.qq.com/s?__biz=MzU1NTMyOTI4Mw==&mid=2247494094&idx=1&sn=4c32130746752039fba45a5ba6b7eedb)
 
+
+#### Job
+
+- [算法在岗一年的经验总结 - 2020](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488282&idx=1&sn=f13b477e8df91723b133705f13a6463c)
+
+- [拒绝跟风，谈谈几种算法岗的区别和体验 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485905&idx=1&sn=ef873a79b5eda8568e235af4dd98b8b9)

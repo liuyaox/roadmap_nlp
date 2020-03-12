@@ -175,6 +175,8 @@
 
     微博评论分析工具, 实现功能: 1.微博评论数据爬取; 2.分词与关键词提取; 3.词云与词频统计; 4.情感分析; 5.主题聚类
 
+- [45个小众而实用的NLP开源字典和工具 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485681&idx=1&sn=ba5cc6de539571cd9efe60a38e19bf74)
+
 
 ## 2.4 Practice
 

@@ -421,6 +421,8 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 - <https://github.com/google-research/bert> (Tensorflow)
 
+    **Article**: [BERT源码分析: [Part I](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247491946&idx=5&sn=6274262ae8ca22a32195863c6fe368c0), [Part II](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247491946&idx=6&sn=5fa477071c373e5060d238c487a36185) and [Part III](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247491946&idx=7&sn=d4c9c552ae54fda1a2dc0bd6dcc7382e)
+
 #### Library
 
 - <https://github.com/CyberZHG/keras-bert> (Keras)
@@ -448,6 +450,8 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 - <https://github.com/xmxoxo/BERT-train2deploy> (Tensorlfow)
 
     BERT模型从训练到部署
+
+- [当Bert遇上Keras：这可能是Bert最简单的打开姿势 - 2019](https://kexue.fm/archives/6736)
 
 - [文本分类实战（十）—— BERT 预训练模型 - 2019](https://www.cnblogs.com/jiangxinyang/p/10241243.html) (Tensorflow)
 

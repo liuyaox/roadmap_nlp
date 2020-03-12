@@ -70,6 +70,10 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 
 - <https://github.com/lonePatient/chinese-word2vec-pytorch> (PyTorch)
 
+- <https://github.com/bojone/tf_word2vec/blob/master/word2vec_keras.py> (Keras)
+
+  **Article**: [Keras版的Word2Vec - 2017](https://kexue.fm/archives/4515)
+
 #### Library
 
 - Gensim: <https://radimrehurek.com/gensim/models/word2vec.html>

@@ -51,6 +51,8 @@
 
     **Chinese**: [构建神经网络的一些实战经验和建议](https://mp.weixin.qq.com/s/c00PXpJHctdm_YEbk4NTQA)
 
+- 【Great】[如何优雅地训练大型模型 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412541&idx=1&sn=f17415894641f9b555c4ac7f7af4e42a)
+
 
 ## 25.2 Parameter Tuning
 
@@ -213,7 +215,27 @@
 - [标签传播算法（Label Propagation）及Python实现 - 2015](https://blog.csdn.net/zouxy09/article/details/49105265)
 
 
-## 25.7 Others
+## 25.7 Data Augmentation
+
+#### Article
+
+- [【赛尔笔记】深度学习领域的数据增强 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247492349&idx=5&sn=c4c7180ea455310ff1b6539fa7168599)
+
+- [数据增强在语音识别中的应用 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412581&idx=3&sn=405e693504f448340ab4a6ad56020f3a)
+
+
+## 25.8 Data Labeling
+
+数据标注，训练数据生成等
+
+#### Article
+
+- [主动学习：标注的一颗救心丸 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412415&idx=3&sn=f4025488aacbb7fe4ae93952917621af)
+
+- [如何判断样本标注的靠谱程度？置信度学习（CL）简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485618&idx=1&sn=7016ad51dab33771d51ae7c2d5c8223f)
+
+
+## 25.x Others
 
 #### Article
 

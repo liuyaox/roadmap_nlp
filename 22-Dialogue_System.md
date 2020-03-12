@@ -19,6 +19,12 @@ CopyNet
 
 - [LCQMC:A Large-scale Chinese Question Matching Corpus - HIT2018](https://www.aclweb.org/anthology/C18-1166/)
 
+#### Article
+
+- [HMM模型在贝壳对话系统中的应用 - 2020](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488053&idx=3&sn=b075a65c16b2b9f72061bde6db296c1f)
+
+- [AAAI20 基于关键词注意力机制和回复弱监督的医疗对话槽填充研究 - 2020](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650797127&idx=1&sn=f309a091e910e61198b1864b028f51eb)
+
 
 ## 22.2 Paper
 

@@ -37,6 +37,11 @@
     A pytorch implement of bert joint baseline for machine comprehension task in 2019 cail
 
 
+#### Article
+
+- [【赛尔笔记】机器阅读理解简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247492349&idx=4&sn=cd32991e5cb96cb193e0673c1e91b173)
+
+
 #### Project
 
 - <https://github.com/chineseGLUE/chineseGLUE>

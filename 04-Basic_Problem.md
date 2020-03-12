@@ -51,6 +51,8 @@
 
 - [深度学习时代，分词真的有必要吗 - 2019](https://zhuanlan.zhihu.com/p/66155616)
 
+- [从why到how的中文分词详解，从算法原理到开源工具 - 2019](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488211&idx=2&sn=3adb96ff316dfc67663f72a9595eda5d)
+
 
 ## 4.5 Dependency Parsing
 
@@ -72,11 +74,15 @@
     **YAO**: 虽然针对Small Data，但我觉得处理所有Data时都可以进行这些处理！
 
 
-## 4.7 New Word
+## 4.7 New Word & Phrase Mining
 
 #### Article
 
-- 【Great】[限定域文本语料的短语挖掘(Phrase Mining) - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485406&idx=2&sn=9a0b7f06184fb2da452620e429eca748)
+- 【Great】[谈谈医疗健康领域的Phrase Mining - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412407&idx=2&sn=2e96b4456afb1a208aab475ebf9fa1b8)
+
+- 【Great】医疗健康领域的短文本解析探索 - 2020: [一](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412504&idx=2&sn=09f7f5783a48c009744997714b52eec4) and [二](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412504&idx=3&sn=37f03898a549e89e1da0a093b67e9925)
+
+- 【Great】[知识图谱如何应用到文本标签化算法中 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412450&idx=2&sn=3c01ae8525dbab5202433b19fc0cc5db)
 
 #### Practice
 
@@ -136,14 +142,25 @@
     规则约束：优先选择拼音相同的候选字词，其次是形似的；纠正后分词个数更少；
 
 
-## 4.9 Subword
+## 4.9 Synonym
+
+#### Article
+
+- [如何扩充知识图谱中的同义词 - 2019](https://mp.weixin.qq.com/s?__biz=MzUyMDY0OTg3Nw==&mid=2247484011&idx=1&sn=8f6e6ae9e3d34b7a1dc2cd55812f55ca)
+
+    同义词挖掘，以医学术语为例
+
+
+## 4.10 Subword
 
 #### Article
 
 - [子词技巧：The Tricks of Subword - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411766&idx=3&sn=c5f92645737b469d386bf303bcbcf71f)
 
+- [深入理解NLP Subword算法：BPE、WordPiece、ULM - 2020](https://zhuanlan.zhihu.com/p/86965595)
 
-## 4.10 打造NLP数据集
+
+## 4.11 打造NLP数据集
 
 #### Article
 

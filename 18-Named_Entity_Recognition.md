@@ -4,6 +4,10 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 ## 18.1 Overview
 
+#### Paper
+
+- 【Great】[零资源跨领域命名实体识别 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247491946&idx=3&sn=e7ec58926b860fe09d93a298698d09a8)
+
 #### Article
 
 - 【Great】[Named entity recognition serie - 2018](https://www.depends-on-the-definition.com/introduction-named-entity-recognition-python/) (Keras)
@@ -21,6 +25,11 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
     介绍模型：BiLSTM + CRF, IDCNN + CRF    实现模型：BiLSTM (无CRF)
 
     **YAO**: 
+
+- 【Great】<https://github.com/qiufengyuyi/sequence_tagging>
+  
+    **Article**: [中文NER任务实验小结报告——深入模型实现细节](https://zhuanlan.zhihu.com/p/103779616)
+
 
 #### Competition
 

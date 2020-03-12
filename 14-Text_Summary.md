@@ -3,6 +3,10 @@
 
 ## 14.1 Overview
 
+#### Paper
+
+- [文本摘要(text summarization)最新研究热点、发展趋势，里程碑论文推荐 - 2020](https://zhuanlan.zhihu.com/p/111266615)
+
 #### Article
 
 - [NLP中自动生产文摘（auto text summarization）- 2017](https://www.sohu.com/a/197255751_609569)
@@ -44,6 +48,8 @@
     - 其他: 其他模型方法
 
 - [文本自动摘要任务的“不完全”心得总结 - 2019](https://zhuanlan.zhihu.com/p/83596443)
+
+- [知识图谱如何助力文本摘要生成 - 2019](https://mp.weixin.qq.com/s?__biz=MzUyMDY0OTg3Nw==&mid=2247483982&idx=1&sn=8740d862216be0d4cbe81f650aedf8d0)
 
 
 #### Competition
