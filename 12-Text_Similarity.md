@@ -1,5 +1,3 @@
-
-
 # 12. Text Similarity
 
 ## 12.1 Overview
@@ -7,6 +5,10 @@
 #### Tool
 
 - [百度短文本相似度](http://ai.baidu.com/tech/nlp/simnet)
+
+#### Article
+
+- [短文本相似度算法研究 - 2020](https://mp.weixin.qq.com/s/lyx4LouT6GzqrPN4ob9NWg)
 
 
 ## 12.2 Paper

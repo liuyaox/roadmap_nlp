@@ -242,6 +242,8 @@
 
     **Chinese**: [2019: 属于BERT预训练语言模型之年](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247487886&idx=2&sn=6fb673abde96827508c7ae67432ebe51)
 
+- [BERT时代与后时代的NLP - 2019](https://zhuanlan.zhihu.com/p/66676144)
+
 
 #### Code
 

@@ -274,27 +274,6 @@ Phrase2Vec???
   讲述了item2vec或其理念在分类、推荐召回和语义召回上的应用，以及直接作为深度模型的输入特征。
 
 
-## 6.10 Node2Vec - TOTODO
-
-Node2Vec belongs to Graph Embedding. Detailed info about Graph Embedding is at <>.
-
-[node2vec: Scalable Feature Learning for Networks - Stanford2016](https://arxiv.org/abs/1607.00653)
-
-node2vec is an algorithmic framework for learning continuous feature representations for nodes in networks. In node2vec, we learn a mapping of nodes to a low-dimensional space of features that maximizes the likelihood of preserving network neighborhoods of nodes.
-
-node2vec主要用于处理网络结构中的多分类和链路预测任务，具体来说是对网络中的节点和边的特征向量表示方法。简单点来说就是将原有社交网络中的图结构，表达成特征向量矩阵，每一个node(人、物或内容等)表示成一个特征向量，用向量与向量之间的矩阵运算来得到相互的关系。
-
-#### Code
-
-- <http://snap.stanford.edu/node2vec/>
-
-- <https://github.com/aditya-grover/node2vec>
-
-#### Article
-
-- [关于Node2vec算法中Graph Embedding同质性和结构性的进一步探讨](https://zhuanlan.zhihu.com/p/64756917)
-
-- [node2vec: Embeddings for Graph Data](https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef)
 
 
 ## 6.11 Others
