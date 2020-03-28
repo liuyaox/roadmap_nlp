@@ -1,5 +1,5 @@
 
-# 23. NLP with Image
+# 23. Multimodal NLP
 
 ## 23.1 Overview
 
@@ -14,6 +14,16 @@
 #### Article
 
 - [【赛尔笔记】 多模态情感分析简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247492349&idx=6&sn=40bec66b380eb190d1c3e61918701f8b)
+
+- 【Great】[通用的图像-文本语言表征学习：多模态预训练模型 UNITER - 2020](https://mp.weixin.qq.com/s/GxQ27vY5naaAXtp_ZTV0ZA)
+
+- [如何让BERT拥有视觉感知能力？两种方式将视频信息注入BERT - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485842&idx=1&sn=cc24542d51e17533781d5c60bd693cec)
+
+    Video + BERT
+
+- [当NLPer爱上CV：后BERT时代生存指南之VL-BERT篇 - 2020](https://mp.weixin.qq.com/s/s5YIG6rBEy6fZkFLh-CzoA)
+
+    Image + BERT
 
 
 ## 23.2 Image Captioning

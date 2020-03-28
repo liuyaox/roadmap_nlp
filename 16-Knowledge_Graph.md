@@ -4,6 +4,10 @@
 
 #### Paper
 
+- 【Great】[Knowledge Graphs - 2020](https://arxiv.org/abs/2003.02320)
+
+    **Article**: [史上最全《知识图谱》2020综述论文，18位作者, 130页pdf](https://mp.weixin.qq.com/s/NUBjX88nzCxCuHrAqaCVWg)
+
 - [Learning Entity and Relation Embeddings for Knowledge Graph Completion - THU2015](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/aaai2015_transr.pdf)
 
 - [COMET: Commonsense Transformers for Automatic Knowledge Graph Construction - Allen2019](https://arxiv.org/abs/1906.05317)

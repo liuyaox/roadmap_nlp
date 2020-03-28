@@ -58,6 +58,8 @@
 
 #### Article
 
+- 【Great】[别再喊我调参侠！夕小瑶“科学炼丹”手册了解一下 - 2020](https://mp.weixin.qq.com/s/HOgdhAzyti0N2TZBmt_4Iw)
+
 - 【Great】[听说你不会调参？以TextCNN为例的优化经验Tricks汇总 - 2019](https://mp.weixin.qq.com/s/8aTd8xNRQeIUWTxfqxyp-A)
 
     **YAO**：OK
@@ -217,11 +219,33 @@
 
 ## 25.7 Data Augmentation
 
+#### Paper
+
+- [EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks - USA2019](https://arxiv.org/abs/1901.11196)
+
+    **Github**: <https://github.com/jasonwei20/eda_nlp>
+
+    **Article**: [NLP中一些简单的数据增强技术](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411500&idx=2&sn=76e635526015ccecd14a1436bda55e2c)
+
+#### Github
+
+- <https://github.com/quincyliang/nlp-data-augmentation>
+
+    Data Augmentation for NLP. NLP数据增强
+
 #### Article
 
-- [【赛尔笔记】深度学习领域的数据增强 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247492349&idx=5&sn=c4c7180ea455310ff1b6539fa7168599)
+- 【Great】[文本增强技术的研究进展及应用实践 - 2020](https://mp.weixin.qq.com/s/CHSDi2LpDOLMjWOLXlvSAg)
+
+- [These are the Easiest Data Augmentation Techniques in NLP you can think of — and they work - 2019](https://towardsdatascience.com/these-are-the-easiest-data-augmentation-techniques-in-natural-language-processing-you-can-think-of-88e393fd610)
+
+- [赛尔笔记 | 深度学习领域的数据增强 - 2019](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650796432&idx=1&sn=6253922c918463e3dbc45abe5e0e57e1)
 
 - [数据增强在语音识别中的应用 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412581&idx=3&sn=405e693504f448340ab4a6ad56020f3a)
+
+- [最全面的data augmentation讲解 - 2020](https://mp.weixin.qq.com/s/QkWO-lmZED4sSZQArWsmkg)
+
+    本文更关注利用预训练语言模型来完成数据增强
 
 
 ## 25.8 Data Labeling

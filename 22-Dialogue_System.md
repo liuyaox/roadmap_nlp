@@ -1,32 +1,8 @@
-
 # 22. Dialogue Systems
 
 ## 22.1 Overview
 
-CopyNet
-
-#### Data
-
-- [Natural Questions: a Benchmark for Question Answering Research](https://ai.google/research/pubs/pub47761)
-
-    **Website**: <https://ai.google.com/research/NaturalQuestions/visualization>
-
-    **Chinese**: [NLP新基准！谷歌重磅发布开放问答数据集，30万自然提问+人工注释答案](http://www.sohu.com/a/291408751_642762)
-
-- <https://github.com/codemayq/chinese_chatbot_corpus>
-
-    中文公开聊天语料库及使用方法
-
-- [LCQMC:A Large-scale Chinese Question Matching Corpus - HIT2018](https://www.aclweb.org/anthology/C18-1166/)
-
-#### Article
-
-- [HMM模型在贝壳对话系统中的应用 - 2020](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488053&idx=3&sn=b075a65c16b2b9f72061bde6db296c1f)
-
-- [AAAI20 基于关键词注意力机制和回复弱监督的医疗对话槽填充研究 - 2020](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650797127&idx=1&sn=f309a091e910e61198b1864b028f51eb)
-
-
-## 22.2 Paper
+#### Paper
 
 - [Large-Scale Simple Question Generation by Template-Based Seq2seq Learning - PKU2017](http://tcci.ccf.org.cn/conference/2017/papers/1066.pdf)
 
@@ -42,8 +18,44 @@ CopyNet
 
     **Code**: <https://github.com/thunlp/XQA> (Tensorflow)
 
+- CopyNet
 
-## 22.3 Practice
+
+#### Article
+
+- [对话机器人技术简介：问答系统、对话系统与聊天机器人 - 2020](https://mp.weixin.qq.com/s/K8FUn4F3LD2JAAfn7nvUUw)
+
+    **Github**: <https://github.com/qhduan/ConversationalRobotDesign>
+
+- [HMM模型在贝壳对话系统中的应用 - 2020](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488053&idx=3&sn=b075a65c16b2b9f72061bde6db296c1f)
+
+- [AAAI20 基于关键词注意力机制和回复弱监督的医疗对话槽填充研究 - 2020](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650797127&idx=1&sn=f309a091e910e61198b1864b028f51eb)
+
+- [远离送命题: 问答系统中语义匹配的『杀手锏』 - 2020](https://mp.weixin.qq.com/s/eyM8RTjtl3FOF5jyLe3Sig)
+
+
+#### Data
+
+- [TyDi QA：不同类型语言中信息查询问答技术的基准 - 2020](https://google-research-datasets.github.io/tydiqa/)
+
+    **Article**: [Google 发布 TyDi QA：多语言问答基准](https://mp.weixin.qq.com/s/mLtz0ezNwoh8cd-5Mfka1Q)
+
+    **Github**: <https://github.com/google-research-datasets/tydiqa>
+
+- [Natural Questions: a Benchmark for Question Answering Research](https://ai.google/research/pubs/pub47761)
+
+    **Website**: <https://ai.google.com/research/NaturalQuestions/visualization>
+
+    **Chinese**: [NLP新基准！谷歌重磅发布开放问答数据集，30万自然提问+人工注释答案](http://www.sohu.com/a/291408751_642762)
+
+- <https://github.com/codemayq/chinese_chatbot_corpus>
+
+    中文公开聊天语料库及使用方法
+
+- [LCQMC:A Large-scale Chinese Question Matching Corpus - HIT2018](https://www.aclweb.org/anthology/C18-1166/)
+
+
+#### Practice
 
 - <https://github.com/yangjianxin1/GPT2-chitchat> (PyTorch)
 
@@ -66,7 +78,7 @@ CopyNet
     A trial of kbqa based on bert for NLPCC2016/2017 Task 5  基于BERT的中文知识库问答实践
 
 
-## 22.4 Competition
+#### Competition
 
 **2019语言与智能技术竞赛**
 

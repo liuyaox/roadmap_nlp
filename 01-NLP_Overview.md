@@ -127,3 +127,18 @@
 - [算法在岗一年的经验总结 - 2020](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488282&idx=1&sn=f13b477e8df91723b133705f13a6463c)
 
 - [拒绝跟风，谈谈几种算法岗的区别和体验 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485905&idx=1&sn=ef873a79b5eda8568e235af4dd98b8b9)
+
+
+#### Others
+
+- [自然语言处理中的对抗攻击 - ](https://mp.weixin.qq.com/s/PfdZBCdcUCZ5iAyGJct2Nw)
+
+    提高模型的安全性，模型特性分析
+
+- [如何提高NLP模型鲁棒性和泛化能力？对抗训练论文串讲 - 2020](https://mp.weixin.qq.com/s/S_yrpxcsNHStWYrIhyelCQ)
+
+    串烧了FGSM, FGM, PGD, FreeAT, YOPO, FreeLB, SMART这几种对抗训练方法
+
+- [阿尔伯塔大学博士毕业论文：基于图结构的自然语言处理 - 2020](https://mp.weixin.qq.com/s/BXovM5bHshLxdmBg93EQrA)
+
+    将自然语言处理和文本挖掘的多个核心任务与图结构的强大表示能力结合起来

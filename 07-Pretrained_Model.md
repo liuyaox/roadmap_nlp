@@ -15,6 +15,11 @@
 
     Must-read Papers on pre-trained language models  各预训练模型层次衍生关系图
 
+- 【Great】[NLP中各种各样的编码器 - 2020](https://mp.weixin.qq.com/s/l821XoMPmRlwTypCk-CJkw)
+
+    文本编码有哪些不同的模型可用？是否存在一个适用于所有事情的模型，还是模型都是依赖于任务的？包括：语义相关、语法探索、信息检索、通用句子编码等！
+
+
 #### Article
 
 - [8 Excellent Pretrained Models to get you Started with NLP - 2019](https://www.analyticsvidhya.com/blog/2019/03/pretrained-models-get-started-nlp/)
