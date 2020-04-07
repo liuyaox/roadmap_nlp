@@ -28,6 +28,7 @@
 
     **Article**: [关系抽取之远程监督算法 - 2019](https://www.cnblogs.com/Luv-GEM/p/11598294.html)
 
+
 #### Data
 
 - <https://www.ownthink.com/>
@@ -50,6 +51,10 @@
 - <https://github.com/liuhuanyong/HyponymyExtraction>
 
     基于知识概念体系，百科知识库，以及在线搜索结构化方式的词语上下位抽取与可视化展示
+
+- <https://github.com/liuhuanyong/EventTriplesExtraction>
+
+    基于依存句法与语义角色标注的**事件三元组抽取**，可用于文本理解如文档主题链，事件线等应用
 
 
 #### Competition

@@ -128,6 +128,10 @@
 
 - [拒绝跟风，谈谈几种算法岗的区别和体验 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485905&idx=1&sn=ef873a79b5eda8568e235af4dd98b8b9)
 
+- <https://github.com/Dikea/awesome-job>
+
+    互联网面试找工作，面经与内推，涵盖：Java C++ Python Go ML NLP CV Data
+
 
 #### Others
 

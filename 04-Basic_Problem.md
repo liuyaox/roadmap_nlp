@@ -3,21 +3,16 @@
 ## 4.1 Overview
 
 
-## 4.2 Vocabulary
+## 4.2 Vocabulary & OOV
 
 #### Article
 
 - [非主流自然语言处理：大规模语料词库自动生成 - 2017](http://www.sohu.com/a/157426068_609569)
 
-
-## 4.3 Out of Vocabulary (OOV)
-
-#### Article
-
 - [word2vec缺少单词怎么办？](https://www.zhihu.com/question/329708785)
 
 
-## 4.4 Segmentation
+## 4.3 Segmentation
 
 #### Library
 
@@ -54,7 +49,7 @@
 - [从why到how的中文分词详解，从算法原理到开源工具 - 2019](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247488211&idx=2&sn=3adb96ff316dfc67663f72a9595eda5d)
 
 
-## 4.5 Dependency Parsing
+## 4.4 Dependency Parsing
 
 #### Practice
 
@@ -63,18 +58,9 @@
     依存关系分析
 
 
-## 4.6 Small Data
-
-#### Article
-
-- 【Great】[Lessons Learned from Applying Deep Learning for NLP Without Big Data - 2018](https://towardsdatascience.com/lessons-learned-from-applying-deep-learning-for-nlp-without-big-data-d470db4f27bf)
-
-    数据增强，同义词替换，等
-
-    **YAO**: 虽然针对Small Data，但我觉得处理所有Data时都可以进行这些处理！
 
 
-## 4.7 New Word & Phrase Mining
+## 4.6 Phrase Mining & Keyword Extraction
 
 #### Article
 
@@ -83,6 +69,15 @@
 - 【Great】医疗健康领域的短文本解析探索 - 2020: [一](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412504&idx=2&sn=09f7f5783a48c009744997714b52eec4) and [二](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412504&idx=3&sn=37f03898a549e89e1da0a093b67e9925)
 
 - 【Great】[知识图谱如何应用到文本标签化算法中 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412450&idx=2&sn=3c01ae8525dbab5202433b19fc0cc5db)
+
+#### Practice
+
+- <https://github.com/bigzhao/Keyword_Extraction>
+
+    神策杯2018高校算法大师赛（中文关键词提取）第二名代码方案
+
+
+## 4.7 New Word
 
 #### Practice
 
@@ -99,7 +94,7 @@
     新词发现 基于词频、凝聚系数和左右邻接信息熵
 
 
-## 4.8 Disambiguation
+## 4.9 Disambiguation
 
 词语纠错和语义消歧
 
@@ -142,7 +137,7 @@
     规则约束：优先选择拼音相同的候选字词，其次是形似的；纠正后分词个数更少；
 
 
-## 4.9 Synonym
+## 4.10 Synonym
 
 #### Article
 
@@ -151,7 +146,7 @@
     同义词挖掘，以医学术语为例
 
 
-## 4.10 Subword
+## 4.11 Subword
 
 #### Article
 
@@ -160,7 +155,7 @@
 - [深入理解NLP Subword算法：BPE、WordPiece、ULM - 2020](https://zhuanlan.zhihu.com/p/86965595)
 
 
-## 4.11 打造NLP数据集
+## 4.12 打造NLP数据集
 
 #### Article
 

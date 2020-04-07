@@ -231,7 +231,7 @@
 
 - <https://github.com/quincyliang/nlp-data-augmentation>
 
-    Data Augmentation for NLP. NLP数据增强
+    Data Augmentation for NLP    NLP数据增强
 
 #### Article
 
@@ -246,6 +246,12 @@
 - [最全面的data augmentation讲解 - 2020](https://mp.weixin.qq.com/s/QkWO-lmZED4sSZQArWsmkg)
 
     本文更关注利用预训练语言模型来完成数据增强
+
+- 【Great】[Lessons Learned from Applying Deep Learning for NLP Without Big Data - 2018](https://towardsdatascience.com/lessons-learned-from-applying-deep-learning-for-nlp-without-big-data-d470db4f27bf)
+
+    数据增强，同义词替换，等
+
+    **YAO**: 处理所有Data都可以进行这些处理！
 
 
 ## 25.8 Data Labeling
