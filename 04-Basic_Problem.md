@@ -58,6 +58,39 @@
     依存关系分析
 
 
+## 4.5 Subword
+
+### 4.5.1 Overview
+
+#### Article
+
+- [子词技巧：The Tricks of Subword - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411766&idx=3&sn=c5f92645737b469d386bf303bcbcf71f)
+
+- [深入理解NLP Subword算法：BPE、WordPiece、ULM - 2020](https://zhuanlan.zhihu.com/p/86965595)
+
+
+### 4.5.2 WordPiece
+
+
+### 4.5.3 SentencePiece
+
+#### Code
+
+- <https://github.com/google/sentencepiece>
+
+    SentencePiece is an unsupervised text tokenizer and implements subword units (BPE) and unigram language model with the extension of direct training from raw sentences.
+
+- <https://github.com/yoheikikuta/bert-japanese>
+
+    BERT with SentencePiece for Japanese text.
+
+- <https://github.com/wannaphong/thai-word-segmentation-sentencepiece>
+
+    thai word segmentation using sentencepiece
+
+- <https://github.com/bheinzerling/bpemb>
+
+    A collection of pre-trained subword embeddings in 275 languages, based on BPE and trained on Wikipedia. It can be as input for neural models in NLP.
 
 
 ## 4.6 Phrase Mining & Keyword Extraction
@@ -144,20 +177,4 @@
 - [如何扩充知识图谱中的同义词 - 2019](https://mp.weixin.qq.com/s?__biz=MzUyMDY0OTg3Nw==&mid=2247484011&idx=1&sn=8f6e6ae9e3d34b7a1dc2cd55812f55ca)
 
     同义词挖掘，以医学术语为例
-
-
-## 4.11 Subword
-
-#### Article
-
-- [子词技巧：The Tricks of Subword - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411766&idx=3&sn=c5f92645737b469d386bf303bcbcf71f)
-
-- [深入理解NLP Subword算法：BPE、WordPiece、ULM - 2020](https://zhuanlan.zhihu.com/p/86965595)
-
-
-## 4.12 打造NLP数据集
-
-#### Article
-
-- [如何打造高质量的机器学习数据集？ - 2019](https://www.zhihu.com/question/333074061/answer/773825458)
 

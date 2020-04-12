@@ -2,6 +2,8 @@
 
 ## 2.1 Data
 
+### 2.1.1 Overview
+
 - <https://github.com/thunlp/THUOCL>
 
     [THUOCL：清华大学开放中文词库](http://thuocl.thunlp.org/)  包括以下数据及其词频统计DF值：IT 财经 成语 地名 历史名人 诗词 医学 饮食 法律 汽车 动物
@@ -145,6 +147,13 @@
 - <https://github.com/liuhuanyong/ChineseHumorSentiment>
 
     中文文本幽默情绪计算项目,项目包括幽默文本语料库的构建,幽默计算模型,包括幽默等级识别,幽默类型识别,隐喻类型识别,隐喻情绪识别等
+
+
+### 2.1.4 打造数据集
+
+#### Article
+
+- [如何打造高质量的机器学习数据集？ - 2019](https://www.zhihu.com/question/333074061/answer/773825458)
 
 
 ## 2.2 Embedding
