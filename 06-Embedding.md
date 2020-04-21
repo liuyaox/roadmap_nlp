@@ -184,6 +184,8 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 
     **Chinese**：[字符级NLP优劣分析：在某些场景中比词向量更好用](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650759154&idx=4&sn=5b823a28c7755427fd0e7e9a1b95dd9f)
 
+- [Besides Word Embedding, why you need to know Character Embedding? - 2018](https://towardsdatascience.com/besides-word-embedding-why-you-need-to-know-character-embedding-6096a34a3b10)
+
 
 ## 6.5 Ngram2Vec
 
