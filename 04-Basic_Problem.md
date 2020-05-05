@@ -66,7 +66,7 @@ Character + Subword
 
 Subword算法有以下2大类：
 
-- BPE：基于统计学，具体实现有WordPiece、Subword-nmt、SentencePiece等
+- 基于统计学: BPE(具体实现有subword-nmt、SentencePiece等), WordPiece(Google未开源), ULM(具体实现有SentencePiece等)
 
 - LMVR：考虑了词的形态特征（适合于德语、土耳其语、意大利语等）(Linguistically-motivated Vocabulary Reduction)
 
@@ -74,9 +74,33 @@ Subword算法有以下2大类：
 
 - [子词技巧：The Tricks of Subword - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411766&idx=3&sn=c5f92645737b469d386bf303bcbcf71f)
 
+    **YAO**: OK
+
+    增量法: BPE, WordPiece   减量法: ULM (Unigram Language Model)
+
+    - BPE: 省略，详见4.5.2
+
+    - WordPiece: 类似BPE，只是在算法步骤第2步时，BPE选择当前语料下**频次最大**的符号对，而WordPiece选择当前语料下**语言模型似然值提升最大**的符号对，即先将语料按当前词表分解，以训练语言模型，对整个语料计算一个似然值，之后在当前词表基础上，分别组合各个符号对，重新训练语言模型并计算似然值，取似然值提升最大的那个符号对，将其加入词表。听起来计算量较大，论文里有一些降低计算量的策略。
+
+    - ULM: 与WordPiece都是用语言模型来挑选符号对，不同点是WordPiece是**初始化小词表+不断添加符号对**，ULM是**初始化大词表+不断剔除符号对(通过语言模型评估)**！每次迭代时，按**符号对的loss**排序并只保留TopK%
+
+    - Subword Regularization: 省略，示例请参考<https://github.com/google/sentencepiece#subword-regularization>
+
+    - BPE Dropout: 在BPE基础上，加入一定的随机性。在每次对训练数据处理分词时，**设定一定的概率(如10%)让一些合并不通过**，则相同的词每次会分出不同的子词。通过不同的分词方案，模型获得了对整个词更好更全面的理解！虽然简单，但在实际翻译任务中提升很大。
+
 - [3 subword algorithms help to improve your NLP model performance - 2019](https://medium.com/@makcedward/how-subword-helps-on-your-nlp-model-83dd1b836f46)
 
-    BPE, WordPiece, Unigram Language Model, SentencePiece
+    **YAO**: OK
+    
+    Algorithms: BPE, WordPiece, ULM   Implementation: SentencePiece
+
+    For example, we can use **two vector (i.e. “sub” and “word”) to represent “subword”**
+
+    Subword balances vocabulary size and footprint. **16k or 32k** subwords are recommended vocabulary size to have a good result.
+
+    Many Asian language word can't be separated by space. Therefore, the initial vocabulary is larger than English. You may need to prepare **over 10k initial word** to kick start. In WordPiece paper, they propose to use **22k word and 11k** word for Japanese and Korean respectively.
+
+    **TODO**: Chinese ?
 
 - [深入理解NLP Subword算法：BPE、WordPiece、ULM - 2020](https://zhuanlan.zhihu.com/p/86965595)
 
@@ -85,7 +109,7 @@ Subword算法有以下2大类：
 
 Subword Units / BPE: [Neural Machine Translation of Rare Words with Subword Units - Edinburgh2016](https://arxiv.org/abs/1508.07909)
 
-把 Rare Words 和 Unknown Words 用 Subword Units 序列来编码，更简单有效。BERT中使用了，有对应的tokenization.py
+把 Rare Words 和 Unknown Words 用 Subword Units 序列来编码，更简单有效。BERT中使用了，有对应的tokenization.py，GPT-2也用了改进版的BPE
 
 #### Article
 
@@ -105,11 +129,11 @@ Subword Units / BPE: [Neural Machine Translation of Rare Words with Subword Unit
     
     其算法步骤如下(详见文中代码)：
 
-    - 初始化符号词表：把**所有字符(空格分隔)**加入符号词表（后续加入的符号有字符对、符号对等），特殊处理单词末尾。示例：'dog' --> ' d o g -'
+    - 初始化符号词表：把语料**分解为最小单元(字符，如26个字母+其他字符，以空格分隔)**加入符号词表（后续加入的符号有字符对、符号对等），特殊处理单词末尾。示例：'dog' --> ' d o g -'
     
-    - 不断迭代：统计当前所有的**相邻符号对**，找到次数最多的符号对(A B)，并在符号词表中把所有(A B)合并为AB，并为其产生一个新的符号，这样常见的ngram会被合并为一个符号加入词表中。示例：'Y A B C' -> 'Y AB C'
+    - 不断迭代：统计当前所有**相邻符号对**的频次，找到频次最大的符号对(A B)，合并符号词表中所有(A B)为AB，并为其产生一个新的符号(这样常见的ngram会被合并为一个符号加入词表中)。示例：'Y A B C' -> 'Y AB C'
     
-    - 迭代中止：重复以上迭代，当合并操作到达指定次数时中止。此时，符号词表大小 = 初始词表大小 + 合并操作次数(算法超参数，可设置)
+    - 迭代中止：重复以上迭代，直至词表大小达到指定大小。符号词表大小 = 初始词表大小 + 合并操作次数(算法超参数，可设置)
 
 #### Code
 
@@ -117,14 +141,38 @@ Subword Units / BPE: [Neural Machine Translation of Rare Words with Subword Unit
 
     A collection of pre-trained subword embeddings in 275 languages, based on BPE and trained on Wikipedia. It can be as input for neural models in NLP.
 
+#### Library
 
-### 4.5.3 SentencePiece
+- subword-nmt: <https://github.com/rsennrich/subword-nmt>
+
+
+### 4.5.3 WordPiece
+
+谷歌内部包，未开源
+
+- [Japanese and Korean voice search - Google2012](https://ieeexplore.ieee.org/abstract/document/6289079)
+
+- [Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation - Google2016](https://arxiv.org/abs/1609.08144)
+
+#### Article
+
+- [一文读懂BERT中的WordPiece - 2019](https://www.cnblogs.com/huangyc/p/10223075.html)
+
+
+### 4.5.4 Unigram Language Model (ULM)
+
+ULM: [Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates - Google2018](https://arxiv.org/abs/1804.10959)
+
+
+### 4.5.5 SentencePiece
 
 SentencePiece: [A simple and language independent subword tokenizer and detokenizer for Neural Text Processing - Google2018](https://arxiv.org/abs/1808.06226)
 
-面向神经网络文本生成系统的无监督文本Tokenization工具，**提供2种切词算法BPE和Unigram词模型**
+面向神经网络文本生成系统的无监督文本Tokenization开源工具
 
-YAO: BPE关注的是character级别的组合，而SentencePiece关注的更是word/phrase级别的组合？？？
+YAO: BPE关注的是**character级别的组合**，而SentencePiece除此之外也关注**word/phrase级别的组合**
+
+YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(subword) within word**，后者侧重**词语组合(subsentence) within sentence**，当然后者也有前者的功能
 
 #### Article
 
@@ -136,13 +184,76 @@ YAO: BPE关注的是character级别的组合，而SentencePiece关注的更是wo
 
     - 本质作用：**从大量序列中自动学习出经常出现的子序列片断**
 
-    - 模型训练和应用：训练和应用都支持命令行调用和Python调用，训练后会生成一个Model和一个词典(明文，可编辑)。若分析某个领域相关问题，可用该领域的书籍和文档去训练模型，并不只限于被分析的内容本身，训练数据越多，模型效果越好。
+    - 模型训练和应用：支持命令行和Python调用，训练后生成一个Model和一个词典(明文，可编辑)。若分析某个领域相关问题，可用该领域的书籍和文档去训练模型，并不只限于被分析的内容本身，训练数据越多，模型效果越好。
 
-#### Code
+#### Github
 
-- <https://github.com/google/sentencepiece>
+- 【Great】<https://github.com/google/sentencepiece>
 
-    SentencePiece is an unsupervised text tokenizer and implements subword units (BPE) and unigram language model with the extension of direct training from raw sentences.
+    SentencePiece is an unsupervised text tokenizer and implements BPE and ULM with the extension of direct training from raw sentences.
+
+    **YAO**: OK
+
+    - 支持功能：**BPE和ULM + 字符级和词级别 + Language Independent + Subword Regularization + Text Normalization**
+
+    - Unlike most unsupervised word segmentation algorithms, which assume an infinite vocabulary, SentencePiece's **final vocabulary size is fixed**, e.g., 8k, 16k, or 32k
+
+    - **Trains from raw sentences**: Previous sub-word implementations assume that the input sentences are pre-tokenized. SentencePiece is fast enough to **train from raw sentences**. It's useful for Chinese and Japanese where no explicit spaces exist between words
+
+    - **Whitespace is treated as a basic symbol**: SentencePiece把whitespace当作一般symbol对待(而非分隔符，处理时会先escape whitespace with '_')，This feature makes it possible to perform detokenization without relying on language-specific resources. 
+    
+    - **启发1**：处理一些语言时，若空格只是分隔符，为避免当成一般symbol来处理，可以先**手动去除所有空格**
+
+    - 模型训练
+        - input: 支持多文件输入，每个文件是one-sentence-per-line raw corpus file
+        - input_format: txt支持raw corpus file，tsv支持<token, frequency>这种带有频次的训练数据(讲解BPE算法步骤时就是这种)
+        - character_coverage: 模型cover的character数量，for language with rich character如中文和日文，建议取0.9995，for other with small character set，取1.0
+        - model_type: 支持unigram(default), bpe, char, word，**当取word时，input sentence must be pretokenized**. **关键: 默认使用数字、空格来分隔**
+        - redefine special meta tokens: UNK,BOS,EOS默认id是0,1,2，可设置，--bos_id=0 --eos_id=1 --unk_id=5 --pad_id=3，当取值-1时表示disabled
+        - **split_by_whitespace:** 非常关键！！表示token是否按whitespace来分隔的！只有取值false时才会提取**crossing-tokens pieces**，即短语(token组合)
+    
+    - model_type: 三种粒度，char, word(其实是token), subword(其实是subtoken，算法有bpe和unigram)
+        - char: vocab是语料中出现的所有字符(含空格)
+        - word: 准确来说是token，vocab是语料中出现的所有token(语料需pretokenized，即用空格分隔好各个token，否则一长串无空格的字符串会被当成token，比如中文里一整句话！)
+        - bpe:  vocab是从语料中提取出的subtoken
+        - unigram: vocab同上，算法不同
+        - YAO: 当语料没有pretokenized或者split_by_whitespace=false时，提取的subtoken其实是phrase/subsentence！尤其对于中文
+        - YAO: 其实可这样通俗理解，char就是最小字符，word就是空格分隔的各个token(其实是word+sentence+paragraph，取决于是否用有空格分隔)，而subtoken就是在token内(其实是word内+sentence内+paragraph内)提取片段Piece，token=word时就是正儿八经的常见subword(字符组合)，token=sentence时就是常见phrase(单词组合)，token=paragraph时就是句常见句子组合！
+        - YAO: 只有char不受是否有whitespace、是否pretokenzation影响，token受影响，因此subtoken也受影响。**关键：subtoken时，默认whitespace既是分隔token的分隔符，又是一般字符。若只当一般字符，令split_by_whitespace=false即可！**
+
+    - 模型Encode(Decode类似)
+        - output_format: 支持piece和id，支持nbest segmentation and segmentation sampling **TODO**: 干嘛的？
+        - extra_options: 支持添加BOS/EOS以及reverse the input sentence **TODO**: 干嘛的？
+        - generate_vocabulary: 场景为同时训练2种语言的模型后，使用该模型为其中一种语言的训练数据生成对应的vocabulary
+        - vocabulary & vocabulary_threshold: Only produce symbols which also appear in the vocabulary (with at least some frequency)
+
+    - 【Great】[Python Wraper详细使用示例 - Jupyter Notebook](https://gist.github.com/liuyaox/dd211cc9274e9a1d7201b459d11e3bb5)
+        - SentencePieceProcessor既可以当编码器、解码器，也可以当字典使用
+        - 可以自定义User Defined Symbols和Control Symbols
+        - ULM对应的模型支持Sampling和NBest Segmentation，可用于数据增强
+        - **处理英文等时建议使用Text Normalization**
+        - 可使用限制Vocabulary，只编码解码Vocabulary中的Token
+        - **通过split_by_whitespace=false，以提取Phrase，而非subtoken**
+
+    - 示例
+        - 从英文语料中提取常见Phrase
+            ```
+            spm_train --input corpus.txt \
+                --model_prefix=m \
+                --vocab_size=24000 \
+                --model_type=unigram \
+                --normalization_rule_name=nfkc_cf \ # 可取其他值？最好取这个值？
+                --character_coverage=1.0 \
+                --split_by_whitespace=false         # 关键所在  因为英文有空格，天然有Pretokenization
+            ```
+
+        - 从中文语料中提取常见Phrase，注意与示例1的区别，省略选项同示例1
+            ```
+            spm_train --input corpus.txt \
+                --... \
+                --character_coverage=0.9995 \       # 默认值，可省略
+                --split_by_whitespace=True          # 默认值，可省略  因为中文无空格，无Pretokenization
+            ```
 
 - <https://github.com/yoheikikuta/bert-japanese>
 
@@ -158,14 +269,11 @@ YAO: BPE关注的是character级别的组合，而SentencePiece关注的更是wo
 
     编码(EncodeAsPieces/EncodeAsIds/NBestEncodeAsPieces)、解码(DecodePieces/DecodeIds)和转化(IdToPiece/PieceToId)等
 
+#### FAQ
 
-### 4.5.4 WordPiece
+- [How to pickle a SentencePiece model #387](https://github.com/google/sentencepiece/issues/387)
 
-[Japanese and Korean voice search - Google2012](https://ieeexplore.ieee.org/abstract/document/6289079)
-
-#### Article
-
-- [一文读懂BERT中的WordPiece - 2019](https://www.cnblogs.com/huangyc/p/10223075.html)
+    Wrap model in a class with methods \_\_getstate\_\_ and \_\_setstate\_\_   [Ref Code](https://github.com/asyml/texar-pytorch/blob/master/texar/torch/data/tokenizers/xlnet_tokenizer.py#L118)
 
 
 ## 4.6 Phrase Mining & Keyword Extraction

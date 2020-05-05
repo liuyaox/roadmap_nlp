@@ -297,7 +297,7 @@
 
 - [ALBERT: A Lite BERT for Self-supervised Learning of Language Representations - Google2019](https://arxiv.org/abs/1909.11942)
 
-    海量中文预训练ALBERT模型
+    海量中文预训练ALBERT模型：参数更少，效果更好
 
     **Code**: <https://github.com/brightmart/albert_zh> (Tensorflow)
 
@@ -409,7 +409,7 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
     
     主要看看预训练模型中的增强训练（多任务学习/数据增强）以及BERT多模态应用： MT-DNN from Microsoft, MT-DNN-2 from Microsoft, GPT-2 from OpenAI 和 VideoBERT from Google
 
-- [BERT 瘦身之路：Distillation，Quantization，Pruning - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490372&idx=7&sn=7fb9c5060796f3f9a92c3f817afc080f)
+- 【Great】[BERT 瘦身之路：Distillation，Quantization，Pruning - 2019](https://zhuanlan.zhihu.com/p/86900556)
 
 - [Understanding searches better than ever before - 2019](https://blog.google/products/search/search-language-understanding-bert)
 
@@ -470,6 +470,8 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
     PyTorch Bert Text Classification
     
+- [Painless Fine-Tuning of BERT in Pytorch - 2019](https://medium.com/swlh/painless-fine-tuning-of-bert-in-pytorch-b91c14912caa)
+
 
 ### 7.4.3 RoBERTa
 
@@ -616,6 +618,8 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 - [如何评价 Google 提出的预训练模型 T5](https://www.zhihu.com/question/352227934/answer/868639851)
 
 - [T5 模型：NLP Text-to-Text 预训练模型超大规模探索 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411701&idx=2&sn=f253b2cde92e0be27e4cdb010f8f957a)
+
+- [Google T5速读 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650411699&idx=2&sn=8f2c38ec70107335920d780c5e7f799f)
 
 
 ## 7.12 Application
