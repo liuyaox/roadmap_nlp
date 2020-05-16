@@ -276,6 +276,10 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     使用GRU+attention进行多标签二分类
 
+#### Article
+
+- [将“softmax+交叉熵”推广到多标签分类问题 - 2020](https://mp.weixin.qq.com/s/Ii2sxJUGNvX4CnmtVmbFwA)
+
 
 #### Competition
 

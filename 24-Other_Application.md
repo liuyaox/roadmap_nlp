@@ -40,3 +40,13 @@
 - <https://github.com/F-debug/Medical-named-entity-recognition>
 
     针对医疗数据，进行命名实体识别。项目中有600份标注好的电子病历文本，共需识别含解剖部位、独立症状、症状描述、手术和药物五类实体。该领域的命名实体识别问题是自然语言处理中经典的序列标注问题。
+
+
+
+## 24.x Others
+
+#### Article
+
+- [I made a Text-to-handwriting tool to write my college assignments for me - 2020](https://dev.to/saurabhdaware/i-made-a-text-to-handwriting-tool-to-write-my-college-assignments-for-me-4ko)
+
+    **Chinese**: [GitHub 开源神器：堪称作业终结者！](https://mp.weixin.qq.com/s/0V2GtxaSEYOWimuE-lsO6Q)

@@ -30,6 +30,8 @@
 
 - [神奇的Embedding - 2019](https://zhuanlan.zhihu.com/p/53058456)
 
+- [深度学习推荐系统中各类流行的Embedding方法（上） - 2020](https://mp.weixin.qq.com/s/VEXEx7n9W8NltnpB1ZGsRw)
+
 
 #### Practice
 

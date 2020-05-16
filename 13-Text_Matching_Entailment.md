@@ -17,6 +17,8 @@ Text Matching and Text Entailment both belong to Natural Language Inference (NLI
 
     Papers, Methods, Books, Tutorial, Datasets, Competitions, Pretrained Models, Courses
 
+- [基于表示模型的文本匹配方法 - 2020](https://mp.weixin.qq.com/s/RdBHPfO9CBDbCg1lRh34ag)
+
 #### Code
 
 - <https://github.com/pengming617/text_matching> (Tensorflow)

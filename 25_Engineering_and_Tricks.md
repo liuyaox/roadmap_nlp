@@ -136,6 +136,10 @@
 
 - [Complete Machine Learning Guide to Parameter Tuning in Gradient Boosting (GBM) in Python - 2016](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/)
 
+- [你必须知道的六个深度炼丹好习惯 - 2019](https://zhuanlan.zhihu.com/p/64604071)
+
+- [33 个神经网络「炼丹」技巧 - 2019](https://zhuanlan.zhihu.com/p/94713859)
+
 ## Library
 
 - <http://hyperopt.github.io/>
@@ -202,6 +206,10 @@
     **Chinese**: [PyTorch 算法加速指南](https://mp.weixin.qq.com/s?__biz=MzU3NjE4NjQ4MA==&mid=2247486517&idx=3&sn=ed7db64a5b43191786167d83368cae8f)
 
     **Github**: <https://github.com/PuneetGrov3r/MediumPosts/tree/master/SpeedUpYourAlgorithms>
+
+- [BERT重计算：用22.5%的训练时间节省5倍的显存开销（附代码） - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247486755&idx=1&sn=b430f5a0e020d34f2231ec1a944b7ad3)
+
+- [巨省显存的重计算技巧在TF、Keras中的正确打开方式 - 2020](https://mp.weixin.qq.com/s/cVu3AL3VuXN2Jc-5trhWZw)
 
 
 ## 25.6 Pseudo Labeling
