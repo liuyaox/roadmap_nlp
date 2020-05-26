@@ -170,7 +170,65 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 - To Create Embedding Layer for Neural Network
 
 
-## 6.4 Character Embedding
+## 6.4 fastText
+
+[Enriching Word Vectors with Subword Information - Facebook2016](https://arxiv.org/abs/1607.04606)
+
+  Unsupervised时，单词如school，训练过程中是 A combination of vectors for school and all its char n-gram, that is, ['school', 'sch', 'cho', 'hoo', 'ool', 'scho', 'choo', 'hool'] (wordNgrams=1, minn=3, maxn=4)，这8个token一起参与训练并随着训练而调整向量，参考Ref1
+
+  Refs:
+
+  - Ref1: [Fasttext algorithm use only word and subword? or sentences too?](https://stackoverflow.com/questions/49811479/fasttext-algorithm-use-only-word-and-subword-or-sentences-too)
+
+#### Code
+
+- <https://github.com/facebookresearch/fastText>
+
+  ```shell
+  ./fasttext skipgram -input data.txt \
+    -output model \
+    -dim 200 \
+    -wordNgrams 1 \
+    -ws 5 \           
+    -loss hs
+  ```
+
+  参数详解：注意此处是指用于训练词向量并非分类
+  - input: 输入文件，每行格式：\<token1 token2 token3 ...\>，使用空格或tab分隔各token
+  - wordNgrams: n of word ngram，CBOW和Skipgram处理的最小token单元，**默认为1，也只能是1**
+    - 设置成n>=2，并不会训练得到word ngram的向量，因为Only used in supervised mode，参考Ref1和Ref2
+    - 若想训练得到word ngram向量，需要先分词出phrase(用非空格拼接word以表示phrase)，分词可参考SentencePiece等)
+  - minn & maxn: min or max n of char ngram，默认分别为3和6，注意区别于分类(分类时默认为0和0)
+  - ws: 窗口半径(总大小ws*2+1)，当ws=5时注意5是指2个wordNgrams(而非5个word)，当wordNgrams=2时，相当于半径是10个word 参考Ref3
+
+  **TODO**: subwords和wordNgrams都是程序自动计算的，不需要人工输入 ???
+
+  Refs:
+  - Ref1: [wordNgrams in unsupervised mode (cbow and skipgram)](https://github.com/facebookresearch/fastText/issues/499)
+  - Ref2: [Understanding wordNgram from fastText](https://stackoverflow.com/questions/57907683/understanding-wordngram-from-fasttext)
+  - Ref3: [Difference between max length of word ngrams and size of context window](https://stackoverflow.com/questions/57507056/difference-between-max-length-of-word-ngrams-and-size-of-context-window)
+
+- <https://fasttext.cc/>
+
+#### Library
+
+- gensim: <https://radimrehurek.com/gensim/models/fasttext.html>
+
+- skift: <https://github.com/shaypal5/skift>
+
+    scikit-learn wrappers for Python fastText
+
+#### Practice
+
+
+#### Article
+
+- [fastText - Word representations](https://fasttext.cc/docs/en/unsupervised-tutorial.html)
+
+- [FastText代码详解(一) - 2018](https://zhuanlan.zhihu.com/p/52154254)
+
+
+## 6.5 Character Embedding
 
 #### Paper
 
@@ -189,7 +247,7 @@ GloVe: [Global Vectors for Word Representation - Stanford2014](https://nlp.stanf
 - [Besides Word Embedding, why you need to know Character Embedding? - 2018](https://towardsdatascience.com/besides-word-embedding-why-you-need-to-know-character-embedding-6096a34a3b10)
 
 
-## 6.5 Ngram2Vec
+## 6.6 Ngram2Vec
 
 Maybe it's useful for attr-attrval matching!?!
 
@@ -202,7 +260,7 @@ Phrase2Vec???
 - <https://github.com/zhezhaoa/ngram2vec/>
 
 
-## 6.6 Sentence2Vec
+## 6.7 Sentence2Vec
 
 #### Paper
 
@@ -234,7 +292,7 @@ Phrase2Vec???
     **Chinese**: [简述表征句子的3种无监督深度学习方法 - 2018](http://www.sohu.com/a/229225932_164987)
 
 
-## 6.7 Doc2Vec & Paragraph2Vec
+## 6.8 Doc2Vec & Paragraph2Vec
 
 - Doc2Vec: [Distributed Representations of Sentences and Documents - Google2014](https://arxiv.org/abs/1405.4053)
 
@@ -250,7 +308,7 @@ Phrase2Vec???
 - Doc2Vec: gensim - <https://radimrehurek.com/gensim/models/doc2vec.html>
 
 
-## 6.8 StarSpace
+## 6.9 StarSpace
 
 [StarSpace: Embed All The Things!](https://arxiv.org/abs/1709.03856)
 
@@ -265,7 +323,7 @@ Phrase2Vec???
 - [StarSpace（embed all the things嵌入表示）编译和测试](https://blog.csdn.net/sparkexpert/article/details/78957607)
 
 
-## 6.9 Item2Vec - TOTODO
+## 6.10 Item2Vec - TOTODO
 
 [Item2Vec: Neural Item Embedding for Collaborative Filtering - Microsoft2016](https://arxiv.org/abs/1603.04259)
 
@@ -280,14 +338,14 @@ Phrase2Vec???
 
 
 
-## 6.11 Others
+## 6.12 Others
 
-### 6.11.1 Wiki2Vec
+### 6.12.1 Wiki2Vec
 
 **Code**: <https://github.com/idio/wiki2vec>
 
 
-### 6.11.2 Tweet2Vec
+### 6.12.2 Tweet2Vec
 
 一些社交文本中的语言结构跟书面语大不相同，作者别出心裁的特意做了一个基于字符组合的模型，其可以基于整个微博环境下复杂、非正常语言的字符串中学习到一种向量化的表达方式。
 
@@ -296,12 +354,12 @@ Phrase2Vec???
 **Code**: <https://github.com/bdhingra/tweet2vec>
 
 
-### 6.11.3 Illustration-2vec
+### 6.12.3 Illustration-2vec
 
 **Code**: <https://github.com/rezoo/illustration2vec>
 
 
-### 6.11.4 cw2Vec
+### 6.12.4 cw2Vec
 
 基于笔画的中文词向量算法
 
@@ -312,7 +370,7 @@ Phrase2Vec???
 **Article**: [蚂蚁金服公开最新基于笔画的中文词向量算法](https://www.sohu.com/a/217456047_99940985)
 
 
-### 6.11.5 Lda2Vec
+### 6.12.5 Lda2Vec
 
 [Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec - 2016](https://arxiv.org/abs/1605.02019)
 
@@ -321,41 +379,41 @@ Phrase2Vec???
 **Article**: <http://www.slideshare.net/ChristopherMoody3/word2vec-lda-and-introducing-a-new-hybrid-algorithm-lda2vec-57135994>
 
 
-### 6.11.6 TopicVec
+### 6.12.6 TopicVec
 
 [Generative Topic Embedding: a Continuous Representation of Documents - Singapore2016](https://arxiv.org/abs/1606.02979)
 
 **Code**: <https://github.com/askerlee/topicvec>
 
 
-### 6.11.7 Entity2Vec
+### 6.12.7 Entity2Vec
 
 [Fast and space-efficient entity linking in queries - Yahoo201](https://www.dc.fi.udc.es/~roi/publications/wsdm2015.pdf)
 
 **Code**: <https://github.com/ot/entity2vec>
 
 
-### 6.11.8 Str2Vec
+### 6.12.8 Str2Vec
 
 **code**: <https://github.com/pengli09/str2vec>
 
 
-### 6.11.9 Author2Vec
+### 6.12.9 Author2Vec
 
 [Author2Vec: Learning Author Representations by Combining Content and Link Information - Microsoft2016](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/jawahar16_www-2.pdf)
 
 
-### 6.11.10 Playlist2Vec
+### 6.12.10 Playlist2Vec
 
 **Code**: <https://github.com/mattdennewitz/playlist-to-vec>
 
 
-### 6.11.11 Sense2Vec
+### 6.12.11 Sense2Vec
 
 [sense2vec - A Fast and Accurate Method for Word Sense Disambiguation In Neural Word Embeddings - 2015](https://arxiv.org/abs/1511.06388)
 
 
-### 6.11.12 Medical2Vec
+### 6.12.12 Medical2Vec
 
 [Multi-layer Representation Learning for Medical Concepts - Georgia2016](https://arxiv.org/abs/1602.05568)
 
@@ -364,17 +422,17 @@ Phrase2Vec???
 **Code**: <https://github.com/ai-ku/wvec>
 
 
-### 6.11.13 Game2Vec
+### 6.12.13 Game2Vec
 
 **Code**: <https://github.com/warchildmd/game2vec>
 
 
-### 6.11.14 Paper2Vec
+### 6.12.14 Paper2Vec
 
 [Paper2vec: Citation-Context Based Document Distributed Representation for Scholar Recommendation - SYSU2017](https://arxiv.org/abs/1703.06587)
 
 
-## 6.12 Embeddings Dimensionality Reduction
+## 6.13 Embeddings Dimensionality Reduction
 
 [Simple & Effective Dimensionality Reduction for Word Embeddings - Microsoft2017](https://arxiv.org/abs/1708.03629)
 

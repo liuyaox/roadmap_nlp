@@ -1,7 +1,12 @@
 
-# 14. Text Summary
+# 14. Text Generation
 
 ## 14.1 Overview
+
+
+## 14.2 Text Summary
+
+### 14.2.1 Overview
 
 #### Paper
 
@@ -52,17 +57,6 @@
 - [知识图谱如何助力文本摘要生成 - 2019](https://mp.weixin.qq.com/s?__biz=MzUyMDY0OTg3Nw==&mid=2247483982&idx=1&sn=8740d862216be0d4cbe81f650aedf8d0)
 
 
-#### Competition
-
-**Byte Cup 2018 国际机器学习竞赛: 英文文章标题自动生成**
-
-- <https://github.com/iwangjian/ByteCup2018> (PyTorch)
-
-    Rank 6
-
-    **Paper**: Paper1, 2, 3
-
-
 #### Practice
 
 - <https://github.com/ztz818/Automatic-generation-of-text-summaries> (Tensorflow)
@@ -87,7 +81,7 @@
     教育行业新闻 自动文摘 语料库 自动摘要
 
 
-## 14.2 Deep Learning
+### 14.2.2 Deep Learning
 
 #### Paper
 
@@ -104,5 +98,32 @@
     **Code**: <https://github.com/nlpyang/bertsum> (PyTorch)
 
 
-## 14.3 Other Text Generation
+
+## 14.3 Title Generation
+
+### 14.3.1 Overview
+
+
+
+#### Competition
+
+**Byte Cup 2018 国际机器学习竞赛: 英文文章标题自动生成**
+
+- <https://github.com/iwangjian/ByteCup2018> (PyTorch)
+
+    Rank 6
+
+    **Paper**: Paper1, 2, 3
+
+
+
+
+## 14.4 Data2Text
+
+Data包括：表格（天气预报、人物百科等）、图片、知识图谱三元组等
+
+对Encoder的修改：捕捉结构上的联系，比如表格会加入记录类型，知识图谱会进行BFS等
+
+对Decoder的修改：建立输入输出之间的Alignment
+
 

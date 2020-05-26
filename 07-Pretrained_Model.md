@@ -9,6 +9,10 @@
 
     NLP Predtrained Embeddings, Models and Datasets Collections(NLP_PEMDC)
 
+- <https://github.com/Separius/awesome-sentence-embedding>
+
+    A curated list of pretrained sentence and word embedding models  包含各种Embeddings和Pretrained Models
+
 #### Paper
 
 - 【Great】<https://github.com/thunlp/PLMpapers>
@@ -278,6 +282,10 @@
 
     **Chinese**: [简单易用NLP框架Flair发布新版本 - 2018](https://www.jiqizhixin.com/articles/2018-12-27-12)
 
+- <https://github.com/bytedance/byseqlib>
+
+    字节：业内第1个实现的CUDA版的Transformer, BERT, GPT2
+
 
 ## 7.2 Chinese
 
@@ -424,7 +432,7 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding - Google2019](https://arxiv.org/abs/1810.04805)
 
-#### Code
+#### Github
 
 - <https://github.com/google-research/bert> (Tensorflow)
 
@@ -435,6 +443,10 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 - <https://github.com/CyberZHG/keras-bert> (Keras)
 
 - <https://github.com/codertimo/BERT-pytorch> (PyTorch)
+
+- <https://github.com/hanxiao/bert-as-service>
+
+    a sentence encoding service for mapping a variable-length sentence to a fixed-length vector
 
 #### Article
 
@@ -603,6 +615,10 @@ XLNet其实本质上还是ELMO, GPT, Bert这一系列两阶段模型的进一步
 - <https://github.com/CyberZHG/keras-xlnet> (Keras)
 
 - <https://github.com/zihangdai/xlnet> (Tensorflow)
+
+- <https://github.com/brightmart/xlnet_zh> (Tensorflow & PyTorch)
+
+    XLNet中文预训练模型
 
 #### Article
 

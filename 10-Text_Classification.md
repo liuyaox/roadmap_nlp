@@ -398,6 +398,15 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
 - <https://github.com/facebookresearch/fastText>
 
+    参数详解：注意此处是用于分类而非训练词向量
+    - input: 输入文件每行Schema：*\<__label__0 , token1 token2 ...\>*，即__label__表示label，是类别名字或编号，用**空格逗号空格**分隔label和text，text是用**空格**分隔的各个token
+    - wordNgrams: n of word ngram，默认为1，表示只使用word
+    - minn & maxn: min or max n of char ngram，默认都为0，表示不使用subword，当然word ngram和char ngram可以同时使用，此时最好提高bucket取值，详见Ref1
+
+    Refs:
+    - Ref1: [In supervised mode can subwords and wordNgrams be used together](https://github.com/facebookresearch/fastText/issues/731)
+
+
 - <https://fasttext.cc/>
 
 #### Library
@@ -415,16 +424,12 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
   ```Python
   from fastText import train_supervised
 
-  model = train_supervised('train.txt', epoch=25, lr=1.0, wordNgrams=2, minCount=1, loss='hs')
+  model = train_supervised('train.txt', epoch=25, lr=1.0, wordNgrams=2, minCount=1, loss='hs')  # train.txt格式同上面 #### Code处
   N, P, R = model.test('test.txt', k=1)
   model.test_label('test.txt', k=1, threshold=0.5)  # Return precision and recall for each label
   model.predict('五彩 手机壳', k=1, threshold=0.5)
   model.save_model("model.bin")
   ```
-
-  其中，train.txt每行Schema：用__label__表示label，使用**空格逗号空格**分隔label和text，其中label是类别名字或编号，text是用**空格**分隔的各个word
-
-  > Schema: __label__0 , 贴膜 金刚膜
 
 - 自己搭建模型，不确定是否合理([Reference](https://github.com/ShawnyXiao/TextClassification-Keras/blob/master/model/FastText/fast_text.py))
 

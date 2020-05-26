@@ -16,9 +16,9 @@
 
 本质上是一种 BoW 词袋模型
 
-处理对象：整个 corpus 里某个 document 中的各个 term
+处理对象：整个 corpus 里某个 document 中各个 term
 
-返回结果：tfidf(document, term)，即某文档 document 中某字/词 term 对应的 TFIDF 值！基于此，可输出 corpus 中每个 document 对应的所有有效 term 及其 tfidf 值
+返回结果：tfidf(document, term)，即某 document 中某 term 对应的 TFIDF 值！基于此，可输出 corpus 中每个 document 对应的所有有效 term (即features) 及其 tfidf 值
 
 #### Practice
 
@@ -71,6 +71,14 @@
 
     - jieba.analyse.textrank: 关键词提取
     - 参数 sentence/topK/withWeight/allowPOS: 同上面的 TFIDF
+
+- [PyTextRank](https://github.com/DerwenAI/pytextrank)
+
+    Implementation of TextRank as a spaCy pipeline extension, used to:
+
+    - extract the top-ranked phrases from text documents
+    - infer links from unstructured text into structured data
+    - run extractive summarization of text documents
 
 #### Practice
 
