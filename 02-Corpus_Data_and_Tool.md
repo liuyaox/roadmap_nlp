@@ -231,6 +231,19 @@
 
     **YAO**: 处理所有Data都可以进行这些处理！
 
+- [Automating Data Augmentation: Practice, Theory and New Direction - Stanford AI Lab 2020](https://ai.stanford.edu/blog/data-augmentation/)
+
+    **Chinese**: [自动化数据增强：实践、理论和新方向](https://mp.weixin.qq.com/s/K7aYSuROGgWqaVrC8TaqmQ)
+
+    Automating the Art of Data Augmentation:
+    
+    - [Part I Overview](https://hazyresearch.stanford.edu/data-aug-part-1)
+    - [Part II Practical Methods](https://hazyresearch.stanford.edu/data-aug-part-2)
+    - [Part III Theory](https://hazyresearch.stanford.edu/data-aug-part-3)
+    - [Part IV New Direction](https://hazyresearch.stanford.edu/data-aug-part-4)
+
+- [文本数据增强 - 2019](https://mp.weixin.qq.com/s/aIydEKcDYWNaczMUi07tIQ)
+
 
 ## 2.6 Data Labeling
 

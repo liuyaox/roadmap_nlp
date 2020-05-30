@@ -1,8 +1,7 @@
-
-
-# 9. Transfer Learning and Multi-task Learning
+# 9. Transfer & Multi-task & Other Learning
 
 ## 9.1 Overview
+
 
 ## 9.2 Transfer Learning
 
@@ -62,4 +61,12 @@
 - [自然语言处理中的多任务学习 - 2018](https://cloud.tencent.com/developer/news/369528)
 
 - [Multi-task Learning(Review)多任务学习概述 - 2019](https://zhuanlan.zhihu.com/p/59413549)
+
+
+## 9.4 Self-supervised Learning
+
+#### Article
+
+- 【Great!!!】[NLP中的自监督表示学习，全是动图，很过瘾的 - 2020](https://mp.weixin.qq.com/s/CDBATYB_3Abf6950jiA-Sg)
+
 

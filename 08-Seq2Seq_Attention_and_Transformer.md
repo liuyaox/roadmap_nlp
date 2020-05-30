@@ -174,6 +174,10 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
     在BahdanauAttention类中有一个权重归一化的版本（normed_BahdanauAttention），它可以加快随机梯度下降的收敛速度。在使用时，将初始化函数中的参数normalize设为True即可。
 
+#### Article
+
+- [一文看懂 Bahdanau 和 Luong 两种 Attention 机制的区别 - 2020](https://zhuanlan.zhihu.com/p/129316415)
+
 
 ### 8.3.5 单调 & 混合 Attention
 

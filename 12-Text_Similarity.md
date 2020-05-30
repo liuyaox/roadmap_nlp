@@ -10,6 +10,14 @@
 
 - [短文本相似度算法研究 - 2020](https://mp.weixin.qq.com/s/lyx4LouT6GzqrPN4ob9NWg)
 
+#### Library
+
+- <https://github.com/facebookresearch/faiss/>
+
+    **Article**: [海量文本求topk相似：faiss库初探](https://mp.weixin.qq.com/s/lS4sn1BFf-kvEKi4Ve74pQ)
+
+    **Chinese**: <https://github.com/liqima/faiss_note>
+
 
 ## 12.2 Paper
 

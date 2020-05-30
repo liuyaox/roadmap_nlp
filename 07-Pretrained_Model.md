@@ -19,6 +19,10 @@
 
     Must-read Papers on pre-trained language models  各预训练模型层次衍生关系图
 
+- [Pre-trained Models for Natural Language Processing: A Survey - 2020](https://arxiv.org/abs/2003.08271)
+
+    **Article**: [NLP集大成之预训练模型综述](https://mp.weixin.qq.com/s/m3dkRYOidA3MPCY0GtxJ5A)
+
 - 【Great】[NLP中各种各样的编码器 - 2020](https://mp.weixin.qq.com/s/l821XoMPmRlwTypCk-CJkw)
 
     文本编码有哪些不同的模型可用？是否存在一个适用于所有事情的模型，还是模型都是依赖于任务的？包括：语义相关、语法探索、信息检索、通用句子编码等！
@@ -484,10 +488,24 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
     
 - [Painless Fine-Tuning of BERT in Pytorch - 2019](https://medium.com/swlh/painless-fine-tuning-of-bert-in-pytorch-b91c14912caa)
 
+- [Siamese and Dual BERT for Multi Text Classification](https://towardsdatascience.com/siamese-and-dual-bert-for-multi-text-classification-c6552d435533)
+
+    **Chinese**: [用Siamese和Dual BERT来做多源文本分类]
+
+    **YAO**: 多源是指输入=新闻标题+简介，分别使用**单路BERT, 双路BERT, Siamese BERT**
+
 
 ### 7.4.3 RoBERTa
 
 [RoBERTa: A Robustly Optimized BERT Pretraining Approach - Washington2019](https://arxiv.org/abs/1907.11692)
+
+### 7.4.4 Model Compression
+
+#### Article
+
+- [模型压缩实践系列之——layer dropout - 2020](https://zhuanlan.zhihu.com/p/106198038)
+
+- [模型压缩实践收尾篇——模型蒸馏以及其他一些技巧实践小结 - 2020](https://zhuanlan.zhihu.com/p/124215760)
 
 
 ## 7.5 GPT
