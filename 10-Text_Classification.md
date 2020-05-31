@@ -12,6 +12,10 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     **Chinese**: [面向可解释的NLP：北大、哈工大等提出文本分类的生成性解释框架](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247489745&idx=5&sn=44e8bfeb5d9d9c1bb2906d941dfc063e)
 
+- [Deep Learning Based Text Classification: A Comprehensive Review - Google2020](https://arxiv.org/abs/2004.03705)
+
+    **Article**: [【Snapchat-谷歌-微软】最新《深度学习文本分类》2020综述论文大全，150+DL分类模型，42页pdf215篇参考文献](https://mp.weixin.qq.com/s/0tg87kxMZqdbWISElgEiJQ)
+
 #### Library
 
 - NeuralNLP-NeuralClassifier: <https://github.com/Tencent/NeuralNLP-NeuralClassifier>

@@ -32,6 +32,8 @@
 
 - [深度学习推荐系统中各类流行的Embedding方法（上） - 2020](https://mp.weixin.qq.com/s/VEXEx7n9W8NltnpB1ZGsRw)
 
+- [Kaggle知识点：时序数据与Embedding - 2020](https://mp.weixin.qq.com/s/BrfyPAYxdUKSn_fwRidXCg)
+
 
 #### Practice
 

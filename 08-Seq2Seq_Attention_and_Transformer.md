@@ -192,8 +192,6 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 ## 8.4 Transformer
 
-其实就是 Seq2Seq + Attention Model with SelfAttention
-
 ### 8.4.1 Transformer
 
 - [Attention Is All You Need - Google2017](https://arxiv.org/abs/1706.03762)
@@ -211,6 +209,12 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 - <https://github.com/foamliu/Self-Attention-Keras> (Keras)
 
 - <https://github.com/Kyubyong/transformer> (Tensorflow)
+
+- [keras定义ScaledDotProductAttention层 - 2019](https://zhuanlan.zhihu.com/p/92320355)
+
+- <https://github.com/SamLynnEvans/Transformer>
+
+    **Article**: [手把手教你用Python搭一个Transformer](https://mp.weixin.qq.com/s/dwWv8psxLYc0JEU4V-RiTg)
 
 #### Library
 
@@ -407,6 +411,9 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 
 - [ICLR 6-6-6！自注意力可以替代CNN，能表达任何卷积滤波层丨代码已开源 - 2020](https://mp.weixin.qq.com/s?__biz=MzUxNjcxMjQxNg==&mid=2247495990&idx=3&sn=dcbcf4d240bc6938adf80d41ada47ad3)
 
+- [transformer中的attention为什么scaled - 2019](https://www.zhihu.com/question/339723385)
+
+- [Transformer的细枝末节 - 2020](https://zhuanlan.zhihu.com/p/60821628)
 
 #### Pratice
 

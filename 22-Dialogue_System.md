@@ -77,6 +77,8 @@
 
     A trial of kbqa based on bert for NLPCC2016/2017 Task 5  基于BERT的中文知识库问答实践
 
+- [Transformer多轮对话改写实践 - 2020](https://mp.weixin.qq.com/s/jBGGO4GSE05XaO0U7cjnhQ)
+
 
 #### Competition
 

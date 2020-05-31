@@ -352,6 +352,8 @@ YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(
     
     规则约束：优先选择拼音相同的候选字词，其次是形似的；纠正后分词个数更少；
 
+- [语法纠错的研究现状 - 2020](https://mp.weixin.qq.com/s/tH4-73aJcRaqJAjotlyANg)
+
 
 ## 4.10 Synonym
 

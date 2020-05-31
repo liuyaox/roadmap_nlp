@@ -1,4 +1,3 @@
-
 # 7. Pretrained Model
 
 ## 7.1 Overview
@@ -257,6 +256,12 @@
 
 - [BERT时代与后时代的NLP - 2019](https://zhuanlan.zhihu.com/p/66676144)
 
+- [NLP算法面试必备！史上最全！PTMs：NLP预训练模型的全面总结 - 2020](https://zhuanlan.zhihu.com/p/115014536)
+
+- [Top 6 Open Source Pretrained Models for Text Classification you should use](https://www.analyticsvidhya.com/blog/2020/03/6-pretrained-models-text-classification/)
+
+    **Chinese**: [6个用于文本分类的最新开源预训练模型](https://mp.weixin.qq.com/s/nU1aOjlYWz0JQ_MOJc1lcw)
+
 
 #### Code
 
@@ -270,7 +275,7 @@
 
 #### Library
 
-- 【Great】<https://github.com/huggingface/pytorch-transformers> (PyTorch)
+- 【Great】<https://github.com/huggingface/transformers> (PyTorch)
 
     A library of SOTA pretrained models for NLP
 
@@ -468,6 +473,17 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 - [BERT fintune 的艺术 - 2019](https://zhuanlan.zhihu.com/p/62642374)
 
+- [用可视化解构BERT，我们从上亿参数中提取出了6种直观模式](https://mp.weixin.qq.com/s/xx72kfN0NiJ_6_KxaKfhNw)
+
+    **Github**: <https://github.com/jessevig/bertviz>
+
+    **Reference**: [Deconstructing BERT: Distilling 6 Patterns from 100 Million Parameters](https://towardsdatascience.com/deconstructing-bert-distilling-6-patterns-from-100-million-parameters-b49113672f77)
+
+    **Reference**: [Deconstructing BERT, Part 2: Visualizing the Inner Workings of Attention](https://towardsdatascience.com/deconstructing-bert-part-2-visualizing-the-inner-workings-of-attention-60a16d86b5c1)
+
+- [如何优雅地编码文本中的位置信息？三种positioanl encoding方法简述 - 2020](https://mp.weixin.qq.com/s/ENpXBYQ4hfdTLSXBIoF00Q)
+
+
 #### Practice
 
 - <https://github.com/xmxoxo/BERT-train2deploy> (Tensorlfow)
@@ -494,10 +510,29 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
     **YAO**: 多源是指输入=新闻标题+简介，分别使用**单路BERT, 双路BERT, Siamese BERT**
 
+- [BERT在小米NLP业务中的实战探索 - 2020](https://mp.weixin.qq.com/s/G995ulqe6Ifxml_AJqapAw)
 
-### 7.4.3 RoBERTa
+    **YAO**: 对话系统意图识别、语音交互Query判不停、多粒度分词、
 
-[RoBERTa: A Robustly Optimized BERT Pretraining Approach - Washington2019](https://arxiv.org/abs/1907.11692)
+- [BERT重计算：用22.5%的训练时间节省5倍的显存开销（附代码） - 2020](https://mp.weixin.qq.com/s/JwK6pkdkgbrYq3eLYXmO-A)
+
+
+### 7.4.3 Other BERT
+
+#### Paper
+
+- [RoBERTa: A Robustly Optimized BERT Pretraining Approach - Washington2019](https://arxiv.org/abs/1907.11692)
+
+- [MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices - CMU2020](https://arxiv.org/abs/2004.02984)
+
+- 【Great!!!】[Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks - Germany2019](https://arxiv.org/abs/1908.10084)
+
+    **Code**: <https://github.com/UKPLab/sentence-transformers>
+
+    **Article**: [Sentence-BERT: 一种能快速计算句子相似度的孪生网络](https://www.cnblogs.com/gczr/p/12874409.html)
+
+    **YAO**: TODO 适用于评论！为每个评论生成Sentence BERT Embedding！！！
+
 
 ### 7.4.4 Model Compression
 
@@ -506,6 +541,10 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 - [模型压缩实践系列之——layer dropout - 2020](https://zhuanlan.zhihu.com/p/106198038)
 
 - [模型压缩实践收尾篇——模型蒸馏以及其他一些技巧实践小结 - 2020](https://zhuanlan.zhihu.com/p/124215760)
+
+- [Tiny-NEZHA：预训练语言模型与蒸馏压缩技术 - 2020](https://mp.weixin.qq.com/s/g0ZrryqSp88fsdiJiwxfWQ)
+
+- [Transformer中16个注意力头一定要比1个注意力头效果好吗 - 2020](https://mp.weixin.qq.com/s/pUrdP5ntaxW0d_tJcQjIPA)
 
 
 ## 7.5 GPT

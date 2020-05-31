@@ -41,6 +41,8 @@
 
 - [【赛尔笔记】机器阅读理解简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247492349&idx=4&sn=cd32991e5cb96cb193e0673c1e91b173)
 
+- 机器阅读理解综述 - 2019: [一](https://zhuanlan.zhihu.com/p/80905984) [二](https://zhuanlan.zhihu.com/p/80980403)  [三](https://zhuanlan.zhihu.com/p/81126870)
+
 
 #### Project
 

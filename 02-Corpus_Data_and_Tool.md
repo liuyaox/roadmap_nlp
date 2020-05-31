@@ -109,6 +109,8 @@
 
     **Article**: [重磅！《大词林》V2.0：自动消歧的开放域中文知识图谱 - 2019](https://mp.weixin.qq.com/s?__biz=MzIxMjAzNDY5Mg==&mid=2650795283&idx=1&sn=5c36be2f86b1892401d4588eb4095b9d)
 
+    **Article**: [哈工大《大词林》开放75万核心实体词及相关概念、关系列表 - 2020](https://mp.weixin.qq.com/s/gGig5KFztInrGAmhUhqAkg)
+
 
 ### 2.1.3 Sentiment Analysis
 
@@ -210,6 +212,12 @@
 - <https://github.com/quincyliang/nlp-data-augmentation>
 
     Data Augmentation for NLP    NLP数据增强
+
+#### Library
+
+- <https://github.com/makcedward/nlpaug>
+
+    **Article**: [NLP中数据增强的综述，快速的生成大量的训练数据](https://mp.weixin.qq.com/s/9fYPPF51RbJi1wNHBrJVzQ)
 
 #### Article
 

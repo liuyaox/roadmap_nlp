@@ -278,6 +278,8 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [文本情感分类（三）：分词 OR 不分词 - 2016](https://kexue.fm/archives/3863)
 
+- [如何理解用户评论中的细粒度情感？面向目标的观点词抽取 - 2020](https://mp.weixin.qq.com/s/zz_9YpaPn5lYzhaNKxylJA)
+
 
 ## 17.2 Deep Learning
 

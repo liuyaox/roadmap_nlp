@@ -3,6 +3,18 @@
 
 ## 14.1 Overview
 
+#### Article
+
+- [文本生成12：4种融合知识的text generation（推荐收藏） - 2020](https://zhuanlan.zhihu.com/p/133266258)
+
+#### Practice
+
+- ["自动作诗机"上线，代码和数据都是公开的 - 2019](ttps://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650410297&idx=1&sn=cda7099455083fbd412d0fdcb41acbea&scene=21)
+
+- [风云三尺剑，花鸟一床书---对联数据集和自动对联机器人 - 2019](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650408997&idx=1&sn=93395c083d85cf15490cf36cb5251a0f&scene=21)
+
+- [用 GPT-2 自动写诗，从五言绝句开始 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412442&idx=1&sn=4e874b9598f49b7cf89267d561addf73)
+
 
 ## 14.2 Text Summary
 
@@ -55,6 +67,8 @@
 - [文本自动摘要任务的“不完全”心得总结 - 2019](https://zhuanlan.zhihu.com/p/83596443)
 
 - [知识图谱如何助力文本摘要生成 - 2019](https://mp.weixin.qq.com/s?__biz=MzUyMDY0OTg3Nw==&mid=2247483982&idx=1&sn=8740d862216be0d4cbe81f650aedf8d0)
+
+- [赛尔笔记 | 事实感知的生成式文本摘要 - 2020](https://mp.weixin.qq.com/s/jwYZ27nqi1eAocqDn7-t4A)
 
 
 #### Practice

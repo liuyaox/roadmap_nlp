@@ -8,6 +8,8 @@
 
     **Code**: <https://github.com/Tixierae/deep_learning_NLP> (Keras)
 
+- <https://github.com/changwookjun/nlp-paper>
+
 - [Paper reading list in natural language processing](https://github.com/iwangjian/Paper-Reading)
 
 - [NLP领域，你推荐哪些综述性的文章？ - 2019](https://www.zhihu.com/question/355125622)
@@ -109,6 +111,8 @@
 - [NLPer复工了！先看看这份2019机器学习与NLP年度盘点吧 - 2020](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650779644&idx=4&sn=a55deda9abf77c41f94cf5836e259fa6)
 
 - [一些在NLP的面试中提问频率非常高的问题 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwODI2NDkxNQ==&mid=2247487735&idx=4&sn=63216274b83c398f15a31d3f106839ba)
+
+- [NLP，吹爆与落地 - 2020](https://mp.weixin.qq.com/s/WftXtfWjMVkXdseyf1GJEA)
 
 
 #### Case

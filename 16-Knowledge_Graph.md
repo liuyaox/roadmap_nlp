@@ -142,11 +142,16 @@
 
 #### Paper
 
+- 0. [More Data, More Relations, More Context and More Openness: A Review and Outlook for Relation Extraction - THU2020](https://arxiv.org/abs/2004.03186)
+
+    **Article**: [【清华大学-腾讯】关系提取综述](https://mp.weixin.qq.com/s/oGwpUPoLuGiBPV7CWWaaxQ)
+
 - 1. [Neural Knowledge Acquisition via Mutual Attention between Knowledge Graph and Text - THU2018](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16691/16013)
 
 - 2. [Chinese Relation Extraction with Multi-Grained Information and External Linguistic Knowledge - THU2019](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/acl2019_nre4chinese.pdf)
 
     **Code**: <https://github.com/thunlp/Chinese_NRE> (PyTorch)
+
 
 #### Article
 

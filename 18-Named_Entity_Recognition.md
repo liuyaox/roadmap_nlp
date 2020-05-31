@@ -18,6 +18,8 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 - [浅析深度学习在实体识别和关系抽取中的应用 - 2017](https://blog.csdn.net/u013709270/article/details/78944538)
 
+- 【Great】[命名实体识别 NER 论文综述：那些年，我们一起追过的却仍未知道的花名(一) - 2020](https://mp.weixin.qq.com/s/_V9dDurEIi1BG14yjE9LfQ)
+
 #### Practice
 
 - 【Great】[NLP命名实体识别(NER)开源实战教程 - 2019](https://blog.csdn.net/xiaosongshine/article/details/99622170) (Keras)

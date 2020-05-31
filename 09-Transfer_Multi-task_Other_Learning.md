@@ -2,8 +2,18 @@
 
 ## 9.1 Overview
 
+#### Article
+
+- [模型独立学习：多任务学习与迁移学习 - 2020](https://mp.weixin.qq.com/s/faIYmHiH6rjRr0soN_-z_Q)
+
 
 ## 9.2 Transfer Learning
+
+#### Paper
+
+- [A survey on domain adaptation theory - France2020](https://arxiv.org/abs/2004.11829)
+
+  **Article**: [最新《迁移学习:域自适应理论》综述论文，128页ppt讲解迁移学习与最优传输](https://mp.weixin.qq.com/s/6AOgxICrY6HWrrzjKc1xTw)
 
 #### Article
 
@@ -56,6 +66,8 @@
 
 #### Article
 
+- [多任务学习综述-A Survey on Multi-Task Learning - 2019](https://zhuanlan.zhihu.com/p/67524006)
+
 - [Multi Task Learning在工业界如何更胜一筹 - 2018](https://www.jianshu.com/p/b2c4fced6e6c)
 
 - [自然语言处理中的多任务学习 - 2018](https://cloud.tencent.com/developer/news/369528)
@@ -68,5 +80,31 @@
 #### Article
 
 - 【Great!!!】[NLP中的自监督表示学习，全是动图，很过瘾的 - 2020](https://mp.weixin.qq.com/s/CDBATYB_3Abf6950jiA-Sg)
+
+- [Self-supervised Learning 再次入门 - 2020](https://zhuanlan.zhihu.com/p/108906502)
+
+
+## 9.5 Multilingual Learning
+
+跨语言/多语言学习
+
+#### Article
+
+- [【综述】跨语言自然语言处理笔记 - 2020](https://mp.weixin.qq.com/s/qS1KjqwW-Th0VWDsRlWU5Q)
+
+
+## 9.6 Few-Shot Learning
+
+小样本学习
+
+#### Paper
+
+- <https://github.com/tata1661/FewShotPapers>
+
+  **Article**: [什么是小样本学习？这篇综述文章用166篇参考文献告诉你答案](https://mp.weixin.qq.com/s/jzo8kyh0qBCObvFQhiZePg)
+
+#### Article
+
+- [深度文本的表征与聚类在小样本场景中的探索 - 2020](https://mp.weixin.qq.com/s/TSFxYQdjjHuyrIJLM2fdcw)
 
 

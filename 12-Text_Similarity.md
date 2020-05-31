@@ -47,6 +47,10 @@
 
     <https://github.com/aditya1503/Siamese-LSTM> (Theano)
 
+- [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks - Germany2019](https://arxiv.org/abs/1908.10084)
+
+    详情参考：07-Pretrained_Model.md
+
 
 ## 12.3 Practice
 
