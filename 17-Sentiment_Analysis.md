@@ -121,6 +121,10 @@ Sentiment Analysis 按粒度可分为3种：
 
     **YAO**: 任务是 **Sentence-Level 的分类**， 使用了 MLKNN，情绪转移，卡方统计特征选择
 
+- <https://github.com/Zhangpeixiang/Short-Texts-Sentiment-Analyse> (Keras)
+
+    中文情感分析模型，包含各种主流的**情感词典、机器学习、深度学习、预训练模型方法**
+
 ##### To Be Confirmed
 
 - 【Great】<https://github.com/jcsyl/news-analyst> (Keras)

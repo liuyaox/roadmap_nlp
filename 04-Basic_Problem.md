@@ -211,6 +211,7 @@ YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(
         - model_type: 支持unigram(default), bpe, char, word，**当取word时，input sentence must be pretokenized**. **关键: 默认使用数字、空格来分隔**
         - redefine special meta tokens: UNK,BOS,EOS默认id是0,1,2，可设置，--bos_id=0 --eos_id=1 --unk_id=5 --pad_id=3，当取值-1时表示disabled
         - **split_by_whitespace:** 非常关键！！表示token是否按whitespace来分隔的！只有取值false时才会提取**crossing-tokens pieces**，即短语(token组合)
+        - **user_defined_symbols & control_symbols**: 详情参考下面的Python Wraper详细使用示例
     
     - model_type: 三种粒度，char, word(其实是token), subword(其实是subtoken，算法有bpe和unigram)
         - char: vocab是语料中出现的所有字符(含空格)
@@ -228,14 +229,16 @@ YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(
         - vocabulary & vocabulary_threshold: Only produce symbols which also appear in the vocabulary (with at least some frequency)
 
     - 【Great】[Python Wraper详细使用示例 - Jupyter Notebook](https://gist.github.com/liuyaox/dd211cc9274e9a1d7201b459d11e3bb5)
-        - SentencePieceProcessor既可以当编码器、解码器，也可以当字典使用
-        - 可以自定义User Defined Symbols和Control Symbols
+        - SentencePieceProcessor是编码器 + 解码器 + 字典
+        - **user_defined_symbols & control_symbols**: 前者让指定symbols在encode时当成一完整token不被划分，后者是在原始输入数据编码后的Vector中手动添加这些symbols的id，模型会知道它们只是Control Symbols，没别的语义信息，且它们在decode时解码为空字符串。参考[Issue](https://github.com/google/sentencepiece/issues/215)
         - ULM对应的模型支持Sampling和NBest Segmentation，可用于数据增强
         - **处理英文等时建议使用Text Normalization**
         - 可使用限制Vocabulary，只编码解码Vocabulary中的Token
         - **通过split_by_whitespace=false，以提取Phrase，而非subtoken**
 
-    - 示例
+    - 训练好的Model可手动再编辑，参考Issue: [Manually modifying SentencePiece model](https://github.com/google/sentencepiece/issues/121)
+
+    - Demo
         - 从英文语料中提取常见Phrase
             ```
             spm_train --input corpus.txt \

@@ -212,7 +212,7 @@
     
     输入2个句子，以\<SEP>分隔，在开头添加一个\<CLS>，一起输入BERT里，\<CLS>对应的那个输出vector，再输入一个Linear Binary Classifier里，让它去预测这2个句子是否是接在一起的。BERT和Linear Binary Classifier是一起训练学习的，前者是finetuning，后者是Learned from Scratch，共同学习到vector，于是vector就可以是XXX的Embedding。
 
-    YAO: vector是谁的Embedding???
+    YAO: vector是谁的Embedding??? 
 
     ![](./image/Bert_training_approach2.png)
 
@@ -387,6 +387,8 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 - <https://github.com/allenai/bilm-tf> (Tensorflow)
 
+- <https://github.com/HIT-SCIR/ELMoForManyLangs> (PyTorch)
+
 #### Article
 
 - [Allten官网文章：ELMo - 2018](https://allennlp.org/elmo)
@@ -515,6 +517,10 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
     **YAO**: 对话系统意图识别、语音交互Query判不停、多粒度分词、
 
 - [BERT重计算：用22.5%的训练时间节省5倍的显存开销（附代码） - 2020](https://mp.weixin.qq.com/s/JwK6pkdkgbrYq3eLYXmO-A)
+
+- <https://github.com/renxingkai/BERT_Chinese_Classification> (Tensorflow)
+
+    用BERT进行中文情感分类，记录了详细操作及完整程序
 
 
 ### 7.4.3 Other BERT
