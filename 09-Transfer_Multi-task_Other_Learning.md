@@ -75,7 +75,18 @@
 - [Self-supervised Learning 再次入门 - 2020](https://zhuanlan.zhihu.com/p/108906502)
 
 
-## 9.5 Semi-supervised Learning
+## 9.5 Contrastive Learning
+
+对比学习
+
+#### Article
+
+- [Contrastive Self-Supervised Learning - 2020](https://ankeshanand.com/blog/2020/01/26/contrative-self-supervised-learning.html)
+
+  **Chinese**: [Contrastive self-supervised learning](https://zhuanlan.zhihu.com/p/104384194)
+
+
+## 9.6 Semi-supervised Learning
 
 #### Article
 
@@ -83,8 +94,23 @@
 
 - [半监督学习技术近年来的发展历程及典型算法框架的演进 - 2020](https://zhuanlan.zhihu.com/p/138085660)
 
+- [半监督深度学习训练和实现小Tricks - 2019](https://zhuanlan.zhihu.com/p/100252944)
 
-## 9.6 Few-shot Learning
+
+## 9.7 Active Learning
+
+主动学习
+
+#### Article
+
+- [主动学习-Active Learning：如何减少标注代价 - 2019](https://zhuanlan.zhihu.com/p/39367595)
+
+- [主动学习（Active Learning）-少标签数据学习 - 2019](https://zhuanlan.zhihu.com/p/79764678)
+
+- [Active Learning in Machine Learning - 2020](https://towardsdatascience.com/active-learning-in-machine-learning-525e61be16e5)
+
+
+## 9.8 Few-shot Learning
 
 少样本学习，其研究领域与迁移学习有一大部分交集部分，即在源域有足够多样本，而在目标域样本不足。
 
@@ -101,22 +127,24 @@
 - [Few-shot learning 少样本学习 - 2019](https://zhuanlan.zhihu.com/p/66552960)
 
 
-## 9.7 Active Learning
-
-主动学习
-
-#### Article
-
-- [主动学习（Active Learning）-少标签数据学习 - 2019](https://zhuanlan.zhihu.com/p/79764678)
-
-- [Active Learning in Machine Learning - 2020](https://towardsdatascience.com/active-learning-in-machine-learning-525e61be16e5)
-
-
-## 9.8 Multilingual Learning
+## 9.9 Multilingual Learning
 
 跨语言/多语言学习
 
 #### Article
 
 - [【综述】跨语言自然语言处理笔记 - 2020](https://mp.weixin.qq.com/s/qS1KjqwW-Th0VWDsRlWU5Q)
+
+
+## 9.10 Meta Learning
+
+元学习，即学习如何去学习
+
+#### Article
+
+- [NTU 李宏毅 Meta Learning - 2020](https://zhuanlan.zhihu.com/p/104412958)
+
+- [元学习（Meta-learning）——李宏毅老师教学视频笔记 - 2020](https://zhuanlan.zhihu.com/p/108503451)
+
+- [Video: Stanford cs330（中英字幕）：深度多任务和元学习（完整视频 | 课程资料）](https://www.bilibili.com/video/BV1He411s7K4)
 
