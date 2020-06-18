@@ -40,16 +40,7 @@
 - [什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何 - 2018](https://www.zhihu.com/question/41979241/answer/123545914)
 
 
-## 9.3 Few-shot Learning
-
-少样本学习，其研究领域与迁移学习有一大部分交集部分，即在源域有足够多样本，而在目标域样本不足。
-
-#### Article
-
-- [Few-shot learning 少样本学习 - 2019](https://zhuanlan.zhihu.com/p/66552960)
-
-
-## 9.4 Multi-task Learning
+## 9.3 Multi-task Learning
 
 #### Paper
 
@@ -84,18 +75,18 @@
 - [Self-supervised Learning 再次入门 - 2020](https://zhuanlan.zhihu.com/p/108906502)
 
 
-## 9.5 Multilingual Learning
-
-跨语言/多语言学习
+## 9.5 Semi-supervised Learning
 
 #### Article
 
-- [【综述】跨语言自然语言处理笔记 - 2020](https://mp.weixin.qq.com/s/qS1KjqwW-Th0VWDsRlWU5Q)
+- [机器学习的趋势：半监督学习 - 2019](https://zhuanlan.zhihu.com/p/67692664)
+
+- [半监督学习技术近年来的发展历程及典型算法框架的演进 - 2020](https://zhuanlan.zhihu.com/p/138085660)
 
 
-## 9.6 Few-Shot Learning
+## 9.6 Few-shot Learning
 
-小样本学习
+少样本学习，其研究领域与迁移学习有一大部分交集部分，即在源域有足够多样本，而在目标域样本不足。
 
 #### Paper
 
@@ -107,4 +98,25 @@
 
 - [深度文本的表征与聚类在小样本场景中的探索 - 2020](https://mp.weixin.qq.com/s/TSFxYQdjjHuyrIJLM2fdcw)
 
+- [Few-shot learning 少样本学习 - 2019](https://zhuanlan.zhihu.com/p/66552960)
+
+
+## 9.7 Active Learning
+
+主动学习
+
+#### Article
+
+- [主动学习（Active Learning）-少标签数据学习 - 2019](https://zhuanlan.zhihu.com/p/79764678)
+
+- [Active Learning in Machine Learning - 2020](https://towardsdatascience.com/active-learning-in-machine-learning-525e61be16e5)
+
+
+## 9.8 Multilingual Learning
+
+跨语言/多语言学习
+
+#### Article
+
+- [【综述】跨语言自然语言处理笔记 - 2020](https://mp.weixin.qq.com/s/qS1KjqwW-Th0VWDsRlWU5Q)
 

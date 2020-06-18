@@ -229,14 +229,13 @@ YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(
         - vocabulary & vocabulary_threshold: Only produce symbols which also appear in the vocabulary (with at least some frequency)
 
     - 【Great】[Python Wraper详细使用示例 - Jupyter Notebook](https://gist.github.com/liuyaox/dd211cc9274e9a1d7201b459d11e3bb5)
+        - 功能有：编码(EncodeAsPieces/EncodeAsIds/NBestEncodeAsPieces)、解码(DecodePieces/DecodeIds)和转化(IdToPiece/PieceToId)等
         - SentencePieceProcessor是编码器 + 解码器 + 字典
         - **user_defined_symbols & control_symbols**: 前者让指定symbols在encode时当成一完整token不被划分，后者是在原始输入数据编码后的Vector中手动添加这些symbols的id，模型会知道它们只是Control Symbols，没别的语义信息，且它们在decode时解码为空字符串。参考[Issue](https://github.com/google/sentencepiece/issues/215)
-        - ULM对应的模型支持Sampling和NBest Segmentation，可用于数据增强
+        - ULM对应的模型支持Sampling和NBest Segmentation，可用于**数据增强**
         - **处理英文等时建议使用Text Normalization**
         - 可使用限制Vocabulary，只编码解码Vocabulary中的Token
-        - **通过split_by_whitespace=false，以提取Phrase，而非subtoken**
-
-    - 训练好的Model可手动再编辑，参考Issue: [Manually modifying SentencePiece model](https://github.com/google/sentencepiece/issues/121)
+        - **通过split_by_whitespace=false，以提取Phrase(subsentence)，而非subtoken**
 
     - Demo
         - 从英文语料中提取常见Phrase
@@ -258,6 +257,8 @@ YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(
                 --split_by_whitespace=True          # 默认值，可省略  因为中文无空格，无Pretokenization
             ```
 
+        - Training without local filesystem: 训练数据通过sentence_iterator可**支持any iterable object，比如urllib.request.urlopen(url)**，详见[Demo](https://github.com/google/sentencepiece/blob/master/python/README.md#training-without-local-filesystem)
+
 - <https://github.com/yoheikikuta/bert-japanese>
 
     BERT with SentencePiece for Japanese text
@@ -266,17 +267,19 @@ YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(
 
     thai word segmentation using SentencePiece
 
-#### Library
+- <https://github.com/tensorflow/text>
 
-- [sentencepiece](https://pypi.org/project/sentencepiece/)
-
-    编码(EncodeAsPieces/EncodeAsIds/NBestEncodeAsPieces)、解码(DecodePieces/DecodeIds)和转化(IdToPiece/PieceToId)等
+    SentencePiece in TF: `sp = tensorflow_text.SentencepieceTokenizer(model=model)`
 
 #### FAQ
 
 - [How to pickle a SentencePiece model #387](https://github.com/google/sentencepiece/issues/387)
 
     Wrap model in a class with methods \_\_getstate\_\_ and \_\_setstate\_\_   [Ref Code](https://github.com/asyml/texar-pytorch/blob/master/texar/torch/data/tokenizers/xlnet_tokenizer.py#L118)
+
+- [Manually modifying SentencePiece model](https://github.com/google/sentencepiece/issues/121)
+
+    训练好的Model可手动再编辑
 
 
 ## 4.6 Phrase Mining & Keyword Extraction

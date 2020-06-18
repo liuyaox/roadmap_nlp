@@ -13,6 +13,8 @@
 
 #### Article
 
+- [这可能是「多模态机器学习」最通俗易懂的介绍 - 2018](https://zhuanlan.zhihu.com/p/53511144)
+
 - [【赛尔笔记】 多模态情感分析简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247492349&idx=6&sn=40bec66b380eb190d1c3e61918701f8b)
 
 - 【Great】[通用的图像-文本语言表征学习：多模态预训练模型 UNITER - 2020](https://mp.weixin.qq.com/s/GxQ27vY5naaAXtp_ZTV0ZA)
