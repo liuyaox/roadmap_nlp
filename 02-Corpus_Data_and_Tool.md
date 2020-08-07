@@ -257,8 +257,29 @@
 
 数据标注，训练数据生成等
 
+### 2.6.1 Overview
+
 #### Article
+
+
+## 2.6.2 Active Learning
+
+主动学习
+
+#### Article
+
+- [主动学习（Active Learning）-少标签数据学习 - 2019](https://zhuanlan.zhihu.com/p/79764678)
+
+- [Active Learning in Machine Learning - 2020](https://towardsdatascience.com/active-learning-in-machine-learning-525e61be16e5)
 
 - [主动学习：标注的一颗救心丸 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412415&idx=3&sn=f4025488aacbb7fe4ae93952917621af)
 
+
+## 2.6.3 Confidence Learning
+
+置信学习
+
+#### Article
+
 - [如何判断样本标注的靠谱程度？置信度学习（CL）简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485618&idx=1&sn=7016ad51dab33771d51ae7c2d5c8223f)
+
