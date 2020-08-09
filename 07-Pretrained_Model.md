@@ -542,9 +542,35 @@ EMLo: Embeddings from Language Model，是第一个使用预训练模型进行�
 
 ### 7.4.4 Model Compression
 
+#### Github
+
+- <https://github.com/dkozlov/awesome-knowledge-distillation>
+
+    Awesome Knowledge Distillation
+
 #### Article
 
 - [模型压缩实践系列之——layer dropout - 2020](https://zhuanlan.zhihu.com/p/106198038)
+
+- [模型蒸馏Distillation - 2019](https://zhuanlan.zhihu.com/p/71986772)
+
+    一个大模型或者多个模型ensemble学到的知识迁移到另一个轻量级单模型，方便部署
+
+    蒸馏的目标：让student学习teacher的泛化能力，而非直接拟合训练数据
+
+- [蒸馏神经网络到底在蒸馏什么？（设计思想篇）- 2018](https://zhuanlan.zhihu.com/p/39945855)
+
+    背景：qi = softmax(exp(zi/T))，T是超参数，越大，概率分布越趋于均匀
+    - Step1: 用较大的T训练大模型Teacher，Teacher能够产生更加均匀分布的Soft Target(各个qi，01之间的数值)
+    - Step2: 用相同的T训练小模型Student，Label用Soft Target，让Student学到数据的结构分布特征
+    - Step3: 应用阶段，令T=1，Student输出的概率分布变得不那么均匀分布了，会偏向正确Label
+    - 其他：有时Label是Soft和Hard Target的加权平均
+
+    **YAO**: OK
+
+    数据间的结构相似性：大模型，比如识别猫的ImageNet，对猫的预测概率p1为0.9，对狗的概率p2为0.001，对汽车的概率p3为0.00001，虽然p2,p3远小于p1，可正确预测出猫，但**p2比p3高2个数量级，也正确学习到了狗比汽车更接近猫的这一先验知识，这就是数据间的结构相似性**。越大的模型越能学习到更丰富的数据结构间的相似信息。这可以解释以下2点：
+    - 较大T值：p2与p3高2个数量级，但p2和p3还是太小，Student直接学习的话，不容易学习，于是令T较大(升温)，Soft Target中**p2,p3就没那么小了，Student较容易学习(热了好吸引，也使用较大的T)**。应用环节，令T=1(降温)，p2,p3恢复原来的很小的状态，Student就容易预测(冷静下来后好决策)
+    - Soft Target作为Student的Label: Hard Target中猫是1，狗和汽车都是0，没有体现出狗与猫的相似性，而**大模型通过复杂精妙的结构可以学习到这一先验知识，蕴含在Soft Target中，拿给Student当Label**，Label本身包含了丰富的先验知识，比Hard Target更好，Student不必自己从零学习先验知识，直接用即可
 
 - [模型压缩实践收尾篇——模型蒸馏以及其他一些技巧实践小结 - 2020](https://zhuanlan.zhihu.com/p/124215760)
 
