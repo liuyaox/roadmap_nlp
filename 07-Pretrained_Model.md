@@ -269,9 +269,11 @@
 
     BERT, EMLo and ERNIE Implementation with PaddlePaddle
 
+
 #### Practice
 
 - [北大、人大联合开源工具箱UER，3行代码完美复现BERT、GPT - 2019](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247490122&idx=3&sn=a2413923ce3e620f26a00edb4d89d878)
+
 
 #### Library
 
@@ -294,6 +296,8 @@
 - <https://github.com/bytedance/byseqlib>
 
     字节：业内第1个实现的CUDA版的Transformer, BERT, GPT2
+
+- [fastHan: 基于BERT的中文NLP集成工具 - 2020](https://zhuanlan.zhihu.com/p/147665538)
 
 
 ## 7.2 Chinese
@@ -616,6 +620,8 @@ GPT2: [Language Models are Unsupervised Multitask Learners - OpenAI2019](https:/
 - GPT2: [The Illustrated GPT-2 (Visualizing Transformer Language Models) - 2019](https://jalammar.github.io/illustrated-gpt2/)
 
     **Chinese**: [完全图解GPT-2：看完这篇就够了（一）](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650768689&idx=2&sn=ff46397819b544a19c3200297f180dea)
+
+- [GPT-2 论文+代码笔记 - 2020](https://mp.weixin.qq.com/s/rPhlB-6_ONzZQM76tIGqPw)
 
 
 ## 7.6 ULMFit

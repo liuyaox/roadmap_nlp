@@ -20,6 +20,8 @@
 
 - CopyNet
 
+- [答案选择|语义匹配任务目前表现最好的几个模型 - 2019](https://zhuanlan.zhihu.com/p/39920446)
+
 
 #### Article
 

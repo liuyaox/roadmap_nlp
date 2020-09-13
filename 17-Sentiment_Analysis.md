@@ -284,6 +284,8 @@ Sentiment Analysis 按粒度可分为3种：
 
 - [如何理解用户评论中的细粒度情感？面向目标的观点词抽取 - 2020](https://mp.weixin.qq.com/s/zz_9YpaPn5lYzhaNKxylJA)
 
+- [情感分析算法在阿里小蜜的应用实践 - 2020](https://mp.weixin.qq.com/s/3onMfnkuGSdJs_H0z7IW_g)
+
 
 ## 17.2 Deep Learning
 

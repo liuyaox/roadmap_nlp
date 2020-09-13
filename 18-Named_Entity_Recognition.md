@@ -20,6 +20,13 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 - 【Great】[命名实体识别 NER 论文综述：那些年，我们一起追过的却仍未知道的花名(一) - 2020](https://mp.weixin.qq.com/s/_V9dDurEIi1BG14yjE9LfQ)
 
+- [序列标注的方法中有多种标注方式BIO、BIOSE、IOB、BILOU、BMEWO的异同 - 2020](https://mp.weixin.qq.com/s/Cpn87G1JBFYWVHmY5Mqp5A)
+
+- [流水的NLP铁打的NER：命名实体识别实践与探索 - 2020](https://mp.weixin.qq.com/s/0cW4SXqEGcL8F-zj1zGABA)
+
+- [工业界求解NER问题的12条黄金法则 - 2020](https://mp.weixin.qq.com/s/TmA4BcxPPz94gwknCBe69Q)
+
+
 #### Practice
 
 - 【Great】[NLP命名实体识别(NER)开源实战教程 - 2019](https://blog.csdn.net/xiaosongshine/article/details/99622170) (Keras)
@@ -31,6 +38,8 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 - 【Great】<https://github.com/qiufengyuyi/sequence_tagging>
   
     **Article**: [中文NER任务实验小结报告——深入模型实现细节](https://zhuanlan.zhihu.com/p/103779616)
+
+- [美团搜索中NER技术的探索与实践 - 2020](https://mp.weixin.qq.com/s/o5X8ck30zPprEZptbS4HUw)
 
 
 #### Competition
@@ -79,6 +88,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
     **自行训练BERT**，而非直接使用训练好的BERT，过程详细值得学习
 
+
 #### Data
 
 - <https://github.com/LG-1/video_music_book_datasets>
@@ -95,6 +105,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 
 关于CRF和Loss推导和实现细节，以及解码细节，请参考：[04_Probabilistic_Graphical_Model](https://github.com/liuyaox/Machine_Learning_Awesome/blob/master/04_Probabilistic_Graphical_Model.md)
 
+
 #### Paper
 
 - [Neural Architectures for Named Entity Recognition - CMU2016](https://arxiv.org/abs/1603.01360)
@@ -104,6 +115,7 @@ YAO's: <https://github.com/liuyaox/named_entity_recognition> (Keras)
 - HSCRF: [Hybrid semi-Markov CRF for Neural Sequence Labeling - USTC2018](https://arxiv.org/abs/1805.03838)
 
     **Code**: <https://github.com/ZhixiuYe/HSCRF-pytorch> (PyTorch)
+
 
 #### Practice
 

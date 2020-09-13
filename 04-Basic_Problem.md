@@ -360,6 +360,8 @@ YAO: WordPiece VS SentencePiece，都统计频次，前者侧重**字符组合(
 
 - [语法纠错的研究现状 - 2020](https://mp.weixin.qq.com/s/tH4-73aJcRaqJAjotlyANg)
 
+- [Soft-Masked BERT：文本纠错与BERT的最新结合 - 2020](https://zhuanlan.zhihu.com/p/144995580)
+
 
 ## 4.10 Synonym
 

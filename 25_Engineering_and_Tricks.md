@@ -53,6 +53,8 @@
 
 - 【Great】[如何优雅地训练大型模型 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412541&idx=1&sn=f17415894641f9b555c4ac7f7af4e42a)
 
+- [深度学习debug沉思录 - 2020](https://zhuanlan.zhihu.com/p/158739701)
+
 
 ## 25.2 Parameter Tuning
 
@@ -192,6 +194,8 @@
 - [给训练踩踩油门——Pytorch加速数据读取 - 2019](https://mp.weixin.qq.com/s/jXaItEwH10-reaiH2pKztw)
 
 - [不止显卡！这些硬件因素也影响着你的深度学习模型性能 - 2019](https://zhuanlan.zhihu.com/p/67785062)
+
+- [PyTorch Parallel Training（单机多卡并行、混合精度、同步BN训练指南文档） - 2020](https://zhuanlan.zhihu.com/p/145427849)
 
 #### Practice
 

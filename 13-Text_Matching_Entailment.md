@@ -29,6 +29,8 @@ Text Matching and Text Entailment both belong to Natural Language Inference (NLI
 
 - [文本匹配相关方向打卡点总结 - 2019](https://mp.weixin.qq.com/s/Nlr-VbbfUahYjMNPhquH4w)
 
+- [文本匹配方法系列––BERT匹配模型 - 2019](https://zhuanlan.zhihu.com/p/85506365)
+
 
 ### 13.1.2 MatchZoo
 

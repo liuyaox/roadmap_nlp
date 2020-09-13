@@ -102,6 +102,8 @@
 
     CV,NLP,语音等6大类
 
+- [【数据集汇总（附下载链接）】再也不愁没数据练习机器学习算法啦！ - 2020](https://mp.weixin.qq.com/s/6WkdQiotvqbmqyXMU_8W3Q)
+
 
 ### 2.1.2 Knowledge Graph
 
@@ -252,6 +254,8 @@
 
 - [文本数据增强 - 2019](https://mp.weixin.qq.com/s/aIydEKcDYWNaczMUi07tIQ)
 
+- [文本数据增强：撬动深度少样本学习模型的性能 - 2020](https://mp.weixin.qq.com/s/LUMYqN-BVBKXMoHRMCyHpA)
+
 
 ## 2.6 Data Labeling
 
@@ -274,6 +278,8 @@
 
 - [主动学习：标注的一颗救心丸 - 2020](https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650412415&idx=3&sn=f4025488aacbb7fe4ae93952917621af)
 
+- [主动学习-Active Learning：如何减少标注代价 - 2019](https://zhuanlan.zhihu.com/p/39367595)
+
 
 ## 2.6.3 Confidence Learning
 
@@ -283,3 +289,4 @@
 
 - [如何判断样本标注的靠谱程度？置信度学习（CL）简述 - 2020](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247485618&idx=1&sn=7016ad51dab33771d51ae7c2d5c8223f)
 
+- [别让数据坑了你！用置信学习找出错误标注（附开源实现）- 2020](https://mp.weixin.qq.com/s/PyyPMsdKaeoZ_3OiSiSBwg)

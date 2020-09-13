@@ -88,6 +88,8 @@
 
 ## 9.6 Semi-supervised Learning
 
+半监督学习
+
 #### Article
 
 - [机器学习的趋势：半监督学习 - 2019](https://zhuanlan.zhihu.com/p/67692664)
@@ -96,18 +98,9 @@
 
 - [半监督深度学习训练和实现小Tricks - 2019](https://zhuanlan.zhihu.com/p/100252944)
 
+- [只有正样本和无标记数据的半监督学习（PU Learning）- 2020](https://mp.weixin.qq.com/s/GhIwGR0F-XqmD2Qm-Qt4zA)
 
-## 9.7 Active Learning
-
-主动学习
-
-#### Article
-
-- [主动学习-Active Learning：如何减少标注代价 - 2019](https://zhuanlan.zhihu.com/p/39367595)
-
-- [主动学习（Active Learning）-少标签数据学习 - 2019](https://zhuanlan.zhihu.com/p/79764678)
-
-- [Active Learning in Machine Learning - 2020](https://towardsdatascience.com/active-learning-in-machine-learning-525e61be16e5)
+- [半监督学习在金融文本分类上的探索和实践 - 2020](https://mp.weixin.qq.com/s/7EazF26teBSg0_XvWtKdUg)
 
 
 ## 9.8 Few-shot Learning
@@ -126,6 +119,8 @@
 
 - [Few-shot learning 少样本学习 - 2019](https://zhuanlan.zhihu.com/p/66552960)
 
+- [NLP中的少样本困境问题探究 - 2020](https://mp.weixin.qq.com/s/S9EWQZsKlww8GC8jCf4QvA)
+
 
 ## 9.9 Multilingual Learning
 
@@ -134,6 +129,8 @@
 #### Article
 
 - [【综述】跨语言自然语言处理笔记 - 2020](https://mp.weixin.qq.com/s/qS1KjqwW-Th0VWDsRlWU5Q)
+
+ - [一文带你了解MultiBERT - 2020](https://mp.weixin.qq.com/s/BvM5zx-3XrsZj8BQ5WEa4A)
 
 
 ## 9.10 Meta Learning

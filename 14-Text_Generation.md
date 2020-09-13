@@ -7,6 +7,9 @@
 
 - [文本生成12：4种融合知识的text generation（推荐收藏） - 2020](https://zhuanlan.zhihu.com/p/133266258)
 
+- [文本生成评价指标的进化与推翻 - 2020](https://mp.weixin.qq.com/s/oOqkVLZejWeFYAbZULbdyg)
+
+
 #### Practice
 
 - ["自动作诗机"上线，代码和数据都是公开的 - 2019](ttps://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650410297&idx=1&sn=cda7099455083fbd412d0fdcb41acbea&scene=21)

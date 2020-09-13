@@ -447,7 +447,14 @@ Structure: Word Encoder(BiGRU) -> Word Attention -> Sentence Encoder(BiGRU) -> S
 - [Transformer-XL — CombiningTransformers and RNNs Into a State-of-the-art Language Model - 2019](https://www.lyrn.ai/2019/01/16/transformer-xl-sota-language-model)
 
 
-### 8.4.3 Others
+### 8.4.3 Longformer
+
+#### Article
+
+- [Longformer：超越RoBERTa，为长文档而生的预训练模型 - 2020](https://mp.weixin.qq.com/s/oKZ1WV6ELKIQ3lGiS_Agjw)
+
+
+### 8.4.4 Others
 
 #### Article
 

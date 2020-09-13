@@ -32,7 +32,11 @@
 
 - [深度学习推荐系统中各类流行的Embedding方法（上） - 2020](https://mp.weixin.qq.com/s/VEXEx7n9W8NltnpB1ZGsRw)
 
+- [深度学习推荐系统中各类流行的Embedding方法 - 2020](https://mp.weixin.qq.com/s/vjUeW6SbqFe-TavGnIcI-A)
+
 - [Kaggle知识点：时序数据与Embedding - 2020](https://mp.weixin.qq.com/s/BrfyPAYxdUKSn_fwRidXCg)
+
+- [推荐系统 Embedding 技术实践总结 - 2020](https://mp.weixin.qq.com/s/7DXVrJUU-PvKiQnipJKVtw)
 
 
 #### Practice
@@ -131,6 +135,11 @@ Yao: These are not easy to understand, and you'd better learn them by reading so
 - [Word2vec Tutorial](https://rare-technologies.com/word2vec-tutorial/)
 
 - 参考<https://github.com/liuyaox/coding_awesome/blob/master/Gensim/gensim_demo.py>中gensim的使用
+
+- 【Great】[文本挖掘从小白到精通（七）--- Word2vec的增量学习 - 2020](https://mp.weixin.qq.com/s/XnADLdeHPC6vSRzSqPmLcg)
+
+    附加作用：可看出随着时间，一些word的语义变化趋势！
+
 
 #### Further - TODO
 
