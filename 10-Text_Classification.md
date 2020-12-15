@@ -120,7 +120,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
     
     - 一定要用Dropout：除非有了BN，最好的参数还是0.5
     
-    - Fine-tuning是必选的
+    - Finetuning是必选的
     
     - 类目不均衡：如果Loss被一部分类别Dominate，对总体而言大多是负向的。建议尝试类似**Booststrap方法以调整Loss中样本权重**（How???）
     
@@ -178,7 +178,7 @@ YAO's: <https://github.com/liuyaox/text_classification> (Keras & PyTorch)
 
     - 模型训练
 
-      - 不均衡采样: **正负比<=9:1**一般都没事，梯度缩放，或者试试何凯明提出的**focal loss**损失函数，提高小类样本准确率的同时，大类样本可能会下降
+      - 不均衡采样: **负正比<=9:1**一般都没事，梯度缩放，或者试试何凯明提出的**focal loss**损失函数，提高小类样本准确率的同时，大类样本可能会下降
 
       - finetuning: 数据量大时适合，数据量小时就别微调了
 

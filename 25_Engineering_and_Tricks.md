@@ -155,7 +155,7 @@
 
 ## 25.3 Learning Rate
 
-最重要的超参，没有之一。
+最重要的超参，没有之一
 
 - [Cyclical Learning Rates for Training Neural Networks - USNavy2017](https://arxiv.org/abs/1506.01186)
 
@@ -164,6 +164,10 @@
     **Code**: <https://github.com/bckenstler/CLR>
 
 #### Article
+
+- [Guide to Pytorch Learning Rate Scheduling - 2020](https://www.kaggle.com/isbhargav/guide-to-pytorch-learning-rate-scheduling)
+
+    **YAO**: 赞！主流scheduling，并且有画图！
 
 - [Improving the way we work with learning rate - 2017](https://techburst.io/improving-the-way-we-work-with-learning-rate-5e99554f163b)
 
@@ -184,11 +188,11 @@
 
 - 大 + 相似：因为足够大，可以finetune整个网络，或后面多层
 
-- 大 + 不相似：因为足够大，可以重新训练，但是实践中finetune还是有益的，可以finetine整个网络
+- 大 + 不相似：因为足够大，可以重新训练，但是实践中finetune还是有益的，可以finetine整个网络。但可能会较大偏离Base Model，如果想尽量维持Base Model的前提下，只是提高一些召回能力，用于finetuning的数据量不宜太大？？？
 
 - 总结：新数据集小，当作**特征提取器**，相似时使用高层特征，不相似时使用低层特征；新数据集大，则都可以finetune整个网络或多层，若不相似，也可以从零重新训练模型
 
-#### Article
+#### Article 
 
 - A Comprehensive guide to Fine-tuning Deep Learning Models in Keras -2016
   - [Part1](https://flyyufelix.github.io/2016/10/03/fine-tuning-in-keras-part1.html)
