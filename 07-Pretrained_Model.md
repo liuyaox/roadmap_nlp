@@ -2,6 +2,8 @@
 
 ## 7.1 Overview
 
+**Keywords**: 
+
 #### Github
 
 - <https://github.com/zhanlaoban/NLP_PEMDC>
@@ -55,7 +57,7 @@
 
     Word Embedding作为预训练过程的方式：Embedding矩阵是网络的**Onehot层到Embedding层映射的初始化参数矩阵**，初始化后可以Frozen OR Finetuning
 
-    这是2018年之前NLP预训练的典型做法，但Word Embedding有一个致命缺点：多义词问题，Word Embedding是静态的，无法区分多义词的不同语义。直接解决这个问题比较成本太高或太繁，从而催生了更简洁优雅的解决方案：ELMo
+    这是2018年之前NLP预训练的典型做法，但Word Embedding有一个致命缺点：多义词问题，Word Embedding是静态的，无法区分多义词的不同语义。直接解决这个问题成本太高或太繁，从而催生了更简洁优雅的解决方案：ELMo
 
     **ELMo**
 
@@ -63,11 +65,11 @@
 
     预训练阶段：输入原始静态Embedding，通过多层编码器学习一个通用语言模型，**ELMo预训练好的是各层编码器的参数，或者说是一个通用语言模型**
 
-    **TODO**: 每层编码器是两层RNN，对应一个Embedding？还是说两层RNN对应两个Embedding？
+    **TODO**: 每层编码器是两层RNN，对应一个Embedding? YES!
 
     使用阶段：输入1个句子，对于句子中的1个单词，每层编码器都会输出1个动态的Embedding，再结合下游任务学习权重，把各层的Embedding加权整合为一个，就是下游任务中该单词的Embedding，所以ELMo代表的是一种**基于特征融合的预训练**方法。由于ELMo给下游提供的是**每个单词**的特征形式，所以这一类预训练方法被称为Feature-based Pre-Training。
 
-    **TODO**: 补充特征？Embedding加权整合为一个后，还需要再加上原始静态的Embedding吗？
+    **TODO**: 补充特征？Embedding加权整合时，也包括那个原始静态的Embedding吗？好像是YES
 
     尧：形象来说，预训练模型朝上竖着站立，ELMo是横着各层给右侧的下游任务；而Bert和GPT是上面最后一层给上面的下游任务。？？？
 
@@ -189,7 +191,7 @@
     
     **TODO**: 使用char的onehot向量？不使用char或word的静态Embedding吗？应该是的，好像xi是onehot向量，而ai=W*xi中的ai就相当于静态Embedding，而W就相当于Embedding Matrix。能不能让BERT直接接收ai作为输入，ai是char/word的静态Embedding，比如Word2Vec,GloVe这些？
 
-    BERT有很多层Encoder，比如12/24/48层，每层关注不同的特征，下游Task有2种使用BERT的方法：
+    BERT有很多层Encoder，比如6/12/24/48层，每层关注不同的特征，下游Task有2种使用BERT的方法：
 
     - Fine-tuning: 改变BERT参数，与下游Task一起参与训练，效果最好
     - Feature Extraction: 抽取若干Encoder层的输出并Concat在一起，效果差于Fine-tuning，但好处是预先保存好Concat后的向量后，可重复使用，且快速使用
@@ -210,7 +212,7 @@
 
     Approach2：Next Sentence Prediction
     
-    输入2个句子，以\<SEP>分隔，在开头添加一个\<CLS>，一起输入BERT里，\<CLS>对应的那个输出vector，再输入一个Linear Binary Classifier里，让它去预测这2个句子是否是接在一起的。BERT和Linear Binary Classifier是一起训练学习的，前者是finetuning，后者是Learned from Scratch，共同学习到vector，于是vector就可以是XXX的Embedding。
+    输入2个句子，以\<SEP>分隔，在开头添加一个\<CLS>，一起输入BERT里，\<CLS>对应的那个输出vector，再输入一个Linear Binary Classifier里，让它去预测这2个句子是否是接在一起的。BERT和Linear Binary Classifier是一起训练学习的，前者是finetuning，后者是Learned from Scratch，共同学习vector，于是vector就可以是XXX的Embedding。
 
     YAO: vector是谁的Embedding??? 
 
@@ -377,11 +379,11 @@
     用BERT进行中文情感分类的详细操作及完整程序
 
 
-## 7.3 EMLo
+## 7.3 ELMo
 
 [Deep contextualized word representations - AllenAI2018](https://arxiv.org/abs/1802.05365)
 
-EMLo: Embeddings from Language Model，是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
+ELMo: Embeddings from Language Model，是第一个使用预训练模型进行词嵌入的方法，将句子输入ELMO，可以得到句子中每个词的向量表示。
 
 低层编码器提取语料中的句法信息，高层编码器提取语料中的语义信息。
 

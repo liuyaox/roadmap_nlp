@@ -280,6 +280,8 @@
 
 - [主动学习-Active Learning：如何减少标注代价 - 2019](https://zhuanlan.zhihu.com/p/39367595)
 
+- [【01】主动学习-Active Learning：如何减少标注代价 - 2019](https://zhuanlan.zhihu.com/p/39367595)
+
 
 ## 2.6.3 Confidence Learning
 
