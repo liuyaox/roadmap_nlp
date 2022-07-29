@@ -302,6 +302,11 @@
 - [fastHan: 基于BERT的中文NLP集成工具 - 2020](https://zhuanlan.zhihu.com/p/147665538)
 
 
+#### Course
+
+- 【Great】[Huggingface Course](https://huggingface.co/course/chapter0/1?fw=pt)
+
+
 ## 7.2 Chinese
 
 中文预训练语言模型
