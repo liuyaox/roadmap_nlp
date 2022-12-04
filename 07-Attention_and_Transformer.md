@@ -1,29 +1,8 @@
-
-
-# 8. Seq2Seq & Attention & Transformer
+# 8. Attention & Transformer
 
 ## 8.1 Overview
 
 **Keywords**: Attention, HAN, Transformer
-
-
-## 8.2 Seq2Seq & Encoder2Decoder
-
-#### Paper
-
-- [Convolutional Sequence to Sequence Learning - Facebook2017](https://arxiv.org/abs/1705.03122)
-
-    ConvS2S：使用CNN创建Seq2Seq模型，Encoder有15层CNN，覆盖输入长度为25
-
-#### Practice
-
-- [Play couplet with seq2seq model. 用深度学习对对联](https://github.com/wb14123/seq2seq-couplet) (Tensorflow)
-
-- [从《Convolutional Sequence to Sequence Learning》到《Attention Is All You Need》 - 2018](https://zhuanlan.zhihu.com/p/27464080)
-
-- [Convolutional Sequence to Sequence Learning - 2019](https://dzapathy.github.io/2019/02/14/fairseq/)
-
-
 
 ## 8.3 Attention
 

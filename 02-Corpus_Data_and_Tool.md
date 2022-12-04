@@ -104,6 +104,10 @@
 
 - [【数据集汇总（附下载链接）】再也不愁没数据练习机器学习算法啦！ - 2020](https://mp.weixin.qq.com/s/6WkdQiotvqbmqyXMU_8W3Q)
 
+- <https://github.com/Keson96/SynoCN>
+  
+  A "soft" Chinese Synonyms Collection. 中文近义词表，主要爬取自百度汉语、CWN，内含80966个词，335061条近义关系。
+
 
 ### 2.1.2 Knowledge Graph
 
@@ -281,6 +285,10 @@
 - [主动学习-Active Learning：如何减少标注代价 - 2019](https://zhuanlan.zhihu.com/p/39367595)
 
 - [【01】主动学习-Active Learning：如何减少标注代价 - 2019](https://zhuanlan.zhihu.com/p/39367595)
+
+#### Paper 
+
+- [预训练模型的多任务主动学习 - 2022](https://mp.weixin.qq.com/s/WyZc_bZ1jL3Z24sMW1ovMQ)
 
 
 ## 2.6.3 Confidence Learning
